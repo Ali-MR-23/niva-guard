@@ -19,15 +19,15 @@ NIVA WP Guard shows **which plugin connects to which address and how much time i
 
 | Overview | Known connections |
 |---|---|
-| ![Overview](docs/screenshots/overview.png) | ![Known connections](docs/screenshots/known.png) |
+| ![Overview](docs/screenshots/panel-overview.png) | ![Known connections](docs/screenshots/panel-known.png) |
 
 | Dashboard clean-up | Server tools and WP-Cron |
 |---|---|
-| ![Dashboard](docs/screenshots/dash.png) | ![Server and 404](docs/screenshots/server.png) |
+| ![Dashboard](docs/screenshots/panel-dash.png) | ![Server and 404](docs/screenshots/panel-server.png) |
 
 | Auto circuit breaker | Deep tracking |
 |---|---|
-| ![Circuit breaker](docs/screenshots/brk.png) | ![Deep tracking](docs/screenshots/deep.png) |
+| ![Circuit breaker](docs/screenshots/panel-brk.png) | ![Deep tracking](docs/screenshots/panel-deep.png) |
 
 ---
 
