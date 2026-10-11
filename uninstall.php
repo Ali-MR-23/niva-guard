@@ -1,6 +1,6 @@
 <?php
 /**
- * حذف کامل افزونه: لودر mu-plugin، فایل‌های ماژول‌های سرور، فایل‌های لاگ و تنظیمات پاک می‌شوند.
+ * Full clean-up on delete: loader and server-tool files, log files and options.
  */
 if (!defined('WP_UNINSTALL_PLUGIN')) {
     exit;
@@ -12,16 +12,18 @@ function nivawpg_uninstall_cleanup(): void
 
     $mu_dir = defined('WPMU_PLUGIN_DIR') ? WPMU_PLUGIN_DIR : WP_CONTENT_DIR . '/mu-plugins';
 
-    // فایل‌های mu: لودر و سه ماژول سرور
-    foreach (['loader', 'heartbeat', 'fast-404', 'shortlink'] as $name) {
-        $file = $mu_dir . '/niva-wp-guard-' . $name . '.php';
+    // mu-plugin files (current and earlier names)
+    foreach (['niva-guard-', 'niva-wp-guard-'] as $prefix) {
+        foreach (['loader', 'heartbeat', 'fast-404', 'shortlink'] as $name) {
+            $file = $mu_dir . '/' . $prefix . $name . '.php';
 
-        if (is_file($file)) {
-            wp_delete_file($file);
+            if (is_file($file)) {
+                wp_delete_file($file);
+            }
         }
     }
 
-    // پوشه‌ی لاگ در uploads
+    // Log folder in uploads
     $up = wp_upload_dir(null, false);
     $dir = rtrim(!empty($up['basedir']) ? $up['basedir'] : WP_CONTENT_DIR, '/\\') . '/niva-wp-guard';
 
@@ -44,7 +46,7 @@ function nivawpg_uninstall_cleanup(): void
         }
     }
 
-    // 404.html (فقط اگر ساخته‌ی همین افزونه باشد)
+    // 404.html (only if this plugin created it)
     $html = ABSPATH . '404.html';
 
     if (is_file($html)) {
@@ -55,7 +57,7 @@ function nivawpg_uninstall_cleanup(): void
         }
     }
 
-    // بلوک .htaccess
+    // .htaccess block
     $ht = ABSPATH . '.htaccess';
 
     if (is_file($ht) && NIVAWPG_Fs::writable($ht)) {
@@ -67,7 +69,7 @@ function nivawpg_uninstall_cleanup(): void
         }
     }
 
-    // گزینه‌ها (نام‌های فعلی و نام‌های قدیمی‌تر)
+    // Options (current and earlier prefixes)
     foreach (['nivawpg_', 'nwg_', 'nhg_'] as $prefix) {
         foreach (['settings', 'seen', 'widgets', 'menus', 'breaker', 'scan', 'cron_last'] as $key) {
             delete_option($prefix . $key);

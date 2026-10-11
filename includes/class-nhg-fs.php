@@ -5,9 +5,9 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * نوشتن و خواندن فایل‌های خود افزونه در بیرون از پوشه‌ی افزونه (mu-plugins، 404.html، .htaccess) از راه WP_Filesystem.
- * اگر وردپرس اجازه‌ی نوشتن مستقیم ندهد (مثلاً به اطلاعات FTP نیاز باشد) همه‌چیز «false» برمی‌گرداند و صفحه‌ی تنظیمات
- * به‌جای نوشتن خودکار، دکمه‌ی دانلود و راهنمای دستی نشان می‌دهد.
+ * Reads and writes the files the plugin creates outside its own folder (mu-plugins, 404.html, .htaccess) through WP_Filesystem.
+ * If WordPress cannot write directly (for example it needs FTP credentials) everything returns false and the settings page
+ * shows download buttons and manual instructions instead of writing automatically.
  */
 final class NIVAWPG_Fs {
 
@@ -33,7 +33,7 @@ final class NIVAWPG_Fs {
         return is_string($c) ? $c : '';
     }
 
-    /** فقط ابتدای فایل (برای خواندن نشانگر) */
+    /** Only the beginning of the file (to read the marker). */
     public static function head(string $path, int $bytes = 400): string {
         return substr(self::get($path), 0, $bytes);
     }

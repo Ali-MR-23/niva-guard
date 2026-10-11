@@ -1,11 +1,11 @@
-/* NIVA WP Guard — admin page script */
+/* NIVA Guard — admin page script */
         (function () {
             var I18N = window.NIVAWPG_I18N || {};
             var form = document.getElementById('nhg-form');
             var $ = function (s, r) { return (r || document).querySelector(s); };
             var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-            /* ── تب‌ها (با یادآوری تب باز در آدرس) ── */
+            /* Tabs (the open tab is kept in the URL hash) */
             var scope = 'rel';
             function openTab(name) {
                 $$('.nhg-tab').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-tab') === name); });
@@ -23,7 +23,7 @@
                 });
             });
 
-            /* ── فیلتر و جستجوی جدول شناخته‌شده ── */
+            /* Known-connections table: filter and search */
             var q = $('#nhg-q'), activeType = '';
             function filterKnown() {
                 var term = (q.value || '').toLowerCase().trim(), shown = 0;
@@ -35,7 +35,7 @@
                     tr.classList.toggle('nhg-hid', !ok);
                     if (ok) { shown++; }
                 });
-                // عنوان گروه فقط وقتی دست‌کم یک ردیف زیرش پیداست
+                // A group heading is shown only while at least one row below it is visible
                 $$('#nhg-known tr[data-src]').forEach(function (h) {
                     var n = h.nextElementSibling, any = false;
                     while (n && !n.hasAttribute('data-src')) { if (!n.classList.contains('nhg-hid')) { any = true; } n = n.nextElementSibling; }
@@ -67,12 +67,12 @@
             simpleFilter('#nhg-q2', '#nhg-disc tr[data-row]', 'row');
             simpleFilter('#nhg-q3', '#nhg-offline label[data-q]', 'label');
 
-            /* ── انتخاب پیشنهادی / برداشتن همه ── */
+            /* Select recommended / clear all */
             var rec = $('#nhg-recommend'), none = $('#nhg-none');
             if (rec) { rec.addEventListener('click', function () { $$('#nhg-known tr:not(.nhg-hid) .nhg-block[data-rec="1"]').forEach(function (c) { c.checked = true; }); track(); }); }
             if (none) { none.addEventListener('click', function () { $$('#nhg-known tr:not(.nhg-hid) .nhg-block').forEach(function (c) { c.checked = false; }); track(); }); }
 
-            /* ── هشدار برای مسدود کردن موارد حساس ── */
+            /* Warning before blocking sensitive items */
             var risky = {license: I18N.riskLicense, service: I18N.riskService};
             form.addEventListener('change', function (e) {
                 var el = e.target;
@@ -83,7 +83,7 @@
                 track();
             });
 
-            /* ── شمارنده‌ی تغییرات ذخیره‌نشده ── */
+            /* Unsaved-changes counter */
             var initial = {};
             function key(el, i) { return (el.name || 'x') + '#' + (el.type === 'checkbox' || el.type === 'radio' ? el.value : i); }
             var controls = $$('#nhg-form input[name], #nhg-form textarea[name], #nhg-form select[name]').filter(function (el) { return el.type !== 'hidden'; });
@@ -99,7 +99,7 @@
             window.addEventListener('beforeunload', function (e) { if (dirtyN > 0 && !form.__saving) { e.preventDefault(); e.returnValue = ''; } });
             form.addEventListener('submit', function () { form.__saving = true; });
 
-            /* ── دکمه‌های کپی ── */
+            /* Copy buttons */
             var ce = document.getElementById('nhg-cron-every'), cs = document.getElementById('nhg-cron-sch');
             if (ce && cs) {
                 ce.addEventListener('change', function () {
@@ -126,14 +126,14 @@
                 });
             });
 
-            /* ── اکاردئون اسکن کد ── */
+            /* Code-scan accordion */
             $$('tr.nhg-acc').forEach(function (tr) {
                 function tg() { var b = tr.nextElementSibling, o = b.hasAttribute('hidden'); if (o) { b.removeAttribute('hidden'); } else { b.setAttribute('hidden', ''); } tr.classList.toggle('open', o); tr.setAttribute('aria-expanded', o ? 'true' : 'false'); }
                 tr.addEventListener('click', tg);
                 tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tg(); } });
             });
 
-            /* ── فیلد عددی (کم/زیاد و مقدارهای آماده) ── */
+            /* Number field (plus/minus and presets) */
             $$('.nhg-stepper').forEach(function (box) {
                 var inp = $('input', box), min = +box.getAttribute('data-min'), max = +box.getAttribute('data-max');
                 var presets = $$('.nhg-preset');
@@ -149,7 +149,7 @@
                 presets.forEach(function (p) { p.classList.toggle('on', +p.getAttribute('data-val') === (parseInt(inp.value, 10) || 0)); });
             });
 
-            /* ── کپی گزارش، پاک کردن لاگ، محو شدن پیام ── */
+            /* Copy report, clear log, fade out the notice */
             var cp = $('#nhg-copy');
             if (cp) { cp.addEventListener('click', function () { var t = $('#nhg-report'); t.select(); document.execCommand('copy'); cp.textContent = I18N.copied; }); }
             var cl = $('#nhg-clearlink');

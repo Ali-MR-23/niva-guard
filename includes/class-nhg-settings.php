@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * ذخیره و خواندن تنظیمات (یک گزینه‌ی واحد) و گزارش اتصال‌های دیده‌شده.
+ * Stores and reads the settings (a single option) and the report of the connections seen.
  */
 class NIVAWPG_Settings {
 
@@ -15,48 +15,48 @@ class NIVAWPG_Settings {
     public const MENUS = 'nivawpg_menus';
     public const BREAKER = 'nivawpg_breaker';
 
-    /** منوهایی که هرگز قابل مخفی شدن نیستند تا راه رسیدن به همین تنظیمات بسته نشود */
+    /** Menus that can never be hidden, so the way to these settings stays open. */
     public const PROTECTED_MENUS = ['index.php', 'options-general.php', 'plugins.php'];
 
     private static ?array $cache = null;
 
     public static function defaults(): array {
         return [
-            'enabled'       => 1,   // کلید اصلی
-            'log'           => 1,   // ثبت اتصال‌ها
-            'block'         => [],  // شناسه‌ی قانون شناخته‌شده ⇒ 1  (مسدود)
-            'cache'         => [],  // شناسه‌ی قانون شناخته‌شده ⇒ 1  (کش پاسخ)
-            'custom'        => [],  // آدرس‌های دلخواه (host/path) برای مسدود شدن
-            'offline'       => [],  // اسلاگ افزونه‌هایی که کل اینترنتشان بسته است
-            'ui_core_news'  => 0,   // ویجت‌های خبری هسته‌ی وردپرس
-            'ui_elementor'  => 0,   // ویجت اخبار المنتور
-            'ui_widget_dirs' => [], // حذف ویجت‌های داشبوردِ کدهای این افزونه‌ها
-            'ui_widgets'    => [],  // شناسه‌ی ویجت‌های داشبوردی که تیک حذف خورده‌اند (از فهرست شناسایی‌شده)
-            'ui_notices'    => 0,   // پنهان کردن اعلان‌های تبلیغاتی با کلیدواژه
-            'ui_keywords'   => '',  // کلیدواژه‌های اعلان تبلیغاتی (هر خط یکی)
-            'ui_yoast_feed' => 0,   // پنهان کردن فید ویجت Yoast
-            'ui_pwsms'      => 0,   // خاموش کردن تبلیغ‌های افزونه‌ی پیامک ووکامرس فارسی
-            'ui_parsidate'  => 0,   // پارسی‌دیت: حذف ویجت داشبورد (بنر حامیان و فید) و بستن اتصال‌هایش
-            'ui_menus'      => [],  // اسلاگ منوهای سمت راست ادمین که فقط مخفی می‌شوند (نه حذف)
-            'ui_jetpack'    => 0,   // حالت آفلاین رسمی Jetpack (بدون اتصال به WordPress.com)
-            'deep'          => 0,   // ردیابی عمیق: اتصال‌های مستقیم PHP (file_get_contents / fopen با http)
-            'breaker'       => 0,   // قطع‌کننده‌ی خودکار: هاستی که پشت‌سرهم خطا یا کندی دارد موقتاً بدون معطلی رد می‌شود
-            'breaker_hours' => 6,   // مدت رد شدن هاست خراب
-            'breaker_fails' => 2,   // چند خطای پشت‌سرهم تا فعال شدن
-            'breaker_off'   => [],  // هاست‌هایی که قطع‌کننده هرگز رد نمی‌کند (معاف)
-            'breaker_slow'  => 5,   // پاسخ کندتر از این (ثانیه) هم خطا حساب می‌شود
-            'loader_on'     => 0,   // لودر mu-plugin (فقط با اجازه‌ی کاربر ساخته می‌شود)
-            'files_ok'      => 0,   // کاربر تنظیمات را ذخیره کرده؛ از این به بعد ترمیم خودکارِ فایل‌های فعال‌شده مجاز است
-            'hb_on'         => 0,   // کنترل Heartbeat (mu-plugin جدا)
-            'hb_interval'   => 300, // فاصله‌ی حالت «کند» به ثانیه
+            'enabled'       => 1,   // Master switch
+            'log'           => 1,   // Log connections
+            'block'         => [],  // known rule id => 1 (blocked)
+            'cache'         => [],  // known rule id => 1 (response cached)
+            'custom'        => [],  // custom addresses (host/path) to block
+            'offline'       => [],  // slugs of plugins taken fully offline
+            'ui_core_news'  => 0,   // WordPress core news widgets
+            'ui_elementor'  => 0,   // Elementor news widget
+            'ui_widget_dirs' => [], // remove dashboard widgets coded by these plugins
+            'ui_widgets'    => [],  // ids of the dashboard widgets ticked for removal (from the detected list)
+            'ui_notices'    => 0,   // hide promotional notices by keyword
+            'ui_keywords'   => '',  // notice keywords (one per line)
+            'ui_yoast_feed' => 0,   // hide the Yoast widget feed
+            'ui_pwsms'      => 0,   // switch off the Persian WooCommerce SMS ads
+            'ui_parsidate'  => 0,   // ParsiDate: remove the dashboard widget (sponsor banner and feed) and close its connections
+            'ui_menus'      => [],  // slugs of admin menu items that are only hidden (not removed)
+            'ui_jetpack'    => 0,   // official Jetpack offline mode (no connection to WordPress.com)
+            'deep'          => 0,   // deep tracking: direct PHP connections (file_get_contents / fopen over http)
+            'breaker'       => 0,   // auto circuit breaker: a host that keeps failing or is slow is skipped for a while
+            'breaker_hours' => 6,   // how long a failing host is skipped
+            'breaker_fails' => 2,   // failures in a row before it activates
+            'breaker_off'   => [],  // hosts the breaker never skips (exempt)
+            'breaker_slow'  => 5,   // a response slower than this (seconds) also counts as a failure
+            'loader_on'     => 0,   // mu-plugin loader (created only with the user's consent)
+            'files_ok'      => 0,   // the user saved the settings; enabled files may now be repaired automatically
+            'hb_on'         => 0,   // Heartbeat control (separate mu-plugin)
+            'hb_interval'   => 300, // interval of the "slow" mode in seconds
             'hb_dash'       => 'interval', // default | interval | off
             'hb_editor'     => 'interval',
             'hb_admin'      => 'interval',
             'hb_front'      => 'off',
-            'f404_on'       => 0,   // ۴۰۴ سریع (mu-plugin + 404.html + .htaccess)
-            'f404_strict'   => 0,   // بستن فایل‌های اسکریپت موجود بیرون از هسته/افزونه/قالب
-            'cron_off'      => 0,   // DISABLE_WP_CRON در wp-config.php (کرون واقعی سرور جایگزین می‌شود)
-            'cron_every'    => 5,   // فاصله‌ی پیشنهادیِ کرون سرور (دقیقه)
+            'f404_on'       => 0,   // fast 404 (mu-plugin + 404.html + .htaccess)
+            'f404_strict'   => 0,   // also close existing script files outside core/plugins/themes
+            'cron_off'      => 0,   // DISABLE_WP_CRON in wp-config.php (a real server cron takes over)
+            'cron_every'    => 5,   // interval of the server cron (minutes)
             'cache_hours'   => 6,
         ];
     }
@@ -71,7 +71,7 @@ class NIVAWPG_Settings {
             $saved = is_array($saved) ? $saved : [];
             self::$cache = array_merge(self::defaults(), $saved);
 
-            // نصب‌های قدیمی‌تر که لودر یا فایل‌های mu از قبل دارند: همان وضعیت حفظ می‌شود
+            // Older installs that already have the loader or mu files keep that state
             if (!array_key_exists('loader_on', $saved) && class_exists('NIVAWPG_Setup') && is_file(NIVAWPG_Setup::loader_path())) {
                 self::$cache['loader_on'] = 1;
             }
@@ -88,7 +88,7 @@ class NIVAWPG_Settings {
         return self::$cache;
     }
 
-    /** کپی یک‌باره‌ی تنظیمات و گزارش‌ها از نام‌های قبلی گزینه‌ها: nwg_* (نسخه‌های ۲.x) یا nhg_* (افزونه‌ی NIVA HTTP Guard) */
+    /** One-time copy of settings and reports from the earlier option names: nwg_* (2.x) or nhg_* (NIVA HTTP Guard). */
     private static function migrate_legacy(): array {
         foreach (['nwg_', 'nhg_'] as $old_prefix) {
             $old = get_option($old_prefix . 'settings', null);
@@ -117,28 +117,28 @@ class NIVAWPG_Settings {
         self::$cache = null;
     }
 
-    /** @return array<string,array{title:string,source:string,context:string}> ویجت‌هایی که در داشبورد همین سایت دیده شده‌اند */
+    /** @return array<string,array{title:string,source:string,context:string}> Widgets seen on this site's dashboard. */
     public static function widgets(): array {
         $w = get_option(self::WIDGETS, []);
 
         return is_array($w) ? $w : [];
     }
 
-    /** @return array<string,string> منوهای سطح اول ادمین که دیده شده‌اند: اسلاگ ⇒ عنوان */
+    /** @return array<string,string> Top-level admin menus seen: slug => title. */
     public static function menus(): array {
         $m = get_option(self::MENUS, []);
 
         return is_array($m) ? $m : [];
     }
 
-    /** @return array<string,array{fails:int,until:int,trips:int,t:int,err:string}> وضعیت قطع‌کننده به‌ازای هر هاست */
+    /** @return array<string,array{fails:int,until:int,trips:int,t:int,err:string}> Breaker state per host. */
     public static function breaker(): array {
         $b = get_option(self::BREAKER, []);
 
         return is_array($b) ? $b : [];
     }
 
-    /** @return array<string,array> گزارش اتصال‌های دیده‌شده؛ کلید = md5(plugin|host|path) */
+    /** @return array<string,array> Report of the connections seen; key = md5(plugin|host|path). */
     public static function seen(): array {
         $s = get_option(self::SEEN, []);
 

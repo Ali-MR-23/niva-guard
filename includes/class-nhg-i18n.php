@@ -5,14 +5,14 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * چندزبانه: فایل‌های languages/niva-wp-guard-{locale}.mo
- * متن‌های اصلی کد انگلیسی‌اند؛ اگر برای زبان سایت فایلی نباشد، انگلیسی نمایش داده می‌شود.
+ * Translations: languages/niva-guard-{locale}.mo
+ * The source strings are English; if there is no file for the site language, English is shown.
  */
 final class NIVAWPG_I18n {
 
-    public const DOMAIN = 'niva-wp-guard';
+    public const DOMAIN = 'niva-guard';
 
-    /** زبان ⇒ فایل پیش‌فرض (برای مثلاً es_MX، de_AT، fa_AF و ...) */
+    /** Language => fallback file (for example es_MX, de_AT, fa_AF …). */
     private const FALLBACK = [
         'fa' => 'fa_IR',
         'ar' => 'ar',
@@ -32,7 +32,7 @@ final class NIVAWPG_I18n {
         $locale = (string) determine_locale();
         $lang = strtolower(substr($locale, 0, 2));
         $candidates = [
-            WP_LANG_DIR . '/plugins/' . self::DOMAIN . '-' . $locale . '.mo', // ترجمه‌ی دستی کاربر
+            WP_LANG_DIR . '/plugins/' . self::DOMAIN . '-' . $locale . '.mo', // Translation provided by the site owner
             NIVAWPG_DIR . 'languages/' . self::DOMAIN . '-' . $locale . '.mo',
         ];
 
@@ -47,6 +47,6 @@ final class NIVAWPG_I18n {
                 return;
             }
         }
-        // فایلی نیست (مثلاً en_US یا زبان پشتیبانی‌نشده): همان متن انگلیسی کد نمایش داده می‌شود
+        // No file (for example en_US or an unsupported language): the English source text is shown
     }
 }

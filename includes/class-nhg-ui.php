@@ -5,20 +5,20 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * ماژول‌های پیشخوان: هر کدام فقط وقتی تیکش روشن باشد اجرا می‌شود.
- * حذف ویجت باعث می‌شود تابع آن اجرا نشود و فید و بنر از سرور بیرونی گرفته نشود.
+ * Dashboard modules: each one runs only when its switch is on.
+ * Removing a widget means its callback never runs, so its feed and banner are not fetched from an external server.
  */
 class NIVAWPG_Ui {
 
     public static function boot(): void {
         add_action('wp_dashboard_setup', [self::class, 'dashboard'], 9999);
         add_action('admin_menu', [self::class, 'menus'], PHP_INT_MAX);
-        add_action('admin_head', [self::class, 'menus'], 0); // افزونه‌هایی مثل WP-Parsidate منوی خود را با PHP_INT_MAX و بعد از ما می‌سازند
+        add_action('admin_head', [self::class, 'menus'], 0); // Plugins such as WP-Parsidate add their menu at PHP_INT_MAX, after our first pass
         add_action('admin_enqueue_scripts', [self::class, 'notice_script']);
         add_action('admin_enqueue_scripts', [self::class, 'yoast_feed_script']);
         self::pwsms_ads();
 
-        // حالت آفلاین رسمی Jetpack: هیچ اتصالی به WordPress.com برقرار نمی‌شود (برای سایت‌هایی که از Jetpack استفاده نمی‌کنند)
+        // Official Jetpack offline mode: no connection to WordPress.com (for sites that do not use Jetpack)
         add_filter('jetpack_offline_mode', static function ($v) {
             return self::on('ui_jetpack') ? true : $v;
         });
@@ -31,8 +31,8 @@ class NIVAWPG_Ui {
     }
 
     /**
-     * منوی سمت راست ادمین: همه‌ی آیتم‌های سطح اول را ثبت می‌کند و آن‌هایی را که تیک خورده‌اند «فقط مخفی» می‌کند.
-     * حذف واقعی نیست: افزونه فعال می‌ماند و صفحه‌اش با آدرس مستقیم همچنان باز می‌شود.
+     * Admin menu: records every top-level item and only hides the ticked ones.
+     * Nothing is really removed: the plugin stays active and its page still opens with a direct link.
      */
     public static function menus(): void {
         global $menu;
@@ -72,7 +72,7 @@ class NIVAWPG_Ui {
         }
     }
 
-    /** ثبت همه‌ی ویجت‌های داشبورد این سایت (شناسه، عنوان و افزونه‌ی سازنده) تا در تنظیمات تیک حذف بخورند */
+    /** Records every dashboard widget of this site (id, title and source plugin) so it can be ticked for removal. */
     private static function record_widgets(): void {
         global $wp_meta_boxes;
         $found = [];
@@ -99,7 +99,7 @@ class NIVAWPG_Ui {
         }
 
         $old = NIVAWPG_Settings::widgets();
-        $merged = $found + $old; // ویجت‌های قبلاً دیده‌شده (حتی اگر الان حذف شده‌اند) در فهرست می‌مانند
+        $merged = $found + $old; // Widgets seen before (even if removed now) stay in the list
 
         if ($merged !== $old) {
             update_option(NIVAWPG_Settings::WIDGETS, $merged, false);
@@ -113,7 +113,7 @@ class NIVAWPG_Ui {
             return;
         }
 
-        self::record_widgets(); // همیشه (قبل از هر حذفی) تا فهرست کامل باشد
+        self::record_widgets(); // Always (before any removal) so the list is complete
 
         $s = NIVAWPG_Settings::get();
 
@@ -122,7 +122,7 @@ class NIVAWPG_Ui {
         }
 
         if (!empty($s['ui_parsidate'])) {
-            // هر ویجتی که کدش داخل wp-parsidate است (ویجت «پارسی‌دیت» با بنر حامیان و فید)
+            // Any widget whose code lives in wp-parsidate (the ParsiDate widget with sponsor banner and feed)
             $s['ui_widget_dirs'] = array_merge((array) $s['ui_widget_dirs'], ['wp-parsidate']);
         }
 
@@ -185,7 +185,7 @@ class NIVAWPG_Ui {
         }
     }
 
-    /** اسکریپت کوچکِ این افزونه برای صفحه‌های ادمین (بدون فایل جدا؛ به‌صورت درون‌خط افزوده می‌شود) */
+    /** Small inline script of this plugin for admin pages (added with wp_add_inline_script). */
     private static function inline_js(string $js): void {
         if (!wp_script_is('nivawpg-ui', 'registered')) {
             wp_register_script('nivawpg-ui', false, [], NIVAWPG_VERSION, true);
@@ -195,7 +195,7 @@ class NIVAWPG_Ui {
         wp_add_inline_script('nivawpg-ui', $js);
     }
 
-    /** پنهان کردن اعلان‌های تبلیغاتی پیشخوان بر اساس کلیدواژه (اعلان‌های خطا و «نسخه جدید» دست‌نخورده می‌مانند) */
+    /** Hides promotional admin notices by keyword (error and "new version" notices are left alone). */
     public static function notice_script(): void {
         if (!self::on('ui_notices')) {
             return;
@@ -223,7 +223,7 @@ JS
         );
     }
 
-    /** فقط بخش فید انگلیسی ویجت Yoast را پنهان می‌کند؛ امتیاز سئو می‌ماند */
+    /** Hides only the English feed part of the Yoast widget; the SEO score stays. */
     public static function yoast_feed_script(string $hook = ''): void {
         if ($hook !== 'index.php' || !self::on('ui_yoast_feed')) {
             return;
@@ -253,7 +253,7 @@ JS
 JS
         );
     }
-    /** خاموش کردن تبلیغ‌های داخلی افزونه‌ی «پیامک ووکامرس فارسی» (بدون دست‌زدن به کد آن) */
+    /** Switches off the built-in ads of the Persian WooCommerce SMS plugin (without touching its code). */
     private static function pwsms_ads(): void {
         add_filter('pre_option_pwoosms_ads_noticemelli', static function ($v) {
             return self::on('ui_pwsms') ? 1 : $v;

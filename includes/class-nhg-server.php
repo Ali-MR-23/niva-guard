@@ -5,19 +5,19 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * ماژول‌های سرور: کنترل Heartbeat، ۴۰۴ سریع و لینک کوتاه همگانی.
- * هر ماژول یک mu-plugin جدا و مستقل می‌سازد (تنظیمات داخل خود فایل ذخیره می‌شود). ۴۰۴ سریع علاوه بر آن
- * فایل 404.html را در ریشه‌ی سایت می‌سازد و یک بلوک جدا در .htaccess می‌گذارد (با بک‌آپ و بازگشت خودکار).
+ * Server modules: Heartbeat control, fast 404 and WP-Cron control.
+ * Each module creates its own standalone mu-plugin (its settings live inside the file). Fast 404 also
+ * creates 404.html in the site root and adds a separate block to .htaccess (with a backup and automatic rollback).
  */
 final class NIVAWPG_Server {
 
     public const MU = [
-        'heartbeat' => 'niva-wp-guard-heartbeat.php',
-        'fast404'   => 'niva-wp-guard-fast-404.php',
+        'heartbeat' => 'niva-guard-heartbeat.php',
+        'fast404'   => 'niva-guard-fast-404.php',
     ];
 
-    /** فایل قدیمیِ ماژول لینک کوتاه (حذف‌شده؛ فقط برای پاک‌سازی) */
-    private const LEGACY_MU = 'niva-wp-guard-shortlink.php';
+    /** mu-plugin files of earlier versions (only removed, never created). */
+    private const LEGACY_MU = ['niva-wp-guard-shortlink.php', 'niva-wp-guard-heartbeat.php', 'niva-wp-guard-fast-404.php'];
 
     public const MODES = ['default', 'interval', 'off'];
 
@@ -25,9 +25,9 @@ final class NIVAWPG_Server {
     private const END = '# END NIVA WP Guard';
     private const MARK = 'nivawpg-404';
     private const MARK_OLD = 'nwg-404';
-    /** فایل‌های اسکریپتی که اسکنرها کاوش می‌کنند (اگر وجود نداشته باشند ۴۰۴ سریع) */
+    /** Script files that scanners probe (answered with a fast 404 when they do not exist). */
     private const EXT_SCRIPT = 'php[0-9]?|pht(ml)?|phps|phar|cgi|pl|asp|aspx|jsp';
-    /** فایل‌های حساس: حتی اگر وجود داشته باشند (debug.log، پشتیبان، ...) از بیرون نباید دیده شوند */
+    /** Sensitive files: never served from outside, even when they exist (debug.log, backups …). */
     private const EXT_SENS = 'env|git|svn|bak|old|sql|log|ini|conf|swp';
     private const EXT = self::EXT_SCRIPT . '|' . self::EXT_SENS;
     private const DOTS = 'git|svn|hg|env|aws|ssh|DS_Store';
@@ -37,7 +37,7 @@ final class NIVAWPG_Server {
         return strpos($head, self::MARK) !== false || strpos($head, self::MARK_OLD) !== false;
     }
 
-    /* ───────────── مسیرها ───────────── */
+    /* ───────────── Paths ───────────── */
 
     public static function mu_dir(): string {
         return rtrim(defined('WPMU_PLUGIN_DIR') ? WPMU_PLUGIN_DIR : WP_CONTENT_DIR . '/mu-plugins', '/\\');
@@ -55,7 +55,7 @@ final class NIVAWPG_Server {
         return ABSPATH . '.htaccess';
     }
 
-    /** مسیر ریشه‌ی وردپرس نسبت به دامنه (مثلاً '' یا '/violet') */
+    /** WordPress root path relative to the domain (for example '' or '/blog'). */
     public static function base_path(): string {
         return rtrim((string) wp_parse_url(site_url('/'), PHP_URL_PATH), '/');
     }
@@ -70,10 +70,10 @@ final class NIVAWPG_Server {
         return $k === 'heartbeat' ? !empty($s['hb_on']) : !empty($s['f404_on']);
     }
 
-    /* ───────────── mu-plugin ها ───────────── */
+    /* ───────────── mu-plugins ───────────── */
 
     private static function mu_header(string $title): string {
-        return "<?php\n/**\n * Plugin Name: NIVA WP Guard — " . $title . "\n * Description: Generated automatically by NIVA WP Guard. Do not edit: change it in Settings → NIVA WP Guard → Server. It is removed together with the plugin.\n */\n\nif (!defined('ABSPATH')) {\n    return;\n}\n\n";
+        return "<?php\n/**\n * Plugin Name: NIVA Guard — " . $title . "\n * Description: Generated automatically by NIVA Guard. Do not edit: change it in Settings → NIVA Guard → Server. It is removed together with the plugin.\n */\n\nif (!defined('ABSPATH')) {\n    return;\n}\n\n";
     }
 
     public static function mu_code(string $k, array $s): string {
@@ -86,7 +86,7 @@ final class NIVAWPG_Server {
                 'front'    => in_array($s['hb_front'], self::MODES, true) ? $s['hb_front'] : 'default',
             ];
 
-            return self::mu_header('Heartbeat control') . '$nivawpg_hb = ' . var_export($cfg, true) /* phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export -- تولید کد PHP فایل mu */ . <<<'PHP'
+            return self::mu_header('Heartbeat control') . '$nivawpg_hb = ' . var_export($cfg, true) /* phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export -- generates the PHP code of the mu-plugin file */ . <<<'PHP'
 ;
 
 $nivawpg_hb_where = static function () {
@@ -107,7 +107,7 @@ $nivawpg_hb_where = static function () {
     return 'admin';
 };
 
-// «کند»: فاصله‌ی Heartbeat بیشتر می‌شود
+// "Slow": a longer Heartbeat interval
 add_filter('heartbeat_settings', static function ($settings) use ($nivawpg_hb, $nivawpg_hb_where) {
     if (($nivawpg_hb[$nivawpg_hb_where()] ?? 'default') === 'interval') {
         $settings['interval'] = (int) $nivawpg_hb['interval'];
@@ -116,7 +116,7 @@ add_filter('heartbeat_settings', static function ($settings) use ($nivawpg_hb, $
     return $settings;
 });
 
-// «خاموش»: اسکریپت با یک نسخه‌ی خالی جایگزین می‌شود تا وابستگی بقیه‌ی اسکریپت‌ها نشکند
+// "Off": the script is replaced by an empty stub so dependent scripts do not break
 $nivawpg_hb_off = static function () use ($nivawpg_hb, $nivawpg_hb_where) {
     if (($nivawpg_hb[$nivawpg_hb_where()] ?? 'default') !== 'off') {
         return;
@@ -135,10 +135,10 @@ PHP;
         // fast404
         $cfg = ['base' => self::base_path(), 'strict' => !empty($s['f404_strict']) ? 1 : 0];
 
-        $code = self::mu_header('Fast 404') . '$nivawpg_f = ' . var_export($cfg, true) /* phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export -- تولید کد PHP فایل mu */ . ';' . "\n" . "\$nivawpg_ext = '" . self::EXT . "';\n" . "\$nivawpg_dots = '" . self::DOTS . "';\n" . "\$nivawpg_core = '" . addslashes(self::CORE) . "';\n" . <<<'PHP'
+        $code = self::mu_header('Fast 404') . '$nivawpg_f = ' . var_export($cfg, true) /* phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export -- generates the PHP code of the mu-plugin file */ . ';' . "\n" . "\$nivawpg_ext = '" . self::EXT . "';\n" . "\$nivawpg_dots = '" . self::DOTS . "';\n" . "\$nivawpg_core = '" . addslashes(self::CORE) . "';\n" . <<<'PHP'
 
 if (!function_exists('nivawpg_fast404_send')) {
-    /** صفحه‌ی ۴۰۴ ایستا را می‌فرستد و اجرا را تمام می‌کند (بدون قالب، CSS و JS) */
+    /** Sends the static 404 page and stops (no theme, CSS or JS). */
     function nivawpg_fast404_send()
     {
         if (!headers_sent()) {
@@ -160,7 +160,7 @@ if (!function_exists('nivawpg_fast404_send')) {
     }
 }
 
-// ۱) تشخیص زودهنگام آدرس‌های اسکنر: قبل از بارگذاری افزونه‌ها و قالب
+// 1) Early detection of scanner addresses: before plugins and theme are loaded
 if (PHP_SAPI !== 'cli' && !empty($_SERVER['REQUEST_URI'])) {
     $nivawpg_path = str_replace("\0", '', rawurldecode((string) parse_url((string) $_SERVER['REQUEST_URI'], PHP_URL_PATH)));
     $nivawpg_rel = ($nivawpg_f['base'] !== '' && strpos($nivawpg_path, $nivawpg_f['base'] . '/') === 0) ? substr($nivawpg_path, strlen($nivawpg_f['base'])) : $nivawpg_path;
@@ -169,7 +169,7 @@ if (PHP_SAPI !== 'cli' && !empty($_SERVER['REQUEST_URI'])) {
         $nivawpg_exists = is_file(ABSPATH . ltrim($nivawpg_rel, '/'));
         $nivawpg_allowed = (bool) preg_match('~^/(?:' . $nivawpg_core . ')$|^/(?:wp-admin|wp-includes|wp-content/plugins|wp-content/themes)/~i', $nivawpg_rel);
 
-        // فایلی که وجود ندارد = کاوش اسکنر؛ در حالت سخت‌گیرانه فایل‌های موجودِ بیرون از هسته/افزونه/قالب هم بسته می‌شوند
+        // A missing file is a scanner probe; in strict mode existing script files outside core/plugins/themes are closed too
         if (!$nivawpg_exists || ($nivawpg_f['strict'] && !$nivawpg_allowed)) {
             nivawpg_fast404_send();
         }
@@ -178,9 +178,9 @@ if (PHP_SAPI !== 'cli' && !empty($_SERVER['REQUEST_URI'])) {
     unset($nivawpg_path, $nivawpg_rel, $nivawpg_exists, $nivawpg_allowed);
 }
 
-// ۲) هر ۴۰۴ دیگر وردپرس هم قبل از رندر قالب با همان صفحه‌ی سبک جواب داده می‌شود.
-// عمداً «آخرین» اولویت: اول باید ریدایرکت اسلاگ قدیمی، حدس آدرس (redirect_guess_404_permalink)، ریدایرکت‌های سئو (Yoast/Rank Math/Redirection)،
-// سایت‌مپ و لینک‌های کوتاه فرصت داشته باشند؛ فقط اگر هیچ‌کدام جواب نداد، صفحه‌ی ۴۰۴ ایستا فرستاده می‌شود.
+// 2) Every other WordPress 404 is answered with the same light page before the theme renders.
+// Deliberately the last priority: old-slug redirects, URL guessing (redirect_guess_404_permalink), SEO redirects (Yoast/Rank Math/Redirection),
+// sitemaps and short links get their chance first; the static 404 is sent only if none of them answered.
 add_action('template_redirect', static function () {
     if (is_404() && !is_robots() && !is_favicon()) {
         nivawpg_fast404_send();
@@ -192,13 +192,13 @@ PHP;
         return $code . self::shortlink_php();
     }
 
-    /** بخشی از قانون‌های «۴۰۴ سریع»، نه یک قابلیت جدا: بدون آن ?p=ID برای محصول/برگه ۴۰۴ می‌شد و لینک‌های کوتاهِ به‌اشتراک‌گذاشته‌شده خراب می‌شدند */
+    /** Part of the fast-404 rules, not a separate feature: without it ?p=ID would 404 for products/pages and shared short links would break. */
     private static function shortlink_php(): string {
         return <<<'PHP'
 if (!defined('NIVAWPG_SHORTLINK')) {
     define('NIVAWPG_SHORTLINK', 1);
 
-    // ?p=ID برای همه‌ی انواع نوشته (محصول، برگه و ...) کار کند، نه فقط «نوشته»
+    // ?p=ID must work for every post type (product, page …), not only posts
     add_filter('request', static function ($vars) {
         if (isset($vars['p']) && !isset($vars['post_type'])) {
             $vars['post_type'] = 'any';
@@ -211,7 +211,7 @@ if (!defined('NIVAWPG_SHORTLINK')) {
 PHP;
     }
 
-    /** فایل mu را (بر اساس تنظیمات) می‌سازد، به‌روز می‌کند یا پاک می‌کند. */
+    /** Creates, updates or removes the mu-plugin file according to the settings. */
     public static function sync_mu(string $k, array $s): string {
         $path = self::mu_path($k);
         $has = is_file($path);
@@ -243,7 +243,7 @@ PHP;
         return NIVAWPG_Fs::put($path, $code) ? 'ok' : 'unwritable';
     }
 
-    /* ───────────── صفحه‌ی 404.html ───────────── */
+    /* ───────────── 404.html page ───────────── */
 
     public static function html404(): string {
         $fa = strpos(get_locale(), 'fa') === 0;
@@ -300,7 +300,7 @@ CSS;
         $home_e = esc_attr($home);
 
         return '<!DOCTYPE html>' . "\n"
-            . '<!-- ' . self::MARK . ' v1 — generated by NIVA WP Guard; delete this comment to keep your own edits -->' . "\n"
+            . '<!-- ' . self::MARK . ' v1 — generated by NIVA Guard; delete this comment to keep your own edits -->' . "\n"
             . '<html lang="' . $t['lang'] . '" dir="' . $t['dir'] . '">' . "\n<head>\n"
             . '<meta charset="utf-8">' . "\n"
             . '<meta name="viewport" content="width=device-width, initial-scale=1">' . "\n"
@@ -320,7 +320,7 @@ CSS;
             . "</body>\n</html>\n";
     }
 
-    /** 404.html: فقط اگر نبود یا فایل خودِ افزونه بود (علامت دارد) نوشته می‌شود؛ فایل سفارشی کاربر دست‌نخورده می‌ماند. */
+    /** 404.html is written only when it is missing or is this plugin's own file (it carries a marker); a custom file stays untouched. */
     public static function sync_html(bool $force = false): string {
         $path = self::html_path();
         $has = is_file($path);
@@ -347,7 +347,7 @@ CSS;
     public static function htaccess_block(array $s): string {
         $base = self::base_path();
         $b = preg_quote($base, '#');
-        $l = [self::BEGIN, '# Fast 404 for scanner probes. Generated automatically; change it from Settings → NIVA WP Guard → Server.', 'ErrorDocument 404 ' . $base . '/404.html', '', '<IfModule mod_rewrite.c>', 'RewriteEngine On', ''];
+        $l = [self::BEGIN, '# Fast 404 for scanner probes. Generated automatically; change it from Settings → NIVA Guard → Server.', 'ErrorDocument 404 ' . $base . '/404.html', '', '<IfModule mod_rewrite.c>', 'RewriteEngine On', ''];
         $l[] = 'RewriteCond %{REQUEST_URI} \.(' . self::EXT_SENS . ')$ [NC]';
         $l[] = 'RewriteRule ^ - [R=404,L]';
         $l[] = '';
@@ -367,9 +367,9 @@ CSS;
         return implode("\n", $l);
     }
 
-    /** برای Nginx (که .htaccess ندارد): فایل‌های PHP جعلی را mu-plugin می‌گیرد */
+    /** For Nginx (no .htaccess): fake PHP probe files are handled by the mu-plugin. */
     public static function nginx_snippet(): string {
-        return "# NIVA WP Guard — Fast 404 (Nginx)\n# PHP probe files are handled by the mu-plugin; this covers the other probe types.\nerror_page 404 /404.html;\nlocation = /404.html { internal; }\nlocation ~* \\.(phar|cgi|pl|asp|aspx|jsp|env|bak|old|sql|log|ini|conf|swp)$ { return 404; }\nlocation ~ /\\.(git|svn|hg|env|aws|ssh|DS_Store) { return 404; }\n";
+        return "# NIVA Guard — Fast 404 (Nginx)\n# PHP probe files are handled by the mu-plugin; this covers the other probe types.\nerror_page 404 /404.html;\nlocation = /404.html { internal; }\nlocation ~* \\.(phar|cgi|pl|asp|aspx|jsp|env|bak|old|sql|log|ini|conf|swp)$ { return 404; }\nlocation ~ /\\.(git|svn|hg|env|aws|ssh|DS_Store) { return 404; }\n";
     }
 
     private static function with_block(string $cur, string $block): string {
@@ -391,7 +391,7 @@ CSS;
 
     private static function without_block(string $cur): string {
         $cur = str_replace("\r\n", "\n", $cur);
-        // بلوک و یک خط خالیِ بعدش (همان که هنگام نصب اضافه شد) حذف می‌شود تا فایل دقیقاً به حالت قبل برگردد
+        // The block and the blank line after it (added on install) are removed so the file returns exactly to its previous state
         $re = '/' . preg_quote(self::BEGIN, '/') . '.*?' . preg_quote(self::END, '/') . '\n\n?/s';
 
         return (string) preg_replace($re, '', $cur, 1);
@@ -458,7 +458,7 @@ CSS;
             return ['ok' => false, 'code' => 'write'];
         }
 
-        // بررسی سلامت: اگر سایت بعد از تغییر خطای سروری داد، فایل قبلی برمی‌گردد (خطای شبکه = نتیجه‌ی نامعلوم، برنمی‌گردد)
+        // Health check: if the site answers with a server error after the change the previous file is restored (a network error is inconclusive and does not roll back)
         $r = wp_remote_get(home_url('/'), ['timeout' => 8, 'redirection' => 0, 'sslverify' => false, 'headers' => ['Cache-Control' => 'no-cache']]);
 
         if (!is_wp_error($r) && (int) wp_remote_retrieve_response_code($r) >= 500) {
@@ -492,12 +492,12 @@ CSS;
         return NIVAWPG_Fs::put($path, self::without_block($cur));
     }
 
-    /* ───────────── کرون وردپرس (wp-config.php) ───────────── */
+    /* ───────────── WordPress cron (wp-config.php) ───────────── */
 
-    /** فاصله‌ی اجرا به دقیقه (۶۰ به بالا = ساعتی) */
+    /** Interval in minutes (60 and up = hours). */
     public const CRON_EVERY = [1, 5, 10, 15, 30, 60, 120, 180, 240, 300, 360];
 
-    /** عبارت زمان‌بندی cron برای فاصله‌ی داده‌شده (دقیقه) */
+    /** Cron schedule expression for the given interval (minutes). */
     public static function cron_schedule(int $minutes): string {
         if ($minutes >= 60) {
             $h = (int) ($minutes / 60);
@@ -515,7 +515,7 @@ CSS;
         $path = ABSPATH . 'wp-config.php';
         $up = dirname(untrailingslashit(ABSPATH));
 
-        // وردپرس اجازه می‌دهد wp-config.php یک پوشه بالاتر باشد
+        // WordPress allows wp-config.php one folder above the root
         if (!is_file($path) && is_file($up . '/wp-config.php') && !is_file($up . '/wp-settings.php')) {
             $path = $up . '/wp-config.php';
         }
@@ -523,7 +523,7 @@ CSS;
         return $path;
     }
 
-    /** بدون بلوک خودِ افزونه، آیا کاربر DISABLE_WP_CRON را جای دیگری تعریف کرده؟ */
+    /** Apart from this plugin's own block, did the user define DISABLE_WP_CRON elsewhere? */
     private static function cfg_external(string $c): bool {
         return (bool) preg_match('/^(?!\s*(?:\/\/|#|\*|\/\*)).*define\s*\(\s*[\'"]DISABLE_WP_CRON[\'"]/mi', self::cfg_strip($c));
     }
@@ -546,8 +546,8 @@ CSS;
     }
 
     /**
-     * DISABLE_WP_CRON را در wp-config.php می‌گذارد یا برمی‌دارد. نسخه‌ی پشتیبان ساخته نمی‌شود
-     * (فایل پشتیبانِ wp-config از بیرون قابل دانلود است)؛ به‌جایش اگر سایت بعد از تغییر خطای سروری بدهد فایل قبلی برمی‌گردد.
+     * Adds or removes DISABLE_WP_CRON in wp-config.php. No backup copy is created
+     * (a wp-config backup could be downloaded from outside); instead the previous file is restored if the site returns a server error afterwards.
      *
      * @return string off | ok | removed | unchanged | custom | unwritable | write | rolled_back | nomarker
      */
@@ -599,7 +599,7 @@ CSS;
         return $want ? 'ok' : 'removed';
     }
 
-    /** وضعیت برای نمایش: ok | custom | missing | unwritable | stale | off */
+    /** State for display: ok | custom | missing | unwritable | stale | off */
     public static function cron_status(array $s): string {
         $path = self::config_path();
         $c = is_file($path) ? NIVAWPG_Fs::get($path) : '';
@@ -618,7 +618,7 @@ CSS;
     }
 
     /**
-     * دستور کرون سرور (cPanel / DirectAdmin) متناسب با نسخه‌ی PHP همین سایت.
+     * Server cron commands (cPanel / DirectAdmin …) matched to this site's PHP version.
      *
      * @return array{every:int,schedule:string,command:string,alt:string,php:string,bin:string}
      */
@@ -660,8 +660,8 @@ CSS;
     public const CRON_LAST = 'nivawpg_cron_last';
 
     /**
-     * ثبت آخرین اجرای کرون: فقط وقتی همین درخواست یک اجرای کرون باشد (wp-cron.php) فعال می‌شود.
-     * اجرای موفق = بدون خطای مرگبار تا پایان درخواست؛ اجرای ناموفق جدا با پیام خطا ثبت می‌شود.
+     * Records the last cron run: active only when this request is a cron run (wp-cron.php).
+     * A successful run ends without a fatal error; a failed run is recorded separately with its error message.
      */
     public static function boot_cron_watch(): void {
         if (!defined('DOING_CRON') || !DOING_CRON) {
@@ -705,7 +705,7 @@ CSS;
         ];
     }
 
-    /** دقیقه‌ی تأخیرِ قدیمی‌ترین کار زمان‌بندی‌شده؛ ۰ یعنی مشکلی نیست */
+    /** Minutes the oldest scheduled task is overdue; 0 means no problem. */
     public static function cron_overdue(int $every): int {
         $jobs = function_exists('_get_cron_array') ? _get_cron_array() : [];
 
@@ -718,10 +718,10 @@ CSS;
         return $late > max(900, $every * 180) ? (int) floor($late / 60) : 0;
     }
 
-    /* ───────────── اعمال و نگهداری ───────────── */
+    /* ───────────── Apply and maintain ───────────── */
 
     /**
-     * بعد از ذخیره‌ی تنظیمات (و هنگام فعال‌سازی/ترمیم): فایل‌های mu، 404.html و (در صورت درخواست) .htaccess هم‌سو می‌شوند.
+     * After the settings are saved (and on repair): the mu files, 404.html and, when requested, .htaccess are brought in line.
      *
      * @return array{mu:array<string,string>,html:string,htaccess:array{ok:bool,code:string}}
      */
@@ -752,12 +752,14 @@ CSS;
         return $out;
     }
 
-    /** فایل mu ماژول لینک کوتاه که در نسخه‌های قبلی ساخته می‌شد */
+    /** Removes mu-plugin files created by earlier versions. */
     private static function drop_legacy_mu(): void {
-        $path = self::mu_dir() . '/' . self::LEGACY_MU;
+        foreach (self::LEGACY_MU as $name) {
+            $path = self::mu_dir() . '/' . $name;
 
-        if (is_file($path)) {
-            wp_delete_file($path);
+            if (is_file($path)) {
+                wp_delete_file($path);
+            }
         }
     }
 
@@ -769,7 +771,7 @@ CSS;
         }
     }
 
-    /** غیرفعال‌سازی افزونه: همه‌چیز پاک می‌شود */
+    /** On deactivation everything the plugin created outside its folder is removed. */
     public static function remove_all(): void {
         self::drop_legacy_mu();
 
@@ -784,12 +786,12 @@ CSS;
         self::sync_cron(['cron_off' => 0]);
     }
 
-    /** ترمیم بی‌صدا (هر ۱۲ ساعت در ادمین): فایل‌های گم‌شده را می‌سازد؛ .htaccess فقط اگر بلوک نبود */
+    /** Silent repair (every 12 hours in the admin): recreates missing files; .htaccess only when the block is missing. */
     public static function heal(): void {
         $s = NIVAWPG_Settings::get();
 
         if (empty($s['files_ok'])) {
-            return; // کاربر هنوز تنظیمات را ذخیره نکرده؛ فایلی ساخته نمی‌شود
+            return; // The user has not saved the settings yet; no file is created
         }
 
         self::apply($s, false);
@@ -799,7 +801,7 @@ CSS;
         }
     }
 
-    /** برای نمایش در تب: وضعیت هر بخش */
+    /** State of each part for the tab. */
     public static function status(array $s): array {
         $mu = [];
 

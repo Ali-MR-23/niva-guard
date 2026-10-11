@@ -1,4 +1,4 @@
-# NIVA WP Guard
+# NIVA Guard
 
 **See and control every outgoing connection of your WordPress plugins and themes.**
 Log each connection with its timing, block ads and promotional notices, cache license checks instead of cutting them off, skip unreachable hosts automatically, turn WP-Cron into a real server cron, and answer scanner probes with a fast static 404.
@@ -13,7 +13,7 @@ Requires WordPress 6.0+ · PHP 7.4+ · License GPLv2 or later · Admin UI in 9 l
 
 Many plugins and themes call home on every page load or in the dashboard: advertising feeds, news widgets, license checks, update checks, usage tracking. On a slow or filtered network (some hosting regions cannot reach many foreign servers at all) each of those calls can wait 5 to 15 seconds and slow down the whole site.
 
-NIVA WP Guard shows **which plugin connects to which address and how much time it costs**, then lets you decide for each connection: leave it, block it, or (for licenses) cache the answer.
+NIVA Guard shows **which plugin connects to which address and how much time it costs**, then lets you decide for each connection: leave it, block it, or (for licenses) cache the answer.
 
 ## Screenshots
 
@@ -39,21 +39,21 @@ NIVA WP Guard shows **which plugin connects to which address and how much time i
 - Nothing else. The plugin has no dependencies and makes **no external connections of its own**.
 
 ### Option 1: upload the zip from the dashboard (recommended)
-1. Open the [latest release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) and download **`niva-wp-guard-2.5.1.zip`** (the file under *Assets*, not "Source code").
+1. Open the [latest release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) and download **`niva-guard-2.6.0.zip`** (the file under *Assets*, not "Source code").
 2. In WordPress go to **Plugins → Add New → Upload Plugin**, choose the zip and click **Install Now**.
 3. Click **Activate Plugin**.
-4. Open **Settings → NIVA WP Guard**.
+4. Open **Settings → NIVA Guard**.
 
 ### Option 2: cPanel / FTP
-1. Unzip `niva-wp-guard-2.5.1.zip` on your computer. You get one folder named `niva-wp-guard`.
+1. Unzip `niva-guard-2.6.0.zip` on your computer. You get one folder named `niva-guard`.
 2. Upload that folder to `wp-content/plugins/` (File Manager or FTP).
 3. Activate the plugin in **Plugins**.
 
 ### Option 3: Git or WP-CLI
 ```bash
 cd wp-content/plugins
-git clone https://github.com/Ali-MR-23/niva-wp-guard.git
-wp plugin activate niva-wp-guard
+git clone https://github.com/Ali-MR-23/niva-wp-guard.git niva-guard
+wp plugin activate niva-guard
 ```
 
 ### First-time setup (about 3 minutes)
@@ -67,13 +67,13 @@ wp plugin activate niva-wp-guard
 Upload the new zip the same way (**Add New → Upload Plugin**) and WordPress offers to replace the current version. Settings are kept.
 
 ### Coming from "NIVA HTTP Guard"
-Deactivate the old plugin first, then activate NIVA WP Guard. Your settings, log, report data and menu choices are migrated automatically.
+Deactivate the old plugin first, then activate NIVA Guard. Your settings, log, report data and menu choices are migrated automatically.
 
 ### Uninstalling
 Deactivate the plugin to remove every file it created outside its own folder (mu-plugin files, `404.html`, the `.htaccess` block and the `DISABLE_WP_CRON` line). Deleting the plugin also removes its options and log folder.
 
 ### Troubleshooting installation
-- **"Plugin file does not exist" / "package could not be installed"**: you uploaded the wrong zip. Use the zip from the release *Assets*, or make sure the zip contains one top-level `niva-wp-guard` folder.
+- **"Plugin file does not exist" / "package could not be installed"**: you uploaded the wrong zip. Use the zip from the release *Assets*, or make sure the zip contains one top-level `niva-guard` folder.
 - **Cannot write files**: if WordPress cannot write to `mu-plugins`, `.htaccess` or `wp-config.php`, the settings page shows download buttons and copy-paste instructions instead.
 - **Site shows an error after enabling a server tool**: the plugin restores `.htaccess` (with backup) and `wp-config.php` automatically when the site answers with a 5xx error. You can also remove the files listed above by hand.
 
@@ -81,7 +81,7 @@ Deactivate the plugin to remove every file it created outside its own folder (mu
 
 ## Features in detail
 
-The settings page is **Settings → NIVA WP Guard** and is organised in tabs.
+The settings page is **Settings → NIVA Guard** and is organised in tabs.
 
 ### 1. Overview
 - **Plugin enabled**: master switch. Off means no connection is touched.
@@ -160,9 +160,9 @@ English, Persian, Arabic, Turkish, Russian, German, French, Spanish and Chinese 
 
 | File | Created by | Removed when |
 |---|---|---|
-| `wp-content/mu-plugins/niva-wp-guard-loader.php` | Load before other plugins | option off, deactivate |
-| `wp-content/mu-plugins/niva-wp-guard-heartbeat.php` | Heartbeat control | option off, deactivate |
-| `wp-content/mu-plugins/niva-wp-guard-fast-404.php` | Fast 404 | option off, deactivate |
+| `wp-content/mu-plugins/niva-guard-loader.php` | Load before other plugins | option off, deactivate |
+| `wp-content/mu-plugins/niva-guard-heartbeat.php` | Heartbeat control | option off, deactivate |
+| `wp-content/mu-plugins/niva-guard-fast-404.php` | Fast 404 | option off, deactivate |
 | `404.html` and a block in `.htaccess` | Fast 404 | option off, deactivate |
 | one line in `wp-config.php` | Disable WP-Cron | option off, deactivate |
 | `wp-content/uploads/niva-wp-guard/` | Logging | uninstall |
@@ -193,7 +193,7 @@ Licensed under the GPL, version 2 or later.
 
 ## فارسی
 
-**NIVA WP Guard** همه‌ی اتصال‌های بیرونی افزونه‌ها و قالب‌های وردپرس را نشان می‌دهد و کنترل می‌کند: ثبت هر اتصال با زمان آن، بستن تبلیغ و اعلان، کش کردن بررسی لایسنس به‌جای قطع کردنش، رد شدن خودکار از سرورهای در دسترس‌نبودنی، تبدیل WP-Cron به کرون واقعی سرور و پاسخ سریع ۴۰۴ به اسکنرها.
+**NIVA Guard** همه‌ی اتصال‌های بیرونی افزونه‌ها و قالب‌های وردپرس را نشان می‌دهد و کنترل می‌کند: ثبت هر اتصال با زمان آن، بستن تبلیغ و اعلان، کش کردن بررسی لایسنس به‌جای قطع کردنش، رد شدن خودکار از سرورهای در دسترس‌نبودنی، تبدیل WP-Cron به کرون واقعی سرور و پاسخ سریع ۴۰۴ به اسکنرها.
 
 ### چرا ساخته شد
 خیلی از افزونه‌ها و قالب‌ها در هر بارگذاری صفحه یا در پیشخوان به سرور سازنده وصل می‌شوند: فید تبلیغ، خبر، بررسی لایسنس و نسخه، آمار استفاده. روی سرورهایی که دسترسی‌شان به سرویس‌های خارجی ضعیف یا فیلتر است، هر اتصال ۵ تا ۱۵ ثانیه معطل می‌ماند و کل سایت کند می‌شود. این افزونه نشان می‌دهد **کدام افزونه به کجا وصل می‌شود و چقدر زمان می‌برد**، و برای هر اتصال تصمیم با شماست: بگذارید باشد، ببندید، یا (برای لایسنس) پاسخش را کش کنید.
@@ -202,17 +202,17 @@ Licensed under the GPL, version 2 or later.
 **الزامات:** وردپرس ۶٫۰ یا بالاتر، PHP نسخه‌ی ۷٫۴ یا بالاتر، حساب مدیر. افزونه هیچ وابستگی ندارد و خودش هرگز به سرویس بیرونی وصل نمی‌شود.
 
 **روش ۱ (پیشنهادی): آپلود از پیشخوان**
-۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) فایل **`niva-wp-guard-2.5.1.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
+۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) فایل **`niva-guard-2.6.0.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
 ۲. در وردپرس: **افزونه‌ها ← افزودن ← بارگذاری افزونه**، فایل را انتخاب و **همین حالا نصب کن** را بزنید.
-۳. **فعال‌سازی افزونه** را بزنید و به **تنظیمات ← NIVA WP Guard** بروید.
+۳. **فعال‌سازی افزونه** را بزنید و به **تنظیمات ← NIVA Guard** بروید.
 
-**روش ۲: cPanel یا FTP:** zip را روی کامپیوتر باز کنید (یک پوشه‌ی `niva-wp-guard` می‌گیرید)، پوشه را در `wp-content/plugins/` آپلود و در بخش افزونه‌ها فعالش کنید.
+**روش ۲: cPanel یا FTP:** zip را روی کامپیوتر باز کنید (یک پوشه‌ی `niva-guard` می‌گیرید)، پوشه را در `wp-content/plugins/` آپلود و در بخش افزونه‌ها فعالش کنید.
 
 **روش ۳: Git یا WP-CLI**
 ```bash
 cd wp-content/plugins
-git clone https://github.com/Ali-MR-23/niva-wp-guard.git
-wp plugin activate niva-wp-guard
+git clone https://github.com/Ali-MR-23/niva-wp-guard.git niva-guard
+wp plugin activate niva-guard
 ```
 
 **تنظیم اولیه (حدود ۳ دقیقه)**

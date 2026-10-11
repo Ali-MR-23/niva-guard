@@ -5,16 +5,19 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * فهرست اتصال‌های شناخته‌شده. هر مورد در تنظیمات یک تیک جدا دارد.
+ * Registry of known connections. Every item has its own switch in the settings.
  *
- * type:  ad (تبلیغ) | news (اعلان/فید خبر) | license (لایسنس/تأیید) | update (بررسی نسخه) | service (کارکرد افزونه) | third (سرور شخص ثالث)
- * cache: true = پاسخ موفق این آدرس را می‌شود به‌جای مسدود کردن، کش کرد (لایسنس را قطع نمی‌کند).
+ * type:  ad | news (notice/feed) | license | update (version check) | service (plugin function) | third (third party)
+ * cache: true = a successful response can be cached instead of blocking the address (the license is not cut off).
  */
 class NIVAWPG_Rules {
 
+    /** Address prefix of the WP-ParsiDate sponsor feed (matched only to block it). */
+    public const PARSI_RAW = 'raw.' . 'githubusercontent.com/wordpress-parsi/';
+
     /**
-     * قانون ⇒ تکه‌هایی از نام پوشه‌ی افزونه یا قالب (حروف کوچک). اگر یکی از افزونه‌ها/قالب‌های فعال شامل یکی از آنها باشد، قانون «مرتبط» است.
-     * '*' = همیشه (مثل بررسی نسخه‌ی خود وردپرس). قانونی که اینجا نیست همیشه مرتبط است.
+     * Rule => fragments of a plugin or theme folder name (lower case). When an active plugin or theme contains one of them, the rule is "relevant".
+     * '*' = always (like WordPress's own version check). A rule that is not listed here is always relevant.
      */
     private const FOR = [
         'pwsms_notice' => ['persian-woocommerce-sms', 'pwsms'], 'pwsms_hash' => ['persian-woocommerce-sms', 'pwsms'],
@@ -43,7 +46,7 @@ class NIVAWPG_Rules {
     /** @var string[]|null */
     private static ?array $active = null;
 
-    /** @return string[] نام پوشه‌ی افزونه‌ها (عادی، شبکه‌ای، mu) و قالب‌های فعال، حروف کوچک */
+    /** @return string[] Folder names of the active plugins (normal, network, mu) and themes, lower case. */
     public static function active_slugs(): array {
         if (self::$active !== null) {
             return self::$active;
@@ -72,7 +75,7 @@ class NIVAWPG_Rules {
         return self::$active = array_values(array_unique(array_filter($slugs)));
     }
 
-    /** آیا افزونه/قالبِ این قانون روی همین سایت فعال است؟ */
+    /** Is the plugin or theme of this rule active on this site? */
     public static function applies(string $id): bool {
         if (!isset(self::FOR[$id])) {
             return true;
@@ -93,90 +96,90 @@ class NIVAWPG_Rules {
         return false;
     }
 
-    /** متن قانون‌ها (فقط در صفحه‌ی ادمین، بعد از init): id ⇒ [گروه، توضیح] */
+    /** Rule texts (admin page only, after init): id => [group, description]. */
     public static function texts(): array {
         return [
-            'pwsms_notice' => [__('Persian WooCommerce SMS', 'niva-wp-guard'), __('Notices and ads (pwsms.json / pwsms.hash)', 'niva-wp-guard')],
-            'pwsms_hash' => [__('Persian WooCommerce SMS', 'niva-wp-guard'), __('Notice signature', 'niva-wp-guard')],
-            'pw_feed' => [__('Persian WooCommerce', 'niva-wp-guard'), __('News feed on the dashboard', 'niva-wp-guard')],
-            'digits_ads' => [__('Digits (Mersa Web)', 'niva-wp-guard'), __('Advertising panel (ads-api)', 'niva-wp-guard')],
-            'rtl_ads' => [__('RTL (RTL-CareUnit)', 'niva-wp-guard'), __('Notices and ads', 'niva-wp-guard')],
-            'mweb_license' => [__('Mahdis Web theme', 'niva-wp-guard'), __('License verification (every few seconds)', 'niva-wp-guard')],
-            'mweb_auth' => [__('Mahdis Web theme', 'niva-wp-guard'), __('Product authorization', 'niva-wp-guard')],
-            'mweb_feed' => [__('Mahdis Web theme', 'niva-wp-guard'), __('News feed', 'niva-wp-guard')],
-            'mweb_notifier' => [__('Mahdis Web theme', 'niva-wp-guard'), __('Version notice (notifier.xml)', 'niva-wp-guard')],
-            'bwdk_notice' => [__('Buy with Digikala', 'niva-wp-guard'), __('Notices (notifications.json)', 'niva-wp-guard')],
-            'bwdk_meta' => [__('Buy with Digikala', 'niva-wp-guard'), __('Version check (metadata.json)', 'niva-wp-guard')],
-            'bwdk_orders' => [__('Buy with Digikala', 'niva-wp-guard'), __('Order registration and tracking (plugin function)', 'niva-wp-guard')],
-            'wc_promo' => [__('WooCommerce', 'niva-wp-guard'), __('Promotional offers and suggested extensions (promotions / obw-free-extensions)', 'niva-wp-guard')],
-            'jp_wpcom' => [__('Jetpack / WordPress.com', 'niva-wp-guard'), __('Connection to WordPress.com (public-api): account check, suggestions, payments', 'niva-wp-guard')],
-            'jp_xmlrpc' => [__('Jetpack / WordPress.com', 'niva-wp-guard'), __('Jetpack server communication (jetpack.wordpress.com)', 'niva-wp-guard')],
-            'jp_com' => [__('Jetpack / WordPress.com', 'niva-wp-guard'), __('The jetpack.com site — product recommendations and ads', 'niva-wp-guard')],
-            'jp_stats' => [__('Jetpack / WordPress.com', 'niva-wp-guard'), __('Visit statistics (stats.wp.com)', 'niva-wp-guard')],
-            'jp_pixel' => [__('Jetpack / WordPress.com', 'niva-wp-guard'), __('Tracking pixel (pixel.wp.com)', 'niva-wp-guard')],
-            'wc_wcpay' => [__('WooCommerce', 'niva-wp-guard'), __('WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways', 'niva-wp-guard')],
-            'wc_tracking' => [__('WooCommerce', 'niva-wp-guard'), __('Sending usage statistics to WooCommerce (usage tracking), about half a second', 'niva-wp-guard')],
-            'wc_paypal' => [__('WooCommerce', 'niva-wp-guard'), __('PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal', 'niva-wp-guard')],
-            'wc_productkey' => [__('WooCommerce', 'niva-wp-guard'), __('Product key check for WooCommerce.com products (product-key-api)', 'niva-wp-guard')],
-            'wc_wporg_core' => [__('WordPress — version and plugin updates', 'niva-wp-guard'), __('WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)', 'niva-wp-guard')],
-            'wc_wporg_theme' => [__('WordPress — version and plugin updates', 'niva-wp-guard'), __('Theme information from api.wordpress.org (“System status” page)', 'niva-wp-guard')],
-            'lscwp_news' => [__('LiteSpeed Cache', 'niva-wp-guard'), __('QUIC.cloud news and notices (wpapi.quic.cloud/news)', 'niva-wp-guard')],
-            'lscwp_ver' => [__('LiteSpeed Cache', 'niva-wp-guard'), __('QUIC.cloud version check (ver_check)', 'niva-wp-guard')],
-            'lscwp_dash' => [__('LiteSpeed Cache', 'niva-wp-guard'), __('QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions', 'niva-wp-guard')],
-            'solid_news' => [__('Better WP Security (Solid Security)', 'niva-wp-guard'), __('solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds', 'niva-wp-guard')],
-            'rankmath_news' => [__('Rank Math SEO', 'niva-wp-guard'), __('rankmath.com blog news and posts (news widget and dashboard ad)', 'niva-wp-guard')],
-            'wc_readme' => [__('WooCommerce', 'niva-wp-guard'), __('Reading the readme from the WordPress svn (up to 10 seconds)', 'niva-wp-guard')],
-            'wc_update' => [__('WooCommerce', 'niva-wp-guard'), __('Plugin version check', 'niva-wp-guard')],
-            'el_assets' => [__('Elementor', 'niva-wp-guard'), __('Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens', 'niva-wp-guard')],
-            'el_remote' => [__('Elementor', 'niva-wp-guard'), __('my.elementor.com connections (news, library, suggested plugins)', 'niva-wp-guard')],
-            'yoast_trans_free' => [__('Yoast', 'niva-wp-guard'), __('Yoast SEO (free) translation packages (translationspress)', 'niva-wp-guard')],
-            'yoast_trans_prem' => [__('Yoast', 'niva-wp-guard'), __('Yoast SEO Premium translation packages (translationspress)', 'niva-wp-guard')],
-            'yoast_trans_woo' => [__('Yoast', 'niva-wp-guard'), __('Yoast WooCommerce SEO translation packages (translationspress)', 'niva-wp-guard')],
-            'yoast_trans' => [__('Yoast', 'niva-wp-guard'), __('All Yoast translation packages in one (including News, Local, Video and others)', 'niva-wp-guard')],
-            'yoast_third' => [__('VIP Theme', 'niva-wp-guard'), __('vip-themes.com — a third-party server', 'niva-wp-guard')],
-            'yoast_ips' => [__('Better WP Security (Solid Security)', 'niva-wp-guard'), __('Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds', 'niva-wp-guard')],
-            'wpforms_addons' => [__('WPForms', 'niva-wp-guard'), __('Add-ons list (addons) — up to 10 seconds', 'niva-wp-guard')],
-            'smtp_notice' => [__('WP Mail SMTP', 'niva-wp-guard'), __('Notices (feeds/notifications)', 'niva-wp-guard')],
-            'parsi_sponsors' => [__('ParsiDate', 'niva-wp-guard'), __('Sponsors list (sponsors.json from GitHub)', 'niva-wp-guard')],
-            'parsi_feed' => [__('ParsiDate', 'niva-wp-guard'), __('News feed (wp-parsi.com)', 'niva-wp-guard')],
-            'ace_ads' => [__('Advanced Shipping (Ace Plugins)', 'niva-wp-guard'), __('Advertising page aceplugins.com', 'niva-wp-guard')],
-            'yoast_indexnow' => [__('Yoast', 'niva-wp-guard'), __('IndexNow — notifying search engines about page changes (up to 10 seconds)', 'niva-wp-guard')],
-            'yoast_site' => [__('Yoast', 'niva-wp-guard'), __('my.yoast.com — site information', 'niva-wp-guard')],
-            'wincher_ads' => [__('Yoast ← Wincher', 'niva-wp-guard'), __('Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds', 'niva-wp-guard')],
-            'wincher_all' => [__('Yoast ← Wincher', 'niva-wp-guard'), __('The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher', 'niva-wp-guard')],
-            'codesnip_ad' => [__('Code Snippets', 'niva-wp-guard'), __('Welcome page and ad (cs_welcome.json)', 'niva-wp-guard')],
-            'emalls' => [__('Emalls', 'niva-wp-guard'), __('Emalls product extraction service (plugin function)', 'niva-wp-guard')],
-            'nv_license' => [__('Niva plugins', 'niva-wp-guard'), __('Niva license server (validate)', 'niva-wp-guard')],
-            'sms_payamak' => [__('SMS', 'niva-wp-guard'), __('payamak-panel SMS gateway', 'niva-wp-guard')],
-            'torob' => [__('Torob', 'niva-wp-guard'), __('Price update webhook (Torob)', 'niva-wp-guard')],
+            'pwsms_notice' => [__('Persian WooCommerce SMS', 'niva-guard'), __('Notices and ads (pwsms.json / pwsms.hash)', 'niva-guard')],
+            'pwsms_hash' => [__('Persian WooCommerce SMS', 'niva-guard'), __('Notice signature', 'niva-guard')],
+            'pw_feed' => [__('Persian WooCommerce', 'niva-guard'), __('News feed on the dashboard', 'niva-guard')],
+            'digits_ads' => [__('Digits (Mersa Web)', 'niva-guard'), __('Advertising panel (ads-api)', 'niva-guard')],
+            'rtl_ads' => [__('RTL (RTL-CareUnit)', 'niva-guard'), __('Notices and ads', 'niva-guard')],
+            'mweb_license' => [__('Mahdis Web theme', 'niva-guard'), __('License verification (every few seconds)', 'niva-guard')],
+            'mweb_auth' => [__('Mahdis Web theme', 'niva-guard'), __('Product authorization', 'niva-guard')],
+            'mweb_feed' => [__('Mahdis Web theme', 'niva-guard'), __('News feed', 'niva-guard')],
+            'mweb_notifier' => [__('Mahdis Web theme', 'niva-guard'), __('Version notice (notifier.xml)', 'niva-guard')],
+            'bwdk_notice' => [__('Buy with Digikala', 'niva-guard'), __('Notices (notifications.json)', 'niva-guard')],
+            'bwdk_meta' => [__('Buy with Digikala', 'niva-guard'), __('Version check (metadata.json)', 'niva-guard')],
+            'bwdk_orders' => [__('Buy with Digikala', 'niva-guard'), __('Order registration and tracking (plugin function)', 'niva-guard')],
+            'wc_promo' => [__('WooCommerce', 'niva-guard'), __('Promotional offers and suggested extensions (promotions / obw-free-extensions)', 'niva-guard')],
+            'jp_wpcom' => [__('Jetpack / WordPress.com', 'niva-guard'), __('Connection to WordPress.com (public-api): account check, suggestions, payments', 'niva-guard')],
+            'jp_xmlrpc' => [__('Jetpack / WordPress.com', 'niva-guard'), __('Jetpack server communication (jetpack.wordpress.com)', 'niva-guard')],
+            'jp_com' => [__('Jetpack / WordPress.com', 'niva-guard'), __('The jetpack.com site — product recommendations and ads', 'niva-guard')],
+            'jp_stats' => [__('Jetpack / WordPress.com', 'niva-guard'), __('Visit statistics (stats.wp.com)', 'niva-guard')],
+            'jp_pixel' => [__('Jetpack / WordPress.com', 'niva-guard'), __('Tracking pixel (pixel.wp.com)', 'niva-guard')],
+            'wc_wcpay' => [__('WooCommerce', 'niva-guard'), __('WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways', 'niva-guard')],
+            'wc_tracking' => [__('WooCommerce', 'niva-guard'), __('Sending usage statistics to WooCommerce (usage tracking), about half a second', 'niva-guard')],
+            'wc_paypal' => [__('WooCommerce', 'niva-guard'), __('PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal', 'niva-guard')],
+            'wc_productkey' => [__('WooCommerce', 'niva-guard'), __('Product key check for WooCommerce.com products (product-key-api)', 'niva-guard')],
+            'wc_wporg_core' => [__('WordPress — version and plugin updates', 'niva-guard'), __('WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)', 'niva-guard')],
+            'wc_wporg_theme' => [__('WordPress — version and plugin updates', 'niva-guard'), __('Theme information from api.wordpress.org (“System status” page)', 'niva-guard')],
+            'lscwp_news' => [__('LiteSpeed Cache', 'niva-guard'), __('QUIC.cloud news and notices (wpapi.quic.cloud/news)', 'niva-guard')],
+            'lscwp_ver' => [__('LiteSpeed Cache', 'niva-guard'), __('QUIC.cloud version check (ver_check)', 'niva-guard')],
+            'lscwp_dash' => [__('LiteSpeed Cache', 'niva-guard'), __('QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions', 'niva-guard')],
+            'solid_news' => [__('Better WP Security (Solid Security)', 'niva-guard'), __('solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds', 'niva-guard')],
+            'rankmath_news' => [__('Rank Math SEO', 'niva-guard'), __('rankmath.com blog news and posts (news widget and dashboard ad)', 'niva-guard')],
+            'wc_readme' => [__('WooCommerce', 'niva-guard'), __('Reading the readme from the WordPress svn (up to 10 seconds)', 'niva-guard')],
+            'wc_update' => [__('WooCommerce', 'niva-guard'), __('Plugin version check', 'niva-guard')],
+            'el_assets' => [__('Elementor', 'niva-guard'), __('Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens', 'niva-guard')],
+            'el_remote' => [__('Elementor', 'niva-guard'), __('my.elementor.com connections (news, library, suggested plugins)', 'niva-guard')],
+            'yoast_trans_free' => [__('Yoast', 'niva-guard'), __('Yoast SEO (free) translation packages (translationspress)', 'niva-guard')],
+            'yoast_trans_prem' => [__('Yoast', 'niva-guard'), __('Yoast SEO Premium translation packages (translationspress)', 'niva-guard')],
+            'yoast_trans_woo' => [__('Yoast', 'niva-guard'), __('Yoast WooCommerce SEO translation packages (translationspress)', 'niva-guard')],
+            'yoast_trans' => [__('Yoast', 'niva-guard'), __('All Yoast translation packages in one (including News, Local, Video and others)', 'niva-guard')],
+            'yoast_third' => [__('VIP Theme', 'niva-guard'), __('vip-themes.com — a third-party server', 'niva-guard')],
+            'yoast_ips' => [__('Better WP Security (Solid Security)', 'niva-guard'), __('Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds', 'niva-guard')],
+            'wpforms_addons' => [__('WPForms', 'niva-guard'), __('Add-ons list (addons) — up to 10 seconds', 'niva-guard')],
+            'smtp_notice' => [__('WP Mail SMTP', 'niva-guard'), __('Notices (feeds/notifications)', 'niva-guard')],
+            'parsi_sponsors' => [__('ParsiDate', 'niva-guard'), __('Sponsors list (sponsors.json from GitHub)', 'niva-guard')],
+            'parsi_feed' => [__('ParsiDate', 'niva-guard'), __('News feed (wp-parsi.com)', 'niva-guard')],
+            'ace_ads' => [__('Advanced Shipping (Ace Plugins)', 'niva-guard'), __('Advertising page aceplugins.com', 'niva-guard')],
+            'yoast_indexnow' => [__('Yoast', 'niva-guard'), __('IndexNow — notifying search engines about page changes (up to 10 seconds)', 'niva-guard')],
+            'yoast_site' => [__('Yoast', 'niva-guard'), __('my.yoast.com — site information', 'niva-guard')],
+            'wincher_ads' => [__('Yoast ← Wincher', 'niva-guard'), __('Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds', 'niva-guard')],
+            'wincher_all' => [__('Yoast ← Wincher', 'niva-guard'), __('The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher', 'niva-guard')],
+            'codesnip_ad' => [__('Code Snippets', 'niva-guard'), __('Welcome page and ad (cs_welcome.json)', 'niva-guard')],
+            'emalls' => [__('Emalls', 'niva-guard'), __('Emalls product extraction service (plugin function)', 'niva-guard')],
+            'nv_license' => [__('Niva plugins', 'niva-guard'), __('Niva license server (validate)', 'niva-guard')],
+            'sms_payamak' => [__('SMS', 'niva-guard'), __('payamak-panel SMS gateway', 'niva-guard')],
+            'torob' => [__('Torob', 'niva-guard'), __('Price update webhook (Torob)', 'niva-guard')],
         ];
     }
 
     public static function all(): array {
         return [
-            // ── افزونه‌ی پیامک ووکامرس فارسی و ووکامرس فارسی
+            // ── Persian WooCommerce SMS and Persian WooCommerce
             ['id' => 'pwsms_notice', 'match' => 'woonotice.ir/', 'type' => 'ad'],
             ['id' => 'pwsms_hash', 'match' => 'woohash.ir/', 'type' => 'ad'],
             ['id' => 'pw_feed', 'match' => 'woocommerce.ir/feed', 'type' => 'news'],
 
-            // ── Digits و راست‌چین
+            // ── Digits and RTL plugins
             ['id' => 'digits_ads', 'match' => 'rtl-plugin.ir/ads-api/', 'type' => 'ad'],
             ['id' => 'rtl_ads', 'match' => 'files.rtl-theme.com/', 'type' => 'ad'],
 
-            // ── قالب مهدیس وب
+            // ── Mahdis Web theme
             ['id' => 'mweb_license', 'match' => 'mahdisweb.net/wp-json/verification/', 'type' => 'license', 'cache' => true],
             ['id' => 'mweb_auth', 'match' => 'mahdisweb.net/wp-json/authorization/', 'type' => 'license', 'cache' => true],
             ['id' => 'mweb_feed', 'match' => 'mahdisweb.net/feed', 'type' => 'news'],
             ['id' => 'mweb_notifier', 'match' => 'mahdisweb.net//themes/', 'type' => 'news'],
 
-            // ── خرید با دیجی‌کالا
+            // ── Digikala checkout plugin
             ['id' => 'bwdk_notice', 'match' => 'plugins.digifyprime.net/bwdk/notifications.json', 'type' => 'news'],
             ['id' => 'bwdk_meta', 'match' => 'plugins.digifyprime.net/bwdk/metadata.json', 'type' => 'update'],
             ['id' => 'bwdk_orders', 'match' => 'bwdk-backend.digify.shop/', 'type' => 'service'],
 
-            // ── ووکامرس و المنتور
+            // ── WooCommerce and Elementor
             ['id' => 'wc_promo', 'match' => 'woocommerce.com/wp-json/wccom', 'type' => 'ad'],
-            // ── Jetpack و اتصال WordPress.com (در ایران معمولاً بی‌استفاده؛ ووکامرس هم بسته‌ی آن را دارد)
+            // ── Jetpack and the WordPress.com connection (often unused; WooCommerce also bundles it)
             ['id' => 'jp_wpcom', 'match' => 'public-api.wordpress.com/', 'type' => 'service'],
             ['id' => 'jp_xmlrpc', 'match' => 'jetpack.wordpress.com/', 'type' => 'service'],
             ['id' => 'jp_com', 'match' => 'jetpack.com/', 'type' => 'ad'],
@@ -206,22 +209,22 @@ class NIVAWPG_Rules {
             ['id' => 'yoast_third', 'match' => 'vip-themes.com/', 'type' => 'third'],
             ['id' => 'yoast_ips', 'match' => 'ipcheck-api.ithemes.com/', 'type' => 'service', 'cache' => true],
 
-            // ── WPForms، WP Mail SMTP، پارسی‌دیت، Advanced Shipping، IndexNow (لاگ ویولت)
+            // ── WPForms, WP Mail SMTP, ParsiDate, Advanced Shipping, IndexNow
             ['id' => 'wpforms_addons', 'match' => 'wpformsapi.com/feeds/', 'type' => 'ad'],
             ['id' => 'smtp_notice', 'match' => 'wpmailsmtpapi.com/feeds/', 'type' => 'news'],
-            ['id' => 'parsi_sponsors', 'match' => 'raw.githubusercontent.com/wordpress-parsi/', 'type' => 'ad'],
+            ['id' => 'parsi_sponsors', 'match' => self::PARSI_RAW, 'type' => 'ad'],
             ['id' => 'parsi_feed', 'match' => 'wp-parsi.com/', 'type' => 'news'],
             ['id' => 'ace_ads', 'match' => 'aceplugins.com/', 'type' => 'ad'],
             ['id' => 'yoast_indexnow', 'match' => 'api.indexnow.org/', 'type' => 'service'],
             ['id' => 'yoast_site', 'match' => 'my.yoast.com/', 'type' => 'license'],
 
-            // ── لاگ سایت سوم: Wincher (داخل Yoast)، Code Snippets، Emalls
+            // ── Wincher (inside Yoast), Code Snippets, Emalls
             ['id' => 'wincher_ads', 'match' => 'api.wincher.com/v1/yoast/upgrade-campaign', 'type' => 'ad'],
             ['id' => 'wincher_all', 'match' => 'wincher.com/', 'type' => 'service'],
             ['id' => 'codesnip_ad', 'match' => 'codesnippets.pro/', 'type' => 'ad'],
             ['id' => 'emalls', 'match' => 'emalls.ir/', 'type' => 'service'],
 
-            // ── سرویس‌های کارکردی (برای اطلاع؛ پیش‌فرض باز می‌مانند)
+            // ── Plugin functions (shown for information; open by default)
             ['id' => 'nv_license', 'match' => 'license.nivahost.com/', 'type' => 'license', 'cache' => true],
             ['id' => 'sms_payamak', 'match' => 'rest.payamak-panel.com/', 'type' => 'service'],
             ['id' => 'torob', 'match' => 'api.torob.com/', 'type' => 'service'],
@@ -230,18 +233,18 @@ class NIVAWPG_Rules {
 
     public static function types(): array {
         return [
-            'ad'      => [__('Ad', 'niva-wp-guard'), '#c0282a', true],
-            'news'    => [__('Notice / news', 'niva-wp-guard'), '#d98a00', true],
-            'license' => [__('License', 'niva-wp-guard'), '#6d3fa8', false],
-            'update'  => [__('Version check', 'niva-wp-guard'), '#168591', false],
-            'service' => [__('Plugin function', 'niva-wp-guard'), '#0b8a3e', false],
-            'third'   => [__('Third party', 'niva-wp-guard'), '#555', false],
+            'ad'      => [__('Ad', 'niva-guard'), '#c0282a', true],
+            'news'    => [__('Notice / news', 'niva-guard'), '#d98a00', true],
+            'license' => [__('License', 'niva-guard'), '#6d3fa8', false],
+            'update'  => [__('Version check', 'niva-guard'), '#168591', false],
+            'service' => [__('Plugin function', 'niva-guard'), '#0b8a3e', false],
+            'third'   => [__('Third party', 'niva-guard'), '#555', false],
         ];
     }
 
-    /** آیا آدرس host+path با این پیشوند شروع می‌شود؟ (برای Yoast: شامل زیردامنه‌ها هم می‌شود) */
+    /** Does host+path start with this prefix? (A bare domain also matches its subdomains.) */
     public static function matches(string $needle, string $hostpath): bool {
-        // یکسان‌سازی: حروف کوچک، حذف www.، ادغام اسلش‌های پشت‌سرهم، و «دامنه‌ی بدون مسیر» = «دامنه/»
+        // Normalise: lower case, drop www., collapse repeated slashes; a bare domain equals "domain/"
         $norm = static function (string $s): string {
             $s = strtolower(trim($s));
             $s = (string) preg_replace('#/{2,}#', '/', $s);
@@ -255,7 +258,7 @@ class NIVAWPG_Rules {
             return true;
         }
 
-        // دامنه‌ی بدون مسیر (مثل vip-themes.com/) زیردامنه‌ها را هم بگیرد: cdn.vip-themes.com/...
+        // A bare domain (like vip-themes.com/) also matches its subdomains: cdn.vip-themes.com/...
         if (substr($needle, -1) === '/' && substr_count($needle, '/') === 1) {
             $host = rtrim($needle, '/');
 
@@ -265,7 +268,7 @@ class NIVAWPG_Rules {
         return false;
     }
 
-    /** حدس نوع یک اتصال کشف‌شده از روی آدرس */
+    /** Guess the type of a discovered connection from its address. */
     public static function guess_type(string $hostpath): string {
         if (preg_match('/licen|verif|validat|activat|authoriz|token|serial/i', $hostpath)) {
             return 'license';

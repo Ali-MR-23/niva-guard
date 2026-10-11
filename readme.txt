@@ -1,10 +1,10 @@
-=== NIVA WP Guard ===
+=== NIVA Guard ===
 Contributors: alimohajer
 Tags: performance, http, notices, heartbeat, 404
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.5.1
+Stable tag: 2.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ See and control every outgoing connection of your plugins and themes: log with t
 
 == Description ==
 
-NIVA WP Guard shows you which plugin or theme connects to which address, how much of your site's time every connection costs, and lets you close the ones you do not want — one switch per connection.
+NIVA Guard shows you which plugin or theme connects to which address, how much of your site's time every connection costs, and lets you close the ones you do not want — one switch per connection.
 
 **Connections**
 
@@ -37,9 +37,9 @@ The settings page is available in English, Persian, Arabic, Turkish, Russian, Ge
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/niva-wp-guard/` or install it from the Plugins screen.
+1. Upload the plugin to `/wp-content/plugins/niva-guard/` or install it from the Plugins screen.
 2. Activate it. Nothing is written outside the plugin folder at this point.
-3. Open **Settings → NIVA WP Guard**, review the options and save.
+3. Open **Settings → NIVA Guard**, review the options and save.
 
 == Frequently Asked Questions ==
 
@@ -51,8 +51,8 @@ No. It does not connect to any external service. The connection log is stored on
 
 Only if you turn the related option on and save the settings:
 
-* `wp-content/mu-plugins/niva-wp-guard-loader.php` — "Load before other plugins", so no connection escapes the logger.
-* `wp-content/mu-plugins/niva-wp-guard-heartbeat.php`, `niva-wp-guard-fast-404.php` — the server tools.
+* `wp-content/mu-plugins/niva-guard-loader.php` — "Load before other plugins", so no connection escapes the logger.
+* `wp-content/mu-plugins/niva-guard-heartbeat.php`, `niva-guard-fast-404.php` — the server tools.
 * `404.html` in the site root and a block between `# BEGIN NIVA WP Guard` and `# END NIVA WP Guard` in `.htaccess` — Fast 404. A backup of `.htaccess` is saved first and restored automatically if the site returns a server error afterwards.
 * `wp-config.php` — only if you turn on "Disable the built-in WordPress cron": one marked line `define( 'DISABLE_WP_CRON', true );` is added (and removed again when you turn the option off or deactivate the plugin). If the site returns a server error afterwards, the file is restored automatically.
 
@@ -73,6 +73,11 @@ The logger, circuit breaker and Heartbeat control work everywhere. Fast 404 cann
 All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 
 == Changelog ==
+
+= 2.6.0 =
+* Renamed to "NIVA Guard" (folder and text domain "niva-guard"). Settings, log and menu choices are kept automatically; deactivate the old "niva-wp-guard" copy if it is still active.
+* The mu-plugin files are now named "niva-guard-*.php"; the old files are removed automatically.
+* Plugin Check clean-up: sanitised form input, no raw third-party addresses in the code.
 
 = 2.5.1 =
 * The "hide menu items" list now includes menus other plugins add very late (for example WP-Parsidate).
@@ -112,6 +117,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Renamed from NIVA HTTP Guard. Settings are migrated automatically.
 
 == Upgrade Notice ==
+
+= 2.6.0 =
+The plugin folder is now niva-guard. Deactivate the old niva-wp-guard copy first; your settings are shared.
 
 = 2.5.1 =
 Small fixes and a more complete cron card. Settings are kept.

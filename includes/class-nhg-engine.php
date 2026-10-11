@@ -5,8 +5,8 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * موتور اتصال‌ها: ثبت (با زمان)، مسدودسازی، کش پاسخ لایسنس و آفلاین کردن افزونه.
- * فقط درخواست‌هایی را بررسی می‌کند که از یک افزونه یا قالب آمده‌اند؛ درخواست‌های خود هسته‌ی وردپرس (آپدیت و ...) دست‌نخورده می‌مانند.
+ * Connection engine: logging (with timing), blocking, license response cache and offline plugins.
+ * Only requests that come from a plugin or a theme are examined; requests made by WordPress core (updates …) are left alone.
  */
 class NIVAWPG_Engine {
 
@@ -21,12 +21,12 @@ class NIVAWPG_Engine {
 
     private static bool $booted = false;
 
-    /** @var string[] خط‌های کندِ این درخواست برای فایل txt */
+    /** @var string[] Slow lines of this request for the text file. */
     private static array $slow_lines = [];
 
     public static function boot(): void {
         if (self::$booted) {
-            return; // لودر زودتر و بارگذاری عادی هر دو صدا می‌زنند؛ فقط یک‌بار فعال می‌شود
+            return; // Called by the loader and by the normal load; it only boots once
         }
 
         self::$booted = true;
@@ -40,13 +40,13 @@ class NIVAWPG_Engine {
         }
     }
 
-    /** افزونه یا قالب فراخوان از روی backtrace؛ null = هسته‌ی وردپرس */
+    /** Calling plugin or theme found in the backtrace; null = WordPress core. */
     private static function caller(): ?string {
-        // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- برای پیدا کردن افزونه‌ی درخواست‌دهنده لازم است
+        // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- needed to find the plugin that made the request
         foreach (debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 30) as $f) {
             $file = isset($f['file']) ? str_replace('\\', '/', $f['file']) : '';
 
-            if (strpos($file, '/plugins/niva-wp-guard/') !== false || strpos($file, '/plugins/niva-http-guard/') !== false) {
+            if (strpos($file, '/plugins/niva-guard/') !== false || strpos($file, '/plugins/niva-wp-guard/') !== false || strpos($file, '/plugins/niva-http-guard/') !== false) {
                 continue;
             }
 
@@ -101,7 +101,7 @@ class NIVAWPG_Engine {
         $site = strtolower((string) wp_parse_url(home_url(), PHP_URL_HOST));
 
         if ($host === '' || $host === $site || $host === 'localhost') {
-            return $pre; // درخواست داخلی
+            return $pre; // Internal request
         }
 
         $hostpath = $host . $path;
@@ -117,19 +117,19 @@ class NIVAWPG_Engine {
             self::$timers[(string) $url] = [microtime(true), $id, $host, $hostpath];
         }
 
-        // ۱) آدرس‌های دلخواه
+        // 1) Custom addresses
         foreach ((array) $s['custom'] as $line) {
             if ($line !== '' && NIVAWPG_Rules::matches($line, $hostpath)) {
                 return self::blocked($id, $hostpath);
             }
         }
 
-        // ۱.۵) ماژول «پارسی‌دیت»: حامیان (sponsors.json) و فید خبر wp-parsi.com
-        if (!empty($s['ui_parsidate']) && (NIVAWPG_Rules::matches('raw.githubusercontent.com/wordpress-parsi/', $hostpath) || NIVAWPG_Rules::matches('wp-parsi.com/', $hostpath))) {
+        // 1.5) ParsiDate module: sponsors list and the wp-parsi.com news feed
+        if (!empty($s['ui_parsidate']) && (NIVAWPG_Rules::matches(NIVAWPG_Rules::PARSI_RAW, $hostpath) || NIVAWPG_Rules::matches('wp-parsi.com/', $hostpath))) {
             return self::blocked($id, $hostpath);
         }
 
-        // ۲) قانون‌های شناخته‌شده (مسدود یا کش)
+        // 2) Known rules (block or cache)
         foreach (NIVAWPG_Rules::all() as $r) {
             if (!NIVAWPG_Rules::matches($r['match'], $hostpath)) {
                 continue;
@@ -149,14 +149,14 @@ class NIVAWPG_Engine {
                         unset(self::$timers[(string) $url]);
                     }
 
-                    return $hit; // پاسخ ذخیره‌شده؛ بدون اتصال
+                    return $hit; // Stored response; no connection
                 }
 
                 self::$pending[(string) $url] = [$key, max(1, (int) $s['cache_hours']) * HOUR_IN_SECONDS];
             }
         }
 
-        // ۳) افزونه‌ی آفلاین: همه‌چیز به‌جز wordpress.org
+        // 3) Offline plugin: everything except wordpress.org
         if (in_array($plugin, (array) $s['offline'], true)) {
             $org = ($host === 'wordpress.org' || substr($host, -14) === '.wordpress.org');
 
@@ -165,7 +165,7 @@ class NIVAWPG_Engine {
             }
         }
 
-        // ۴) قطع‌کننده‌ی خودکار: هاستی که تازه پشت‌سرهم خطا یا کندی داشته، تا پایان مهلت بدون معطلی رد می‌شود (لایسنس‌ها معاف‌اند)
+        // 4) Circuit breaker: a host that keeps failing or is slow is skipped until the period ends (licenses are exempt)
         if (!empty($s['breaker']) && !self::brk_exempt($host, $hostpath, $s)) {
             $b = NIVAWPG_Settings::breaker();
 
@@ -176,7 +176,7 @@ class NIVAWPG_Engine {
 
                 unset(self::$timers[(string) $url]);
 
-                return new WP_Error('nivawpg_breaker', 'NIVA WP Guard: host temporarily skipped (' . $host . ')');
+                return new WP_Error('nivawpg_breaker', 'NIVA Guard: host temporarily skipped (' . $host . ')');
             }
         }
 
@@ -184,9 +184,9 @@ class NIVAWPG_Engine {
     }
 
     /**
-     * اتصال مستقیم PHP (از wrapper پروتکل). ثبت می‌کند و می‌گوید مسدود شود یا نه.
+     * Direct PHP connection (from the stream wrapper): logs it and says whether to block it.
      *
-     * @return array{id:string,block:bool}|null null = ثبت/بررسی نمی‌شود (هسته، آدرس داخلی)
+     * @return array{id:string,block:bool}|null null = not logged or checked (core, internal address)
      */
     public static function direct(string $url, string $method = 'GET'): ?array {
         $s = NIVAWPG_Settings::get();
@@ -227,7 +227,7 @@ class NIVAWPG_Engine {
             }
         }
 
-        if (!$block && !empty($s['ui_parsidate']) && (NIVAWPG_Rules::matches('raw.githubusercontent.com/wordpress-parsi/', $hostpath) || NIVAWPG_Rules::matches('wp-parsi.com/', $hostpath))) {
+        if (!$block && !empty($s['ui_parsidate']) && (NIVAWPG_Rules::matches(NIVAWPG_Rules::PARSI_RAW, $hostpath) || NIVAWPG_Rules::matches('wp-parsi.com/', $hostpath))) {
             $block = true;
         }
 
@@ -251,7 +251,7 @@ class NIVAWPG_Engine {
         return ['id' => $id, 'block' => $block];
     }
 
-    /** پایان اتصال مستقیم: ثبت مدت */
+    /** End of a direct connection: record the duration. */
     public static function direct_done(string $id, float $dt, bool $ok): void {
         if (!isset(self::$buffer[$id])) {
             return;
@@ -267,7 +267,7 @@ class NIVAWPG_Engine {
         self::$buffer[$id]['status'] = $ok ? 'OK' : 'ERR';
     }
 
-    /** معاف از قطع‌کننده: لایسنس‌ها همیشه، و هاست‌هایی که کاربر معاف کرده (خود هاست یا زیردامنه‌اش) */
+    /** Exempt from the breaker: licenses always, and hosts the user exempted (the host or a subdomain). */
     private static function brk_exempt(string $host, string $hostpath, array $s): bool {
         foreach ((array) ($s['breaker_off'] ?? []) as $h) {
             if ($h !== '' && ($host === $h || substr($host, -strlen($h) - 1) === '.' . $h)) {
@@ -278,7 +278,7 @@ class NIVAWPG_Engine {
         return self::is_license($hostpath);
     }
 
-    /** آدرس‌های «لایسنس» هرگز توسط قطع‌کننده رد نمی‌شوند */
+    /** "License" addresses are never skipped by the breaker. */
     private static function is_license(string $hostpath): bool {
         foreach (NIVAWPG_Rules::all() as $r) {
             if ($r['type'] === 'license' && NIVAWPG_Rules::matches($r['match'], $hostpath)) {
@@ -289,7 +289,7 @@ class NIVAWPG_Engine {
         return false;
     }
 
-    /** ثبت نتیجه‌ی یک اتصال برای قطع‌کننده: خطا یا پاسخ کندتر از آستانه = شکست */
+    /** Record the result of a connection for the breaker: an error or a response slower than the limit is a failure. */
     private static function breaker_record(string $host, $response, float $dt): void {
         $s = NIVAWPG_Settings::get();
         $b = NIVAWPG_Settings::breaker();
@@ -300,7 +300,7 @@ class NIVAWPG_Engine {
 
         if (!$err && !$slow) {
             if (isset($b[$host])) {
-                unset($b[$host]); // سالم شد
+                unset($b[$host]); // Healthy again
                 update_option(NIVAWPG_Settings::BREAKER, $b);
             }
 
@@ -308,13 +308,13 @@ class NIVAWPG_Engine {
         }
 
         if (is_wp_error($response) && !$err) {
-            return; // مسدودسازی خودمان خطای هاست نیست
+            return; // Our own blocking is not a host failure
         }
 
-        $probe = $e['until'] > 0 && $now >= $e['until']; // اولین تلاشِ بعد از پایان مهلت
+        $probe = $e['until'] > 0 && $now >= $e['until']; // First try after the skip period ended
 
         if ($now - (int) $e['t'] > HOUR_IN_SECONDS && !$probe) {
-            $e['fails'] = 0; // خطاهای قدیمی دیگر شمرده نمی‌شوند
+            $e['fails'] = 0; // Old failures no longer count
         }
 
         $e['fails']++;
@@ -343,7 +343,7 @@ class NIVAWPG_Engine {
             self::$buffer[$id]['blocked']++;
         }
 
-        return new WP_Error('nivawpg_blocked', 'Blocked by NIVA WP Guard: ' . $hostpath);
+        return new WP_Error('nivawpg_blocked', 'Blocked by NIVA Guard: ' . $hostpath);
     }
 
     private static function cache_key(array $args, string $url): string {
@@ -353,7 +353,7 @@ class NIVAWPG_Engine {
         return 'nivawpg_c_' . md5(($args['method'] ?? 'GET') . '|' . $url . '|' . $body);
     }
 
-    /** ذخیره‌ی پاسخ موفق (۲۰۰) برای قانون‌هایی که کش روشن دارند */
+    /** Store a successful (200) response for rules with caching on. */
     public static function store_cache($response, $args, $url) {
         if (empty(self::$pending[(string) $url])) {
             return $response;
@@ -377,7 +377,7 @@ class NIVAWPG_Engine {
         return $response;
     }
 
-    /** ثبت مدت پاسخ */
+    /** Record the response time. */
     public static function timing($response, $context, $class, $args, $url): void {
         if ($context !== 'response' || !isset(self::$timers[(string) $url])) {
             return;
@@ -408,7 +408,7 @@ class NIVAWPG_Engine {
         self::$buffer[$id]['status'] = is_wp_error($response) ? 'ERR' : (string) wp_remote_retrieve_response_code($response);
     }
 
-    /** نوشتن دسته‌جمعی گزارش در پایان درخواست (یک بار نوشتن در دیتابیس) */
+    /** Write the report in one batch at the end of the request (a single database write). */
     public static function flush(): void {
         if (!self::$buffer && !self::$slow_lines) {
             return;

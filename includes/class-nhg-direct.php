@@ -5,15 +5,15 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * ردیابی عمیق (پیش‌فرض خاموش):
- *  ۱) NIVAWPG_Stream: لایه‌ی میانی پروتکل http/https برای اتصال‌هایی که API وردپرس را دور می‌زنند
- *     (file_get_contents('http…')، fopen، copy، simplexml_load_file و ...). ثبت و در صورت قانون، مسدود می‌شود.
- *  ۲) NIVAWPG_Scan: اسکن ایستای کد افزونه‌ها برای curl_exec / fsockopen و ...؛ این‌ها در PHP خالص زنده قابل شنود نیستند.
+ * Deep tracking (off by default):
+ *  1) NIVAWPG_Stream: an http/https stream wrapper for connections that bypass the WordPress HTTP API
+ *     (file_get_contents('http…'), fopen, copy, simplexml_load_file …). They are logged and blocked when a rule says so.
+ *  2) NIVAWPG_Scan: a static scan of plugin code for curl_exec / fsockopen …, which cannot be intercepted live in plain PHP.
  */
-// phpcs:disable WordPress.WP.AlternativeFunctions -- wrapper پروتکل باید توابع بومی stream را صدا بزند
+// phpcs:disable WordPress.WP.AlternativeFunctions -- a stream wrapper has to call the native stream functions
 final class NIVAWPG_Stream {
 
-    /** @var resource|null اضافه‌شده خودکار توسط PHP */
+    /** @var resource|null Set by PHP automatically. */
     public $context;
 
     /** @var resource|false */
@@ -40,19 +40,19 @@ final class NIVAWPG_Stream {
         self::$on = true;
     }
 
-    /** برای باز کردن واقعی آدرس، لحظه‌ای wrapper داخلی PHP را برمی‌گردانیم */
+    /** To really open the address, PHP's own wrapper is restored for a moment. */
     private static function native(): void {
         foreach (self::PROTOS as $p) {
-            // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- اگر wrapper از قبل برگردانده شده باشد PHP هشدار می‌دهد
+            // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- PHP warns when the wrapper was already restored
             @stream_wrapper_unregister($p);
-            // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- همان دلیل
+            // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- same reason
             @stream_wrapper_restore($p);
         }
     }
 
     private static function mine(): void {
         foreach (self::PROTOS as $p) {
-            // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- wrapper ممکن است ثبت نشده باشد
+            // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- the wrapper may not be registered
             @stream_wrapper_unregister($p);
             stream_wrapper_register($p, self::class, STREAM_IS_URL);
         }
@@ -71,12 +71,12 @@ final class NIVAWPG_Stream {
         try {
             $info = NIVAWPG_Engine::direct((string) $path, $method);
         } catch (\Throwable $e) {
-            $info = null; // خطای ثبت هرگز نباید اتصال را بشکند
+            $info = null; // A logging error must never break the connection
         }
 
         if ($info && $info['block']) {
             if ($options & STREAM_REPORT_ERRORS) {
-                trigger_error('Blocked by NIVA WP Guard: ' . esc_html($path), E_USER_WARNING); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- باید مثل خطای عادی wrapper گزارش شود
+                trigger_error('Blocked by NIVA Guard: ' . esc_html($path), E_USER_WARNING); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error -- must be reported like any other wrapper error
             }
 
             return false;
@@ -149,20 +149,20 @@ final class NIVAWPG_Stream {
     }
 
     public function url_stat($path, $flags) {
-        return false; // file_exists('http://…') در PHP همیشه false است
+        return false; // file_exists('http://…') is always false in PHP
     }
 }
 
 // phpcs:enable WordPress.WP.AlternativeFunctions
 
 /**
- * اسکن ایستا: فقط می‌خواند و چیزی را اجرا یا مسدود نمی‌کند. نتیجه «احتمال» است، نه اتصال انجام‌شده.
+ * Static scan: it only reads files and neither runs nor blocks anything. The result is a possibility, not a connection that happened.
  */
 final class NIVAWPG_Scan {
 
     public const OPTION = 'nivawpg_scan';
 
-    private const MAX_FILE = 2097152; // ۲ مگابایت
+    private const MAX_FILE = 2097152; // 2 MB
     private const MAX_FILES = 40;
 
     /** @return array{time:int,partial:bool,files:int,plugins:array<string,array>} */
@@ -173,10 +173,6 @@ final class NIVAWPG_Scan {
     }
 
     public static function run(): array {
-        if (function_exists('set_time_limit')) {
-            set_time_limit(90);
-        }
-
         $deadline = microtime(true) + 60;
         $out = ['time' => time(), 'partial' => false, 'files' => 0, 'plugins' => []];
         $roots = [
@@ -191,12 +187,12 @@ final class NIVAWPG_Scan {
             }
 
             foreach ((array) scandir($root) as $name) {
-                if ($name === '.' || $name === '..' || $name === 'index.php' || $name === 'niva-wp-guard' || $name === 'niva-http-guard' || $name === 'niva-wp-guard-loader.php' || $name === 'niva-http-guard-loader.php') {
+                if ($name === '.' || $name === '..' || $name === 'index.php' || $name === 'niva-guard' || $name === 'niva-wp-guard' || $name === 'niva-http-guard' || $name === 'niva-guard-loader.php' || $name === 'niva-wp-guard-loader.php' || $name === 'niva-http-guard-loader.php') {
                     continue;
                 }
 
                 if (strpos((string) $name, 'nhg-') === 0) {
-                    continue; // لودر خود افزونه
+                    continue; // the plugin's own loader
                 }
 
                 $path = $root . '/' . $name;
@@ -215,7 +211,7 @@ final class NIVAWPG_Scan {
             }
         }
 
-        // فقط افزونه‌هایی که چیزی در آنها پیدا شد، به ترتیب «کد خودِ افزونه»
+        // Only plugins with findings, own code first
         uasort($out['plugins'], static fn($a, $b) => [$b['own_n'], $b['lib_n']] <=> [$a['own_n'], $a['lib_n']]);
         update_option(self::OPTION, $out, false);
 
@@ -244,7 +240,7 @@ final class NIVAWPG_Scan {
             }
 
             $p = str_replace('\\', '/', $f->getPathname());
-            // کتابخانه‌های همراه (Composer، Guzzle، nusoap و ...) جدا از کد خود افزونه شمرده می‌شوند
+            // Bundled libraries (Composer, Guzzle, nusoap …) are counted apart from the plugin's own code
             $is_lib = (bool) preg_match('#/(?:vendor|vendor_prefixed|vendors|libs?|libraries|third[-_]?party|sdk)/|nusoap|guzzle|phpseclib|/requests/#i', substr($p, strlen($dir)));
             self::scan_file($p, $slug, $out, $is_lib);
 
@@ -307,11 +303,11 @@ final class NIVAWPG_Scan {
         unset($e);
     }
 
-    /** آدرس‌ها و IPهای ثابتی که در متن فایل نوشته شده (مقصدهای احتمالی، نه اتصال انجام‌شده) */
+    /** Fixed addresses and IPs written in the file (possible destinations, not connections that happened). */
     private static function hosts(string $code): array {
         $found = [];
 
-        // خط‌های توضیحات (لینک مستندات و ...) مقصد واقعی نیستند
+        // Comment lines (documentation links …) are not real destinations
         $code = implode("\n", array_filter(explode("\n", $code), static function ($l) {
             $t = ltrim($l);
 
@@ -324,7 +320,7 @@ final class NIVAWPG_Scan {
             $hosts = $m[1];
         }
 
-        // دامنه‌ی بدون http در رشته‌ی نقل‌قول (مثل 'api.mixpanel.com')
+        // A domain without http inside a quoted string (like 'api.mixpanel.com')
         if (preg_match_all('#[\'"]((?:[a-z0-9-]+\.)+(?:com|net|org|io|ir|co|ai|me|app|dev|cloud))(?::\d+)?(?:/[^\'"\s]*)?[\'"]#i', $code, $m2)) {
             $hosts = array_merge($hosts, $m2[1]);
         }

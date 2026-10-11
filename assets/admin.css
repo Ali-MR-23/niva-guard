@@ -1,5 +1,5 @@
-/* NIVA WP Guard — admin page styles */
-            /* ───── پایه: تمام‌عرض، مقیاس‌پذیر برای مانیتورهای بزرگ ───── */
+/* NIVA Guard — admin page styles */
+            /* Base: full width, scales for large screens */
             #wpcontent{padding-inline-start:0}
             .nhg{--c1:#168591;--c2:#6d3fa8;--ink:#1d2430;--mut:#6b7280;--line:#e4e7ec;--bg:#f5f6f8;--ok:#0b8a3e;--warn:#d98a00;--bad:#c0282a;
                  max-width:none;margin:0;padding:16px 22px 0;font-size:14px;color:var(--ink)}
@@ -8,7 +8,7 @@
             .nhg *{box-sizing:border-box}
             .nhg h1,.nhg h2,.nhg h3{padding:0;color:inherit}
 
-            /* ───── سربرگ ───── */
+            /* Header */
             .nhg-hero{display:grid;grid-template-columns:1fr auto;gap:18px 28px;align-items:center;padding:24px 30px;border-radius:20px;color:#fff;
                 background:radial-gradient(1200px 300px at 0 0,rgba(109,63,168,.55),transparent 60%),linear-gradient(135deg,#12303d,#168591);box-shadow:0 18px 40px -22px rgba(10,50,70,.7)}
             .nhg-hero h1{margin:0;font-size:1.65em;color:#fff;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -24,7 +24,7 @@
 
             .nhg-flash{display:flex;align-items:center;gap:10px;margin-top:14px;padding:12px 18px;border-radius:12px;font-weight:600;background:#e3f7e9;color:#0b3d1c;border:1px solid #9bd9ae}
 
-            /* ───── تب‌ها ───── */
+            /* Tabs */
             .nhg-tabs{position:sticky;top:32px;z-index:20;display:flex;gap:6px;flex-wrap:wrap;margin:16px -6px 0;padding:10px 6px;background:linear-gradient(180deg,var(--bg) 75%,rgba(245,246,248,0))}
             .nhg-tab{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;color:#374151;font:inherit;font-weight:600;cursor:pointer;transition:.15s}
             .nhg-tab:hover{border-color:var(--c1);color:var(--c1)}
@@ -38,7 +38,7 @@
             @keyframes nhgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
             .nhg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:18px;align-items:start}
 
-            /* ───── کارت‌ها ───── */
+            /* Cards */
             .nhg-card{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 22px -18px rgba(0,0,0,.35);overflow:hidden}
             .nhg-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid #eef0f3;background:linear-gradient(180deg,#fafbfc,#fff)}
             .nhg-head h2{margin:0;font-size:1.12em}
@@ -47,7 +47,7 @@
             .nhg-body{padding:18px 24px 22px}
             .nhg-note{margin:14px 0 0;padding:12px 16px;border-radius:12px;background:#fff7e6;color:#5c3b00;font-size:.9em;line-height:1.8}
 
-            /* ───── ابزار جدول: جستجو و فیلتر ───── */
+            /* Table tools: search and filter */
             .nhg-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:14px 24px;border-bottom:1px solid #eef0f3;background:#fcfcfd}
             .nhg-search{flex:1 1 280px;max-width:460px;position:relative}
             .nhg-search input{width:100%;height:40px;padding:0 14px 0 40px;border:1px solid var(--line);border-radius:12px;background:#fff}
@@ -58,7 +58,7 @@
             .nhg-fchip em{font-style:normal;opacity:.7;margin-inline-start:4px}
             .nhg-count{margin-inline-start:auto;color:var(--mut);font-size:.9em}
 
-            /* ───── جدول‌ها ───── */
+            /* Tables */
             .nhg-tbl{width:100%;border-collapse:collapse}
             .nhg-tbl th{position:sticky;top:0;padding:12px 14px;text-align:start;color:var(--mut);font-size:.82em;font-weight:700;background:#fafbfc;border-bottom:1px solid var(--line);white-space:nowrap}
             .nhg-tbl td{padding:12px 14px;border-bottom:1px solid #f1f2f5;vertical-align:middle}
@@ -98,13 +98,13 @@
             .nhg-slow{color:var(--bad);font-weight:700}
             .nhg-dim{color:#c3c8d2}
 
-            /* نوار تأثیر (سهم زمان انتظار) */
+            /* Impact bar (share of the waiting time) */
             .nhg-bar{height:8px;border-radius:999px;background:#eef0f3;overflow:hidden;min-width:90px}
             .nhg-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#f6c453,#e0452c)}
             .nhg-imp{display:flex;flex-direction:column;gap:5px;min-width:130px}
             .nhg-imp span{font-size:.84em;color:#4b5563}
 
-            /* کلیدهای تیک */
+            /* Toggle switches */
             .nhg-sw{position:relative;display:inline-block;width:46px;height:26px;vertical-align:middle;flex:none}
             .nhg-sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:2}
             .nhg-sw span{position:absolute;inset:0;border-radius:999px;background:#c9ced6;transition:.2s}
@@ -155,7 +155,7 @@
             .nhg-preset:hover{border-color:var(--c1);color:var(--c1)}
             .nhg-preset.on{background:var(--c1);border-color:var(--c1);color:#fff}
 
-            /* ───── نوار ذخیره ───── */
+            /* Save bar */
             .nhg-save{position:sticky;bottom:14px;z-index:25;display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:22px 0 16px;padding:14px 24px;
                 border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);box-shadow:0 14px 34px -16px rgba(0,0,0,.35)}
             .nhg-save .button-primary{padding:6px 34px;height:auto;min-height:42px;border-radius:12px;font-size:1em;font-weight:700;background:var(--c1);border-color:#10707a}
