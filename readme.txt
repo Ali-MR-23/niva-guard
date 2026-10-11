@@ -4,7 +4,7 @@ Tags: performance, http, notices, heartbeat, 404
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.5.0
+Stable tag: 2.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,13 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 
 == Changelog ==
 
+= 2.5.1 =
+* The "hide menu items" list now includes menus other plugins add very late (for example WP-Parsidate).
+* Cron card: full crontab line with the schedule, "Copy command only" for the cPanel form, and more command variants (cPanel, CloudLinux, DirectAdmin, Plesk, WP-CLI, wget, curl).
+* Intervals up to 6 hours for the server cron job.
+* Neutral wording in the circuit breaker description; vip-themes.com is shown as "VIP Theme".
+* Packaging: the installable zip no longer contains development files.
+
 = 2.5.0 =
 * New: switch off the built-in WordPress cron from the "Server and 404" tab and copy a ready cron job command for cPanel (schedule and PHP path matched to your site).
 * New: the cron card shows the last successful (and last failed) cron run, how it was started (server command or web request) and the next scheduled task.
@@ -105,6 +112,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Renamed from NIVA HTTP Guard. Settings are migrated automatically.
 
 == Upgrade Notice ==
+
+= 2.5.1 =
+Small fixes and a more complete cron card. Settings are kept.
 
 = 2.4.1 =
 Internal names changed to a unique prefix. Your settings are migrated automatically; deactivate any old "NIVA HTTP Guard" copy first.

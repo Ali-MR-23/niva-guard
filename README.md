@@ -39,13 +39,13 @@ NIVA WP Guard shows **which plugin connects to which address and how much time i
 - Nothing else. The plugin has no dependencies and makes **no external connections of its own**.
 
 ### Option 1: upload the zip from the dashboard (recommended)
-1. Open the [latest release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) and download **`niva-wp-guard-2.5.0.zip`** (the file under *Assets*, not "Source code").
+1. Open the [latest release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) and download **`niva-wp-guard-2.5.1.zip`** (the file under *Assets*, not "Source code").
 2. In WordPress go to **Plugins → Add New → Upload Plugin**, choose the zip and click **Install Now**.
 3. Click **Activate Plugin**.
 4. Open **Settings → NIVA WP Guard**.
 
 ### Option 2: cPanel / FTP
-1. Unzip `niva-wp-guard-2.5.0.zip` on your computer. You get one folder named `niva-wp-guard`.
+1. Unzip `niva-wp-guard-2.5.1.zip` on your computer. You get one folder named `niva-wp-guard`.
 2. Upload that folder to `wp-content/plugins/` (File Manager or FTP).
 3. Activate the plugin in **Plugins**.
 
@@ -202,7 +202,7 @@ Licensed under the GPL, version 2 or later.
 **الزامات:** وردپرس ۶٫۰ یا بالاتر، PHP نسخه‌ی ۷٫۴ یا بالاتر، حساب مدیر. افزونه هیچ وابستگی ندارد و خودش هرگز به سرویس بیرونی وصل نمی‌شود.
 
 **روش ۱ (پیشنهادی): آپلود از پیشخوان**
-۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) فایل **`niva-wp-guard-2.5.0.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
+۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) فایل **`niva-wp-guard-2.5.1.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
 ۲. در وردپرس: **افزونه‌ها ← افزودن ← بارگذاری افزونه**، فایل را انتخاب و **همین حالا نصب کن** را بزنید.
 ۳. **فعال‌سازی افزونه** را بزنید و به **تنظیمات ← NIVA WP Guard** بروید.
 
