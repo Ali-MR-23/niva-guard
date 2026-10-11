@@ -1,0 +1,1061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NIVA WP Guard 2.1.0\n"
+"Report-Msgid-Bugs-To: https://www.nivahost.net\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Domain: niva-wp-guard\n"
+
+msgid "You do not have permission to do this."
+msgstr "ليس لديك صلاحية للقيام بهذا الإجراء."
+
+msgid "Installed and active"
+msgstr "مثبّت ونشط"
+
+msgid "Not installed"
+msgstr "غير مثبّت"
+
+msgid "Outdated"
+msgstr "قديم"
+
+msgid "The mu-plugins folder is not writable"
+msgstr "مجلد mu-plugins غير قابل للكتابة"
+
+msgid "Active"
+msgstr "نشط"
+
+msgid "Inactive"
+msgstr "غير نشط"
+
+msgid "See which plugin and theme connects where, how much of your site's time it takes, and block every ad with one switch. Cache licenses without cutting them off."
+msgstr "اعرف أي إضافة وقالب تتصل بأي عنوان، وكم من وقت موقعك تستهلك، واحظر كل إعلان بمفتاح واحد. خزّن التراخيص مؤقتًا دون قطعها."
+
+msgid "Connections recorded"
+msgstr "اتصالات مسجَّلة"
+
+msgid "Total wait"
+msgstr "إجمالي الانتظار"
+
+msgid "Blocked"
+msgstr "محظور"
+
+msgid "From cache"
+msgstr "من الذاكرة المؤقتة"
+
+msgid "✓ Settings saved."
+msgstr "✓ تم حفظ الإعدادات."
+
+msgid "✓ Connection report and log file cleared."
+msgstr "✓ تم مسح تقرير الاتصالات وملف السجل."
+
+msgid "✓ The list of skipped hosts was released."
+msgstr "✓ تم تحرير قائمة المضيفات المتجاوَزة."
+
+msgid "✓ Plugin code scan completed."
+msgstr "✓ اكتمل فحص أكواد الإضافات."
+
+msgid "✓ Loader installed."
+msgstr "✓ تم تثبيت المحمّل."
+
+msgid "✕ Loader installation failed (the mu-plugins folder is not writable)."
+msgstr "✕ فشل تثبيت المحمّل (مجلد mu-plugins غير قابل للكتابة)."
+
+msgid "Overview"
+msgstr "نظرة عامة"
+
+msgid "Known connections"
+msgstr "الاتصالات المعروفة"
+
+msgid "Seen on your site"
+msgstr "ما شوهد في موقعك"
+
+msgid "Take a plugin offline"
+msgstr "عزل إضافة عن الإنترنت"
+
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+msgid "Auto circuit breaker"
+msgstr "قاطع الدائرة التلقائي"
+
+msgid "Deep tracking"
+msgstr "التتبع العميق"
+
+msgid "Manual"
+msgstr "يدوي"
+
+msgid "General status"
+msgstr "الحالة العامة"
+
+msgid "The master switch turns all blocking and modules on or off at once."
+msgstr "المفتاح الرئيسي يشغّل أو يوقف كل عمليات الحظر والوحدات دفعة واحدة."
+
+msgid "Plugin enabled"
+msgstr "الإضافة مفعّلة"
+
+msgid "Off = no connection is touched."
+msgstr "إيقاف = لا يتم التعديل على أي اتصال."
+
+msgid "Log connections"
+msgstr "تسجيل الاتصالات"
+
+msgid "A timed report, in a txt file and in the database."
+msgstr "تقرير مع التوقيت، في ملف txt وفي قاعدة البيانات."
+
+msgid "License response cache time"
+msgstr "مدة تخزين استجابة الترخيص مؤقتًا"
+
+msgid "Less"
+msgstr "أقل"
+
+msgid "hours"
+msgstr "ساعات"
+
+msgid "Cache time in hours"
+msgstr "مدة التخزين المؤقت بالساعات"
+
+msgid "More"
+msgstr "أكثر"
+
+msgid "Preset values"
+msgstr "قيم جاهزة"
+
+msgid "1 hour"
+msgstr "ساعة واحدة"
+
+msgid "6 hours"
+msgstr "6 ساعات"
+
+msgid "12 hours"
+msgstr "12 ساعة"
+
+msgid "1 day"
+msgstr "يوم واحد"
+
+msgid "3 days"
+msgstr "3 أيام"
+
+msgid "A successful license response is kept for this long so the server is not contacted every time."
+msgstr "تُحفظ استجابة الترخيص الناجحة طوال هذه المدة حتى لا يتم الاتصال بالخادم في كل مرة."
+
+msgid "Automatic setup and log file"
+msgstr "الإعداد التلقائي وملف السجل"
+
+msgid "It is created automatically on every new site."
+msgstr "يُنشأ تلقائيًا على كل موقع جديد."
+
+msgid "mu-plugin loader"
+msgstr "محمّل mu-plugin"
+
+msgid "Install / repair again"
+msgstr "تثبيت / إصلاح من جديد"
+
+msgid "Makes the plugin load before all the others so no connection escapes it."
+msgstr "يجعل الإضافة تُحمَّل قبل البقية فلا يفلت أي اتصال منها."
+
+msgid "txt log file"
+msgstr "ملف السجل txt"
+
+msgid "Download txt"
+msgstr "تنزيل txt"
+
+msgid "Download summary report"
+msgstr "تنزيل التقرير الموجز"
+
+msgid "It is created with the first connection"
+msgstr "يُنشأ عند أول اتصال"
+
+msgid "Report from the txt file"
+msgstr "تقرير من ملف txt"
+
+msgid "The slowest connections; you can copy this report and send it."
+msgstr "أبطأ الاتصالات؛ يمكنك نسخ هذا التقرير وإرساله."
+
+msgid "Address"
+msgstr "العنوان"
+
+msgid "Plugin / theme"
+msgstr "الإضافة / القالب"
+
+msgid "Count"
+msgstr "العدد"
+
+msgid "Impact"
+msgstr "التأثير"
+
+msgid "Maximum"
+msgstr "الحد الأقصى"
+
+msgid "Report text"
+msgstr "نص التقرير"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "The log file exists but no slow connection (over half a second) has been recorded yet."
+msgstr "ملف السجل موجود لكن لم يُسجَّل بعد أي اتصال بطيء (أكثر من نصف ثانية)."
+
+msgid "There is no report yet. Work with the site and the dashboard for a few minutes and check again."
+msgstr "لا يوجد تقرير بعد. اعمل على الموقع ولوحة التحكم بضع دقائق ثم عُد."
+
+msgid "“Block” closes the connection completely. “Cache” is for licenses: the same valid response is kept for a few hours and the license is not cut off."
+msgstr "«حظر» يغلق الاتصال تمامًا. «تخزين مؤقت» مخصص للتراخيص: تُحفظ الاستجابة الصحيحة نفسها عدة ساعات ولا ينقطع الترخيص."
+
+msgid "Select recommended (ads and notices)"
+msgstr "اختيار الموصى به (إعلانات وإشعارات)"
+
+msgid "Clear all"
+msgstr "إلغاء تحديد الكل"
+
+msgid "All"
+msgstr "الكل"
+
+msgid "Search: plugin, domain or description…"
+msgstr "بحث: إضافة أو نطاق أو وصف…"
+
+msgid "Seen only"
+msgstr "المشاهَد فقط"
+
+msgid "Description and address"
+msgstr "الوصف والعنوان"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "Impact on speed"
+msgstr "التأثير على السرعة"
+
+msgid "Block"
+msgstr "حظر"
+
+msgid "Cache"
+msgstr "تخزين مؤقت"
+
+msgid "Not seen yet"
+msgstr "لم يُشاهَد بعد"
+
+msgid "Blocking “license” and “plugin function” items may lock a theme or stop SMS and orders from working. For licenses, “cache” is safer. If you tick both “block” and “cache”, block wins."
+msgstr "حظر عناصر «الترخيص» و«وظيفة الإضافة» قد يؤدي إلى قفل القالب أو توقف الرسائل النصية والطلبات. للتراخيص، «التخزين المؤقت» أكثر أمانًا. إذا حددت «حظر» و«تخزين مؤقت» معًا فالحظر هو الأقوى."
+
+msgid "Connections seen on your site"
+msgstr "الاتصالات المشاهَدة في موقعك"
+
+msgid "Items that are not in the known list, ordered by longest wait. Tick one to block that address."
+msgstr "عناصر غير موجودة في القائمة المعروفة، مرتبة حسب أطول انتظار. حدّد عنصرًا لحظر عنوانه."
+
+msgid "No new connection has been recorded yet. Work with the site and the dashboard for a while and check again."
+msgstr "لم يُسجَّل أي اتصال جديد بعد. اعمل على الموقع ولوحة التحكم قليلًا ثم عُد."
+
+msgid "Type (guess)"
+msgstr "النوع (تخمين)"
+
+msgid "Search the connections seen…"
+msgstr "البحث في الاتصالات المشاهَدة…"
+
+msgid "Take a whole plugin offline"
+msgstr "عزل إضافة كاملة عن الإنترنت"
+
+msgid "All external connections of the selected plugin are closed (only wordpress.org stays open). Use it only for plugins that do not need the internet or a license."
+msgstr "تُغلق كل الاتصالات الخارجية للإضافة المحددة (يبقى wordpress.org فقط مفتوحًا). استخدمه فقط للإضافات التي لا تحتاج إلى الإنترنت أو ترخيص."
+
+msgid "Search plugin…"
+msgstr "ابحث عن إضافة…"
+
+msgid "Ready-made widgets and ads"
+msgstr "ودجات وإعلانات جاهزة"
+
+msgid "Each item is switched on separately."
+msgstr "يُفعَّل كل عنصر على حدة."
+
+msgid "WordPress news widget"
+msgstr "ودجة أخبار ووردبريس"
+
+msgid "“Events and News” and the planet news."
+msgstr "«الأحداث والأخبار» وأخبار الكوكب."
+
+msgid "ParsiDate: widget and ads"
+msgstr "ParsiDate: الودجة والإعلانات"
+
+msgid "The dashboard widget (sponsor banner such as Files.ir and the news feed) is removed and the sponsors.json and wp-parsi.com connections are closed. The Jalali calendar stays untouched."
+msgstr "تُحذف ودجة لوحة التحكم (لافتة الرعاة مثل Files.ir وموجز الأخبار) وتُغلق اتصالات sponsors.json وwp-parsi.com. يبقى التقويم الشمسي كما هو."
+
+msgid "Elementor news widget"
+msgstr "ودجة أخبار Elementor"
+
+msgid "Version and tool ads."
+msgstr "إعلانات الإصدارات والأدوات."
+
+msgid "Yoast widget feed"
+msgstr "موجز ودجة Yoast"
+
+msgid "The SEO score stays; only the English feed is hidden."
+msgstr "تبقى درجة SEO؛ يُخفى الموجز الإنجليزي فقط."
+
+msgid "Jetpack: offline mode"
+msgstr "Jetpack: وضع عدم الاتصال"
+
+msgid "The connection to WordPress.com and the Jetpack connections (including the bundle inside WooCommerce) are cut."
+msgstr "يُقطع الاتصال بـ WordPress.com واتصالات Jetpack (بما فيها الحزمة داخل WooCommerce)."
+
+msgid "Persian WooCommerce SMS ads"
+msgstr "إعلانات الرسائل النصية لـ WooCommerce الفارسي"
+
+msgid "The national SMS banner and plugin install suggestions."
+msgstr "لافتة الرسائل النصية الوطنية واقتراحات تثبيت الإضافات."
+
+msgid "Hide promotional notices"
+msgstr "إخفاء الإشعارات الترويجية"
+
+msgid "Errors and “new version” notices always stay."
+msgstr "تبقى الأخطاء وإشعارات «إصدار جديد» دائمًا."
+
+msgid "Enable the keyword filter for notices"
+msgstr "تفعيل مرشّح الكلمات المفتاحية للإشعارات"
+
+msgid "One keyword per line, for example: Digits jacket"
+msgstr "كلمة مفتاحية في كل سطر، مثلًا: Digits jacket"
+
+msgid "Dashboard widgets of this site"
+msgstr "ودجات لوحة التحكم في هذا الموقع"
+
+msgid "(one switch each)"
+msgstr "(مفتاح لكل واحدة)"
+
+msgid "All the widgets that have been seen on this site's dashboard, with the name of the plugin that created them. A ticked widget is never created, so its feed and ad banner are not fetched from an external server either."
+msgstr "كل الودجات التي شوهدت في لوحة تحكم هذا الموقع، مع اسم الإضافة المنشئة لها. الودجة المحددة لا تُنشأ أصلًا، فلا يُجلب موجزها ولا لافتتها الإعلانية من خادم خارجي."
+
+msgid "Admin menu (right side)"
+msgstr "قائمة الإدارة (الجانب)"
+
+msgid "(only hidden, not removed)"
+msgstr "(تُخفى فقط، لا تُحذف)"
+
+msgid "Every ticked item is hidden from the side menu. The plugin stays active and its settings still open by direct address. “Dashboard”, “Settings” and “Plugins” are not in this list so you never lose access."
+msgstr "كل عنصر محدد يُخفى من القائمة الجانبية. تبقى الإضافة نشطة وتُفتح إعداداتها بالعنوان المباشر. «لوحة التحكم» و«الإعدادات» و«الإضافات» ليست في هذه القائمة حتى لا تفقد الوصول."
+
+msgid "There is no list yet. Open another admin page and come back here."
+msgstr "لا توجد قائمة بعد. افتح صفحة إدارة أخرى ثم عُد إلى هنا."
+
+msgid "Remove dashboard widgets of the selected plugins"
+msgstr "حذف ودجات لوحة التحكم للإضافات المحددة"
+
+msgid "The widget code does not run and its feed and banner are not fetched from an external server."
+msgstr "لا يُنفَّذ كود الودجة ولا يُجلب موجزها ولا لافتتها من خادم خارجي."
+
+msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "الخوادم في بعض المناطق (مثل إيران) لا تصل أحيانًا إلى الخدمات الخارجية وتنتظر من 5 إلى 15 ثانية في كل مرة. بهذا الخيار، يُتجاوَز المضيف الذي يفشل أو يبطؤ بشكل متتالٍ لفترة دون انتظار."
+
+msgid "Enable"
+msgstr "تفعيل"
+
+msgid "Off by default. “License” addresses are always exempt."
+msgstr "متوقف افتراضيًا. عناوين «الترخيص» مستثناة دائمًا."
+
+msgid "How long a failing host is skipped (hours)"
+msgstr "مدة تجاوز المضيف المعطل (ساعات)"
+
+msgid "Consecutive failures before it activates"
+msgstr "عدد الإخفاقات المتتالية قبل التفعيل"
+
+msgid "A response slower than this (seconds) also counts as a failure"
+msgstr "الاستجابة الأبطأ من هذا (بالثواني) تُحسب إخفاقًا أيضًا"
+
+msgid "Exempt hosts (one per line)"
+msgstr "مضيفات مستثناة (واحد في كل سطر)"
+
+msgid "These hosts (and their subdomains) are never skipped, even if they are slow or failing. You can also exempt hosts from the table beside this one."
+msgstr "هذه المضيفات (ونطاقاتها الفرعية) لا تُتجاوَز أبدًا حتى لو كانت بطيئة أو معطلة. يمكنك أيضًا استثناء مضيفات من الجدول المجاور."
+
+msgid "Hosts being watched"
+msgstr "المضيفات قيد المراقبة"
+
+msgid "Only failures recorded since this option was switched on are shown. After the skip period ends it tries once more; if the host is healthy it is removed from the list."
+msgstr "تُعرض فقط الإخفاقات المسجَّلة منذ تفعيل هذا الخيار. بعد انتهاء مدة التجاوز يحاول مرة أخرى؛ وإذا كان المضيف سليمًا يُحذف من القائمة."
+
+msgid "No host has been recorded yet."
+msgstr "لم يُسجَّل أي مضيف بعد."
+
+msgid "Host"
+msgstr "المضيف"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Skip ends"
+msgstr "انتهاء التجاوز"
+
+msgid "Times activated"
+msgstr "عدد مرات التفعيل"
+
+msgid "Last error"
+msgstr "آخر خطأ"
+
+msgid "Exempt from the breaker"
+msgstr "مستثنى من القاطع"
+
+msgid "Release all (clear the list)"
+msgstr "تحرير الكل (مسح القائمة)"
+
+msgid "1) Intercept direct PHP connections"
+msgstr "1) اعتراض اتصالات PHP المباشرة"
+
+msgid "Enable deep tracking"
+msgstr "تفعيل التتبع العميق"
+
+msgid "Off by default. Try it on a test site first."
+msgstr "متوقف افتراضيًا. جرّبه أولًا على موقع تجريبي."
+
+msgid "2) Plugin code scan (static)"
+msgstr "2) فحص أكواد الإضافات (ثابت)"
+
+msgid "Scan plugin code"
+msgstr "فحص أكواد الإضافات"
+
+msgid "Nothing found."
+msgstr "لم يُعثر على شيء."
+
+msgid "Plugin's own code"
+msgstr "كود الإضافة نفسها"
+
+msgid "Library (vendor)"
+msgstr "مكتبة (vendor)"
+
+msgid "Fixed destinations in code"
+msgstr "وجهات ثابتة في الكود"
+
+msgid "File details were not saved in this scan; scan again."
+msgstr "لم تُحفظ تفاصيل الملفات في هذا الفحص؛ أعد الفحص."
+
+msgid "File"
+msgstr "الملف"
+
+msgid "Line"
+msgstr "السطر"
+
+msgid "Site / fixed IP inside the file"
+msgstr "موقع / IP ثابت داخل الملف"
+
+msgid "Library"
+msgstr "مكتبة"
+
+msgid "Plugin code"
+msgstr "كود الإضافة"
+
+msgid "“Plugin's own code” means outside the vendor folder. A high count inside libraries is usually harmless. False positives are possible too (for example curl for a local address); to be sure, follow that plugin in the “seen” table."
+msgstr "«كود الإضافة نفسها» يعني خارج مجلد vendor. العدد الكبير داخل المكتبات غالبًا غير ضار. وقد تظهر نتائج إيجابية كاذبة (مثل curl لعنوان محلي)؛ وللتأكد، تابع تلك الإضافة في جدول «المشاهَد»."
+
+msgid "Manual blocking"
+msgstr "الحظر اليدوي"
+
+msgid "Save settings"
+msgstr "حفظ الإعدادات"
+
+msgid "No changes made"
+msgstr "لم يتم أي تغيير"
+
+msgid "Clear the connection report"
+msgstr "مسح تقرير الاتصالات"
+
+msgid "The mu-plugins folder could not be created: %s"
+msgstr "تعذّر إنشاء مجلد mu-plugins: %s"
+
+msgid "The mu-plugins folder is not writable; the plugin works normally but loads later than the others."
+msgstr "مجلد mu-plugins غير قابل للكتابة؛ تعمل الإضافة بشكل عادي لكنها تُحمَّل بعد البقية."
+
+msgid "Writing the loader file failed."
+msgstr "فشلت كتابة ملف المحمّل."
+
+msgid "Loader installed: %s"
+msgstr "تم تثبيت المحمّل: %s"
+
+msgid "NIVA WP Guard — connection report"
+msgstr "NIVA WP Guard — تقرير الاتصالات"
+
+msgid "Site: %1$s | Date: %2$s UTC | Version: %3$s"
+msgstr "الموقع: %1$s | التاريخ: %2$s UTC | الإصدار: %3$s"
+
+msgid "The log file has not been created yet."
+msgstr "لم يُنشأ ملف السجل بعد."
+
+msgid "Unique connections: %1$d | Slow connections (over 0.5 s): %2$d | Total wait: %3$.1f s | Errors / no response: %4$d"
+msgstr "اتصالات فريدة: %1$d | اتصالات بطيئة (أكثر من 0.5 ث): %2$d | إجمالي الانتظار: %3$.1f ث | أخطاء / بلا استجابة: %4$d"
+
+msgid "— By plugin (total wait time):"
+msgstr "— حسب الإضافة (إجمالي زمن الانتظار):"
+
+msgid "— Slowest addresses:"
+msgstr "— أبطأ العناوين:"
+
+msgid "  %1$-60s  %2$d times  total %3$.1fs  max %4$.1fs  errors:%5$d  [%6$s]"
+msgstr "  %1$-60s  %2$d مرات  الإجمالي %3$.1fs  الأقصى %4$.1fs  أخطاء:%5$d  [%6$s]"
+
+msgid "Persian WooCommerce SMS"
+msgstr "رسائل WooCommerce الفارسي"
+
+msgid "Persian WooCommerce"
+msgstr "WooCommerce الفارسي"
+
+msgid "Digits (Mersa Web)"
+msgstr "Digits (Mersa Web)"
+
+msgid "RTL (RTL-CareUnit)"
+msgstr "RTL (RTL-CareUnit)"
+
+msgid "Mahdis Web theme"
+msgstr "قالب Mahdis Web"
+
+msgid "Buy with Digikala"
+msgstr "الشراء عبر ديجي كالا"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "WordPress — version and plugin updates"
+msgstr "WordPress — تحديثات الإصدار والإضافات"
+
+msgid "Elementor"
+msgstr "Elementor"
+
+msgid "Yoast (unofficial server)"
+msgstr "Yoast (خادم غير رسمي)"
+
+msgid "ParsiDate"
+msgstr "ParsiDate"
+
+msgid "Advanced Shipping (Ace Plugins)"
+msgstr "Advanced Shipping (Ace Plugins)"
+
+msgid "Emalls"
+msgstr "Emalls"
+
+msgid "Niva plugins"
+msgstr "إضافات Niva"
+
+msgid "SMS"
+msgstr "رسائل SMS"
+
+msgid "Torob"
+msgstr "Torob"
+
+msgid "Notices and ads (pwsms.json / pwsms.hash)"
+msgstr "إشعارات وإعلانات (pwsms.json / pwsms.hash)"
+
+msgid "Notice signature"
+msgstr "توقيع الإشعارات"
+
+msgid "News feed on the dashboard"
+msgstr "موجز الأخبار في لوحة التحكم"
+
+msgid "Advertising panel (ads-api)"
+msgstr "لوحة الإعلانات (ads-api)"
+
+msgid "Notices and ads"
+msgstr "إشعارات وإعلانات"
+
+msgid "License verification (every few seconds)"
+msgstr "التحقق من الترخيص (كل بضع ثوانٍ)"
+
+msgid "Product authorization"
+msgstr "تفويض المنتج"
+
+msgid "News feed"
+msgstr "موجز الأخبار"
+
+msgid "Version notice (notifier.xml)"
+msgstr "إشعار الإصدار (notifier.xml)"
+
+msgid "Notices (notifications.json)"
+msgstr "الإشعارات (notifications.json)"
+
+msgid "Version check (metadata.json)"
+msgstr "فحص الإصدار (metadata.json)"
+
+msgid "Order registration and tracking (plugin function)"
+msgstr "تسجيل الطلبات وتتبعها (وظيفة الإضافة)"
+
+msgid "Promotional offers and suggested extensions (promotions / obw-free-extensions)"
+msgstr "عروض ترويجية وإضافات مقترحة (promotions / obw-free-extensions)"
+
+msgid "Connection to WordPress.com (public-api): account check, suggestions, payments"
+msgstr "الاتصال بـ WordPress.com (public-api): فحص الحساب والاقتراحات والمدفوعات"
+
+msgid "Jetpack server communication (jetpack.wordpress.com)"
+msgstr "اتصال خادم Jetpack (jetpack.wordpress.com)"
+
+msgid "The jetpack.com site — product recommendations and ads"
+msgstr "موقع jetpack.com — توصيات وإعلانات المنتجات"
+
+msgid "Visit statistics (stats.wp.com)"
+msgstr "إحصاءات الزيارات (stats.wp.com)"
+
+msgid "Tracking pixel (pixel.wp.com)"
+msgstr "بكسل التتبع (pixel.wp.com)"
+
+msgid "WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways"
+msgstr "إعلانات WooPayments (incentives) — لافتة «فعّل WooPayments»؛ لا علاقة لها ببوابات الدفع الخاصة بك"
+
+msgid "Sending usage statistics to WooCommerce (usage tracking), about half a second"
+msgstr "إرسال إحصاءات الاستخدام إلى WooCommerce (usage tracking)، حوالي نصف ثانية"
+
+msgid "PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal"
+msgstr "PayPal (webscr): التحقق من IPN والاتصال بـ PayPal — قد ينتظر حتى 15 ثانية من الخوادم التي لا تصل إلى PayPal"
+
+msgid "Product key check for WooCommerce.com products (product-key-api)"
+msgstr "فحص مفتاح منتجات WooCommerce.com (product-key-api)"
+
+msgid "WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)"
+msgstr "فحص إصدار WordPress من api.wordpress.org (صفحة «حالة النظام»؛ حتى 10 ثوانٍ على المضيفات البطيئة)"
+
+msgid "Theme information from api.wordpress.org (“System status” page)"
+msgstr "معلومات القالب من api.wordpress.org (صفحة «حالة النظام»)"
+
+msgid "QUIC.cloud news and notices (wpapi.quic.cloud/news)"
+msgstr "أخبار وإشعارات QUIC.cloud (wpapi.quic.cloud/news)"
+
+msgid "QUIC.cloud version check (ver_check)"
+msgstr "فحص إصدار QUIC.cloud (ver_check)"
+
+msgid "QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions"
+msgstr "لوحة QUIC.cloud (api.quic.cloud/d/dash): إحصاءات واقتراحات الخدمة السحابية"
+
+msgid "solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds"
+msgstr "أخبار ومنشورات ترويجية من solidwp.com (ودجة وإشعار لوحة التحكم)، حتى 10 ثوانٍ"
+
+msgid "rankmath.com blog news and posts (news widget and dashboard ad)"
+msgstr "أخبار ومنشورات مدونة rankmath.com (ودجة الأخبار وإعلان لوحة التحكم)"
+
+msgid "Reading the readme from the WordPress svn (up to 10 seconds)"
+msgstr "قراءة readme من svn الخاص بـ WordPress (حتى 10 ثوانٍ)"
+
+msgid "Plugin version check"
+msgstr "فحص إصدار الإضافات"
+
+msgid "Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens"
+msgstr "إعلانات وإشعارات المحرر: الترقية إلى Pro (free-to-pro-upsell) والإشعارات والعروض — عند فتح المحرر"
+
+msgid "my.elementor.com connections (news, library, suggested plugins)"
+msgstr "اتصالات my.elementor.com (الأخبار والمكتبة والإضافات المقترحة)"
+
+msgid "Yoast SEO (free) translation packages (translationspress)"
+msgstr "حزم ترجمة Yoast SEO المجاني (translationspress)"
+
+msgid "Yoast SEO Premium translation packages (translationspress)"
+msgstr "حزم ترجمة Yoast SEO Premium (translationspress)"
+
+msgid "Yoast WooCommerce SEO translation packages (translationspress)"
+msgstr "حزم ترجمة Yoast WooCommerce SEO (translationspress)"
+
+msgid "All Yoast translation packages in one (including News, Local, Video and others)"
+msgstr "كل حزم ترجمة Yoast دفعة واحدة (تشمل News وLocal وVideo وغيرها)"
+
+msgid "vip-themes.com — a third-party server, not Yoast"
+msgstr "vip-themes.com — خادم طرف ثالث وليس Yoast"
+
+msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
+msgstr "فحص IP الزائر (ipcheck) — يعمل أيضًا في صفحات الموقع وقد ينتظر حتى 10 ثوانٍ"
+
+msgid "Add-ons list (addons) — up to 10 seconds"
+msgstr "قائمة الإضافات (addons) — حتى 10 ثوانٍ"
+
+msgid "Notices (feeds/notifications)"
+msgstr "الإشعارات (feeds/notifications)"
+
+msgid "Sponsors list (sponsors.json from GitHub)"
+msgstr "قائمة الرعاة (sponsors.json من GitHub)"
+
+msgid "News feed (wp-parsi.com)"
+msgstr "موجز الأخبار (wp-parsi.com)"
+
+msgid "Advertising page aceplugins.com"
+msgstr "صفحة إعلانات aceplugins.com"
+
+msgid "IndexNow — notifying search engines about page changes (up to 10 seconds)"
+msgstr "IndexNow — إبلاغ محركات البحث بتغيّر الصفحات (حتى 10 ثوانٍ)"
+
+msgid "my.yoast.com — site information"
+msgstr "my.yoast.com — معلومات الموقع"
+
+msgid "Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds"
+msgstr "حملة الترقية (upgrade-campaign) — إعلان؛ حتى 10 ثوانٍ"
+
+msgid "The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher"
+msgstr "اتصال Wincher بالكامل (تتبع الكلمات المفتاحية: account وconnect/token) — حتى 10 ثوانٍ؛ احظره إن كنت لا تستخدم Wincher"
+
+msgid "Welcome page and ad (cs_welcome.json)"
+msgstr "صفحة الترحيب والإعلان (cs_welcome.json)"
+
+msgid "Emalls product extraction service (plugin function)"
+msgstr "خدمة استخراج منتجات Emalls (وظيفة الإضافة)"
+
+msgid "Niva license server (validate)"
+msgstr "خادم ترخيص Niva (validate)"
+
+msgid "payamak-panel SMS gateway"
+msgstr "بوابة رسائل payamak-panel"
+
+msgid "Price update webhook (Torob)"
+msgstr "Webhook تحديث الأسعار (Torob)"
+
+msgid "Ad"
+msgstr "إعلان"
+
+msgid "Notice / news"
+msgstr "إشعار / أخبار"
+
+msgid "License"
+msgstr "ترخيص"
+
+msgid "Version check"
+msgstr "فحص الإصدار"
+
+msgid "Plugin function"
+msgstr "وظيفة الإضافة"
+
+msgid "Third party"
+msgstr "طرف ثالث"
+
+msgid "Status summary: <b>%1$s</b> blocked, <b>%2$s</b> cached, <b>%3$s</b> plugins offline."
+msgstr "ملخص الحالة: <b>%1$s</b> محظور، <b>%2$s</b> مخزَّن مؤقتًا، <b>%3$s</b> إضافات معزولة عن الإنترنت."
+
+msgid "<b>%1$s</b> unique connections · <b>%2$s</b> slow · total wait <b>%3$s</b> · <b>%4$s</b> errors or no response"
+msgstr "<b>%1$s</b> اتصالات فريدة · <b>%2$s</b> بطيئة · إجمالي الانتظار <b>%3$s</b> · <b>%4$s</b> أخطاء أو بلا استجابة"
+
+msgid "Skipped"
+msgstr "يُتجاوَز"
+
+msgid "Counting (%s)"
+msgstr "قيد العدّ (%s)"
+
+msgid "Waiting for next try"
+msgstr "بانتظار المحاولة التالية"
+
+msgid "Connections that bypass the WordPress API and go through <code>file_get_contents('http…')</code> or <code>fopen</code> are also recorded in the same table and log (tag \"PHP-GET\"), and the blocking rules apply to them too."
+msgstr "الاتصالات التي تتجاوز واجهة WordPress وتمر عبر <code>file_get_contents('http…')</code> أو <code>fopen</code> تُسجَّل أيضًا في الجدول والسجل نفسيهما (وسم \"PHP-GET\")، وتنطبق عليها قواعد الحظر كذلك."
+
+msgid "Limits: <code>curl_exec</code> and <code>fsockopen</code> cannot be intercepted live in plain PHP (see section 2). Also, if a plugin reads <code>$http_response_header</code> or <code>get_headers()</code> directly, it may not receive the header data while this option is on; if anything breaks, turn this switch off. Requests made by WordPress core itself (without a calling plugin) are left untouched."
+msgstr "القيود: لا يمكن اعتراض <code>curl_exec</code> و<code>fsockopen</code> مباشرةً في PHP العادي (راجع القسم 2). كذلك إذا قرأت إضافة <code>$http_response_header</code> أو <code>get_headers()</code> مباشرةً فقد لا تستلم بيانات الترويسة أثناء تفعيل هذا الخيار؛ وإذا تعطّل شيء فأوقف هذا المفتاح. طلبات نواة WordPress نفسها (بدون إضافة مستدعية) لا تُمَس."
+
+msgid "allow_url_fopen is disabled on this host; this section has no effect."
+msgstr "allow_url_fopen معطّل على هذا المضيف؛ لا أثر لهذا القسم."
+
+msgid "Reads the PHP files of all plugins and themes and lists where <code>curl</code>, <code>fsockopen</code> or <code>file_get_contents('http…')</code> is written directly. It does not run or block anything; it only tells you which plugin has the “ability to connect silently”."
+msgstr "يقرأ ملفات PHP لكل الإضافات والقوالب ويسرد الأماكن التي كُتب فيها <code>curl</code> أو <code>fsockopen</code> أو <code>file_get_contents('http…')</code> مباشرةً. لا ينفّذ ولا يحظر شيئًا؛ فقط يخبرك أي إضافة لديها «القدرة على الاتصال بصمت»."
+
+msgid "Last scan: %1$s · %2$s files"
+msgstr "آخر فحص: %1$s · %2$s ملفات"
+
+msgid "· partial (time ran out)"
+msgstr "· غير مكتمل (انتهى الوقت)"
+
+msgid "No fixed address — the destination comes from settings or input at run time"
+msgstr "لا عنوان ثابت — الوجهة تأتي من الإعدادات أو المدخلات أثناء التشغيل"
+
+msgid "One address per line in the form <code>domain/path</code> (prefix); for example <code>example.com/ads/</code>"
+msgstr "عنوان واحد في كل سطر بصيغة <code>النطاق/المسار</code> (بادئة)؛ مثلًا <code>example.com/ads/</code>"
+
+msgid "%s items"
+msgstr "%s عناصر"
+
+msgid "This item is of the “license” type. Blocking it may lock a theme or plugin. Turn on “cache” instead. Continue?"
+msgstr "هذا العنصر من نوع «الترخيص». حظره قد يقفل القالب أو الإضافة. شغّل «التخزين المؤقت» بدلًا منه. هل تتابع؟"
+
+msgid "This item is needed for the plugin itself to work (SMS, orders, etc.). Continue?"
+msgstr "هذا العنصر ضروري لعمل الإضافة نفسها (الرسائل النصية، الطلبات، إلخ). هل تتابع؟"
+
+msgid "%s unsaved changes"
+msgstr "%s تغييرات غير محفوظة"
+
+msgid "Copied ✓"
+msgstr "تم النسخ ✓"
+
+msgid "Clear the connection report and log file?"
+msgstr "هل تريد مسح تقرير الاتصالات وملف السجل؟"
+
+msgid "%1$s times · %2$s ·"
+msgstr "%1$s مرات · %2$s ·"
+
+msgid "max %s"
+msgstr "الأقصى %s"
+
+msgid "WordPress core"
+msgstr "نواة WordPress"
+
+msgid "Theme: %s"
+msgstr "القالب: %s"
+
+msgid "There is no list yet. Open the <a href=\"%s\">Dashboard</a> page once and come back here."
+msgstr "لا توجد قائمة بعد. افتح صفحة <a href=\"%s\">لوحة التحكم</a> مرة واحدة ثم عُد إلى هنا."
+
+msgid "Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site."
+msgstr "تحكّم في الاتصالات الصادرة للإضافات والقوالب: سجّل كل اتصال مع توقيته (ملف txt وتقرير)، واحظر الإعلانات والإشعارات وموجزات الأخبار، وخزّن استجابات التراخيص مؤقتًا (دون قطعها)، وعزل إضافات محددة عن الإنترنت، واحذف ودجات وإشعارات لوحة التحكم الترويجية، وتجاوز المضيفات المعطلة تلقائيًا. لكل عنصر مفتاحه الخاص والإعداد تلقائي على كل موقع جديد."
+
+msgid "The old “NIVA HTTP Guard” plugin is still active. Deactivate it so the new version can work. Your settings are migrated automatically and you can delete the old plugin after the first load."
+msgstr "إضافة «NIVA HTTP Guard» القديمة ما زالت نشطة. عطّلها ليعمل الإصدار الجديد. تُنقل إعداداتك تلقائيًا ويمكنك حذف الإضافة القديمة بعد أول تحميل."
+
+msgid "Relevant to this site"
+msgstr "ذات صلة بهذا الموقع"
+
+msgid "All connections"
+msgstr "كل الاتصالات"
+
+msgid ".htaccess is up to date (a backup was saved)."
+msgstr "ملف .htaccess محدَّث (تم حفظ نسخة احتياطية)."
+
+msgid "The .htaccess block was removed."
+msgstr "تمت إزالة كتلة .htaccess."
+
+msgid "404.html was regenerated."
+msgstr "أُعيد إنشاء ملف 404.html."
+
+msgid "Could not write 404.html — download it and upload it to the site root."
+msgstr "تعذّرت كتابة 404.html — نزّله وارفعه إلى جذر الموقع."
+
+msgid "The site returned a server error after the change, so .htaccess was restored from the backup."
+msgstr "أعاد الموقع خطأ خادم بعد التغيير، لذا استُعيد .htaccess من النسخة الاحتياطية."
+
+msgid "This server uses Nginx, which does not use .htaccess. Use the Nginx snippet below."
+msgstr "يستخدم هذا الخادم Nginx الذي لا يستخدم .htaccess. استخدم مقتطف Nginx أدناه."
+
+msgid "Enable Fast 404 and save first."
+msgstr "فعّل «404 السريع» واحفظ أولًا."
+
+msgid "Could not write .htaccess — download the snippet below and add it yourself."
+msgstr "تعذّرت الكتابة في .htaccess — نزّل المقتطف أدناه وأضفه بنفسك."
+
+msgid "Server and 404"
+msgstr "الخادم و404"
+
+msgid "Installed"
+msgstr "مثبّت"
+
+msgid "Outdated — it is updated when you save"
+msgstr "قديم — يُحدَّث عند الحفظ"
+
+msgid "Still present — it is removed when you save"
+msgstr "ما زال موجودًا — يُزال عند الحفظ"
+
+msgid "Not writable"
+msgstr "غير قابل للكتابة"
+
+msgid "Your own file (kept untouched)"
+msgstr "ملفك الخاص (يبقى دون مساس)"
+
+msgid "Not used on Nginx"
+msgstr "غير مستخدم على Nginx"
+
+msgid "Off"
+msgstr "متوقف"
+
+msgid "WordPress default"
+msgstr "الافتراضي في ووردبريس"
+
+msgid "Slow down (use the interval)"
+msgstr "إبطاء (استخدم الفاصل)"
+
+msgid "Turn off"
+msgstr "إيقاف"
+
+msgid "Post editor"
+msgstr "محرر المقالات"
+
+msgid "Other admin pages"
+msgstr "صفحات الإدارة الأخرى"
+
+msgid "Front-end (visitors)"
+msgstr "الواجهة الأمامية (الزوار)"
+
+msgid "Heartbeat control"
+msgstr "التحكم في Heartbeat"
+
+msgid "WordPress sends a background request (Heartbeat) every 15–60 seconds for autosave, post locking and notices. On weak hosts this alone can overload the server. Control it separately for each part of the site."
+msgstr "يرسل ووردبريس طلبًا في الخلفية (Heartbeat) كل 15 إلى 60 ثانية للحفظ التلقائي وقفل المقالات والإشعارات. على الاستضافات الضعيفة قد يرهق هذا وحده الخادم. تحكّم فيه لكل جزء من الموقع على حدة."
+
+msgid "Enable heartbeat control"
+msgstr "فعّل التحكم في Heartbeat"
+
+msgid "A separate mu-plugin file is created; off = default WordPress behavior."
+msgstr "يُنشأ ملف mu-plugin منفصل؛ الإيقاف = السلوك الافتراضي لووردبريس."
+
+msgid "Interval when slowed (seconds)"
+msgstr "الفاصل في وضع الإبطاء (بالثواني)"
+
+msgid "For example 300 = every 5 minutes, 600 = every 10 minutes."
+msgstr "مثلًا 300 = كل 5 دقائق، 600 = كل 10 دقائق."
+
+msgid "Turning it off in the post editor disables autosave and post locking while editing."
+msgstr "إيقافه في محرر المقالات يعطّل الحفظ التلقائي وقفل المقال أثناء التحرير."
+
+msgid "mu-plugin file"
+msgstr "ملف mu-plugin"
+
+msgid "Fast 404"
+msgstr "404 السريع"
+
+msgid "Scanner bots probe hundreds of strange addresses (.env, backup files, fake PHP files). Instead of loading WordPress, the database, CSS and JS for each one, a light static 404 page is returned immediately."
+msgstr "تجرّب روبوتات الفحص مئات العناوين الغريبة (.env وملفات النسخ الاحتياطي وملفات PHP المزيفة). وبدل تحميل ووردبريس وقاعدة البيانات وCSS وJS لكل منها، تُعاد فورًا صفحة 404 ثابتة وخفيفة."
+
+msgid "Enable fast 404"
+msgstr "فعّل 404 السريع"
+
+msgid "Creates a separate mu-plugin, a 404.html page in the site root and a block in .htaccess."
+msgstr "يُنشئ mu-plugin منفصلًا وصفحة 404.html في جذر الموقع وكتلة في .htaccess."
+
+msgid "Strict mode"
+msgstr "الوضع الصارم"
+
+msgid "Also blocks existing script files outside the WordPress core, plugins and themes folders. May break custom scripts placed in the site root."
+msgstr "يحظر أيضًا ملفات السكربت الموجودة خارج مجلدات نواة ووردبريس والإضافات والقوالب. قد يعطّل سكربتات مخصصة موضوعة في جذر الموقع."
+
+msgid "Installation status"
+msgstr "حالة التثبيت"
+
+msgid "404.html page"
+msgstr "صفحة 404.html"
+
+msgid ".htaccess block"
+msgstr "كتلة .htaccess"
+
+msgid "Install / repair .htaccess"
+msgstr "تثبيت / إصلاح .htaccess"
+
+msgid "Regenerate 404.html"
+msgstr "إعادة إنشاء 404.html"
+
+msgid "Remove .htaccess block"
+msgstr "إزالة كتلة .htaccess"
+
+msgid "Download 404.html"
+msgstr "تنزيل 404.html"
+
+msgid "Download Nginx snippet"
+msgstr "تنزيل مقتطف Nginx"
+
+msgid "Download .htaccess snippet"
+msgstr "تنزيل مقتطف .htaccess"
+
+msgid "Nginx configuration"
+msgstr "إعدادات Nginx"
+
+msgid "Code to add to .htaccess"
+msgstr "الشيفرة المطلوب إضافتها إلى .htaccess"
+
+msgid "Nginx does not use .htaccess; add this to your server configuration. Fake PHP files are handled by the mu-plugin."
+msgstr "لا يستخدم Nginx ملف .htaccess؛ أضف هذا إلى إعدادات الخادم. ملفات PHP المزيفة يتولاها mu-plugin."
+
+msgid "If automatic installation is not possible, download the files and place them yourself: put 404.html in the site root (next to wp-config.php) and add this code to the top of .htaccess (before “# BEGIN WordPress”)."
+msgstr "إذا تعذّر التثبيت التلقائي، نزّل الملفات وضعها بنفسك: ضع 404.html في جذر الموقع (بجوار wp-config.php) وأضف هذه الشيفرة في أعلى .htaccess (قبل «# BEGIN WordPress»)."
+
+msgid "Load before other plugins (mu-plugin loader)"
+msgstr "التحميل قبل بقية الإضافات (محمّل mu-plugin)"
+
+msgid "Creates one small file in wp-content/mu-plugins. Nothing is created outside the plugin folder until you turn this on and save."
+msgstr "يُنشأ ملف صغير في wp-content/mu-plugins. لا يُنشأ أي شيء خارج مجلد الإضافة حتى تفعّل هذا الخيار وتحفظ."
+
+msgid "DISABLE_WP_CRON is already defined in wp-config.php by you, so it was left untouched."
+msgstr "لقد عرّفتَ DISABLE_WP_CRON بنفسك في wp-config.php، لذلك تُرك دون تغيير."
+
+msgid "The site returned a server error after the change, so wp-config.php was restored."
+msgstr "أعاد الموقع خطأ خادم بعد التغيير، لذلك أُعيد wp-config.php إلى حالته السابقة."
+
+msgid "Could not find the right place in wp-config.php — add the line shown in the cron card yourself."
+msgstr "تعذّر العثور على المكان المناسب في wp-config.php — أضف السطر الظاهر في بطاقة الكرون بنفسك."
+
+msgid "wp-config.php could not be changed automatically — add the line shown in the cron card yourself."
+msgstr "تعذّر تعديل wp-config.php تلقائيًا — أضف السطر الظاهر في بطاقة الكرون بنفسك."
+
+msgid "WordPress cron (wp-cron)"
+msgstr "كرون ووردبريس (wp-cron)"
+
+msgid "By default WordPress runs its scheduled tasks (scheduled posts, emails, backups, WooCommerce jobs) during visitors’ page loads. This slows pages down and wastes resources. Turn it off here and let the server run it on a fixed schedule instead."
+msgstr "يشغّل ووردبريس مهامه المجدولة (النشر المجدول، البريد، النسخ الاحتياطي، مهام ووكومرس) افتراضيًا أثناء تحميل الزوار للصفحات. هذا يبطّئ الصفحات ويهدر الموارد. أوقفه هنا ودع الخادم يشغّله وفق جدول ثابت."
+
+msgid "Disable the built-in WordPress cron"
+msgstr "تعطيل كرون ووردبريس المدمج"
+
+msgid "Adds DISABLE_WP_CRON to wp-config.php. Add the server cron job below first, otherwise scheduled tasks stop running."
+msgstr "يضيف DISABLE_WP_CRON إلى wp-config.php. أضف مهمة الكرون الخاصة بالخادم أدناه أولًا وإلا توقفت المهام المجدولة."
+
+msgid "Run the server job every"
+msgstr "تشغيل مهمة الخادم كل"
+
+msgid "%s minutes"
+msgstr "%s دقيقة"
+
+msgid "5 minutes suits most sites and shops, 15 minutes is enough for a blog. Use 1 minute only if you need exact timing; more frequent runs only load the server."
+msgstr "خمس دقائق تناسب معظم المواقع والمتاجر، وخمس عشرة دقيقة تكفي للمدونة. استخدم دقيقة واحدة فقط إذا احتجت توقيتًا دقيقًا؛ التشغيل الأكثر تكرارًا يثقل الخادم فقط."
+
+msgid "wp-config.php setting"
+msgstr "إعداد wp-config.php"
+
+msgid "Scheduled tasks are %s minutes overdue. Check that the server cron job below exists."
+msgstr "المهام المجدولة متأخرة %s دقيقة. تأكد من وجود مهمة الكرون في الخادم أدناه."
+
+msgid "Cron job for cPanel"
+msgstr "مهمة كرون لـ cPanel"
+
+msgid "In cPanel open “Cron Jobs” → “Add New Cron Job”. Enter the schedule (or choose the matching “Common Settings”), paste the command and save."
+msgstr "في cPanel افتح «Cron Jobs» ← «Add New Cron Job». أدخل الجدول (أو اختر «Common Settings» المطابق)، والصق الأمر واحفظ."
+
+msgid "Schedule (minute, hour, day, month, weekday)"
+msgstr "الجدول (دقيقة، ساعة، يوم، شهر، يوم الأسبوع)"
+
+msgid "Command (matches this site’s PHP %s)"
+msgstr "الأمر (يطابق PHP %s لهذا الموقع)"
+
+msgid "Other panels and alternative command"
+msgstr "لوحات أخرى وأمر بديل"
+
+msgid "The command uses the cPanel path for PHP %1$s (%2$s). On DirectAdmin or other panels replace that path with the PHP path your panel shows for the same version, for example /usr/local/php82/bin/php."
+msgstr "يستخدم الأمر مسار cPanel لـ PHP %1$s (%2$s). في DirectAdmin أو لوحات أخرى استبدل هذا المسار بمسار PHP الذي تعرضه لوحتك لنفس الإصدار، مثل /usr/local/php82/bin/php."
+
+msgid "If the command above does not run, use this one. It calls the cron file through the web address."
+msgstr "إذا لم يعمل الأمر أعلاه فاستخدم هذا؛ فهو يستدعي ملف الكرون عبر عنوان الويب."
+
+msgid "If wp-config.php cannot be changed automatically, add this line above “That’s all, stop editing!”:"
+msgstr "إذا تعذّر تعديل wp-config.php تلقائيًا فأضف هذا السطر فوق «That’s all, stop editing!»:"
+
+msgid "%s hours"
+msgstr "%s ساعات"
+
+msgid "Longer intervals (hours) lower the server load the most, but scheduled posts, emails and WooCommerce jobs then run later (up to that interval)."
+msgstr "الفواصل الأطول (بالساعات) تخفف حمل الخادم أكثر، لكن النشر المجدول والبريد ومهام ووكومرس ستُنفَّذ متأخرة (حتى هذا الفاصل)."
+
+msgid "This is the full line (schedule + command), ready for crontab. In the cPanel form, enter the schedule in the time fields and paste only the part after it into the Command field."
+msgstr "هذا هو السطر الكامل (الجدول + الأمر) الجاهز لـ crontab. في نموذج cPanel أدخل الجدول في حقول الوقت والصق الجزء الذي بعده فقط في حقل Command."
+
+msgid "Cron activity"
+msgstr "نشاط الكرون"
+
+msgid "Last successful run"
+msgstr "آخر تشغيل ناجح"
+
+msgid "Not recorded yet"
+msgstr "لم يُسجَّل بعد"
+
+msgid "Last failed run"
+msgstr "آخر تشغيل فاشل"
+
+msgid "Next scheduled task"
+msgstr "المهمة المجدولة التالية"
+
+msgid "Run by"
+msgstr "شُغِّل بواسطة"
+
+msgid "Server cron command"
+msgstr "أمر كرون الخادم"
+
+msgid "Web request (visitor or URL)"
+msgstr "طلب ويب (زائر أو عنوان)"
+
+msgid "%s ago"
+msgstr "منذ %s"
+
+msgid "in %s"
+msgstr "بعد %s"
+
+msgid "Copy command only"
+msgstr "انسخ الأمر فقط"
+

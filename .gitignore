@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.zip
+*.log
+*.bak
+*.nivawpg-backup-*
+.idea/
+.vscode/
+node_modules/
+vendor/

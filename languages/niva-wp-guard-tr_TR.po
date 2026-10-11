@@ -1,0 +1,1061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NIVA WP Guard 2.1.0\n"
+"Report-Msgid-Bugs-To: https://www.nivahost.net\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: niva-wp-guard\n"
+
+msgid "You do not have permission to do this."
+msgstr "Bu işlemi yapma yetkiniz yok."
+
+msgid "Installed and active"
+msgstr "Kurulu ve etkin"
+
+msgid "Not installed"
+msgstr "Kurulu değil"
+
+msgid "Outdated"
+msgstr "Eski"
+
+msgid "The mu-plugins folder is not writable"
+msgstr "mu-plugins klasörü yazılabilir değil"
+
+msgid "Active"
+msgstr "Etkin"
+
+msgid "Inactive"
+msgstr "Devre dışı"
+
+msgid "See which plugin and theme connects where, how much of your site's time it takes, and block every ad with one switch. Cache licenses without cutting them off."
+msgstr "Hangi eklenti ve temanın nereye bağlandığını, sitenizin ne kadar zamanını aldığını görün ve her reklamı tek anahtarla engelleyin. Lisansları kesmeden önbelleğe alın."
+
+msgid "Connections recorded"
+msgstr "Kaydedilen bağlantılar"
+
+msgid "Total wait"
+msgstr "Toplam bekleme"
+
+msgid "Blocked"
+msgstr "Engellenen"
+
+msgid "From cache"
+msgstr "Önbellekten"
+
+msgid "✓ Settings saved."
+msgstr "✓ Ayarlar kaydedildi."
+
+msgid "✓ Connection report and log file cleared."
+msgstr "✓ Bağlantı raporu ve günlük dosyası temizlendi."
+
+msgid "✓ The list of skipped hosts was released."
+msgstr "✓ Atlanan ana bilgisayarların listesi serbest bırakıldı."
+
+msgid "✓ Plugin code scan completed."
+msgstr "✓ Eklenti kodu taraması tamamlandı."
+
+msgid "✓ Loader installed."
+msgstr "✓ Yükleyici kuruldu."
+
+msgid "✕ Loader installation failed (the mu-plugins folder is not writable)."
+msgstr "✕ Yükleyici kurulumu başarısız oldu (mu-plugins klasörü yazılabilir değil)."
+
+msgid "Overview"
+msgstr "Genel bakış"
+
+msgid "Known connections"
+msgstr "Bilinen bağlantılar"
+
+msgid "Seen on your site"
+msgstr "Sitenizde görülenler"
+
+msgid "Take a plugin offline"
+msgstr "Bir eklentiyi çevrimdışı yap"
+
+msgid "Dashboard"
+msgstr "Pano"
+
+msgid "Auto circuit breaker"
+msgstr "Otomatik devre kesici"
+
+msgid "Deep tracking"
+msgstr "Derin izleme"
+
+msgid "Manual"
+msgstr "Elle"
+
+msgid "General status"
+msgstr "Genel durum"
+
+msgid "The master switch turns all blocking and modules on or off at once."
+msgstr "Ana anahtar tüm engellemeleri ve modülleri tek seferde açar veya kapatır."
+
+msgid "Plugin enabled"
+msgstr "Eklenti etkin"
+
+msgid "Off = no connection is touched."
+msgstr "Kapalı = hiçbir bağlantıya dokunulmaz."
+
+msgid "Log connections"
+msgstr "Bağlantıları kaydet"
+
+msgid "A timed report, in a txt file and in the database."
+msgstr "Zamanlı rapor; txt dosyasında ve veritabanında."
+
+msgid "License response cache time"
+msgstr "Lisans yanıtı önbellek süresi"
+
+msgid "Less"
+msgstr "Daha az"
+
+msgid "hours"
+msgstr "saat"
+
+msgid "Cache time in hours"
+msgstr "Saat olarak önbellek süresi"
+
+msgid "More"
+msgstr "Daha fazla"
+
+msgid "Preset values"
+msgstr "Hazır değerler"
+
+msgid "1 hour"
+msgstr "1 saat"
+
+msgid "6 hours"
+msgstr "6 saat"
+
+msgid "12 hours"
+msgstr "12 saat"
+
+msgid "1 day"
+msgstr "1 gün"
+
+msgid "3 days"
+msgstr "3 gün"
+
+msgid "A successful license response is kept for this long so the server is not contacted every time."
+msgstr "Başarılı bir lisans yanıtı bu süre boyunca saklanır; böylece sunucuya her seferinde bağlanılmaz."
+
+msgid "Automatic setup and log file"
+msgstr "Otomatik kurulum ve günlük dosyası"
+
+msgid "It is created automatically on every new site."
+msgstr "Her yeni sitede otomatik oluşturulur."
+
+msgid "mu-plugin loader"
+msgstr "mu-plugin yükleyicisi"
+
+msgid "Install / repair again"
+msgstr "Yeniden kur / onar"
+
+msgid "Makes the plugin load before all the others so no connection escapes it."
+msgstr "Eklentinin diğerlerinden önce yüklenmesini sağlar; böylece hiçbir bağlantı kaçmaz."
+
+msgid "txt log file"
+msgstr "txt günlük dosyası"
+
+msgid "Download txt"
+msgstr "txt indir"
+
+msgid "Download summary report"
+msgstr "Özet raporu indir"
+
+msgid "It is created with the first connection"
+msgstr "İlk bağlantıyla birlikte oluşturulur"
+
+msgid "Report from the txt file"
+msgstr "txt dosyasından rapor"
+
+msgid "The slowest connections; you can copy this report and send it."
+msgstr "En yavaş bağlantılar; bu raporu kopyalayıp gönderebilirsiniz."
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Plugin / theme"
+msgstr "Eklenti / tema"
+
+msgid "Count"
+msgstr "Sayı"
+
+msgid "Impact"
+msgstr "Etki"
+
+msgid "Maximum"
+msgstr "En yüksek"
+
+msgid "Report text"
+msgstr "Rapor metni"
+
+msgid "Copy"
+msgstr "Kopyala"
+
+msgid "The log file exists but no slow connection (over half a second) has been recorded yet."
+msgstr "Günlük dosyası var ancak henüz yavaş bir bağlantı (yarım saniyenin üzerinde) kaydedilmedi."
+
+msgid "There is no report yet. Work with the site and the dashboard for a few minutes and check again."
+msgstr "Henüz rapor yok. Birkaç dakika siteyle ve panoyla çalışın, sonra tekrar bakın."
+
+msgid "“Block” closes the connection completely. “Cache” is for licenses: the same valid response is kept for a few hours and the license is not cut off."
+msgstr "“Engelle” bağlantıyı tamamen kapatır. “Önbellek” lisanslar içindir: aynı geçerli yanıt birkaç saat saklanır ve lisans kesilmez."
+
+msgid "Select recommended (ads and notices)"
+msgstr "Önerilenleri seç (reklamlar ve bildirimler)"
+
+msgid "Clear all"
+msgstr "Tümünü temizle"
+
+msgid "All"
+msgstr "Tümü"
+
+msgid "Search: plugin, domain or description…"
+msgstr "Ara: eklenti, alan adı veya açıklama…"
+
+msgid "Seen only"
+msgstr "Yalnızca görülenler"
+
+msgid "Description and address"
+msgstr "Açıklama ve adres"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Impact on speed"
+msgstr "Hıza etkisi"
+
+msgid "Block"
+msgstr "Engelle"
+
+msgid "Cache"
+msgstr "Önbellek"
+
+msgid "Not seen yet"
+msgstr "Henüz görülmedi"
+
+msgid "Blocking “license” and “plugin function” items may lock a theme or stop SMS and orders from working. For licenses, “cache” is safer. If you tick both “block” and “cache”, block wins."
+msgstr "“Lisans” ve “eklenti işlevi” öğelerini engellemek temayı kilitleyebilir veya SMS ve siparişlerin çalışmasını durdurabilir. Lisanslar için “önbellek” daha güvenlidir. Hem “engelle” hem “önbellek” işaretlerseniz engelleme geçerli olur."
+
+msgid "Connections seen on your site"
+msgstr "Sitenizde görülen bağlantılar"
+
+msgid "Items that are not in the known list, ordered by longest wait. Tick one to block that address."
+msgstr "Bilinen listede olmayan öğeler, en uzun beklemeye göre sıralı. İşaretlerseniz o adres engellenir."
+
+msgid "No new connection has been recorded yet. Work with the site and the dashboard for a while and check again."
+msgstr "Henüz yeni bir bağlantı kaydedilmedi. Bir süre siteyle ve panoyla çalışın, sonra tekrar bakın."
+
+msgid "Type (guess)"
+msgstr "Tür (tahmin)"
+
+msgid "Search the connections seen…"
+msgstr "Görülen bağlantılarda ara…"
+
+msgid "Take a whole plugin offline"
+msgstr "Bir eklentiyi tamamen çevrimdışı yap"
+
+msgid "All external connections of the selected plugin are closed (only wordpress.org stays open). Use it only for plugins that do not need the internet or a license."
+msgstr "Seçilen eklentinin tüm dış bağlantıları kapatılır (yalnızca wordpress.org açık kalır). Yalnızca internete veya lisansa ihtiyaç duymayan eklentiler için kullanın."
+
+msgid "Search plugin…"
+msgstr "Eklenti ara…"
+
+msgid "Ready-made widgets and ads"
+msgstr "Hazır bileşenler ve reklamlar"
+
+msgid "Each item is switched on separately."
+msgstr "Her öğe ayrı ayrı açılır."
+
+msgid "WordPress news widget"
+msgstr "WordPress haber bileşeni"
+
+msgid "“Events and News” and the planet news."
+msgstr "“Etkinlikler ve Haberler” ile gezegen haberleri."
+
+msgid "ParsiDate: widget and ads"
+msgstr "ParsiDate: bileşen ve reklamlar"
+
+msgid "The dashboard widget (sponsor banner such as Files.ir and the news feed) is removed and the sponsors.json and wp-parsi.com connections are closed. The Jalali calendar stays untouched."
+msgstr "Pano bileşeni (Files.ir gibi sponsor afişi ve haber akışı) kaldırılır ve sponsors.json ile wp-parsi.com bağlantıları kapatılır. Hicri şemsi takvim olduğu gibi kalır."
+
+msgid "Elementor news widget"
+msgstr "Elementor haber bileşeni"
+
+msgid "Version and tool ads."
+msgstr "Sürüm ve araç reklamları."
+
+msgid "Yoast widget feed"
+msgstr "Yoast bileşen akışı"
+
+msgid "The SEO score stays; only the English feed is hidden."
+msgstr "SEO puanı kalır; yalnızca İngilizce akış gizlenir."
+
+msgid "Jetpack: offline mode"
+msgstr "Jetpack: çevrimdışı mod"
+
+msgid "The connection to WordPress.com and the Jetpack connections (including the bundle inside WooCommerce) are cut."
+msgstr "WordPress.com bağlantısı ve Jetpack bağlantıları (WooCommerce içindeki paket dahil) kesilir."
+
+msgid "Persian WooCommerce SMS ads"
+msgstr "Farsça WooCommerce SMS reklamları"
+
+msgid "The national SMS banner and plugin install suggestions."
+msgstr "Ulusal SMS afişi ve eklenti kurulum önerileri."
+
+msgid "Hide promotional notices"
+msgstr "Reklam bildirimlerini gizle"
+
+msgid "Errors and “new version” notices always stay."
+msgstr "Hatalar ve “yeni sürüm” bildirimleri her zaman kalır."
+
+msgid "Enable the keyword filter for notices"
+msgstr "Bildirimler için anahtar sözcük filtresini etkinleştir"
+
+msgid "One keyword per line, for example: Digits jacket"
+msgstr "Her satıra bir anahtar sözcük, örneğin: Digits jacket"
+
+msgid "Dashboard widgets of this site"
+msgstr "Bu sitenin pano bileşenleri"
+
+msgid "(one switch each)"
+msgstr "(her biri ayrı anahtar)"
+
+msgid "All the widgets that have been seen on this site's dashboard, with the name of the plugin that created them. A ticked widget is never created, so its feed and ad banner are not fetched from an external server either."
+msgstr "Bu sitenin panosunda görülen tüm bileşenler, oluşturan eklentinin adıyla. İşaretlenen bileşen hiç oluşturulmaz; dolayısıyla akışı ve reklam afişi dış sunucudan çekilmez."
+
+msgid "Admin menu (right side)"
+msgstr "Yönetim menüsü (yan)"
+
+msgid "(only hidden, not removed)"
+msgstr "(yalnızca gizlenir, kaldırılmaz)"
+
+msgid "Every ticked item is hidden from the side menu. The plugin stays active and its settings still open by direct address. “Dashboard”, “Settings” and “Plugins” are not in this list so you never lose access."
+msgstr "İşaretlenen her öğe yan menüden gizlenir. Eklenti etkin kalır ve ayarları doğrudan adresle açılır. “Pano”, “Ayarlar” ve “Eklentiler” erişiminizi kaybetmemeniz için bu listede yoktur."
+
+msgid "There is no list yet. Open another admin page and come back here."
+msgstr "Henüz liste yok. Başka bir yönetim sayfası açın ve buraya geri dönün."
+
+msgid "Remove dashboard widgets of the selected plugins"
+msgstr "Seçilen eklentilerin pano bileşenlerini kaldır"
+
+msgid "The widget code does not run and its feed and banner are not fetched from an external server."
+msgstr "Bileşen kodu çalıştırılmaz; akışı ve afişi dış sunucudan çekilmez."
+
+msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "Bazı bölgelerdeki (örneğin İran) sunucular dış hizmetlere zaman zaman ulaşamaz ve her seferinde 5 ila 15 saniye bekler. Bu seçenekle, art arda hata veren veya yavaş olan bir ana bilgisayar bir süre beklemeden atlanır."
+
+msgid "Enable"
+msgstr "Etkinleştir"
+
+msgid "Off by default. “License” addresses are always exempt."
+msgstr "Varsayılan olarak kapalı. “Lisans” adresleri her zaman muaftır."
+
+msgid "How long a failing host is skipped (hours)"
+msgstr "Bozuk ana bilgisayar ne kadar süre atlansın (saat)"
+
+msgid "Consecutive failures before it activates"
+msgstr "Devreye girmeden önce art arda hata sayısı"
+
+msgid "A response slower than this (seconds) also counts as a failure"
+msgstr "Bundan yavaş yanıt (saniye) da hata sayılır"
+
+msgid "Exempt hosts (one per line)"
+msgstr "Muaf ana bilgisayarlar (her satıra bir tane)"
+
+msgid "These hosts (and their subdomains) are never skipped, even if they are slow or failing. You can also exempt hosts from the table beside this one."
+msgstr "Bu ana bilgisayarlar (ve alt alan adları) yavaş veya hatalı olsalar bile asla atlanmaz. Muafiyeti yandaki tablodan da verebilirsiniz."
+
+msgid "Hosts being watched"
+msgstr "İzlenen ana bilgisayarlar"
+
+msgid "Only failures recorded since this option was switched on are shown. After the skip period ends it tries once more; if the host is healthy it is removed from the list."
+msgstr "Yalnızca bu seçenek açıldığından beri kaydedilen hatalar gösterilir. Atlama süresi bitince bir kez daha dener; ana bilgisayar sağlamsa listeden çıkarılır."
+
+msgid "No host has been recorded yet."
+msgstr "Henüz kaydedilmiş ana bilgisayar yok."
+
+msgid "Host"
+msgstr "Ana bilgisayar"
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Skip ends"
+msgstr "Atlama bitişi"
+
+msgid "Times activated"
+msgstr "Devreye girme sayısı"
+
+msgid "Last error"
+msgstr "Son hata"
+
+msgid "Exempt from the breaker"
+msgstr "Devre kesiciden muaf"
+
+msgid "Release all (clear the list)"
+msgstr "Tümünü serbest bırak (listeyi temizle)"
+
+msgid "1) Intercept direct PHP connections"
+msgstr "1) Doğrudan PHP bağlantılarını dinle"
+
+msgid "Enable deep tracking"
+msgstr "Derin izlemeyi etkinleştir"
+
+msgid "Off by default. Try it on a test site first."
+msgstr "Varsayılan olarak kapalı. Önce bir test sitesinde deneyin."
+
+msgid "2) Plugin code scan (static)"
+msgstr "2) Eklenti kodu taraması (statik)"
+
+msgid "Scan plugin code"
+msgstr "Eklenti kodunu tara"
+
+msgid "Nothing found."
+msgstr "Hiçbir şey bulunamadı."
+
+msgid "Plugin's own code"
+msgstr "Eklentinin kendi kodu"
+
+msgid "Library (vendor)"
+msgstr "Kütüphane (vendor)"
+
+msgid "Fixed destinations in code"
+msgstr "Koddaki sabit hedefler"
+
+msgid "File details were not saved in this scan; scan again."
+msgstr "Bu taramada dosya ayrıntıları kaydedilmedi; yeniden tarayın."
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "Line"
+msgstr "Satır"
+
+msgid "Site / fixed IP inside the file"
+msgstr "Dosya içindeki site / sabit IP"
+
+msgid "Library"
+msgstr "Kütüphane"
+
+msgid "Plugin code"
+msgstr "Eklenti kodu"
+
+msgid "“Plugin's own code” means outside the vendor folder. A high count inside libraries is usually harmless. False positives are possible too (for example curl for a local address); to be sure, follow that plugin in the “seen” table."
+msgstr "“Eklentinin kendi kodu”, vendor klasörü dışı anlamına gelir. Kütüphanelerdeki yüksek sayı genellikle zararsızdır. Yanlış pozitifler de olabilir (örneğin yerel adres için curl); emin olmak için o eklentiyi “görülenler” tablosunda izleyin."
+
+msgid "Manual blocking"
+msgstr "Elle engelleme"
+
+msgid "Save settings"
+msgstr "Ayarları kaydet"
+
+msgid "No changes made"
+msgstr "Değişiklik yapılmadı"
+
+msgid "Clear the connection report"
+msgstr "Bağlantı raporunu temizle"
+
+msgid "The mu-plugins folder could not be created: %s"
+msgstr "mu-plugins klasörü oluşturulamadı: %s"
+
+msgid "The mu-plugins folder is not writable; the plugin works normally but loads later than the others."
+msgstr "mu-plugins klasörü yazılabilir değil; eklenti normal çalışır ancak diğerlerinden sonra yüklenir."
+
+msgid "Writing the loader file failed."
+msgstr "Yükleyici dosyası yazılamadı."
+
+msgid "Loader installed: %s"
+msgstr "Yükleyici kuruldu: %s"
+
+msgid "NIVA WP Guard — connection report"
+msgstr "NIVA WP Guard — bağlantı raporu"
+
+msgid "Site: %1$s | Date: %2$s UTC | Version: %3$s"
+msgstr "Site: %1$s | Tarih: %2$s UTC | Sürüm: %3$s"
+
+msgid "The log file has not been created yet."
+msgstr "Günlük dosyası henüz oluşturulmadı."
+
+msgid "Unique connections: %1$d | Slow connections (over 0.5 s): %2$d | Total wait: %3$.1f s | Errors / no response: %4$d"
+msgstr "Benzersiz bağlantı: %1$d | Yavaş bağlantı (0,5 sn üzeri): %2$d | Toplam bekleme: %3$.1f sn | Hata / yanıtsız: %4$d"
+
+msgid "— By plugin (total wait time):"
+msgstr "— Eklentiye göre (toplam bekleme süresi):"
+
+msgid "— Slowest addresses:"
+msgstr "— En yavaş adresler:"
+
+msgid "  %1$-60s  %2$d times  total %3$.1fs  max %4$.1fs  errors:%5$d  [%6$s]"
+msgstr "  %1$-60s  %2$d kez  toplam %3$.1fs  en çok %4$.1fs  hata:%5$d  [%6$s]"
+
+msgid "Persian WooCommerce SMS"
+msgstr "Farsça WooCommerce SMS"
+
+msgid "Persian WooCommerce"
+msgstr "Farsça WooCommerce"
+
+msgid "Digits (Mersa Web)"
+msgstr "Digits (Mersa Web)"
+
+msgid "RTL (RTL-CareUnit)"
+msgstr "RTL (RTL-CareUnit)"
+
+msgid "Mahdis Web theme"
+msgstr "Mahdis Web teması"
+
+msgid "Buy with Digikala"
+msgstr "Digikala ile satın alma"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "WordPress — version and plugin updates"
+msgstr "WordPress — sürüm ve eklenti güncellemeleri"
+
+msgid "Elementor"
+msgstr "Elementor"
+
+msgid "Yoast (unofficial server)"
+msgstr "Yoast (resmî olmayan sunucu)"
+
+msgid "ParsiDate"
+msgstr "ParsiDate"
+
+msgid "Advanced Shipping (Ace Plugins)"
+msgstr "Advanced Shipping (Ace Plugins)"
+
+msgid "Emalls"
+msgstr "Emalls"
+
+msgid "Niva plugins"
+msgstr "Niva eklentileri"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "Torob"
+msgstr "Torob"
+
+msgid "Notices and ads (pwsms.json / pwsms.hash)"
+msgstr "Bildirimler ve reklamlar (pwsms.json / pwsms.hash)"
+
+msgid "Notice signature"
+msgstr "Bildirim imzası"
+
+msgid "News feed on the dashboard"
+msgstr "Panodaki haber akışı"
+
+msgid "Advertising panel (ads-api)"
+msgstr "Reklam paneli (ads-api)"
+
+msgid "Notices and ads"
+msgstr "Bildirimler ve reklamlar"
+
+msgid "License verification (every few seconds)"
+msgstr "Lisans doğrulama (birkaç saniyede bir)"
+
+msgid "Product authorization"
+msgstr "Ürün yetkilendirme"
+
+msgid "News feed"
+msgstr "Haber akışı"
+
+msgid "Version notice (notifier.xml)"
+msgstr "Sürüm bildirimi (notifier.xml)"
+
+msgid "Notices (notifications.json)"
+msgstr "Bildirimler (notifications.json)"
+
+msgid "Version check (metadata.json)"
+msgstr "Sürüm kontrolü (metadata.json)"
+
+msgid "Order registration and tracking (plugin function)"
+msgstr "Sipariş kaydı ve takibi (eklenti işlevi)"
+
+msgid "Promotional offers and suggested extensions (promotions / obw-free-extensions)"
+msgstr "Tanıtım teklifleri ve önerilen uzantılar (promotions / obw-free-extensions)"
+
+msgid "Connection to WordPress.com (public-api): account check, suggestions, payments"
+msgstr "WordPress.com bağlantısı (public-api): hesap kontrolü, öneriler, ödemeler"
+
+msgid "Jetpack server communication (jetpack.wordpress.com)"
+msgstr "Jetpack sunucu iletişimi (jetpack.wordpress.com)"
+
+msgid "The jetpack.com site — product recommendations and ads"
+msgstr "jetpack.com sitesi — ürün önerileri ve reklamlar"
+
+msgid "Visit statistics (stats.wp.com)"
+msgstr "Ziyaret istatistikleri (stats.wp.com)"
+
+msgid "Tracking pixel (pixel.wp.com)"
+msgstr "İzleme pikseli (pixel.wp.com)"
+
+msgid "WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways"
+msgstr "WooPayments reklamları (incentives) — “WooPayments’i kurun” afişi; kendi ödeme geçitlerinizle ilgisi yoktur"
+
+msgid "Sending usage statistics to WooCommerce (usage tracking), about half a second"
+msgstr "WooCommerce’e kullanım istatistiği gönderme (usage tracking), yaklaşık yarım saniye"
+
+msgid "PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal"
+msgstr "PayPal (webscr): IPN doğrulama ve PayPal’a bağlanma — PayPal’a ulaşamayan sunucularda 15 saniyeye kadar bekleyebilir"
+
+msgid "Product key check for WooCommerce.com products (product-key-api)"
+msgstr "WooCommerce.com ürünleri için ürün anahtarı kontrolü (product-key-api)"
+
+msgid "WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)"
+msgstr "api.wordpress.org üzerinden WordPress sürüm kontrolü (“Sistem durumu” sayfası; yavaş sunucularda 10 saniyeye kadar)"
+
+msgid "Theme information from api.wordpress.org (“System status” page)"
+msgstr "api.wordpress.org üzerinden tema bilgisi (“Sistem durumu” sayfası)"
+
+msgid "QUIC.cloud news and notices (wpapi.quic.cloud/news)"
+msgstr "QUIC.cloud haber ve bildirimleri (wpapi.quic.cloud/news)"
+
+msgid "QUIC.cloud version check (ver_check)"
+msgstr "QUIC.cloud sürüm kontrolü (ver_check)"
+
+msgid "QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions"
+msgstr "QUIC.cloud panosu (api.quic.cloud/d/dash): istatistikler ve bulut hizmeti önerileri"
+
+msgid "solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds"
+msgstr "solidwp.com haber ve tanıtım yazıları (pano bileşeni ve bildirimi), 10 saniyeye kadar"
+
+msgid "rankmath.com blog news and posts (news widget and dashboard ad)"
+msgstr "rankmath.com blog haberleri ve yazıları (haber bileşeni ve pano reklamı)"
+
+msgid "Reading the readme from the WordPress svn (up to 10 seconds)"
+msgstr "WordPress svn’den readme okuma (10 saniyeye kadar)"
+
+msgid "Plugin version check"
+msgstr "Eklenti sürüm kontrolü"
+
+msgid "Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens"
+msgstr "Düzenleyici reklamları ve bildirimleri: Pro’ya yükseltme (free-to-pro-upsell), bildirimler ve tanıtımlar — düzenleyici açılırken"
+
+msgid "my.elementor.com connections (news, library, suggested plugins)"
+msgstr "my.elementor.com bağlantıları (haberler, kütüphane, önerilen eklentiler)"
+
+msgid "Yoast SEO (free) translation packages (translationspress)"
+msgstr "Yoast SEO (ücretsiz) çeviri paketleri (translationspress)"
+
+msgid "Yoast SEO Premium translation packages (translationspress)"
+msgstr "Yoast SEO Premium çeviri paketleri (translationspress)"
+
+msgid "Yoast WooCommerce SEO translation packages (translationspress)"
+msgstr "Yoast WooCommerce SEO çeviri paketleri (translationspress)"
+
+msgid "All Yoast translation packages in one (including News, Local, Video and others)"
+msgstr "Tüm Yoast çeviri paketleri tek seferde (News, Local, Video ve diğerleri dahil)"
+
+msgid "vip-themes.com — a third-party server, not Yoast"
+msgstr "vip-themes.com — Yoast değil, üçüncü taraf sunucu"
+
+msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
+msgstr "Ziyaretçi IP kontrolü (ipcheck) — site sayfalarında da çalışır ve 10 saniyeye kadar bekletebilir"
+
+msgid "Add-ons list (addons) — up to 10 seconds"
+msgstr "Eklenti listesi (addons) — 10 saniyeye kadar"
+
+msgid "Notices (feeds/notifications)"
+msgstr "Bildirimler (feeds/notifications)"
+
+msgid "Sponsors list (sponsors.json from GitHub)"
+msgstr "Sponsor listesi (GitHub’dan sponsors.json)"
+
+msgid "News feed (wp-parsi.com)"
+msgstr "Haber akışı (wp-parsi.com)"
+
+msgid "Advertising page aceplugins.com"
+msgstr "aceplugins.com reklam sayfası"
+
+msgid "IndexNow — notifying search engines about page changes (up to 10 seconds)"
+msgstr "IndexNow — sayfa değişikliklerini arama motorlarına bildirme (10 saniyeye kadar)"
+
+msgid "my.yoast.com — site information"
+msgstr "my.yoast.com — site bilgileri"
+
+msgid "Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds"
+msgstr "Yükseltme kampanyası (upgrade-campaign) — reklam; 10 saniyeye kadar"
+
+msgid "The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher"
+msgstr "Wincher bağlantısının tamamı (anahtar kelime takibi: account ve connect/token) — 10 saniyeye kadar; Wincher kullanmıyorsanız engelleyin"
+
+msgid "Welcome page and ad (cs_welcome.json)"
+msgstr "Karşılama sayfası ve reklam (cs_welcome.json)"
+
+msgid "Emalls product extraction service (plugin function)"
+msgstr "Emalls ürün çıkarma hizmeti (eklenti işlevi)"
+
+msgid "Niva license server (validate)"
+msgstr "Niva lisans sunucusu (validate)"
+
+msgid "payamak-panel SMS gateway"
+msgstr "payamak-panel SMS geçidi"
+
+msgid "Price update webhook (Torob)"
+msgstr "Fiyat güncelleme webhook’u (Torob)"
+
+msgid "Ad"
+msgstr "Reklam"
+
+msgid "Notice / news"
+msgstr "Bildirim / haber"
+
+msgid "License"
+msgstr "Lisans"
+
+msgid "Version check"
+msgstr "Sürüm kontrolü"
+
+msgid "Plugin function"
+msgstr "Eklenti işlevi"
+
+msgid "Third party"
+msgstr "Üçüncü taraf"
+
+msgid "Status summary: <b>%1$s</b> blocked, <b>%2$s</b> cached, <b>%3$s</b> plugins offline."
+msgstr "Durum özeti: <b>%1$s</b> engellendi, <b>%2$s</b> önbelleğe alındı, <b>%3$s</b> eklenti çevrimdışı."
+
+msgid "<b>%1$s</b> unique connections · <b>%2$s</b> slow · total wait <b>%3$s</b> · <b>%4$s</b> errors or no response"
+msgstr "<b>%1$s</b> benzersiz bağlantı · <b>%2$s</b> yavaş · toplam bekleme <b>%3$s</b> · <b>%4$s</b> hata veya yanıtsız"
+
+msgid "Skipped"
+msgstr "Atlanıyor"
+
+msgid "Counting (%s)"
+msgstr "Sayılıyor (%s)"
+
+msgid "Waiting for next try"
+msgstr "Sonraki deneme bekleniyor"
+
+msgid "Connections that bypass the WordPress API and go through <code>file_get_contents('http…')</code> or <code>fopen</code> are also recorded in the same table and log (tag \"PHP-GET\"), and the blocking rules apply to them too."
+msgstr "WordPress API’sini atlayıp <code>file_get_contents('http…')</code> veya <code>fopen</code> ile giden bağlantılar da aynı tabloda ve günlükte kaydedilir (“PHP-GET” etiketi) ve engelleme kuralları onlara da uygulanır."
+
+msgid "Limits: <code>curl_exec</code> and <code>fsockopen</code> cannot be intercepted live in plain PHP (see section 2). Also, if a plugin reads <code>$http_response_header</code> or <code>get_headers()</code> directly, it may not receive the header data while this option is on; if anything breaks, turn this switch off. Requests made by WordPress core itself (without a calling plugin) are left untouched."
+msgstr "Sınırlamalar: <code>curl_exec</code> ve <code>fsockopen</code> düz PHP’de canlı olarak dinlenemez (bölüm 2’ye bakın). Ayrıca bir eklenti <code>$http_response_header</code> veya <code>get_headers()</code> değerini doğrudan okuyorsa, bu seçenek açıkken başlık verisini alamayabilir; bir şey bozulursa bu anahtarı kapatın. WordPress çekirdeğinin kendi istekleri (çağıran eklenti olmadan) olduğu gibi bırakılır."
+
+msgid "allow_url_fopen is disabled on this host; this section has no effect."
+msgstr "allow_url_fopen bu sunucuda kapalı; bu bölümün etkisi yok."
+
+msgid "Reads the PHP files of all plugins and themes and lists where <code>curl</code>, <code>fsockopen</code> or <code>file_get_contents('http…')</code> is written directly. It does not run or block anything; it only tells you which plugin has the “ability to connect silently”."
+msgstr "Tüm eklenti ve temaların PHP dosyalarını okur ve <code>curl</code>, <code>fsockopen</code> veya <code>file_get_contents('http…')</code> kodunun doğrudan yazıldığı yerleri listeler. Hiçbir şeyi çalıştırmaz veya engellemez; yalnızca hangi eklentinin “sessizce bağlanma yeteneği” olduğunu söyler."
+
+msgid "Last scan: %1$s · %2$s files"
+msgstr "Son tarama: %1$s · %2$s dosya"
+
+msgid "· partial (time ran out)"
+msgstr "· yarım kaldı (süre doldu)"
+
+msgid "No fixed address — the destination comes from settings or input at run time"
+msgstr "Sabit adres yok — hedef çalışma anında ayarlardan veya girdiden gelir"
+
+msgid "One address per line in the form <code>domain/path</code> (prefix); for example <code>example.com/ads/</code>"
+msgstr "Her satıra <code>alan/yol</code> biçiminde bir adres (önek); örneğin <code>example.com/ads/</code>"
+
+msgid "%s items"
+msgstr "%s öğe"
+
+msgid "This item is of the “license” type. Blocking it may lock a theme or plugin. Turn on “cache” instead. Continue?"
+msgstr "Bu öğe “lisans” türünde. Engellemek temayı veya eklentiyi kilitleyebilir. Bunun yerine “önbellek”i açın. Devam edilsin mi?"
+
+msgid "This item is needed for the plugin itself to work (SMS, orders, etc.). Continue?"
+msgstr "Bu öğe eklentinin kendi çalışması için gerekli (SMS, siparişler vb.). Devam edilsin mi?"
+
+msgid "%s unsaved changes"
+msgstr "%s kaydedilmemiş değişiklik"
+
+msgid "Copied ✓"
+msgstr "Kopyalandı ✓"
+
+msgid "Clear the connection report and log file?"
+msgstr "Bağlantı raporu ve günlük dosyası temizlensin mi?"
+
+msgid "%1$s times · %2$s ·"
+msgstr "%1$s kez · %2$s ·"
+
+msgid "max %s"
+msgstr "en çok %s"
+
+msgid "WordPress core"
+msgstr "WordPress çekirdeği"
+
+msgid "Theme: %s"
+msgstr "Tema: %s"
+
+msgid "There is no list yet. Open the <a href=\"%s\">Dashboard</a> page once and come back here."
+msgstr "Henüz liste yok. <a href=\"%s\">Pano</a> sayfasını bir kez açın ve buraya geri dönün."
+
+msgid "Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site."
+msgstr "Eklenti ve temaların dışa giden bağlantılarını kontrol edin: her bağlantıyı zamanıyla birlikte kaydedin (txt dosyası ve rapor), reklamları, bildirimleri ve haber akışlarını engelleyin, lisans yanıtlarını (kesmeden) önbelleğe alın, seçili eklentileri çevrimdışı yapın, pano tanıtım bileşenlerini ve bildirimlerini kaldırın ve hata veren ana bilgisayarları otomatik atlayın. Her öğenin kendi anahtarı vardır ve kurulum her yeni sitede otomatiktir."
+
+msgid "The old “NIVA HTTP Guard” plugin is still active. Deactivate it so the new version can work. Your settings are migrated automatically and you can delete the old plugin after the first load."
+msgstr "Eski “NIVA HTTP Guard” eklentisi hâlâ etkin. Yeni sürümün çalışması için onu devre dışı bırakın. Ayarlarınız otomatik taşınır ve ilk yüklemeden sonra eski eklentiyi silebilirsiniz."
+
+msgid "Relevant to this site"
+msgstr "Bu siteyle ilgili"
+
+msgid "All connections"
+msgstr "Tüm bağlantılar"
+
+msgid ".htaccess is up to date (a backup was saved)."
+msgstr ".htaccess güncel (yedek kaydedildi)."
+
+msgid "The .htaccess block was removed."
+msgstr ".htaccess bloğu kaldırıldı."
+
+msgid "404.html was regenerated."
+msgstr "404.html yeniden oluşturuldu."
+
+msgid "Could not write 404.html — download it and upload it to the site root."
+msgstr "404.html yazılamadı — indirip sitenin kök dizinine yükleyin."
+
+msgid "The site returned a server error after the change, so .htaccess was restored from the backup."
+msgstr "Değişiklikten sonra site sunucu hatası verdi; bu yüzden .htaccess yedekten geri yüklendi."
+
+msgid "This server uses Nginx, which does not use .htaccess. Use the Nginx snippet below."
+msgstr "Bu sunucu Nginx kullanıyor ve .htaccess kullanmaz. Aşağıdaki Nginx kodunu kullanın."
+
+msgid "Enable Fast 404 and save first."
+msgstr "Önce “Hızlı 404”ü etkinleştirip kaydedin."
+
+msgid "Could not write .htaccess — download the snippet below and add it yourself."
+msgstr ".htaccess yazılamadı — aşağıdaki kodu indirip kendiniz ekleyin."
+
+msgid "Server and 404"
+msgstr "Sunucu ve 404"
+
+msgid "Installed"
+msgstr "Kurulu"
+
+msgid "Outdated — it is updated when you save"
+msgstr "Eski — kaydettiğinizde güncellenir"
+
+msgid "Still present — it is removed when you save"
+msgstr "Hâlâ duruyor — kaydettiğinizde kaldırılır"
+
+msgid "Not writable"
+msgstr "Yazılamıyor"
+
+msgid "Your own file (kept untouched)"
+msgstr "Kendi dosyanız (dokunulmaz)"
+
+msgid "Not used on Nginx"
+msgstr "Nginx’te kullanılmaz"
+
+msgid "Off"
+msgstr "Kapalı"
+
+msgid "WordPress default"
+msgstr "WordPress varsayılanı"
+
+msgid "Slow down (use the interval)"
+msgstr "Yavaşlat (aralığı kullan)"
+
+msgid "Turn off"
+msgstr "Kapat"
+
+msgid "Post editor"
+msgstr "Yazı düzenleyici"
+
+msgid "Other admin pages"
+msgstr "Diğer yönetim sayfaları"
+
+msgid "Front-end (visitors)"
+msgstr "Ön yüz (ziyaretçiler)"
+
+msgid "Heartbeat control"
+msgstr "Heartbeat kontrolü"
+
+msgid "WordPress sends a background request (Heartbeat) every 15–60 seconds for autosave, post locking and notices. On weak hosts this alone can overload the server. Control it separately for each part of the site."
+msgstr "WordPress otomatik kayıt, yazı kilitleme ve bildirimler için her 15–60 saniyede bir arka plan isteği (Heartbeat) gönderir. Zayıf sunucularda tek başına bu bile sunucuyu yorabilir. Sitenin her bölümü için ayrı ayrı kontrol edin."
+
+msgid "Enable heartbeat control"
+msgstr "Heartbeat kontrolünü etkinleştir"
+
+msgid "A separate mu-plugin file is created; off = default WordPress behavior."
+msgstr "Ayrı bir mu-plugin dosyası oluşturulur; kapalı = WordPress’in varsayılan davranışı."
+
+msgid "Interval when slowed (seconds)"
+msgstr "Yavaşlatma aralığı (saniye)"
+
+msgid "For example 300 = every 5 minutes, 600 = every 10 minutes."
+msgstr "Örneğin 300 = 5 dakikada bir, 600 = 10 dakikada bir."
+
+msgid "Turning it off in the post editor disables autosave and post locking while editing."
+msgstr "Yazı düzenleyicide kapatmak, düzenleme sırasında otomatik kaydı ve yazı kilitlemeyi devre dışı bırakır."
+
+msgid "mu-plugin file"
+msgstr "mu-plugin dosyası"
+
+msgid "Fast 404"
+msgstr "Hızlı 404"
+
+msgid "Scanner bots probe hundreds of strange addresses (.env, backup files, fake PHP files). Instead of loading WordPress, the database, CSS and JS for each one, a light static 404 page is returned immediately."
+msgstr "Tarama botları yüzlerce garip adres dener (.env, yedek dosyaları, sahte PHP dosyaları). Her biri için WordPress’i, veritabanını, CSS ve JS’yi yüklemek yerine hafif ve statik bir 404 sayfası anında döndürülür."
+
+msgid "Enable fast 404"
+msgstr "Hızlı 404’ü etkinleştir"
+
+msgid "Creates a separate mu-plugin, a 404.html page in the site root and a block in .htaccess."
+msgstr "Ayrı bir mu-plugin, sitenin kök dizininde bir 404.html sayfası ve .htaccess içinde bir blok oluşturur."
+
+msgid "Strict mode"
+msgstr "Sıkı mod"
+
+msgid "Also blocks existing script files outside the WordPress core, plugins and themes folders. May break custom scripts placed in the site root."
+msgstr "WordPress çekirdeği, eklenti ve tema klasörleri dışındaki mevcut betik dosyalarını da engeller. Sitenin kök dizinindeki özel betikleri bozabilir."
+
+msgid "Installation status"
+msgstr "Kurulum durumu"
+
+msgid "404.html page"
+msgstr "404.html sayfası"
+
+msgid ".htaccess block"
+msgstr ".htaccess bloğu"
+
+msgid "Install / repair .htaccess"
+msgstr ".htaccess’i kur / onar"
+
+msgid "Regenerate 404.html"
+msgstr "404.html’i yeniden oluştur"
+
+msgid "Remove .htaccess block"
+msgstr ".htaccess bloğunu kaldır"
+
+msgid "Download 404.html"
+msgstr "404.html’i indir"
+
+msgid "Download Nginx snippet"
+msgstr "Nginx kodunu indir"
+
+msgid "Download .htaccess snippet"
+msgstr ".htaccess kodunu indir"
+
+msgid "Nginx configuration"
+msgstr "Nginx yapılandırması"
+
+msgid "Code to add to .htaccess"
+msgstr ".htaccess’e eklenecek kod"
+
+msgid "Nginx does not use .htaccess; add this to your server configuration. Fake PHP files are handled by the mu-plugin."
+msgstr "Nginx .htaccess kullanmaz; bunu sunucu yapılandırmanıza ekleyin. Sahte PHP dosyalarını mu-plugin yakalar."
+
+msgid "If automatic installation is not possible, download the files and place them yourself: put 404.html in the site root (next to wp-config.php) and add this code to the top of .htaccess (before “# BEGIN WordPress”)."
+msgstr "Otomatik kurulum mümkün değilse dosyaları indirip kendiniz yerleştirin: 404.html’i sitenin kök dizinine (wp-config.php’nin yanına) koyun ve bu kodu .htaccess’in en üstüne (“# BEGIN WordPress” öncesine) ekleyin."
+
+msgid "Load before other plugins (mu-plugin loader)"
+msgstr "Diğer eklentilerden önce yükle (mu-plugin yükleyicisi)"
+
+msgid "Creates one small file in wp-content/mu-plugins. Nothing is created outside the plugin folder until you turn this on and save."
+msgstr "wp-content/mu-plugins içinde küçük bir dosya oluşturulur. Bunu açıp kaydedene kadar eklenti klasörünün dışında hiçbir şey oluşturulmaz."
+
+msgid "DISABLE_WP_CRON is already defined in wp-config.php by you, so it was left untouched."
+msgstr "DISABLE_WP_CRON zaten wp-config.php içinde sizin tarafınızdan tanımlı, bu yüzden dokunulmadı."
+
+msgid "The site returned a server error after the change, so wp-config.php was restored."
+msgstr "Değişiklikten sonra site sunucu hatası verdi, bu yüzden wp-config.php eski haline getirildi."
+
+msgid "Could not find the right place in wp-config.php — add the line shown in the cron card yourself."
+msgstr "wp-config.php içinde uygun yer bulunamadı — cron kartında gösterilen satırı kendiniz ekleyin."
+
+msgid "wp-config.php could not be changed automatically — add the line shown in the cron card yourself."
+msgstr "wp-config.php otomatik değiştirilemedi — cron kartında gösterilen satırı kendiniz ekleyin."
+
+msgid "WordPress cron (wp-cron)"
+msgstr "WordPress cron (wp-cron)"
+
+msgid "By default WordPress runs its scheduled tasks (scheduled posts, emails, backups, WooCommerce jobs) during visitors’ page loads. This slows pages down and wastes resources. Turn it off here and let the server run it on a fixed schedule instead."
+msgstr "WordPress varsayılan olarak zamanlanmış görevlerini (zamanlanmış yazılar, e-postalar, yedekler, WooCommerce işleri) ziyaretçiler sayfayı yüklerken çalıştırır. Bu sayfaları yavaşlatır ve kaynak israf eder. Burada kapatın ve sunucunun sabit bir takvimle çalıştırmasını sağlayın."
+
+msgid "Disable the built-in WordPress cron"
+msgstr "Yerleşik WordPress cron’unu devre dışı bırak"
+
+msgid "Adds DISABLE_WP_CRON to wp-config.php. Add the server cron job below first, otherwise scheduled tasks stop running."
+msgstr "wp-config.php dosyasına DISABLE_WP_CRON ekler. Önce aşağıdaki sunucu cron görevini ekleyin, aksi halde zamanlanmış görevler çalışmaz."
+
+msgid "Run the server job every"
+msgstr "Sunucu görevi şu aralıkla çalışsın"
+
+msgid "%s minutes"
+msgstr "%s dakika"
+
+msgid "5 minutes suits most sites and shops, 15 minutes is enough for a blog. Use 1 minute only if you need exact timing; more frequent runs only load the server."
+msgstr "5 dakika çoğu site ve mağaza için uygundur, blog için 15 dakika yeterlidir. 1 dakikayı yalnızca tam zamanlama gerekiyorsa kullanın; daha sık çalıştırma sunucuyu sadece yorar."
+
+msgid "wp-config.php setting"
+msgstr "wp-config.php ayarı"
+
+msgid "Scheduled tasks are %s minutes overdue. Check that the server cron job below exists."
+msgstr "Zamanlanmış görevler %s dakika gecikmiş. Aşağıdaki sunucu cron görevinin var olduğundan emin olun."
+
+msgid "Cron job for cPanel"
+msgstr "cPanel için cron görevi"
+
+msgid "In cPanel open “Cron Jobs” → “Add New Cron Job”. Enter the schedule (or choose the matching “Common Settings”), paste the command and save."
+msgstr "cPanel’de “Cron Jobs” → “Add New Cron Job” bölümünü açın. Zamanlamayı girin (veya uygun “Common Settings” seçin), komutu yapıştırıp kaydedin."
+
+msgid "Schedule (minute, hour, day, month, weekday)"
+msgstr "Zamanlama (dakika, saat, gün, ay, haftanın günü)"
+
+msgid "Command (matches this site’s PHP %s)"
+msgstr "Komut (bu sitenin PHP %s sürümüne uygun)"
+
+msgid "Other panels and alternative command"
+msgstr "Diğer paneller ve alternatif komut"
+
+msgid "The command uses the cPanel path for PHP %1$s (%2$s). On DirectAdmin or other panels replace that path with the PHP path your panel shows for the same version, for example /usr/local/php82/bin/php."
+msgstr "Komut, PHP %1$s için cPanel yolunu (%2$s) kullanır. DirectAdmin veya diğer panellerde bu yolu panelinizin aynı sürüm için gösterdiği PHP yolu ile değiştirin, örneğin /usr/local/php82/bin/php."
+
+msgid "If the command above does not run, use this one. It calls the cron file through the web address."
+msgstr "Yukarıdaki komut çalışmazsa bunu kullanın; cron dosyasını web adresi üzerinden çağırır."
+
+msgid "If wp-config.php cannot be changed automatically, add this line above “That’s all, stop editing!”:"
+msgstr "wp-config.php otomatik değiştirilemiyorsa şu satırı “That’s all, stop editing!” satırının üstüne ekleyin:"
+
+msgid "%s hours"
+msgstr "%s saat"
+
+msgid "Longer intervals (hours) lower the server load the most, but scheduled posts, emails and WooCommerce jobs then run later (up to that interval)."
+msgstr "Daha uzun aralıklar (saat) sunucu yükünü en çok azaltır, ancak zamanlanmış yazılar, e-postalar ve WooCommerce işleri daha geç (en fazla bu aralık kadar) çalışır."
+
+msgid "This is the full line (schedule + command), ready for crontab. In the cPanel form, enter the schedule in the time fields and paste only the part after it into the Command field."
+msgstr "Bu, crontab için hazır tam satırdır (zamanlama + komut). cPanel formunda zamanlamayı zaman alanlarına girin, yalnızca sonrasındaki kısmı Command alanına yapıştırın."
+
+msgid "Cron activity"
+msgstr "Cron etkinliği"
+
+msgid "Last successful run"
+msgstr "Son başarılı çalıştırma"
+
+msgid "Not recorded yet"
+msgstr "Henüz kaydedilmedi"
+
+msgid "Last failed run"
+msgstr "Son başarısız çalıştırma"
+
+msgid "Next scheduled task"
+msgstr "Sonraki zamanlanmış görev"
+
+msgid "Run by"
+msgstr "Çalıştıran"
+
+msgid "Server cron command"
+msgstr "Sunucu cron komutu"
+
+msgid "Web request (visitor or URL)"
+msgstr "Web isteği (ziyaretçi veya adres)"
+
+msgid "%s ago"
+msgstr "%s önce"
+
+msgid "in %s"
+msgstr "%s sonra"
+
+msgid "Copy command only"
+msgstr "Yalnızca komutu kopyala"
+

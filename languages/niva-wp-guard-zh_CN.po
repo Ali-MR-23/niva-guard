@@ -1,0 +1,1061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NIVA WP Guard 2.1.0\n"
+"Report-Msgid-Bugs-To: https://www.nivahost.net\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: niva-wp-guard\n"
+
+msgid "You do not have permission to do this."
+msgstr "您没有执行此操作的权限。"
+
+msgid "Installed and active"
+msgstr "已安装并启用"
+
+msgid "Not installed"
+msgstr "未安装"
+
+msgid "Outdated"
+msgstr "已过期"
+
+msgid "The mu-plugins folder is not writable"
+msgstr "mu-plugins 文件夹不可写"
+
+msgid "Active"
+msgstr "已启用"
+
+msgid "Inactive"
+msgstr "未启用"
+
+msgid "See which plugin and theme connects where, how much of your site's time it takes, and block every ad with one switch. Cache licenses without cutting them off."
+msgstr "查看哪个插件和主题连接到哪里、占用了站点多少时间，并用一个开关屏蔽所有广告。缓存许可证而不切断它们。"
+
+msgid "Connections recorded"
+msgstr "已记录的连接"
+
+msgid "Total wait"
+msgstr "总等待时间"
+
+msgid "Blocked"
+msgstr "已拦截"
+
+msgid "From cache"
+msgstr "来自缓存"
+
+msgid "✓ Settings saved."
+msgstr "✓ 设置已保存。"
+
+msgid "✓ Connection report and log file cleared."
+msgstr "✓ 连接报告和日志文件已清除。"
+
+msgid "✓ The list of skipped hosts was released."
+msgstr "✓ 已释放被跳过的主机列表。"
+
+msgid "✓ Plugin code scan completed."
+msgstr "✓ 插件代码扫描完成。"
+
+msgid "✓ Loader installed."
+msgstr "✓ 加载器已安装。"
+
+msgid "✕ Loader installation failed (the mu-plugins folder is not writable)."
+msgstr "✕ 加载器安装失败（mu-plugins 文件夹不可写）。"
+
+msgid "Overview"
+msgstr "概览"
+
+msgid "Known connections"
+msgstr "已知连接"
+
+msgid "Seen on your site"
+msgstr "您站点上发现的"
+
+msgid "Take a plugin offline"
+msgstr "让插件离线"
+
+msgid "Dashboard"
+msgstr "仪表盘"
+
+msgid "Auto circuit breaker"
+msgstr "自动熔断器"
+
+msgid "Deep tracking"
+msgstr "深度追踪"
+
+msgid "Manual"
+msgstr "手动"
+
+msgid "General status"
+msgstr "总体状态"
+
+msgid "The master switch turns all blocking and modules on or off at once."
+msgstr "总开关可一次性开启或关闭所有拦截和模块。"
+
+msgid "Plugin enabled"
+msgstr "插件已启用"
+
+msgid "Off = no connection is touched."
+msgstr "关闭 = 不触碰任何连接。"
+
+msgid "Log connections"
+msgstr "记录连接"
+
+msgid "A timed report, in a txt file and in the database."
+msgstr "带时间的报告，保存在 txt 文件和数据库中。"
+
+msgid "License response cache time"
+msgstr "许可证响应缓存时间"
+
+msgid "Less"
+msgstr "减少"
+
+msgid "hours"
+msgstr "小时"
+
+msgid "Cache time in hours"
+msgstr "缓存时间（小时）"
+
+msgid "More"
+msgstr "增加"
+
+msgid "Preset values"
+msgstr "预设值"
+
+msgid "1 hour"
+msgstr "1 小时"
+
+msgid "6 hours"
+msgstr "6 小时"
+
+msgid "12 hours"
+msgstr "12 小时"
+
+msgid "1 day"
+msgstr "1 天"
+
+msgid "3 days"
+msgstr "3 天"
+
+msgid "A successful license response is kept for this long so the server is not contacted every time."
+msgstr "成功的许可证响应会保存这么长时间，避免每次都联系服务器。"
+
+msgid "Automatic setup and log file"
+msgstr "自动安装和日志文件"
+
+msgid "It is created automatically on every new site."
+msgstr "在每个新站点上自动创建。"
+
+msgid "mu-plugin loader"
+msgstr "mu-plugin 加载器"
+
+msgid "Install / repair again"
+msgstr "重新安装 / 修复"
+
+msgid "Makes the plugin load before all the others so no connection escapes it."
+msgstr "让插件先于其他插件加载，确保没有连接漏网。"
+
+msgid "txt log file"
+msgstr "txt 日志文件"
+
+msgid "Download txt"
+msgstr "下载 txt"
+
+msgid "Download summary report"
+msgstr "下载摘要报告"
+
+msgid "It is created with the first connection"
+msgstr "首次连接时创建"
+
+msgid "Report from the txt file"
+msgstr "来自 txt 文件的报告"
+
+msgid "The slowest connections; you can copy this report and send it."
+msgstr "最慢的连接；您可以复制此报告并发送。"
+
+msgid "Address"
+msgstr "地址"
+
+msgid "Plugin / theme"
+msgstr "插件 / 主题"
+
+msgid "Count"
+msgstr "次数"
+
+msgid "Impact"
+msgstr "影响"
+
+msgid "Maximum"
+msgstr "最大值"
+
+msgid "Report text"
+msgstr "报告文本"
+
+msgid "Copy"
+msgstr "复制"
+
+msgid "The log file exists but no slow connection (over half a second) has been recorded yet."
+msgstr "日志文件存在，但尚未记录到慢连接（超过半秒）。"
+
+msgid "There is no report yet. Work with the site and the dashboard for a few minutes and check again."
+msgstr "目前还没有报告。请先使用站点和仪表盘几分钟，然后再查看。"
+
+msgid "“Block” closes the connection completely. “Cache” is for licenses: the same valid response is kept for a few hours and the license is not cut off."
+msgstr "“拦截”会完全关闭连接。“缓存”用于许可证：同一个有效响应会保存几个小时，许可证不会被切断。"
+
+msgid "Select recommended (ads and notices)"
+msgstr "选择推荐项（广告和通知）"
+
+msgid "Clear all"
+msgstr "全部取消"
+
+msgid "All"
+msgstr "全部"
+
+msgid "Search: plugin, domain or description…"
+msgstr "搜索：插件、域名或说明…"
+
+msgid "Seen only"
+msgstr "仅已发现的"
+
+msgid "Description and address"
+msgstr "说明和地址"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "Impact on speed"
+msgstr "对速度的影响"
+
+msgid "Block"
+msgstr "拦截"
+
+msgid "Cache"
+msgstr "缓存"
+
+msgid "Not seen yet"
+msgstr "尚未发现"
+
+msgid "Blocking “license” and “plugin function” items may lock a theme or stop SMS and orders from working. For licenses, “cache” is safer. If you tick both “block” and “cache”, block wins."
+msgstr "拦截“许可证”和“插件功能”类项目可能会锁定主题，或导致短信和订单无法工作。对于许可证，“缓存”更安全。如果同时勾选“拦截”和“缓存”，则以拦截为准。"
+
+msgid "Connections seen on your site"
+msgstr "您站点上发现的连接"
+
+msgid "Items that are not in the known list, ordered by longest wait. Tick one to block that address."
+msgstr "不在已知列表中的项目，按等待时间从长到短排序。勾选即可拦截该地址。"
+
+msgid "No new connection has been recorded yet. Work with the site and the dashboard for a while and check again."
+msgstr "尚未记录到新连接。请先使用站点和仪表盘一段时间，然后再查看。"
+
+msgid "Type (guess)"
+msgstr "类型（推测）"
+
+msgid "Search the connections seen…"
+msgstr "在已发现的连接中搜索…"
+
+msgid "Take a whole plugin offline"
+msgstr "让整个插件离线"
+
+msgid "All external connections of the selected plugin are closed (only wordpress.org stays open). Use it only for plugins that do not need the internet or a license."
+msgstr "所选插件的所有外部连接都将关闭（仅保留 wordpress.org）。仅用于不需要联网或许可证的插件。"
+
+msgid "Search plugin…"
+msgstr "搜索插件…"
+
+msgid "Ready-made widgets and ads"
+msgstr "现成的小工具和广告"
+
+msgid "Each item is switched on separately."
+msgstr "每一项单独开启。"
+
+msgid "WordPress news widget"
+msgstr "WordPress 新闻小工具"
+
+msgid "“Events and News” and the planet news."
+msgstr "“活动和新闻”以及行星新闻。"
+
+msgid "ParsiDate: widget and ads"
+msgstr "ParsiDate：小工具和广告"
+
+msgid "The dashboard widget (sponsor banner such as Files.ir and the news feed) is removed and the sponsors.json and wp-parsi.com connections are closed. The Jalali calendar stays untouched."
+msgstr "将移除仪表盘小工具（如 Files.ir 的赞助商横幅和新闻源），并关闭 sponsors.json 和 wp-parsi.com 连接。波斯历（太阳历）保持不变。"
+
+msgid "Elementor news widget"
+msgstr "Elementor 新闻小工具"
+
+msgid "Version and tool ads."
+msgstr "版本和工具广告。"
+
+msgid "Yoast widget feed"
+msgstr "Yoast 小工具源"
+
+msgid "The SEO score stays; only the English feed is hidden."
+msgstr "SEO 评分保留；仅隐藏英文新闻源。"
+
+msgid "Jetpack: offline mode"
+msgstr "Jetpack：离线模式"
+
+msgid "The connection to WordPress.com and the Jetpack connections (including the bundle inside WooCommerce) are cut."
+msgstr "切断与 WordPress.com 的连接和 Jetpack 连接（包括 WooCommerce 内置的那一部分）。"
+
+msgid "Persian WooCommerce SMS ads"
+msgstr "波斯语 WooCommerce 短信广告"
+
+msgid "The national SMS banner and plugin install suggestions."
+msgstr "全国短信横幅和插件安装建议。"
+
+msgid "Hide promotional notices"
+msgstr "隐藏推广通知"
+
+msgid "Errors and “new version” notices always stay."
+msgstr "错误和“新版本”通知始终保留。"
+
+msgid "Enable the keyword filter for notices"
+msgstr "启用通知关键词过滤"
+
+msgid "One keyword per line, for example: Digits jacket"
+msgstr "每行一个关键词，例如：Digits jacket"
+
+msgid "Dashboard widgets of this site"
+msgstr "本站仪表盘小工具"
+
+msgid "(one switch each)"
+msgstr "（每个一个开关）"
+
+msgid "All the widgets that have been seen on this site's dashboard, with the name of the plugin that created them. A ticked widget is never created, so its feed and ad banner are not fetched from an external server either."
+msgstr "在本站仪表盘上发现的所有小工具，附带创建它们的插件名称。勾选的小工具根本不会被创建，因此它的新闻源和广告横幅也不会从外部服务器获取。"
+
+msgid "Admin menu (right side)"
+msgstr "管理菜单（侧边）"
+
+msgid "(only hidden, not removed)"
+msgstr "（仅隐藏，不删除）"
+
+msgid "Every ticked item is hidden from the side menu. The plugin stays active and its settings still open by direct address. “Dashboard”, “Settings” and “Plugins” are not in this list so you never lose access."
+msgstr "每个勾选的项目都会从侧边菜单中隐藏。插件保持启用，其设置仍可通过直接地址打开。“仪表盘”“设置”和“插件”不在此列表中，以免您失去访问权限。"
+
+msgid "There is no list yet. Open another admin page and come back here."
+msgstr "目前还没有列表。请打开另一个管理页面，然后回到这里。"
+
+msgid "Remove dashboard widgets of the selected plugins"
+msgstr "移除所选插件的仪表盘小工具"
+
+msgid "The widget code does not run and its feed and banner are not fetched from an external server."
+msgstr "小工具代码不会运行，其新闻源和横幅也不会从外部服务器获取。"
+
+msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "某些地区（如伊朗）的服务器有时无法访问外部服务，每次都要等待 5 到 15 秒。启用此选项后，连续失败或缓慢的主机会在一段时间内被直接跳过，无需等待。"
+
+msgid "Enable"
+msgstr "启用"
+
+msgid "Off by default. “License” addresses are always exempt."
+msgstr "默认关闭。“许可证”地址始终豁免。"
+
+msgid "How long a failing host is skipped (hours)"
+msgstr "故障主机的跳过时长（小时）"
+
+msgid "Consecutive failures before it activates"
+msgstr "连续失败多少次后启用"
+
+msgid "A response slower than this (seconds) also counts as a failure"
+msgstr "响应慢于此值（秒）也算作失败"
+
+msgid "Exempt hosts (one per line)"
+msgstr "豁免主机（每行一个）"
+
+msgid "These hosts (and their subdomains) are never skipped, even if they are slow or failing. You can also exempt hosts from the table beside this one."
+msgstr "这些主机（及其子域名）永远不会被跳过，即使它们缓慢或故障。您也可以在旁边的表格中豁免主机。"
+
+msgid "Hosts being watched"
+msgstr "受监视的主机"
+
+msgid "Only failures recorded since this option was switched on are shown. After the skip period ends it tries once more; if the host is healthy it is removed from the list."
+msgstr "仅显示自启用此选项以来记录的失败。跳过期结束后会再试一次；如果主机正常，则会从列表中移除。"
+
+msgid "No host has been recorded yet."
+msgstr "尚未记录任何主机。"
+
+msgid "Host"
+msgstr "主机"
+
+msgid "Status"
+msgstr "状态"
+
+msgid "Skip ends"
+msgstr "跳过结束时间"
+
+msgid "Times activated"
+msgstr "启用次数"
+
+msgid "Last error"
+msgstr "最近错误"
+
+msgid "Exempt from the breaker"
+msgstr "免于熔断"
+
+msgid "Release all (clear the list)"
+msgstr "全部释放（清空列表）"
+
+msgid "1) Intercept direct PHP connections"
+msgstr "1) 拦截直接的 PHP 连接"
+
+msgid "Enable deep tracking"
+msgstr "启用深度追踪"
+
+msgid "Off by default. Try it on a test site first."
+msgstr "默认关闭。请先在测试站点上试用。"
+
+msgid "2) Plugin code scan (static)"
+msgstr "2) 插件代码扫描（静态）"
+
+msgid "Scan plugin code"
+msgstr "扫描插件代码"
+
+msgid "Nothing found."
+msgstr "未发现任何内容。"
+
+msgid "Plugin's own code"
+msgstr "插件自身代码"
+
+msgid "Library (vendor)"
+msgstr "库（vendor）"
+
+msgid "Fixed destinations in code"
+msgstr "代码中的固定目标"
+
+msgid "File details were not saved in this scan; scan again."
+msgstr "此次扫描未保存文件详情；请重新扫描。"
+
+msgid "File"
+msgstr "文件"
+
+msgid "Line"
+msgstr "行"
+
+msgid "Site / fixed IP inside the file"
+msgstr "文件内的站点 / 固定 IP"
+
+msgid "Library"
+msgstr "库"
+
+msgid "Plugin code"
+msgstr "插件代码"
+
+msgid "“Plugin's own code” means outside the vendor folder. A high count inside libraries is usually harmless. False positives are possible too (for example curl for a local address); to be sure, follow that plugin in the “seen” table."
+msgstr "“插件自身代码”指 vendor 文件夹之外的代码。库中数量较多通常无害。也可能出现误报（例如针对本地地址的 curl）；为确认起见，请在“已发现”表中跟踪该插件。"
+
+msgid "Manual blocking"
+msgstr "手动拦截"
+
+msgid "Save settings"
+msgstr "保存设置"
+
+msgid "No changes made"
+msgstr "未做任何更改"
+
+msgid "Clear the connection report"
+msgstr "清除连接报告"
+
+msgid "The mu-plugins folder could not be created: %s"
+msgstr "无法创建 mu-plugins 文件夹：%s"
+
+msgid "The mu-plugins folder is not writable; the plugin works normally but loads later than the others."
+msgstr "mu-plugins 文件夹不可写；插件可正常工作，但加载时间晚于其他插件。"
+
+msgid "Writing the loader file failed."
+msgstr "写入加载器文件失败。"
+
+msgid "Loader installed: %s"
+msgstr "加载器已安装：%s"
+
+msgid "NIVA WP Guard — connection report"
+msgstr "NIVA WP Guard — 连接报告"
+
+msgid "Site: %1$s | Date: %2$s UTC | Version: %3$s"
+msgstr "站点：%1$s | 日期：%2$s UTC | 版本：%3$s"
+
+msgid "The log file has not been created yet."
+msgstr "日志文件尚未创建。"
+
+msgid "Unique connections: %1$d | Slow connections (over 0.5 s): %2$d | Total wait: %3$.1f s | Errors / no response: %4$d"
+msgstr "唯一连接：%1$d | 慢连接（超过 0.5 秒）：%2$d | 总等待：%3$.1f 秒 | 错误 / 无响应：%4$d"
+
+msgid "— By plugin (total wait time):"
+msgstr "— 按插件（总等待时间）："
+
+msgid "— Slowest addresses:"
+msgstr "— 最慢的地址："
+
+msgid "  %1$-60s  %2$d times  total %3$.1fs  max %4$.1fs  errors:%5$d  [%6$s]"
+msgstr "  %1$-60s  %2$d 次  共计 %3$.1fs  最大 %4$.1fs  错误:%5$d  [%6$s]"
+
+msgid "Persian WooCommerce SMS"
+msgstr "波斯语 WooCommerce 短信"
+
+msgid "Persian WooCommerce"
+msgstr "波斯语 WooCommerce"
+
+msgid "Digits (Mersa Web)"
+msgstr "Digits (Mersa Web)"
+
+msgid "RTL (RTL-CareUnit)"
+msgstr "RTL (RTL-CareUnit)"
+
+msgid "Mahdis Web theme"
+msgstr "Mahdis Web 主题"
+
+msgid "Buy with Digikala"
+msgstr "通过 Digikala 购买"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "WordPress — version and plugin updates"
+msgstr "WordPress — 版本和插件更新"
+
+msgid "Elementor"
+msgstr "Elementor"
+
+msgid "Yoast (unofficial server)"
+msgstr "Yoast（非官方服务器）"
+
+msgid "ParsiDate"
+msgstr "ParsiDate"
+
+msgid "Advanced Shipping (Ace Plugins)"
+msgstr "Advanced Shipping (Ace Plugins)"
+
+msgid "Emalls"
+msgstr "Emalls"
+
+msgid "Niva plugins"
+msgstr "Niva 插件"
+
+msgid "SMS"
+msgstr "短信"
+
+msgid "Torob"
+msgstr "Torob"
+
+msgid "Notices and ads (pwsms.json / pwsms.hash)"
+msgstr "通知和广告 (pwsms.json / pwsms.hash)"
+
+msgid "Notice signature"
+msgstr "通知签名"
+
+msgid "News feed on the dashboard"
+msgstr "仪表盘新闻源"
+
+msgid "Advertising panel (ads-api)"
+msgstr "广告面板 (ads-api)"
+
+msgid "Notices and ads"
+msgstr "通知和广告"
+
+msgid "License verification (every few seconds)"
+msgstr "许可证验证（每隔几秒）"
+
+msgid "Product authorization"
+msgstr "产品授权"
+
+msgid "News feed"
+msgstr "新闻源"
+
+msgid "Version notice (notifier.xml)"
+msgstr "版本通知 (notifier.xml)"
+
+msgid "Notices (notifications.json)"
+msgstr "通知 (notifications.json)"
+
+msgid "Version check (metadata.json)"
+msgstr "版本检查 (metadata.json)"
+
+msgid "Order registration and tracking (plugin function)"
+msgstr "订单登记与跟踪（插件功能）"
+
+msgid "Promotional offers and suggested extensions (promotions / obw-free-extensions)"
+msgstr "促销优惠和推荐扩展 (promotions / obw-free-extensions)"
+
+msgid "Connection to WordPress.com (public-api): account check, suggestions, payments"
+msgstr "连接 WordPress.com (public-api)：账户检查、建议、支付"
+
+msgid "Jetpack server communication (jetpack.wordpress.com)"
+msgstr "Jetpack 服务器通信 (jetpack.wordpress.com)"
+
+msgid "The jetpack.com site — product recommendations and ads"
+msgstr "jetpack.com 网站 — 产品推荐和广告"
+
+msgid "Visit statistics (stats.wp.com)"
+msgstr "访问统计 (stats.wp.com)"
+
+msgid "Tracking pixel (pixel.wp.com)"
+msgstr "跟踪像素 (pixel.wp.com)"
+
+msgid "WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways"
+msgstr "WooPayments 广告 (incentives) — “设置 WooPayments”横幅；与您自己的支付网关无关"
+
+msgid "Sending usage statistics to WooCommerce (usage tracking), about half a second"
+msgstr "向 WooCommerce 发送使用统计 (usage tracking)，约半秒"
+
+msgid "PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal"
+msgstr "PayPal (webscr)：IPN 验证和连接 PayPal — 在无法访问 PayPal 的服务器上最多可能等待 15 秒"
+
+msgid "Product key check for WooCommerce.com products (product-key-api)"
+msgstr "WooCommerce.com 产品的产品密钥检查 (product-key-api)"
+
+msgid "WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)"
+msgstr "通过 api.wordpress.org 检查 WordPress 版本（“系统状态”页面；在较慢的主机上最长 10 秒）"
+
+msgid "Theme information from api.wordpress.org (“System status” page)"
+msgstr "通过 api.wordpress.org 获取主题信息（“系统状态”页面）"
+
+msgid "QUIC.cloud news and notices (wpapi.quic.cloud/news)"
+msgstr "QUIC.cloud 新闻和通知 (wpapi.quic.cloud/news)"
+
+msgid "QUIC.cloud version check (ver_check)"
+msgstr "QUIC.cloud 版本检查 (ver_check)"
+
+msgid "QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions"
+msgstr "QUIC.cloud 仪表盘 (api.quic.cloud/d/dash)：统计和云服务建议"
+
+msgid "solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds"
+msgstr "solidwp.com 新闻和推广文章（仪表盘小工具和通知），最长 10 秒"
+
+msgid "rankmath.com blog news and posts (news widget and dashboard ad)"
+msgstr "rankmath.com 博客新闻和文章（新闻小工具和仪表盘广告）"
+
+msgid "Reading the readme from the WordPress svn (up to 10 seconds)"
+msgstr "从 WordPress svn 读取 readme（最长 10 秒）"
+
+msgid "Plugin version check"
+msgstr "插件版本检查"
+
+msgid "Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens"
+msgstr "编辑器广告和通知：升级到 Pro (free-to-pro-upsell)、通知和促销 — 打开编辑器时"
+
+msgid "my.elementor.com connections (news, library, suggested plugins)"
+msgstr "my.elementor.com 连接（新闻、库、推荐插件）"
+
+msgid "Yoast SEO (free) translation packages (translationspress)"
+msgstr "Yoast SEO（免费版）翻译包 (translationspress)"
+
+msgid "Yoast SEO Premium translation packages (translationspress)"
+msgstr "Yoast SEO Premium 翻译包 (translationspress)"
+
+msgid "Yoast WooCommerce SEO translation packages (translationspress)"
+msgstr "Yoast WooCommerce SEO 翻译包 (translationspress)"
+
+msgid "All Yoast translation packages in one (including News, Local, Video and others)"
+msgstr "所有 Yoast 翻译包合并（包括 News、Local、Video 等）"
+
+msgid "vip-themes.com — a third-party server, not Yoast"
+msgstr "vip-themes.com — 第三方服务器，并非 Yoast"
+
+msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
+msgstr "访客 IP 检查 (ipcheck) — 也会在站点页面上运行，最长可能等待 10 秒"
+
+msgid "Add-ons list (addons) — up to 10 seconds"
+msgstr "附加组件列表 (addons) — 最长 10 秒"
+
+msgid "Notices (feeds/notifications)"
+msgstr "通知 (feeds/notifications)"
+
+msgid "Sponsors list (sponsors.json from GitHub)"
+msgstr "赞助商列表（来自 GitHub 的 sponsors.json）"
+
+msgid "News feed (wp-parsi.com)"
+msgstr "新闻源 (wp-parsi.com)"
+
+msgid "Advertising page aceplugins.com"
+msgstr "aceplugins.com 广告页面"
+
+msgid "IndexNow — notifying search engines about page changes (up to 10 seconds)"
+msgstr "IndexNow — 向搜索引擎通知页面变更（最长 10 秒）"
+
+msgid "my.yoast.com — site information"
+msgstr "my.yoast.com — 站点信息"
+
+msgid "Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds"
+msgstr "升级活动 (upgrade-campaign) — 广告；最长 10 秒"
+
+msgid "The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher"
+msgstr "整个 Wincher 连接（关键词追踪：account 和 connect/token）— 最长 10 秒；如果不使用 Wincher，请拦截"
+
+msgid "Welcome page and ad (cs_welcome.json)"
+msgstr "欢迎页面和广告 (cs_welcome.json)"
+
+msgid "Emalls product extraction service (plugin function)"
+msgstr "Emalls 产品提取服务（插件功能）"
+
+msgid "Niva license server (validate)"
+msgstr "Niva 许可证服务器 (validate)"
+
+msgid "payamak-panel SMS gateway"
+msgstr "短信网关 payamak-panel"
+
+msgid "Price update webhook (Torob)"
+msgstr "价格更新 Webhook (Torob)"
+
+msgid "Ad"
+msgstr "广告"
+
+msgid "Notice / news"
+msgstr "通知 / 新闻"
+
+msgid "License"
+msgstr "许可证"
+
+msgid "Version check"
+msgstr "版本检查"
+
+msgid "Plugin function"
+msgstr "插件功能"
+
+msgid "Third party"
+msgstr "第三方"
+
+msgid "Status summary: <b>%1$s</b> blocked, <b>%2$s</b> cached, <b>%3$s</b> plugins offline."
+msgstr "状态摘要：<b>%1$s</b> 个已拦截，<b>%2$s</b> 个已缓存，<b>%3$s</b> 个插件离线。"
+
+msgid "<b>%1$s</b> unique connections · <b>%2$s</b> slow · total wait <b>%3$s</b> · <b>%4$s</b> errors or no response"
+msgstr "<b>%1$s</b> 个唯一连接 · <b>%2$s</b> 个慢 · 总等待 <b>%3$s</b> · <b>%4$s</b> 个错误或无响应"
+
+msgid "Skipped"
+msgstr "已跳过"
+
+msgid "Counting (%s)"
+msgstr "计数中 (%s)"
+
+msgid "Waiting for next try"
+msgstr "等待下次尝试"
+
+msgid "Connections that bypass the WordPress API and go through <code>file_get_contents('http…')</code> or <code>fopen</code> are also recorded in the same table and log (tag \"PHP-GET\"), and the blocking rules apply to them too."
+msgstr "绕过 WordPress API、通过 <code>file_get_contents('http…')</code> 或 <code>fopen</code> 发出的连接，也会记录在同一个表格和日志中（标记为“PHP-GET”），拦截规则同样适用于它们。"
+
+msgid "Limits: <code>curl_exec</code> and <code>fsockopen</code> cannot be intercepted live in plain PHP (see section 2). Also, if a plugin reads <code>$http_response_header</code> or <code>get_headers()</code> directly, it may not receive the header data while this option is on; if anything breaks, turn this switch off. Requests made by WordPress core itself (without a calling plugin) are left untouched."
+msgstr "限制：<code>curl_exec</code> 和 <code>fsockopen</code> 在纯 PHP 中无法实时拦截（见第 2 部分）。此外，如果某个插件直接读取 <code>$http_response_header</code> 或 <code>get_headers()</code>，在此选项开启时可能拿不到响应头数据；如有异常，请关闭此开关。WordPress 核心自身的请求（没有调用它的插件）保持不变。"
+
+msgid "allow_url_fopen is disabled on this host; this section has no effect."
+msgstr "此主机已禁用 allow_url_fopen；本部分不起作用。"
+
+msgid "Reads the PHP files of all plugins and themes and lists where <code>curl</code>, <code>fsockopen</code> or <code>file_get_contents('http…')</code> is written directly. It does not run or block anything; it only tells you which plugin has the “ability to connect silently”."
+msgstr "读取所有插件和主题的 PHP 文件，并列出直接写有 <code>curl</code>、<code>fsockopen</code> 或 <code>file_get_contents('http…')</code> 的位置。它不会运行或拦截任何内容；只告诉您哪个插件具备“静默连接的能力”。"
+
+msgid "Last scan: %1$s · %2$s files"
+msgstr "上次扫描：%1$s · %2$s 个文件"
+
+msgid "· partial (time ran out)"
+msgstr "· 部分完成（时间已用完）"
+
+msgid "No fixed address — the destination comes from settings or input at run time"
+msgstr "没有固定地址 — 目标在运行时来自设置或输入"
+
+msgid "One address per line in the form <code>domain/path</code> (prefix); for example <code>example.com/ads/</code>"
+msgstr "每行一个地址，格式为 <code>域名/路径</code>（前缀）；例如 <code>example.com/ads/</code>"
+
+msgid "%s items"
+msgstr "%s 项"
+
+msgid "This item is of the “license” type. Blocking it may lock a theme or plugin. Turn on “cache” instead. Continue?"
+msgstr "此项属于“许可证”类型。拦截它可能会锁定主题或插件。请改为开启“缓存”。是否继续？"
+
+msgid "This item is needed for the plugin itself to work (SMS, orders, etc.). Continue?"
+msgstr "此项是插件自身运行所必需的（短信、订单等）。是否继续？"
+
+msgid "%s unsaved changes"
+msgstr "%s 项未保存的更改"
+
+msgid "Copied ✓"
+msgstr "已复制 ✓"
+
+msgid "Clear the connection report and log file?"
+msgstr "是否清除连接报告和日志文件？"
+
+msgid "%1$s times · %2$s ·"
+msgstr "%1$s 次 · %2$s ·"
+
+msgid "max %s"
+msgstr "最大 %s"
+
+msgid "WordPress core"
+msgstr "WordPress 核心"
+
+msgid "Theme: %s"
+msgstr "主题：%s"
+
+msgid "There is no list yet. Open the <a href=\"%s\">Dashboard</a> page once and come back here."
+msgstr "目前还没有列表。请打开一次<a href=\"%s\">仪表盘</a>页面，然后回到这里。"
+
+msgid "Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site."
+msgstr "控制插件和主题的对外连接：记录每次连接及其耗时（txt 文件和报告），拦截广告、通知和新闻源，缓存许可证响应（不切断），让所选插件离线，移除仪表盘上的推广小工具和通知，并自动跳过故障主机。每一项都有独立开关，每个新站点上的安装都是自动的。"
+
+msgid "The old “NIVA HTTP Guard” plugin is still active. Deactivate it so the new version can work. Your settings are migrated automatically and you can delete the old plugin after the first load."
+msgstr "旧的“NIVA HTTP Guard”插件仍处于启用状态。请先停用它，新版本才能工作。您的设置会自动迁移，首次加载后即可删除旧插件。"
+
+msgid "Relevant to this site"
+msgstr "与本站相关"
+
+msgid "All connections"
+msgstr "所有连接"
+
+msgid ".htaccess is up to date (a backup was saved)."
+msgstr ".htaccess 已是最新（已保存备份）。"
+
+msgid "The .htaccess block was removed."
+msgstr "已移除 .htaccess 代码块。"
+
+msgid "404.html was regenerated."
+msgstr "已重新生成 404.html。"
+
+msgid "Could not write 404.html — download it and upload it to the site root."
+msgstr "无法写入 404.html — 请下载后上传到站点根目录。"
+
+msgid "The site returned a server error after the change, so .htaccess was restored from the backup."
+msgstr "更改后站点返回了服务器错误，因此已从备份还原 .htaccess。"
+
+msgid "This server uses Nginx, which does not use .htaccess. Use the Nginx snippet below."
+msgstr "此服务器使用 Nginx，不使用 .htaccess。请使用下方的 Nginx 配置片段。"
+
+msgid "Enable Fast 404 and save first."
+msgstr "请先启用“快速 404”并保存。"
+
+msgid "Could not write .htaccess — download the snippet below and add it yourself."
+msgstr "无法写入 .htaccess — 请下载下方代码并自行添加。"
+
+msgid "Server and 404"
+msgstr "服务器与 404"
+
+msgid "Installed"
+msgstr "已安装"
+
+msgid "Outdated — it is updated when you save"
+msgstr "已过期 — 保存时会更新"
+
+msgid "Still present — it is removed when you save"
+msgstr "仍然存在 — 保存时会移除"
+
+msgid "Not writable"
+msgstr "不可写"
+
+msgid "Your own file (kept untouched)"
+msgstr "您自己的文件（保持不动）"
+
+msgid "Not used on Nginx"
+msgstr "Nginx 上不使用"
+
+msgid "Off"
+msgstr "关闭"
+
+msgid "WordPress default"
+msgstr "WordPress 默认"
+
+msgid "Slow down (use the interval)"
+msgstr "减速（使用间隔）"
+
+msgid "Turn off"
+msgstr "关闭"
+
+msgid "Post editor"
+msgstr "文章编辑器"
+
+msgid "Other admin pages"
+msgstr "其他管理页面"
+
+msgid "Front-end (visitors)"
+msgstr "前台（访客）"
+
+msgid "Heartbeat control"
+msgstr "Heartbeat 控制"
+
+msgid "WordPress sends a background request (Heartbeat) every 15–60 seconds for autosave, post locking and notices. On weak hosts this alone can overload the server. Control it separately for each part of the site."
+msgstr "WordPress 每 15–60 秒会发送一次后台请求（Heartbeat），用于自动保存、文章锁定和通知。在配置较弱的主机上，仅此一项就可能让服务器不堪重负。请针对站点的每个部分分别控制。"
+
+msgid "Enable heartbeat control"
+msgstr "启用 Heartbeat 控制"
+
+msgid "A separate mu-plugin file is created; off = default WordPress behavior."
+msgstr "会创建一个独立的 mu-plugin 文件；关闭 = WordPress 默认行为。"
+
+msgid "Interval when slowed (seconds)"
+msgstr "减速时的间隔（秒）"
+
+msgid "For example 300 = every 5 minutes, 600 = every 10 minutes."
+msgstr "例如 300 = 每 5 分钟，600 = 每 10 分钟。"
+
+msgid "Turning it off in the post editor disables autosave and post locking while editing."
+msgstr "在文章编辑器中关闭会在编辑期间禁用自动保存和文章锁定。"
+
+msgid "mu-plugin file"
+msgstr "mu-plugin 文件"
+
+msgid "Fast 404"
+msgstr "快速 404"
+
+msgid "Scanner bots probe hundreds of strange addresses (.env, backup files, fake PHP files). Instead of loading WordPress, the database, CSS and JS for each one, a light static 404 page is returned immediately."
+msgstr "扫描机器人会尝试数百个奇怪的地址（.env、备份文件、伪造的 PHP 文件）。无需为每个请求加载 WordPress、数据库、CSS 和 JS，而是立即返回一个轻量的静态 404 页面。"
+
+msgid "Enable fast 404"
+msgstr "启用快速 404"
+
+msgid "Creates a separate mu-plugin, a 404.html page in the site root and a block in .htaccess."
+msgstr "会创建一个独立的 mu-plugin、站点根目录下的 404.html 页面以及 .htaccess 中的一段代码。"
+
+msgid "Strict mode"
+msgstr "严格模式"
+
+msgid "Also blocks existing script files outside the WordPress core, plugins and themes folders. May break custom scripts placed in the site root."
+msgstr "同时会拦截 WordPress 核心、插件和主题目录之外已存在的脚本文件。可能会影响放在站点根目录的自定义脚本。"
+
+msgid "Installation status"
+msgstr "安装状态"
+
+msgid "404.html page"
+msgstr "404.html 页面"
+
+msgid ".htaccess block"
+msgstr ".htaccess 代码块"
+
+msgid "Install / repair .htaccess"
+msgstr "安装 / 修复 .htaccess"
+
+msgid "Regenerate 404.html"
+msgstr "重新生成 404.html"
+
+msgid "Remove .htaccess block"
+msgstr "移除 .htaccess 代码块"
+
+msgid "Download 404.html"
+msgstr "下载 404.html"
+
+msgid "Download Nginx snippet"
+msgstr "下载 Nginx 配置片段"
+
+msgid "Download .htaccess snippet"
+msgstr "下载 .htaccess 代码"
+
+msgid "Nginx configuration"
+msgstr "Nginx 配置"
+
+msgid "Code to add to .htaccess"
+msgstr "需添加到 .htaccess 的代码"
+
+msgid "Nginx does not use .htaccess; add this to your server configuration. Fake PHP files are handled by the mu-plugin."
+msgstr "Nginx 不使用 .htaccess；请将此添加到服务器配置中。伪造的 PHP 文件由 mu-plugin 处理。"
+
+msgid "If automatic installation is not possible, download the files and place them yourself: put 404.html in the site root (next to wp-config.php) and add this code to the top of .htaccess (before “# BEGIN WordPress”)."
+msgstr "如果无法自动安装，请下载文件并自行放置：将 404.html 放在站点根目录（wp-config.php 旁边），并把此代码添加到 .htaccess 顶部（“# BEGIN WordPress”之前）。"
+
+msgid "Load before other plugins (mu-plugin loader)"
+msgstr "先于其他插件加载（mu-plugin 加载器）"
+
+msgid "Creates one small file in wp-content/mu-plugins. Nothing is created outside the plugin folder until you turn this on and save."
+msgstr "会在 wp-content/mu-plugins 中创建一个小文件。在您开启并保存之前，不会在插件文件夹之外创建任何内容。"
+
+msgid "DISABLE_WP_CRON is already defined in wp-config.php by you, so it was left untouched."
+msgstr "您已在 wp-config.php 中自行定义了 DISABLE_WP_CRON，因此未作改动。"
+
+msgid "The site returned a server error after the change, so wp-config.php was restored."
+msgstr "更改后网站返回了服务器错误，因此已还原 wp-config.php。"
+
+msgid "Could not find the right place in wp-config.php — add the line shown in the cron card yourself."
+msgstr "在 wp-config.php 中找不到合适的位置——请自行添加 Cron 卡片中显示的那一行。"
+
+msgid "wp-config.php could not be changed automatically — add the line shown in the cron card yourself."
+msgstr "无法自动修改 wp-config.php——请自行添加 Cron 卡片中显示的那一行。"
+
+msgid "WordPress cron (wp-cron)"
+msgstr "WordPress 计划任务 (wp-cron)"
+
+msgid "By default WordPress runs its scheduled tasks (scheduled posts, emails, backups, WooCommerce jobs) during visitors’ page loads. This slows pages down and wastes resources. Turn it off here and let the server run it on a fixed schedule instead."
+msgstr "WordPress 默认在访客加载页面时运行计划任务（定时发布、邮件、备份、WooCommerce 任务）。这会拖慢页面并浪费资源。在此将其关闭，改由服务器按固定时间表运行。"
+
+msgid "Disable the built-in WordPress cron"
+msgstr "禁用 WordPress 内置计划任务"
+
+msgid "Adds DISABLE_WP_CRON to wp-config.php. Add the server cron job below first, otherwise scheduled tasks stop running."
+msgstr "向 wp-config.php 添加 DISABLE_WP_CRON。请先添加下方的服务器计划任务，否则计划任务将停止运行。"
+
+msgid "Run the server job every"
+msgstr "服务器任务运行间隔"
+
+msgid "%s minutes"
+msgstr "%s 分钟"
+
+msgid "5 minutes suits most sites and shops, 15 minutes is enough for a blog. Use 1 minute only if you need exact timing; more frequent runs only load the server."
+msgstr "多数网站和商店 5 分钟即可，博客 15 分钟足够。仅在需要精确时间时使用 1 分钟；更频繁只会增加服务器负担。"
+
+msgid "wp-config.php setting"
+msgstr "wp-config.php 设置"
+
+msgid "Scheduled tasks are %s minutes overdue. Check that the server cron job below exists."
+msgstr "计划任务已延迟 %s 分钟。请检查下方的服务器计划任务是否存在。"
+
+msgid "Cron job for cPanel"
+msgstr "cPanel 计划任务"
+
+msgid "In cPanel open “Cron Jobs” → “Add New Cron Job”. Enter the schedule (or choose the matching “Common Settings”), paste the command and save."
+msgstr "在 cPanel 中打开“Cron Jobs”→“Add New Cron Job”。填写时间表（或选择对应的“Common Settings”），粘贴命令并保存。"
+
+msgid "Schedule (minute, hour, day, month, weekday)"
+msgstr "时间表（分、时、日、月、星期）"
+
+msgid "Command (matches this site’s PHP %s)"
+msgstr "命令（与本站 PHP %s 匹配）"
+
+msgid "Other panels and alternative command"
+msgstr "其他面板与备用命令"
+
+msgid "The command uses the cPanel path for PHP %1$s (%2$s). On DirectAdmin or other panels replace that path with the PHP path your panel shows for the same version, for example /usr/local/php82/bin/php."
+msgstr "该命令使用 PHP %1$s 的 cPanel 路径（%2$s）。在 DirectAdmin 或其他面板中，请换成面板为同一版本显示的 PHP 路径，例如 /usr/local/php82/bin/php。"
+
+msgid "If the command above does not run, use this one. It calls the cron file through the web address."
+msgstr "如果上面的命令无法运行，请使用这一条；它通过网址调用计划任务文件。"
+
+msgid "If wp-config.php cannot be changed automatically, add this line above “That’s all, stop editing!”:"
+msgstr "如果无法自动修改 wp-config.php，请将此行添加到“That’s all, stop editing!”之上："
+
+msgid "%s hours"
+msgstr "%s 小时"
+
+msgid "Longer intervals (hours) lower the server load the most, but scheduled posts, emails and WooCommerce jobs then run later (up to that interval)."
+msgstr "较长的间隔（小时）最能减轻服务器负载，但定时发布、邮件和 WooCommerce 任务会更晚运行（最多延迟一个间隔）。"
+
+msgid "This is the full line (schedule + command), ready for crontab. In the cPanel form, enter the schedule in the time fields and paste only the part after it into the Command field."
+msgstr "这是可直接用于 crontab 的完整一行（时间表 + 命令）。在 cPanel 表单中，请把时间表填入时间字段，只将其后的部分粘贴到 Command 字段。"
+
+msgid "Cron activity"
+msgstr "计划任务活动"
+
+msgid "Last successful run"
+msgstr "上次成功运行"
+
+msgid "Not recorded yet"
+msgstr "尚无记录"
+
+msgid "Last failed run"
+msgstr "上次失败运行"
+
+msgid "Next scheduled task"
+msgstr "下一个计划任务"
+
+msgid "Run by"
+msgstr "触发方式"
+
+msgid "Server cron command"
+msgstr "服务器 cron 命令"
+
+msgid "Web request (visitor or URL)"
+msgstr "Web 请求（访客或网址）"
+
+msgid "%s ago"
+msgstr "%s前"
+
+msgid "in %s"
+msgstr "%s后"
+
+msgid "Copy command only"
+msgstr "仅复制命令"
+

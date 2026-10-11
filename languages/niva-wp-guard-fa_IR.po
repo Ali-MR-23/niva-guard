@@ -1,0 +1,1061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NIVA WP Guard 2.1.0\n"
+"Report-Msgid-Bugs-To: https://www.nivahost.net\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: niva-wp-guard\n"
+
+msgid "You do not have permission to do this."
+msgstr "دسترسی مجاز نیست."
+
+msgid "Installed and active"
+msgstr "نصب‌شده و فعال"
+
+msgid "Not installed"
+msgstr "نصب نشده"
+
+msgid "Outdated"
+msgstr "قدیمی"
+
+msgid "The mu-plugins folder is not writable"
+msgstr "پوشه‌ی mu-plugins قابل نوشتن نیست"
+
+msgid "Active"
+msgstr "فعال"
+
+msgid "Inactive"
+msgstr "غیرفعال"
+
+msgid "See which plugin and theme connects where, how much of your site's time it takes, and block every ad with one switch. Cache licenses without cutting them off."
+msgstr "ببینید کدام افزونه و قالب به کجا وصل می‌شود، چقدر وقت سایت را می‌گیرد، و هر مورد تبلیغاتی را با یک تیک ببندید. لایسنس‌ها را بدون قطع شدن «کش» کنید."
+
+msgid "Connections recorded"
+msgstr "اتصال ثبت‌شده"
+
+msgid "Total wait"
+msgstr "مجموع انتظار"
+
+msgid "Blocked"
+msgstr "مسدودشده"
+
+msgid "From cache"
+msgstr "از کش"
+
+msgid "✓ Settings saved."
+msgstr "✓ تنظیمات ذخیره شد."
+
+msgid "✓ Connection report and log file cleared."
+msgstr "✓ گزارش اتصال‌ها و فایل لاگ پاک شد."
+
+msgid "✓ The list of skipped hosts was released."
+msgstr "✓ فهرست هاست‌های ردشده آزاد شد."
+
+msgid "✓ Plugin code scan completed."
+msgstr "✓ اسکن کد افزونه‌ها انجام شد."
+
+msgid "✓ Loader installed."
+msgstr "✓ لودر نصب شد."
+
+msgid "✕ Loader installation failed (the mu-plugins folder is not writable)."
+msgstr "✕ نصب لودر ناموفق بود (پوشه‌ی mu-plugins قابل نوشتن نیست)."
+
+msgid "Overview"
+msgstr "نمای کلی"
+
+msgid "Known connections"
+msgstr "اتصال‌های شناخته‌شده"
+
+msgid "Seen on your site"
+msgstr "دیده‌شده در سایت شما"
+
+msgid "Take a plugin offline"
+msgstr "آفلاین کردن افزونه"
+
+msgid "Dashboard"
+msgstr "پیشخوان"
+
+msgid "Auto circuit breaker"
+msgstr "قطع‌کننده‌ی خودکار"
+
+msgid "Deep tracking"
+msgstr "ردیابی عمیق"
+
+msgid "Manual"
+msgstr "دستی"
+
+msgid "General status"
+msgstr "وضعیت کلی"
+
+msgid "The master switch turns all blocking and modules on or off at once."
+msgstr "کلید اصلی همه‌ی مسدودسازی‌ها و ماژول‌ها را یک‌جا روشن یا خاموش می‌کند."
+
+msgid "Plugin enabled"
+msgstr "فعال بودن افزونه"
+
+msgid "Off = no connection is touched."
+msgstr "خاموش = هیچ اتصالی دست‌کاری نمی‌شود."
+
+msgid "Log connections"
+msgstr "ثبت اتصال‌ها"
+
+msgid "A timed report, in a txt file and in the database."
+msgstr "گزارش با زمان، در فایل txt و دیتابیس."
+
+msgid "License response cache time"
+msgstr "مدت کش پاسخ لایسنس"
+
+msgid "Less"
+msgstr "کمتر"
+
+msgid "hours"
+msgstr "ساعت"
+
+msgid "Cache time in hours"
+msgstr "مدت کش به ساعت"
+
+msgid "More"
+msgstr "بیشتر"
+
+msgid "Preset values"
+msgstr "مقدارهای آماده"
+
+msgid "1 hour"
+msgstr "۱ ساعت"
+
+msgid "6 hours"
+msgstr "۶ ساعت"
+
+msgid "12 hours"
+msgstr "۱۲ ساعت"
+
+msgid "1 day"
+msgstr "۱ روز"
+
+msgid "3 days"
+msgstr "۳ روز"
+
+msgid "A successful license response is kept for this long so the server is not contacted every time."
+msgstr "پاسخ موفق لایسنس این مدت نگه داشته می‌شود تا هر بار به سرور وصل نشود."
+
+msgid "Automatic setup and log file"
+msgstr "نصب خودکار و فایل لاگ"
+
+msgid "It is created automatically on every new site."
+msgstr "روی هر سایت جدید خودکار ساخته می‌شود."
+
+msgid "mu-plugin loader"
+msgstr "لودر mu-plugin"
+
+msgid "Install / repair again"
+msgstr "نصب / ترمیم دوباره"
+
+msgid "Makes the plugin load before all the others so no connection escapes it."
+msgstr "باعث می‌شود افزونه قبل از بقیه بارگذاری شود و هیچ اتصالی از دستش نرود."
+
+msgid "txt log file"
+msgstr "فایل لاگ txt"
+
+msgid "Download txt"
+msgstr "دانلود txt"
+
+msgid "Download summary report"
+msgstr "دانلود گزارش خلاصه"
+
+msgid "It is created with the first connection"
+msgstr "با اولین اتصال ساخته می‌شود"
+
+msgid "Report from the txt file"
+msgstr "گزارش از روی فایل txt"
+
+msgid "The slowest connections; you can copy this report and send it."
+msgstr "کندترین اتصال‌ها؛ همین گزارش را می‌توانید کپی کنید و بفرستید."
+
+msgid "Address"
+msgstr "آدرس"
+
+msgid "Plugin / theme"
+msgstr "افزونه / قالب"
+
+msgid "Count"
+msgstr "دفعات"
+
+msgid "Impact"
+msgstr "تأثیر"
+
+msgid "Maximum"
+msgstr "حداکثر"
+
+msgid "Report text"
+msgstr "متن گزارش"
+
+msgid "Copy"
+msgstr "کپی"
+
+msgid "The log file exists but no slow connection (over half a second) has been recorded yet."
+msgstr "فایل لاگ هست ولی هنوز اتصال کندی (بالای نیم ثانیه) ثبت نشده."
+
+msgid "There is no report yet. Work with the site and the dashboard for a few minutes and check again."
+msgstr "هنوز گزارشی نیست. چند دقیقه با سایت و پیشخوان کار کنید و دوباره سر بزنید."
+
+msgid "“Block” closes the connection completely. “Cache” is for licenses: the same valid response is kept for a few hours and the license is not cut off."
+msgstr "«مسدود» اتصال را کامل می‌بندد. «کش» برای لایسنس است: همان پاسخ معتبر چند ساعت نگه داشته می‌شود و لایسنس قطع نمی‌شود."
+
+msgid "Select recommended (ads and notices)"
+msgstr "انتخاب پیشنهادی (تبلیغ و اعلان)"
+
+msgid "Clear all"
+msgstr "برداشتن همه"
+
+msgid "All"
+msgstr "همه"
+
+msgid "Search: plugin, domain or description…"
+msgstr "جستجو: افزونه، دامنه یا توضیح…"
+
+msgid "Seen only"
+msgstr "فقط دیده‌شده"
+
+msgid "Description and address"
+msgstr "توضیح و آدرس"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Impact on speed"
+msgstr "تأثیر روی سرعت"
+
+msgid "Block"
+msgstr "مسدود"
+
+msgid "Cache"
+msgstr "کش"
+
+msgid "Not seen yet"
+msgstr "هنوز دیده نشده"
+
+msgid "Blocking “license” and “plugin function” items may lock a theme or stop SMS and orders from working. For licenses, “cache” is safer. If you tick both “block” and “cache”, block wins."
+msgstr "مسدود کردن موارد «لایسنس» و «کارکرد افزونه» ممکن است قفل شدن قالب یا کار نکردن پیامک و سفارش را در پی داشته باشد. برای لایسنس، «کش» امن‌تر است. اگر هم «مسدود» و هم «کش» بزنید، مسدود برنده است."
+
+msgid "Connections seen on your site"
+msgstr "اتصال‌های دیده‌شده در سایت شما"
+
+msgid "Items that are not in the known list, ordered by longest wait. Tick one to block that address."
+msgstr "مواردی که در فهرست شناخته‌شده نیستند، به‌ترتیب بیشترین زمان انتظار. با تیک، همان آدرس مسدود می‌شود."
+
+msgid "No new connection has been recorded yet. Work with the site and the dashboard for a while and check again."
+msgstr "هنوز اتصال جدیدی ثبت نشده. مدتی با سایت و پیشخوان کار کنید و دوباره سر بزنید."
+
+msgid "Type (guess)"
+msgstr "نوع (حدس)"
+
+msgid "Search the connections seen…"
+msgstr "جستجو در اتصال‌های دیده‌شده…"
+
+msgid "Take a whole plugin offline"
+msgstr "آفلاین کردن کامل یک افزونه"
+
+msgid "All external connections of the selected plugin are closed (only wordpress.org stays open). Use it only for plugins that do not need the internet or a license."
+msgstr "همه‌ی ارتباط‌های بیرونی افزونه‌ی انتخاب‌شده بسته می‌شود (فقط wordpress.org آزاد می‌ماند). فقط برای افزونه‌هایی که به اینترنت و لایسنس نیاز ندارند."
+
+msgid "Search plugin…"
+msgstr "جستجوی افزونه…"
+
+msgid "Ready-made widgets and ads"
+msgstr "ویجت‌ها و تبلیغ‌های آماده"
+
+msgid "Each item is switched on separately."
+msgstr "هر مورد جدا روشن می‌شود."
+
+msgid "WordPress news widget"
+msgstr "ویجت اخبار وردپرس"
+
+msgid "“Events and News” and the planet news."
+msgstr "«رویدادها و اخبار» و اخبار سیاره."
+
+msgid "ParsiDate: widget and ads"
+msgstr "پارسی‌دیت: ویجت و تبلیغ‌ها"
+
+msgid "The dashboard widget (sponsor banner such as Files.ir and the news feed) is removed and the sponsors.json and wp-parsi.com connections are closed. The Jalali calendar stays untouched."
+msgstr "ویجت داشبورد (بنر حامیان مثل Files.ir و فید خبر) حذف می‌شود و اتصال‌های sponsors.json و wp-parsi.com بسته می‌شود. تقویم شمسی دست‌نخورده می‌ماند."
+
+msgid "Elementor news widget"
+msgstr "ویجت اخبار المنتور"
+
+msgid "Version and tool ads."
+msgstr "تبلیغ نسخه‌ها و ابزارها."
+
+msgid "Yoast widget feed"
+msgstr "فید ویجت Yoast"
+
+msgid "The SEO score stays; only the English feed is hidden."
+msgstr "امتیاز سئو می‌ماند، فقط فید انگلیسی پنهان می‌شود."
+
+msgid "Jetpack: offline mode"
+msgstr "Jetpack: حالت آفلاین"
+
+msgid "The connection to WordPress.com and the Jetpack connections (including the bundle inside WooCommerce) are cut."
+msgstr "اتصال به WordPress.com و ارتباط‌های Jetpack (و بسته‌ی آن داخل ووکامرس) قطع می‌شود."
+
+msgid "Persian WooCommerce SMS ads"
+msgstr "تبلیغ‌های پیامک ووکامرس فارسی"
+
+msgid "The national SMS banner and plugin install suggestions."
+msgstr "بنر ملی پیامک و پیشنهادهای نصب افزونه."
+
+msgid "Hide promotional notices"
+msgstr "پنهان کردن اعلان‌های تبلیغاتی"
+
+msgid "Errors and “new version” notices always stay."
+msgstr "خطاها و «نسخه جدید» همیشه می‌مانند."
+
+msgid "Enable the keyword filter for notices"
+msgstr "فعال کردن فیلتر کلیدواژه‌ای اعلان‌ها"
+
+msgid "One keyword per line, for example: Digits jacket"
+msgstr "هر خط یک کلیدواژه، مثلاً: دیجیتس ژاکت"
+
+msgid "Dashboard widgets of this site"
+msgstr "ویجت‌های داشبورد این سایت"
+
+msgid "(one switch each)"
+msgstr "(هر کدام یک تیک)"
+
+msgid "All the widgets that have been seen on this site's dashboard, with the name of the plugin that created them. A ticked widget is never created, so its feed and ad banner are not fetched from an external server either."
+msgstr "همه‌ی ویجت‌هایی که در داشبورد همین سایت دیده شده‌اند، با نام افزونه‌ی سازنده. ویجت تیک‌خورده اصلاً ساخته نمی‌شود، پس فید و بنر تبلیغاتی‌اش هم از سرور بیرونی گرفته نمی‌شود."
+
+msgid "Admin menu (right side)"
+msgstr "منوی سمت راست ادمین"
+
+msgid "(only hidden, not removed)"
+msgstr "(فقط مخفی می‌شود، نه حذف)"
+
+msgid "Every ticked item is hidden from the side menu. The plugin stays active and its settings still open by direct address. “Dashboard”, “Settings” and “Plugins” are not in this list so you never lose access."
+msgstr "هر آیتم تیک‌خورده از منوی کناری پنهان می‌شود. افزونه فعال می‌ماند و تنظیماتش با آدرس مستقیم باز می‌شود. «پیشخوان»، «تنظیمات» و «افزونه‌ها» برای اینکه دسترسی‌تان بسته نشود در این فهرست نیستند."
+
+msgid "There is no list yet. Open another admin page and come back here."
+msgstr "هنوز فهرستی نیست. یک صفحه‌ی دیگر ادمین را باز کنید و دوباره به همین‌جا برگردید."
+
+msgid "Remove dashboard widgets of the selected plugins"
+msgstr "حذف ویجت‌های داشبوردِ افزونه‌های انتخاب‌شده"
+
+msgid "The widget code does not run and its feed and banner are not fetched from an external server."
+msgstr "کد ویجت اجرا نمی‌شود و فید و بنرش از سرور بیرونی گرفته نمی‌شود."
+
+msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "سرور ایران گاهی به سرویس‌های بیرونی نمی‌رسد و هر بار ۵ تا ۱۵ ثانیه معطل می‌شود. با این گزینه، هاستی که پشت‌سرهم خطا یا کندی دارد برای مدتی بدون معطلی رد می‌شود."
+
+msgid "Enable"
+msgstr "فعال‌سازی"
+
+msgid "Off by default. “License” addresses are always exempt."
+msgstr "پیش‌فرض خاموش. آدرس‌های «لایسنس» همیشه معاف‌اند."
+
+msgid "How long a failing host is skipped (hours)"
+msgstr "مدت رد شدن هاست خراب (ساعت)"
+
+msgid "Consecutive failures before it activates"
+msgstr "تعداد شکست پشت‌سرهم تا فعال شدن"
+
+msgid "A response slower than this (seconds) also counts as a failure"
+msgstr "پاسخ کندتر از این (ثانیه) هم شکست حساب شود"
+
+msgid "Exempt hosts (one per line)"
+msgstr "هاست‌های معاف (هر خط یکی)"
+
+msgid "These hosts (and their subdomains) are never skipped, even if they are slow or failing. You can also exempt hosts from the table beside this one."
+msgstr "این هاست‌ها (و زیردامنه‌هایشان) هرگز رد نمی‌شوند، حتی اگر کند یا خراب باشند. هاست‌های جدول سمت چپ را هم می‌توانید از همان‌جا معاف کنید."
+
+msgid "Hosts being watched"
+msgstr "هاست‌های زیر نظر"
+
+msgid "Only failures recorded since this option was switched on are shown. After the skip period ends it tries once more; if the host is healthy it is removed from the list."
+msgstr "فقط شکست‌های ثبت‌شده از وقتی که این گزینه روشن شده نشان داده می‌شود. اولین تلاش بعد از پایان مهلت دوباره امتحان می‌کند؛ اگر سالم بود هاست از فهرست پاک می‌شود."
+
+msgid "No host has been recorded yet."
+msgstr "فعلاً هاستی ثبت نشده."
+
+msgid "Host"
+msgstr "هاست"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Skip ends"
+msgstr "پایان مهلت"
+
+msgid "Times activated"
+msgstr "دفعات فعال شدن"
+
+msgid "Last error"
+msgstr "آخرین خطا"
+
+msgid "Exempt from the breaker"
+msgstr "معاف از قطع‌کننده"
+
+msgid "Release all (clear the list)"
+msgstr "آزاد کردن همه (پاک کردن فهرست)"
+
+msgid "1) Intercept direct PHP connections"
+msgstr "۱) شنود اتصال‌های مستقیم PHP"
+
+msgid "Enable deep tracking"
+msgstr "فعال‌سازی ردیابی عمیق"
+
+msgid "Off by default. Try it on a test site first."
+msgstr "پیش‌فرض خاموش است. ابتدا روی سایت آزمایشی امتحان کنید."
+
+msgid "2) Plugin code scan (static)"
+msgstr "۲) اسکن کد افزونه‌ها (ایستا)"
+
+msgid "Scan plugin code"
+msgstr "اسکن کد افزونه‌ها"
+
+msgid "Nothing found."
+msgstr "موردی پیدا نشد."
+
+msgid "Plugin's own code"
+msgstr "کد خود افزونه"
+
+msgid "Library (vendor)"
+msgstr "کتابخانه (vendor)"
+
+msgid "Fixed destinations in code"
+msgstr "مقصدهای ثابت در کد"
+
+msgid "File details were not saved in this scan; scan again."
+msgstr "جزئیات فایل‌ها در این اسکن ذخیره نشده؛ دوباره اسکن بزنید."
+
+msgid "File"
+msgstr "فایل"
+
+msgid "Line"
+msgstr "خط"
+
+msgid "Site / fixed IP inside the file"
+msgstr "سایت / IP ثابت داخل فایل"
+
+msgid "Library"
+msgstr "کتابخانه"
+
+msgid "Plugin code"
+msgstr "کد افزونه"
+
+msgid "“Plugin's own code” means outside the vendor folder. A high count inside libraries is usually harmless. False positives are possible too (for example curl for a local address); to be sure, follow that plugin in the “seen” table."
+msgstr "«کد خود افزونه» یعنی خارج از پوشه‌ی vendor. تعداد زیاد در کتابخانه‌ها معمولاً بی‌خطر است. نتیجه‌ی مثبت کاذب هم ممکن است (مثلاً curl برای آدرس لوکال)؛ برای اطمینان، آن افزونه را در جدول «دیده‌شده» دنبال کنید."
+
+msgid "Manual blocking"
+msgstr "مسدودسازی دستی"
+
+msgid "Save settings"
+msgstr "ذخیره‌ی تنظیمات"
+
+msgid "No changes made"
+msgstr "تغییری انجام نشده"
+
+msgid "Clear the connection report"
+msgstr "پاک کردن گزارش اتصال‌ها"
+
+msgid "The mu-plugins folder could not be created: %s"
+msgstr "پوشه‌ی mu-plugins ساخته نشد: %s"
+
+msgid "The mu-plugins folder is not writable; the plugin works normally but loads later than the others."
+msgstr "پوشه‌ی mu-plugins قابل نوشتن نیست؛ افزونه به‌صورت عادی کار می‌کند ولی دیرتر از بقیه بارگذاری می‌شود."
+
+msgid "Writing the loader file failed."
+msgstr "نوشتن فایل لودر ناموفق بود."
+
+msgid "Loader installed: %s"
+msgstr "لودر نصب شد: %s"
+
+msgid "NIVA WP Guard — connection report"
+msgstr "NIVA WP Guard — گزارش اتصال‌ها"
+
+msgid "Site: %1$s | Date: %2$s UTC | Version: %3$s"
+msgstr "سایت: %1$s | تاریخ: %2$s UTC | نسخه: %3$s"
+
+msgid "The log file has not been created yet."
+msgstr "هنوز فایل لاگ ساخته نشده است."
+
+msgid "Unique connections: %1$d | Slow connections (over 0.5 s): %2$d | Total wait: %3$.1f s | Errors / no response: %4$d"
+msgstr "اتصال یکتا: %1$d | اتصال کند (بالای ۰٫۵ ثانیه): %2$d | مجموع انتظار: %3$.1f ثانیه | موارد خطا/بدون پاسخ: %4$d"
+
+msgid "— By plugin (total wait time):"
+msgstr "— به تفکیک افزونه (مجموع زمان انتظار):"
+
+msgid "— Slowest addresses:"
+msgstr "— کندترین آدرس‌ها:"
+
+msgid "  %1$-60s  %2$d times  total %3$.1fs  max %4$.1fs  errors:%5$d  [%6$s]"
+msgstr "  %1$-60s  %2$dبار  مجموع %3$.1fs  حداکثر %4$.1fs  خطا:%5$d  [%6$s]"
+
+msgid "Persian WooCommerce SMS"
+msgstr "پیامک ووکامرس فارسی"
+
+msgid "Persian WooCommerce"
+msgstr "ووکامرس فارسی"
+
+msgid "Digits (Mersa Web)"
+msgstr "Digits (مرسا وب)"
+
+msgid "RTL (RTL-CareUnit)"
+msgstr "راست‌چین (RTL-CareUnit)"
+
+msgid "Mahdis Web theme"
+msgstr "قالب مهدیس وب"
+
+msgid "Buy with Digikala"
+msgstr "خرید با دیجی‌کالا"
+
+msgid "WooCommerce"
+msgstr "ووکامرس"
+
+msgid "WordPress — version and plugin updates"
+msgstr "وردپرس - بروز رسانی نسخه و افزونه"
+
+msgid "Elementor"
+msgstr "المنتور"
+
+msgid "Yoast (unofficial server)"
+msgstr "Yoast (سرور غیر رسمی)"
+
+msgid "ParsiDate"
+msgstr "پارسی‌دیت"
+
+msgid "Advanced Shipping (Ace Plugins)"
+msgstr "حمل و نقل پیشرفته (Ace Plugins)"
+
+msgid "Emalls"
+msgstr "ایمالز"
+
+msgid "Niva plugins"
+msgstr "افزونه‌های Niva"
+
+msgid "SMS"
+msgstr "پیامک"
+
+msgid "Torob"
+msgstr "ترب"
+
+msgid "Notices and ads (pwsms.json / pwsms.hash)"
+msgstr "اعلان‌ها و تبلیغات (pwsms.json / pwsms.hash)"
+
+msgid "Notice signature"
+msgstr "امضای اعلان‌ها"
+
+msgid "News feed on the dashboard"
+msgstr "فید خبر در پیشخوان"
+
+msgid "Advertising panel (ads-api)"
+msgstr "پنل تبلیغات (ads-api)"
+
+msgid "Notices and ads"
+msgstr "اعلان‌ها و تبلیغات"
+
+msgid "License verification (every few seconds)"
+msgstr "تأیید لایسنس (هر چند ثانیه یک‌بار)"
+
+msgid "Product authorization"
+msgstr "احراز محصول"
+
+msgid "News feed"
+msgstr "فید خبر"
+
+msgid "Version notice (notifier.xml)"
+msgstr "اعلان نسخه (notifier.xml)"
+
+msgid "Notices (notifications.json)"
+msgstr "اعلان‌ها (notifications.json)"
+
+msgid "Version check (metadata.json)"
+msgstr "بررسی نسخه (metadata.json)"
+
+msgid "Order registration and tracking (plugin function)"
+msgstr "ثبت و پیگیری سفارش (کارکرد افزونه)"
+
+msgid "Promotional offers and suggested extensions (promotions / obw-free-extensions)"
+msgstr "پیشنهادهای تبلیغاتی و افزونه‌های پیشنهادی (promotions / obw-free-extensions)"
+
+msgid "Connection to WordPress.com (public-api): account check, suggestions, payments"
+msgstr "اتصال به WordPress.com (public-api): بررسی حساب، پیشنهادها، پرداخت‌ها"
+
+msgid "Jetpack server communication (jetpack.wordpress.com)"
+msgstr "ارتباط سرور Jetpack (jetpack.wordpress.com)"
+
+msgid "The jetpack.com site — product recommendations and ads"
+msgstr "سایت jetpack.com — توصیه و تبلیغ محصولات"
+
+msgid "Visit statistics (stats.wp.com)"
+msgstr "آمار بازدید (stats.wp.com)"
+
+msgid "Tracking pixel (pixel.wp.com)"
+msgstr "پیکسل ردیابی (pixel.wp.com)"
+
+msgid "WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways"
+msgstr "تبلیغات WooPayments (incentives) — بنر «درگاه ووکامرس را راه بیندازید»؛ به درگاه‌های شما ربطی ندارد"
+
+msgid "Sending usage statistics to WooCommerce (usage tracking), about half a second"
+msgstr "ارسال آمار استفاده به ووکامرس (usage tracking)، حدود نیم ثانیه"
+
+msgid "PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal"
+msgstr "پی‌پال (webscr): تأیید IPN و اتصال به پی‌پال — در ایران تا ۱۵ ثانیه معطل می‌کند"
+
+msgid "Product key check for WooCommerce.com products (product-key-api)"
+msgstr "بررسی کلید محصولات ووکامرس.کام (product-key-api)"
+
+msgid "WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)"
+msgstr "بررسی نسخه‌ی وردپرس از api.wordpress.org (صفحه‌ی «وضعیت سیستم»؛ روی هاست‌های کند تا ۱۰ ثانیه)"
+
+msgid "Theme information from api.wordpress.org (“System status” page)"
+msgstr "اطلاعات قالب از api.wordpress.org (صفحه‌ی «وضعیت سیستم»)"
+
+msgid "QUIC.cloud news and notices (wpapi.quic.cloud/news)"
+msgstr "خبر و اعلان QUIC.cloud (wpapi.quic.cloud/news)"
+
+msgid "QUIC.cloud version check (ver_check)"
+msgstr "بررسی نسخه‌ی QUIC.cloud (ver_check)"
+
+msgid "QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions"
+msgstr "داشبورد QUIC.cloud (api.quic.cloud/d/dash): آمار و پیشنهاد سرویس ابری"
+
+msgid "solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds"
+msgstr "خبر و پست‌های تبلیغاتی solidwp.com (ویجت و اعلان داشبورد)، تا ۱۰ ثانیه"
+
+msgid "rankmath.com blog news and posts (news widget and dashboard ad)"
+msgstr "خبر و پست‌های وبلاگ rankmath.com (ویجت اخبار و تبلیغ داشبورد)"
+
+msgid "Reading the readme from the WordPress svn (up to 10 seconds)"
+msgstr "خواندن readme از svn وردپرس (تا ۱۰ ثانیه)"
+
+msgid "Plugin version check"
+msgstr "بررسی نسخه‌ی افزونه‌ها"
+
+msgid "Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens"
+msgstr "تبلیغ و اعلان ویرایشگر: ارتقا به Pro (free-to-pro-upsell)، اعلان‌ها (notifications) و پیشنهادها (promotions) — موقع باز کردن ویرایشگر"
+
+msgid "my.elementor.com connections (news, library, suggested plugins)"
+msgstr "اتصال‌های my.elementor.com (اخبار، کتابخانه، افزونه‌های پیشنهادی)"
+
+msgid "Yoast SEO (free) translation packages (translationspress)"
+msgstr "بسته‌های ترجمه‌ی Yoast SEO رایگان (translationspress)"
+
+msgid "Yoast SEO Premium translation packages (translationspress)"
+msgstr "بسته‌های ترجمه‌ی Yoast SEO پریمیوم (translationspress)"
+
+msgid "Yoast WooCommerce SEO translation packages (translationspress)"
+msgstr "بسته‌های ترجمه‌ی Yoast WooCommerce SEO (translationspress)"
+
+msgid "All Yoast translation packages in one (including News, Local, Video and others)"
+msgstr "همه‌ی بسته‌های ترجمه‌ی Yoast، یک‌جا (شامل News، Local، Video و بقیه)"
+
+msgid "vip-themes.com — a third-party server, not Yoast"
+msgstr "vip-themes.com — سرور شخص ثالث، نه Yoast"
+
+msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
+msgstr "بررسی آی‌پی بازدیدکننده (ipcheck) — در صفحات سایت هم اجرا می‌شود و تا ۱۰ ثانیه معطل می‌کند"
+
+msgid "Add-ons list (addons) — up to 10 seconds"
+msgstr "فهرست افزودنی‌ها (addons) — تا ۱۰ ثانیه"
+
+msgid "Notices (feeds/notifications)"
+msgstr "اعلان‌ها (feeds/notifications)"
+
+msgid "Sponsors list (sponsors.json from GitHub)"
+msgstr "فهرست حامیان (sponsors.json از گیت‌هاب)"
+
+msgid "News feed (wp-parsi.com)"
+msgstr "فید خبر (wp-parsi.com)"
+
+msgid "Advertising page aceplugins.com"
+msgstr "صفحه‌ی تبلیغاتی aceplugins.com"
+
+msgid "IndexNow — notifying search engines about page changes (up to 10 seconds)"
+msgstr "IndexNow — اعلام تغییر صفحه به موتورهای جستجو (تا ۱۰ ثانیه)"
+
+msgid "my.yoast.com — site information"
+msgstr "my.yoast.com — اطلاعات سایت"
+
+msgid "Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds"
+msgstr "کمپین ارتقا (upgrade-campaign) — تبلیغ؛ تا ۱۰ ثانیه"
+
+msgid "The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher"
+msgstr "کل اتصال Wincher (ردیابی کلمه‌ی کلیدی: account و connect/token) — تا ۱۰ ثانیه؛ اگر از Wincher استفاده نمی‌کنید ببندید"
+
+msgid "Welcome page and ad (cs_welcome.json)"
+msgstr "صفحه‌ی خوش‌آمد و تبلیغ (cs_welcome.json)"
+
+msgid "Emalls product extraction service (plugin function)"
+msgstr "سرویس استخراج محصولات ایمالز (کارکرد افزونه)"
+
+msgid "Niva license server (validate)"
+msgstr "سرور لایسنس Niva (validate)"
+
+msgid "payamak-panel SMS gateway"
+msgstr "درگاه پیامک payamak-panel"
+
+msgid "Price update webhook (Torob)"
+msgstr "وب‌هوک به‌روزرسانی قیمت (ترب)"
+
+msgid "Ad"
+msgstr "تبلیغ"
+
+msgid "Notice / news"
+msgstr "اعلان/خبر"
+
+msgid "License"
+msgstr "لایسنس"
+
+msgid "Version check"
+msgstr "بررسی نسخه"
+
+msgid "Plugin function"
+msgstr "کارکرد افزونه"
+
+msgid "Third party"
+msgstr "شخص ثالث"
+
+msgid "Status summary: <b>%1$s</b> blocked, <b>%2$s</b> cached, <b>%3$s</b> plugins offline."
+msgstr "خلاصه‌ی وضعیت: <b>%1$s</b> مورد مسدود، <b>%2$s</b> مورد کش، <b>%3$s</b> افزونه‌ی آفلاین."
+
+msgid "<b>%1$s</b> unique connections · <b>%2$s</b> slow · total wait <b>%3$s</b> · <b>%4$s</b> errors or no response"
+msgstr "<b>%1$s</b> اتصال یکتا · <b>%2$s</b> بار کند · مجموع انتظار <b>%3$s</b> · <b>%4$s</b> خطا یا بدون پاسخ"
+
+msgid "Skipped"
+msgstr "رد می‌شود"
+
+msgid "Counting (%s)"
+msgstr "در حال شمارش (%s)"
+
+msgid "Waiting for next try"
+msgstr "منتظر تلاش بعدی"
+
+msgid "Connections that bypass the WordPress API and go through <code>file_get_contents('http…')</code> or <code>fopen</code> are also recorded in the same table and log (tag \"PHP-GET\"), and the blocking rules apply to them too."
+msgstr "اتصال‌هایی که API وردپرس را دور می‌زنند و با <code>file_get_contents('http…')</code> یا <code>fopen</code> می‌روند هم در همان جدول و لاگ ثبت می‌شوند (برچسب «PHP-GET») و قانون‌های مسدودسازی روی آنها هم اعمال می‌شود."
+
+msgid "Limits: <code>curl_exec</code> and <code>fsockopen</code> cannot be intercepted live in plain PHP (see section 2). Also, if a plugin reads <code>$http_response_header</code> or <code>get_headers()</code> directly, it may not receive the header data while this option is on; if anything breaks, turn this switch off. Requests made by WordPress core itself (without a calling plugin) are left untouched."
+msgstr "محدودیت‌ها: <code>curl_exec</code> و <code>fsockopen</code> در PHP خالص زنده قابل شنود نیستند (بخش ۲ را ببینید). همچنین اگر افزونه‌ای <code>$http_response_header</code> یا <code>get_headers()</code> را مستقیم بخواند، در حالت فعال ممکن است داده‌ی هدر را نگیرد؛ اگر چیزی خراب شد، همین تیک را بردارید. درخواست‌های خود هسته‌ی وردپرس (بدون افزونه‌ی فراخوان) دست‌نخورده می‌ماند."
+
+msgid "allow_url_fopen is disabled on this host; this section has no effect."
+msgstr "allow_url_fopen روی این هاست خاموش است؛ این بخش اثری ندارد."
+
+msgid "Reads the PHP files of all plugins and themes and lists where <code>curl</code>, <code>fsockopen</code> or <code>file_get_contents('http…')</code> is written directly. It does not run or block anything; it only tells you which plugin has the “ability to connect silently”."
+msgstr "فایل‌های PHP همه‌ی افزونه‌ها و قالب‌ها را می‌خواند و جاهایی که <code>curl</code>، <code>fsockopen</code> یا <code>file_get_contents('http…')</code> مستقیم نوشته شده را فهرست می‌کند. چیزی را اجرا یا مسدود نمی‌کند؛ فقط می‌گوید کدام افزونه «توانایی اتصال پنهان» دارد."
+
+msgid "Last scan: %1$s · %2$s files"
+msgstr "آخرین اسکن: %1$s · %2$s فایل"
+
+msgid "· partial (time ran out)"
+msgstr "· نیمه‌کاره (زمان تمام شد)"
+
+msgid "No fixed address — the destination comes from settings or input at run time"
+msgstr "آدرس ثابتی نیست — مقصد هنگام اجرا از تنظیمات یا ورودی می‌آید"
+
+msgid "One address per line in the form <code>domain/path</code> (prefix); for example <code>example.com/ads/</code>"
+msgstr "هر خط یک آدرس به شکل <code>دامنه/مسیر</code> (پیشوند)؛ مثلاً <code>example.com/ads/</code>"
+
+msgid "%s items"
+msgstr "%s مورد"
+
+msgid "This item is of the “license” type. Blocking it may lock a theme or plugin. Turn on “cache” instead. Continue?"
+msgstr "این مورد از نوع «لایسنس» است. مسدود کردنش ممکن است قالب یا افزونه را قفل کند. به‌جای آن «کش» را روشن کنید. ادامه می‌دهید؟"
+
+msgid "This item is needed for the plugin itself to work (SMS, orders, etc.). Continue?"
+msgstr "این مورد برای کار خود افزونه (پیامک، سفارش و ...) لازم است. ادامه می‌دهید؟"
+
+msgid "%s unsaved changes"
+msgstr "%s تغییر ذخیره‌نشده"
+
+msgid "Copied ✓"
+msgstr "کپی شد ✓"
+
+msgid "Clear the connection report and log file?"
+msgstr "گزارش اتصال‌ها و فایل لاگ پاک شود؟"
+
+msgid "%1$s times · %2$s ·"
+msgstr "%1$s بار · %2$s ·"
+
+msgid "max %s"
+msgstr "حداکثر %s"
+
+msgid "WordPress core"
+msgstr "هسته‌ی وردپرس"
+
+msgid "Theme: %s"
+msgstr "قالب: %s"
+
+msgid "There is no list yet. Open the <a href=\"%s\">Dashboard</a> page once and come back here."
+msgstr "هنوز فهرستی نیست. یک بار صفحه‌ی <a href=\"%s\">پیشخوان</a> را باز کنید و دوباره به همین‌جا برگردید."
+
+msgid "Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site."
+msgstr "کنترل ارتباط‌های بیرونی افزونه‌ها و قالب‌ها: ثبت همه‌ی اتصال‌ها با زمان (در فایل txt و گزارش)، مسدود کردن تبلیغ و اعلان و فید خبری، کش پاسخ لایسنس (بدون قطع آن)، آفلاین کردن افزونه‌های دلخواه و حذف ویجت‌ها و اعلان‌های تبلیغاتی پیشخوان. هر مورد یک تیک جدا دارد و نصب روی هر سایت جدید خودکار است."
+
+msgid "The old “NIVA HTTP Guard” plugin is still active. Deactivate it so the new version can work. Your settings are migrated automatically and you can delete the old plugin after the first load."
+msgstr "نسخه‌ی قدیمی «NIVA HTTP Guard» هنوز فعال است. آن را غیرفعال کنید تا نسخه‌ی جدید کار کند. تنظیمات شما خودکار منتقل می‌شود و بعد از اولین بارگذاری می‌توانید نسخه‌ی قدیمی را حذف کنید."
+
+msgid "Relevant to this site"
+msgstr "مرتبط با این سایت"
+
+msgid "All connections"
+msgstr "همه‌ی اتصال‌ها"
+
+msgid ".htaccess is up to date (a backup was saved)."
+msgstr "فایل .htaccess به‌روز است (بک‌آپ ذخیره شد)."
+
+msgid "The .htaccess block was removed."
+msgstr "بلوک .htaccess حذف شد."
+
+msgid "404.html was regenerated."
+msgstr "فایل 404.html دوباره ساخته شد."
+
+msgid "Could not write 404.html — download it and upload it to the site root."
+msgstr "نوشتن 404.html ممکن نبود — آن را دانلود کنید و در ریشه‌ی سایت بگذارید."
+
+msgid "The site returned a server error after the change, so .htaccess was restored from the backup."
+msgstr "بعد از تغییر، سایت خطای سرور داد؛ برای همین .htaccess از بک‌آپ برگردانده شد."
+
+msgid "This server uses Nginx, which does not use .htaccess. Use the Nginx snippet below."
+msgstr "این سرور Nginx است و از .htaccess استفاده نمی‌کند. کد Nginx زیر را به کار ببرید."
+
+msgid "Enable Fast 404 and save first."
+msgstr "اول «۴۰۴ سریع» را روشن و ذخیره کنید."
+
+msgid "Could not write .htaccess — download the snippet below and add it yourself."
+msgstr "نوشتن .htaccess ممکن نبود — کد زیر را دانلود کنید و خودتان اضافه کنید."
+
+msgid "Server and 404"
+msgstr "سرور و ۴۰۴"
+
+msgid "Installed"
+msgstr "نصب شد"
+
+msgid "Outdated — it is updated when you save"
+msgstr "قدیمی — با ذخیره‌ی تنظیمات به‌روز می‌شود"
+
+msgid "Still present — it is removed when you save"
+msgstr "هنوز هست — با ذخیره‌ی تنظیمات حذف می‌شود"
+
+msgid "Not writable"
+msgstr "قابل نوشتن نیست"
+
+msgid "Your own file (kept untouched)"
+msgstr "فایل سفارشی شما (دست‌نخورده می‌ماند)"
+
+msgid "Not used on Nginx"
+msgstr "روی Nginx استفاده نمی‌شود"
+
+msgid "Off"
+msgstr "خاموش"
+
+msgid "WordPress default"
+msgstr "پیش‌فرض وردپرس"
+
+msgid "Slow down (use the interval)"
+msgstr "کند کردن (با فاصله‌ی بالا)"
+
+msgid "Turn off"
+msgstr "خاموش"
+
+msgid "Post editor"
+msgstr "ویرایشگر نوشته/محصول"
+
+msgid "Other admin pages"
+msgstr "سایر صفحه‌های ادمین"
+
+msgid "Front-end (visitors)"
+msgstr "فرانت‌اند (بازدیدکنندگان)"
+
+msgid "Heartbeat control"
+msgstr "کنترل Heartbeat"
+
+msgid "WordPress sends a background request (Heartbeat) every 15–60 seconds for autosave, post locking and notices. On weak hosts this alone can overload the server. Control it separately for each part of the site."
+msgstr "وردپرس برای ذخیره‌ی خودکار، قفل نوشته و اعلان‌ها هر ۱۵ تا ۶۰ ثانیه یک درخواست پس‌زمینه (Heartbeat) می‌فرستد. روی هاست‌های ضعیف همین به‌تنهایی سرور را زیر بار می‌برد. برای هر بخش سایت جداگانه کنترلش کنید."
+
+msgid "Enable heartbeat control"
+msgstr "کنترل Heartbeat را فعال کن"
+
+msgid "A separate mu-plugin file is created; off = default WordPress behavior."
+msgstr "یک فایل mu-plugin جدا ساخته می‌شود؛ خاموش = رفتار پیش‌فرض وردپرس."
+
+msgid "Interval when slowed (seconds)"
+msgstr "فاصله‌ی حالت «کند» (ثانیه)"
+
+msgid "For example 300 = every 5 minutes, 600 = every 10 minutes."
+msgstr "مثلاً ۳۰۰ = هر ۵ دقیقه، ۶۰۰ = هر ۱۰ دقیقه."
+
+msgid "Turning it off in the post editor disables autosave and post locking while editing."
+msgstr "خاموش کردن در ویرایشگر، ذخیره‌ی خودکار و قفل نوشته را هنگام ویرایش از کار می‌اندازد."
+
+msgid "mu-plugin file"
+msgstr "فایل mu-plugin"
+
+msgid "Fast 404"
+msgstr "۴۰۴ سریع"
+
+msgid "Scanner bots probe hundreds of strange addresses (.env, backup files, fake PHP files). Instead of loading WordPress, the database, CSS and JS for each one, a light static 404 page is returned immediately."
+msgstr "ربات‌های اسکنر صدها آدرس عجیب (.env، فایل‌های پشتیبان، فایل‌های PHP جعلی) را امتحان می‌کنند. به‌جای بارگذاری وردپرس، دیتابیس، CSS و JS برای هرکدام، یک صفحه‌ی ۴۰۴ ایستا و سبک فوراً برگردانده می‌شود."
+
+msgid "Enable fast 404"
+msgstr "۴۰۴ سریع را فعال کن"
+
+msgid "Creates a separate mu-plugin, a 404.html page in the site root and a block in .htaccess."
+msgstr "یک mu-plugin جدا، صفحه‌ی 404.html در ریشه‌ی سایت و یک بلوک در .htaccess ساخته می‌شود."
+
+msgid "Strict mode"
+msgstr "حالت سخت‌گیرانه"
+
+msgid "Also blocks existing script files outside the WordPress core, plugins and themes folders. May break custom scripts placed in the site root."
+msgstr "فایل‌های اسکریپت موجود بیرون از پوشه‌های هسته، افزونه و قالب را هم می‌بندد. ممکن است اسکریپت‌های دلخواه در ریشه‌ی سایت را از کار بیندازد."
+
+msgid "Installation status"
+msgstr "وضعیت نصب"
+
+msgid "404.html page"
+msgstr "صفحه‌ی 404.html"
+
+msgid ".htaccess block"
+msgstr "بلوک .htaccess"
+
+msgid "Install / repair .htaccess"
+msgstr "نصب / ترمیم .htaccess"
+
+msgid "Regenerate 404.html"
+msgstr "ساخت دوباره‌ی 404.html"
+
+msgid "Remove .htaccess block"
+msgstr "حذف بلوک .htaccess"
+
+msgid "Download 404.html"
+msgstr "دانلود 404.html"
+
+msgid "Download Nginx snippet"
+msgstr "دانلود کد Nginx"
+
+msgid "Download .htaccess snippet"
+msgstr "دانلود کد .htaccess"
+
+msgid "Nginx configuration"
+msgstr "تنظیمات Nginx"
+
+msgid "Code to add to .htaccess"
+msgstr "کدی که باید به .htaccess اضافه شود"
+
+msgid "Nginx does not use .htaccess; add this to your server configuration. Fake PHP files are handled by the mu-plugin."
+msgstr "Nginx از .htaccess استفاده نمی‌کند؛ این کد را به تنظیمات سرور اضافه کنید. فایل‌های PHP جعلی را mu-plugin می‌گیرد."
+
+msgid "If automatic installation is not possible, download the files and place them yourself: put 404.html in the site root (next to wp-config.php) and add this code to the top of .htaccess (before “# BEGIN WordPress”)."
+msgstr "اگر نصب خودکار ممکن نبود، فایل‌ها را دانلود کنید و خودتان بگذارید: 404.html را در ریشه‌ی سایت (کنار wp-config.php) قرار دهید و کد زیر را بالای .htaccess (قبل از «# BEGIN WordPress») اضافه کنید."
+
+msgid "Load before other plugins (mu-plugin loader)"
+msgstr "قبل از بقیه‌ی افزونه‌ها بارگذاری شود (لودر mu-plugin)"
+
+msgid "Creates one small file in wp-content/mu-plugins. Nothing is created outside the plugin folder until you turn this on and save."
+msgstr "یک فایل کوچک در wp-content/mu-plugins ساخته می‌شود. تا وقتی این را روشن و ذخیره نکنید، هیچ فایلی بیرون از پوشه‌ی افزونه ساخته نمی‌شود."
+
+msgid "DISABLE_WP_CRON is already defined in wp-config.php by you, so it was left untouched."
+msgstr "تعریف DISABLE_WP_CRON را خودتان در wp-config.php گذاشته‌اید، پس دست‌نخورده ماند."
+
+msgid "The site returned a server error after the change, so wp-config.php was restored."
+msgstr "سایت بعد از تغییر خطای سرور داد، پس wp-config.php به حالت قبل برگردانده شد."
+
+msgid "Could not find the right place in wp-config.php — add the line shown in the cron card yourself."
+msgstr "جای مناسب در wp-config.php پیدا نشد — خط نمایش‌داده‌شده در کارت کرون را خودتان اضافه کنید."
+
+msgid "wp-config.php could not be changed automatically — add the line shown in the cron card yourself."
+msgstr "wp-config.php به‌صورت خودکار تغییر نکرد — خط نمایش‌داده‌شده در کارت کرون را خودتان اضافه کنید."
+
+msgid "WordPress cron (wp-cron)"
+msgstr "کرون وردپرس (wp-cron)"
+
+msgid "By default WordPress runs its scheduled tasks (scheduled posts, emails, backups, WooCommerce jobs) during visitors’ page loads. This slows pages down and wastes resources. Turn it off here and let the server run it on a fixed schedule instead."
+msgstr "وردپرس به‌طور پیش‌فرض کارهای زمان‌بندی‌شده‌اش (انتشار زمان‌بندی‌شده، ایمیل‌ها، پشتیبان‌گیری، کارهای ووکامرس) را هنگام بارگذاری صفحه توسط بازدیدکنندگان اجرا می‌کند. این کار صفحات را کند می‌کند و منابع را هدر می‌دهد. اینجا خاموشش کنید و بگذارید سرور آن را در زمان‌بندی ثابت اجرا کند."
+
+msgid "Disable the built-in WordPress cron"
+msgstr "غیرفعال کردن کرون داخلی وردپرس"
+
+msgid "Adds DISABLE_WP_CRON to wp-config.php. Add the server cron job below first, otherwise scheduled tasks stop running."
+msgstr "DISABLE_WP_CRON را به wp-config.php اضافه می‌کند. اول کرون سرور را پایین اضافه کنید، وگرنه کارهای زمان‌بندی‌شده اجرا نمی‌شوند."
+
+msgid "Run the server job every"
+msgstr "کار سرور هر چند وقت اجرا شود"
+
+msgid "%s minutes"
+msgstr "%s دقیقه"
+
+msgid "5 minutes suits most sites and shops, 15 minutes is enough for a blog. Use 1 minute only if you need exact timing; more frequent runs only load the server."
+msgstr "برای بیشتر سایت‌ها و فروشگاه‌ها ۵ دقیقه مناسب است و برای وبلاگ ۱۵ دقیقه کافی است. ۱ دقیقه فقط برای زمان‌بندی دقیق؛ اجرای پرتکرارتر فقط سرور را سنگین می‌کند."
+
+msgid "wp-config.php setting"
+msgstr "تنظیم wp-config.php"
+
+msgid "Scheduled tasks are %s minutes overdue. Check that the server cron job below exists."
+msgstr "کارهای زمان‌بندی‌شده %s دقیقه عقب افتاده‌اند. بررسی کنید کرون سرور (پایین) ساخته شده باشد."
+
+msgid "Cron job for cPanel"
+msgstr "کرون جاب برای cPanel"
+
+msgid "In cPanel open “Cron Jobs” → “Add New Cron Job”. Enter the schedule (or choose the matching “Common Settings”), paste the command and save."
+msgstr "در cPanel به «Cron Jobs» ← «Add New Cron Job» بروید. زمان‌بندی را وارد کنید (یا «Common Settings» مشابه را انتخاب کنید)، دستور را بچسبانید و ذخیره کنید."
+
+msgid "Schedule (minute, hour, day, month, weekday)"
+msgstr "زمان‌بندی (دقیقه، ساعت، روز، ماه، روز هفته)"
+
+msgid "Command (matches this site’s PHP %s)"
+msgstr "دستور (متناسب با PHP %s همین سایت)"
+
+msgid "Other panels and alternative command"
+msgstr "پنل‌های دیگر و دستور جایگزین"
+
+msgid "The command uses the cPanel path for PHP %1$s (%2$s). On DirectAdmin or other panels replace that path with the PHP path your panel shows for the same version, for example /usr/local/php82/bin/php."
+msgstr "دستور از مسیر cPanel برای PHP %1$s (%2$s) استفاده می‌کند. در دایرکت‌ادمین یا پنل‌های دیگر این مسیر را با مسیر PHP همان نسخه در پنل خود عوض کنید، مثلاً /usr/local/php82/bin/php."
+
+msgid "If the command above does not run, use this one. It calls the cron file through the web address."
+msgstr "اگر دستور بالا اجرا نشد از این یکی استفاده کنید؛ فایل کرون را از راه آدرس وب صدا می‌زند."
+
+msgid "If wp-config.php cannot be changed automatically, add this line above “That’s all, stop editing!”:"
+msgstr "اگر wp-config.php خودکار تغییر نکرد، این خط را بالای «That’s all, stop editing!» اضافه کنید:"
+
+msgid "%s hours"
+msgstr "%s ساعت"
+
+msgid "Longer intervals (hours) lower the server load the most, but scheduled posts, emails and WooCommerce jobs then run later (up to that interval)."
+msgstr "فاصله‌های بلندتر (ساعتی) بیشترین فشار را از سرور برمی‌دارند، اما انتشار زمان‌بندی‌شده، ایمیل‌ها و کارهای ووکامرس دیرتر (تا همان فاصله) اجرا می‌شوند."
+
+msgid "This is the full line (schedule + command), ready for crontab. In the cPanel form, enter the schedule in the time fields and paste only the part after it into the Command field."
+msgstr "این خط کامل (زمان‌بندی + دستور) است و برای crontab آماده است. در فرم cPanel زمان‌بندی را در فیلدهای زمان وارد کنید و فقط بخشِ بعد از آن را در فیلد Command بچسبانید."
+
+msgid "Cron activity"
+msgstr "فعالیت کرون"
+
+msgid "Last successful run"
+msgstr "آخرین اجرای موفق"
+
+msgid "Not recorded yet"
+msgstr "هنوز ثبت نشده"
+
+msgid "Last failed run"
+msgstr "آخرین اجرای ناموفق"
+
+msgid "Next scheduled task"
+msgstr "کار زمان‌بندی‌شده‌ی بعدی"
+
+msgid "Run by"
+msgstr "اجراکننده"
+
+msgid "Server cron command"
+msgstr "دستور کرون سرور"
+
+msgid "Web request (visitor or URL)"
+msgstr "درخواست وب (بازدیدکننده یا آدرس)"
+
+msgid "%s ago"
+msgstr "%s پیش"
+
+msgid "in %s"
+msgstr "تا %s دیگر"
+
+msgid "Copy command only"
+msgstr "فقط دستور را کپی کن"
+

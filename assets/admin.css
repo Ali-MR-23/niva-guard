@@ -1,0 +1,167 @@
+/* NIVA WP Guard — admin page styles */
+            /* ───── پایه: تمام‌عرض، مقیاس‌پذیر برای مانیتورهای بزرگ ───── */
+            #wpcontent{padding-inline-start:0}
+            .nhg{--c1:#168591;--c2:#6d3fa8;--ink:#1d2430;--mut:#6b7280;--line:#e4e7ec;--bg:#f5f6f8;--ok:#0b8a3e;--warn:#d98a00;--bad:#c0282a;
+                 max-width:none;margin:0;padding:16px 22px 0;font-size:14px;color:var(--ink)}
+            @media (min-width:1800px){.nhg{font-size:15.5px;padding:20px 40px 0}}
+            @media (min-width:2400px){.nhg{font-size:17px;padding:24px 64px 0}}
+            .nhg *{box-sizing:border-box}
+            .nhg h1,.nhg h2,.nhg h3{padding:0;color:inherit}
+
+            /* ───── سربرگ ───── */
+            .nhg-hero{display:grid;grid-template-columns:1fr auto;gap:18px 28px;align-items:center;padding:24px 30px;border-radius:20px;color:#fff;
+                background:radial-gradient(1200px 300px at 0 0,rgba(109,63,168,.55),transparent 60%),linear-gradient(135deg,#12303d,#168591);box-shadow:0 18px 40px -22px rgba(10,50,70,.7)}
+            .nhg-hero h1{margin:0;font-size:1.65em;color:#fff;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+            .nhg-pill{display:inline-flex;align-items:center;gap:6px;padding:3px 12px;border-radius:999px;font-size:.62em;font-weight:700;background:rgba(255,255,255,.18)}
+            .nhg-pill i{width:8px;height:8px;border-radius:50%;background:#5ef0a0;box-shadow:0 0 0 3px rgba(94,240,160,.25)}
+            .nhg-pill.off i{background:#ff8a8a;box-shadow:0 0 0 3px rgba(255,138,138,.25)}
+            .nhg-hero p{margin:6px 0 0;opacity:.88;max-width:62ch;line-height:1.8}
+            .nhg-stats{display:grid;grid-template-columns:repeat(4,minmax(116px,1fr));gap:12px}
+            .nhg-stat{padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.14);backdrop-filter:blur(4px);text-align:center}
+            .nhg-stat b{display:block;font-size:1.55em;line-height:1.3;white-space:nowrap}
+            .nhg-stat span{font-size:.82em;opacity:.9}
+            @media (max-width:1100px){.nhg-hero{grid-template-columns:1fr}.nhg-stats{grid-template-columns:repeat(2,1fr)}}
+
+            .nhg-flash{display:flex;align-items:center;gap:10px;margin-top:14px;padding:12px 18px;border-radius:12px;font-weight:600;background:#e3f7e9;color:#0b3d1c;border:1px solid #9bd9ae}
+
+            /* ───── تب‌ها ───── */
+            .nhg-tabs{position:sticky;top:32px;z-index:20;display:flex;gap:6px;flex-wrap:wrap;margin:16px -6px 0;padding:10px 6px;background:linear-gradient(180deg,var(--bg) 75%,rgba(245,246,248,0))}
+            .nhg-tab{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;color:#374151;font:inherit;font-weight:600;cursor:pointer;transition:.15s}
+            .nhg-tab:hover{border-color:var(--c1);color:var(--c1)}
+            .nhg-tab.on{background:var(--c1);border-color:var(--c1);color:#fff;box-shadow:0 8px 18px -10px var(--c1)}
+            .nhg-tab em{font-style:normal;min-width:22px;padding:0 7px;border-radius:999px;background:rgba(0,0,0,.08);font-size:.82em;line-height:20px;text-align:center}
+            .nhg-tab.on em{background:rgba(255,255,255,.25)}
+            @media (max-width:782px){.nhg-tabs{top:46px}}
+
+            .nhg-panel{display:none;margin-top:6px;animation:nhgIn .25s ease}
+            .nhg-panel.on{display:block}
+            @keyframes nhgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+            .nhg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:18px;align-items:start}
+
+            /* ───── کارت‌ها ───── */
+            .nhg-card{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 22px -18px rgba(0,0,0,.35);overflow:hidden}
+            .nhg-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:16px 24px;border-bottom:1px solid #eef0f3;background:linear-gradient(180deg,#fafbfc,#fff)}
+            .nhg-head h2{margin:0;font-size:1.12em}
+            .nhg-head p{margin:2px 0 0;color:var(--mut);font-size:.88em;line-height:1.7}
+            .nhg-head .nhg-act{margin-inline-start:auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+            .nhg-body{padding:18px 24px 22px}
+            .nhg-note{margin:14px 0 0;padding:12px 16px;border-radius:12px;background:#fff7e6;color:#5c3b00;font-size:.9em;line-height:1.8}
+
+            /* ───── ابزار جدول: جستجو و فیلتر ───── */
+            .nhg-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;padding:14px 24px;border-bottom:1px solid #eef0f3;background:#fcfcfd}
+            .nhg-search{flex:1 1 280px;max-width:460px;position:relative}
+            .nhg-search input{width:100%;height:40px;padding:0 14px 0 40px;border:1px solid var(--line);border-radius:12px;background:#fff}
+            .nhg-search svg{position:absolute;left:12px;top:11px;width:18px;height:18px;color:#9ca3af}
+            .nhg-chipbar{display:flex;gap:6px;flex-wrap:wrap}
+            .nhg-fchip{padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:.9em;cursor:pointer;color:#4b5563}
+            .nhg-fchip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+            .nhg-fchip em{font-style:normal;opacity:.7;margin-inline-start:4px}
+            .nhg-count{margin-inline-start:auto;color:var(--mut);font-size:.9em}
+
+            /* ───── جدول‌ها ───── */
+            .nhg-tbl{width:100%;border-collapse:collapse}
+            .nhg-tbl th{position:sticky;top:0;padding:12px 14px;text-align:start;color:var(--mut);font-size:.82em;font-weight:700;background:#fafbfc;border-bottom:1px solid var(--line);white-space:nowrap}
+            .nhg-tbl td{padding:12px 14px;border-bottom:1px solid #f1f2f5;vertical-align:middle}
+            .nhg-tbl tbody tr:hover td{background:#fafcfd}
+            .nhg .notice,.nhg div.updated,.nhg div.error,.nhg .rank-math-notice,.nhg .update-nag{display:none!important}
+            .nhg-grid-deep{grid-template-columns:minmax(260px,1fr) minmax(0,3fr)}
+            @media (max-width:1100px){.nhg-grid-deep{grid-template-columns:1fr}}
+            .nhg-stabs{display:flex;gap:4px;padding:10px 24px 0;border-bottom:1px solid #eef0f3;background:#fcfcfd}
+            .nhg-stab{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;margin-bottom:-1px;border:1px solid transparent;border-radius:10px 10px 0 0;background:transparent;color:#4b5563;font:inherit;font-weight:600;cursor:pointer}
+            .nhg-stab:hover{color:var(--c1)}
+            .nhg-stab.on{background:#fff;border-color:#eef0f3 #eef0f3 #fff;color:var(--c1)}
+            .nhg-stab em{font-style:normal;min-width:22px;padding:0 7px;border-radius:999px;background:rgba(0,0,0,.07);font-size:.82em;line-height:20px;text-align:center}
+            .nhg-flash-bad{background:#fde8e8;color:#5c1212;border-color:#f1a9a9}
+            .nhg-hb-row,.nhg-srv-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #eef0f3}
+            .nhg-hb-row select{min-width:230px;height:38px;border-radius:10px}
+            .nhg-srv-row:last-child{border-bottom:0}
+            .nhg-srv-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+            .nhg-details{margin-top:16px;border:1px solid var(--line);border-radius:12px;background:#fcfcfd;padding:10px 14px}
+            .nhg-details summary{cursor:pointer;font-weight:700}
+            .nhg-details textarea{direction:ltr;text-align:left;margin-top:10px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82em}
+            .nhg-acc{cursor:pointer}
+            .nhg-acc:focus{outline:2px solid var(--c1);outline-offset:-2px}
+            .nhg-chev{display:inline-block;transition:transform .15s;color:var(--mut);font-weight:700}
+            .nhg-acc.open .nhg-chev{transform:rotate(-90deg)}
+            .nhg-acc-body td{background:#f8fafb;padding:6px 14px 16px}
+            .nhg-sub{width:100%;border-collapse:collapse;font-size:.9em}
+            .nhg-sub th{padding:8px 10px;text-align:start;color:var(--mut);font-size:.82em;border-bottom:1px solid var(--line)}
+            .nhg-sub td{padding:8px 10px;border-bottom:1px solid #eef0f3;vertical-align:top}
+            .nhg-tag{display:inline-block;margin-inline-start:6px;padding:1px 8px;border-radius:999px;font-size:.78em;font-family:inherit}
+            .nhg-tag.own{background:#fde8e8;color:#9b1c1c}
+            .nhg-tag.lib{background:#eef0f3;color:#4b5563}
+            .nhg-tbl tr.nhg-src td{padding:9px 14px;background:#f3f5f8;font-weight:800;color:#374151;font-size:.92em}
+            .nhg-tbl tr.nhg-hid{display:none}
+            .nhg-tbl .ltr{direction:ltr;text-align:left;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82em;color:#8a93a3;word-break:break-all}
+            .nhg-tbl .ttl{font-weight:600;line-height:1.7}
+            .nhg-badge{display:inline-block;padding:2px 11px;border-radius:999px;font-size:.78em;font-weight:700;color:#fff;white-space:nowrap}
+            .nhg-slow{color:var(--bad);font-weight:700}
+            .nhg-dim{color:#c3c8d2}
+
+            /* نوار تأثیر (سهم زمان انتظار) */
+            .nhg-bar{height:8px;border-radius:999px;background:#eef0f3;overflow:hidden;min-width:90px}
+            .nhg-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#f6c453,#e0452c)}
+            .nhg-imp{display:flex;flex-direction:column;gap:5px;min-width:130px}
+            .nhg-imp span{font-size:.84em;color:#4b5563}
+
+            /* کلیدهای تیک */
+            .nhg-sw{position:relative;display:inline-block;width:46px;height:26px;vertical-align:middle;flex:none}
+            .nhg-sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:2}
+            .nhg-sw span{position:absolute;inset:0;border-radius:999px;background:#c9ced6;transition:.2s}
+            .nhg-sw span:before{content:"";position:absolute;top:3px;inset-inline-start:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+            .nhg-sw input:checked + span{background:var(--c1)}
+            .nhg-sw input:checked + span:before{transform:translateX(-20px)}
+            .nhg-ltr .nhg-sw input:checked + span:before{transform:translateX(20px)}
+            .nhg-m-start{margin-inline-start:12px}
+            .nhg-rtl .nhg-slug{text-align:right}
+            .nhg-ltr .nhg-slug{text-align:left}
+            .nhg-ltr .nhg-chev{transform:scaleX(-1)}
+            .nhg-ltr .nhg-acc.open .nhg-chev{transform:rotate(90deg) scaleX(-1)}
+            .nhg-sw.bad input:checked + span{background:var(--bad)}
+            .nhg-sw input:focus-visible + span{outline:2px solid var(--c2);outline-offset:2px}
+
+            .nhg-opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;transition:.15s}
+            .nhg-opt:hover{border-color:var(--c1)}
+            .nhg-opt b{display:block}
+            .nhg-opt small{display:block;color:var(--mut);margin-top:2px;line-height:1.6}
+            .nhg-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px}
+
+            .nhg-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+            .nhg-chip label{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;background:#fff;transition:.15s}
+            .nhg-chip label:hover{border-color:var(--c1)}
+            .nhg-chip label.hid{display:none}
+            .nhg-chip input:checked ~ span{font-weight:800;color:var(--c1)}
+
+            .nhg-kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+            .nhg-kv > div{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#fcfcfd}
+            .nhg-kv .ltr{direction:ltr;text-align:left;color:#9aa3b2;font-size:.78em;margin-top:6px;word-break:break-all}
+            .nhg textarea{width:100%;border-radius:12px;border:1px solid var(--line);padding:12px;line-height:1.8}
+            .nhg-form-row{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+            .nhg-field{display:flex;flex-direction:column;gap:8px}
+            .nhg-flabel{font-weight:700}
+            .nhg-fhint{color:var(--mut);line-height:1.7}
+            .nhg-stepper{display:inline-flex;align-items:stretch;align-self:flex-start;height:46px;border:1.5px solid var(--line);border-radius:14px;background:#fff;overflow:hidden;transition:.15s}
+            .nhg-stepper:focus-within{border-color:var(--c1);box-shadow:0 0 0 4px rgba(22,133,145,.14)}
+            .nhg-stepper input[type=number]{width:62px;height:auto;border:0;border-radius:0;box-shadow:none;background:transparent;text-align:center;font-size:1.15em;font-weight:800;color:var(--ink);padding:0;-moz-appearance:textfield;appearance:textfield}
+            .nhg-stepper input[type=number]::-webkit-outer-spin-button,.nhg-stepper input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+            .nhg-stepper input:focus{outline:0;box-shadow:none}
+            .nhg-st-row{display:flex;align-items:center;gap:10px}
+            .nhg-st-unit{color:#4b5563;font-weight:600}
+            .nhg-st-btn{width:46px;border:0;background:#f4f6f8;color:#374151;font-size:1.35em;font-weight:700;line-height:1;cursor:pointer;transition:.12s}
+            .nhg-st-btn:hover{background:var(--c1);color:#fff}
+            .nhg-st-btn:active{transform:scale(.94)}
+            .nhg-presets{display:flex;gap:6px;flex-wrap:wrap}
+            .nhg-preset{padding:5px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:.88em;color:#4b5563;cursor:pointer;transition:.12s}
+            .nhg-preset:hover{border-color:var(--c1);color:var(--c1)}
+            .nhg-preset.on{background:var(--c1);border-color:var(--c1);color:#fff}
+
+            /* ───── نوار ذخیره ───── */
+            .nhg-save{position:sticky;bottom:14px;z-index:25;display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:22px 0 16px;padding:14px 24px;
+                border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);box-shadow:0 14px 34px -16px rgba(0,0,0,.35)}
+            .nhg-save .button-primary{padding:6px 34px;height:auto;min-height:42px;border-radius:12px;font-size:1em;font-weight:700;background:var(--c1);border-color:#10707a}
+            .nhg-save .button-primary:hover{background:#10707a}
+            .nhg-dirty{color:var(--mut);font-size:.92em}
+            .nhg-dirty.on{color:#8a4b00;font-weight:700}
+            .nhg-dirty.on:before{content:"";display:inline-block;width:9px;height:9px;margin-inline-end:8px;border-radius:50%;background:#f59e0b;animation:nhgPulse 1.4s infinite}
+            @keyframes nhgPulse{0%{box-shadow:0 0 0 0 rgba(245,158,11,.5)}100%{box-shadow:0 0 0 10px rgba(245,158,11,0)}}
+            .nhg .button{border-radius:10px}

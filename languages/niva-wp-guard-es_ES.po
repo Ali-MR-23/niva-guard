@@ -1,0 +1,1061 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: NIVA WP Guard 2.1.0\n"
+"Report-Msgid-Bugs-To: https://www.nivahost.net\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: niva-wp-guard\n"
+
+msgid "You do not have permission to do this."
+msgstr "No tienes permiso para realizar esta acción."
+
+msgid "Installed and active"
+msgstr "Instalado y activo"
+
+msgid "Not installed"
+msgstr "No instalado"
+
+msgid "Outdated"
+msgstr "Desactualizado"
+
+msgid "The mu-plugins folder is not writable"
+msgstr "La carpeta mu-plugins no tiene permiso de escritura"
+
+msgid "Active"
+msgstr "Activo"
+
+msgid "Inactive"
+msgstr "Inactivo"
+
+msgid "See which plugin and theme connects where, how much of your site's time it takes, and block every ad with one switch. Cache licenses without cutting them off."
+msgstr "Mira qué plugin y qué tema se conecta adónde, cuánto tiempo de tu sitio consume, y bloquea cualquier anuncio con un solo interruptor. Guarda las licencias en caché sin cortarlas."
+
+msgid "Connections recorded"
+msgstr "Conexiones registradas"
+
+msgid "Total wait"
+msgstr "Espera total"
+
+msgid "Blocked"
+msgstr "Bloqueadas"
+
+msgid "From cache"
+msgstr "Desde la caché"
+
+msgid "✓ Settings saved."
+msgstr "✓ Ajustes guardados."
+
+msgid "✓ Connection report and log file cleared."
+msgstr "✓ Se borraron el informe de conexiones y el archivo de registro."
+
+msgid "✓ The list of skipped hosts was released."
+msgstr "✓ Se liberó la lista de hosts omitidos."
+
+msgid "✓ Plugin code scan completed."
+msgstr "✓ Análisis del código de los plugins completado."
+
+msgid "✓ Loader installed."
+msgstr "✓ Cargador instalado."
+
+msgid "✕ Loader installation failed (the mu-plugins folder is not writable)."
+msgstr "✕ Falló la instalación del cargador (la carpeta mu-plugins no tiene permiso de escritura)."
+
+msgid "Overview"
+msgstr "Resumen"
+
+msgid "Known connections"
+msgstr "Conexiones conocidas"
+
+msgid "Seen on your site"
+msgstr "Vistas en tu sitio"
+
+msgid "Take a plugin offline"
+msgstr "Poner un plugin sin conexión"
+
+msgid "Dashboard"
+msgstr "Escritorio"
+
+msgid "Auto circuit breaker"
+msgstr "Cortacircuitos automático"
+
+msgid "Deep tracking"
+msgstr "Seguimiento profundo"
+
+msgid "Manual"
+msgstr "Manual"
+
+msgid "General status"
+msgstr "Estado general"
+
+msgid "The master switch turns all blocking and modules on or off at once."
+msgstr "El interruptor principal activa o desactiva de una vez todos los bloqueos y módulos."
+
+msgid "Plugin enabled"
+msgstr "Plugin activado"
+
+msgid "Off = no connection is touched."
+msgstr "Apagado = no se toca ninguna conexión."
+
+msgid "Log connections"
+msgstr "Registrar conexiones"
+
+msgid "A timed report, in a txt file and in the database."
+msgstr "Un informe con tiempos, en un archivo txt y en la base de datos."
+
+msgid "License response cache time"
+msgstr "Tiempo de caché de la respuesta de licencia"
+
+msgid "Less"
+msgstr "Menos"
+
+msgid "hours"
+msgstr "horas"
+
+msgid "Cache time in hours"
+msgstr "Tiempo de caché en horas"
+
+msgid "More"
+msgstr "Más"
+
+msgid "Preset values"
+msgstr "Valores predefinidos"
+
+msgid "1 hour"
+msgstr "1 hora"
+
+msgid "6 hours"
+msgstr "6 horas"
+
+msgid "12 hours"
+msgstr "12 horas"
+
+msgid "1 day"
+msgstr "1 día"
+
+msgid "3 days"
+msgstr "3 días"
+
+msgid "A successful license response is kept for this long so the server is not contacted every time."
+msgstr "Una respuesta de licencia correcta se conserva durante este tiempo para no contactar al servidor cada vez."
+
+msgid "Automatic setup and log file"
+msgstr "Instalación automática y archivo de registro"
+
+msgid "It is created automatically on every new site."
+msgstr "Se crea automáticamente en cada sitio nuevo."
+
+msgid "mu-plugin loader"
+msgstr "Cargador mu-plugin"
+
+msgid "Install / repair again"
+msgstr "Instalar / reparar de nuevo"
+
+msgid "Makes the plugin load before all the others so no connection escapes it."
+msgstr "Hace que el plugin se cargue antes que los demás para que no se escape ninguna conexión."
+
+msgid "txt log file"
+msgstr "Archivo de registro txt"
+
+msgid "Download txt"
+msgstr "Descargar txt"
+
+msgid "Download summary report"
+msgstr "Descargar informe resumido"
+
+msgid "It is created with the first connection"
+msgstr "Se crea con la primera conexión"
+
+msgid "Report from the txt file"
+msgstr "Informe desde el archivo txt"
+
+msgid "The slowest connections; you can copy this report and send it."
+msgstr "Las conexiones más lentas; puedes copiar este informe y enviarlo."
+
+msgid "Address"
+msgstr "Dirección"
+
+msgid "Plugin / theme"
+msgstr "Plugin / tema"
+
+msgid "Count"
+msgstr "Cantidad"
+
+msgid "Impact"
+msgstr "Impacto"
+
+msgid "Maximum"
+msgstr "Máximo"
+
+msgid "Report text"
+msgstr "Texto del informe"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "The log file exists but no slow connection (over half a second) has been recorded yet."
+msgstr "El archivo de registro existe, pero aún no se ha registrado ninguna conexión lenta (más de medio segundo)."
+
+msgid "There is no report yet. Work with the site and the dashboard for a few minutes and check again."
+msgstr "Aún no hay informe. Trabaja unos minutos con el sitio y el escritorio y vuelve a mirar."
+
+msgid "“Block” closes the connection completely. “Cache” is for licenses: the same valid response is kept for a few hours and the license is not cut off."
+msgstr "«Bloquear» cierra la conexión por completo. «Caché» es para licencias: la misma respuesta válida se conserva unas horas y la licencia no se corta."
+
+msgid "Select recommended (ads and notices)"
+msgstr "Seleccionar recomendados (anuncios y avisos)"
+
+msgid "Clear all"
+msgstr "Desmarcar todo"
+
+msgid "All"
+msgstr "Todos"
+
+msgid "Search: plugin, domain or description…"
+msgstr "Buscar: plugin, dominio o descripción…"
+
+msgid "Seen only"
+msgstr "Solo los vistos"
+
+msgid "Description and address"
+msgstr "Descripción y dirección"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Impact on speed"
+msgstr "Impacto en la velocidad"
+
+msgid "Block"
+msgstr "Bloquear"
+
+msgid "Cache"
+msgstr "Caché"
+
+msgid "Not seen yet"
+msgstr "Aún no visto"
+
+msgid "Blocking “license” and “plugin function” items may lock a theme or stop SMS and orders from working. For licenses, “cache” is safer. If you tick both “block” and “cache”, block wins."
+msgstr "Bloquear elementos de «licencia» y «función del plugin» puede bloquear un tema o dejar sin funcionar los SMS y los pedidos. Para las licencias, la «caché» es más segura. Si marcas «bloquear» y «caché» a la vez, gana el bloqueo."
+
+msgid "Connections seen on your site"
+msgstr "Conexiones vistas en tu sitio"
+
+msgid "Items that are not in the known list, ordered by longest wait. Tick one to block that address."
+msgstr "Elementos que no están en la lista conocida, ordenados por mayor espera. Márcalos para bloquear esa dirección."
+
+msgid "No new connection has been recorded yet. Work with the site and the dashboard for a while and check again."
+msgstr "Aún no se ha registrado ninguna conexión nueva. Trabaja un rato con el sitio y el escritorio y vuelve a mirar."
+
+msgid "Type (guess)"
+msgstr "Tipo (estimado)"
+
+msgid "Search the connections seen…"
+msgstr "Buscar en las conexiones vistas…"
+
+msgid "Take a whole plugin offline"
+msgstr "Poner un plugin completo sin conexión"
+
+msgid "All external connections of the selected plugin are closed (only wordpress.org stays open). Use it only for plugins that do not need the internet or a license."
+msgstr "Se cierran todas las conexiones externas del plugin seleccionado (solo queda abierto wordpress.org). Úsalo únicamente con plugins que no necesiten internet ni licencia."
+
+msgid "Search plugin…"
+msgstr "Buscar plugin…"
+
+msgid "Ready-made widgets and ads"
+msgstr "Widgets y anuncios predefinidos"
+
+msgid "Each item is switched on separately."
+msgstr "Cada elemento se activa por separado."
+
+msgid "WordPress news widget"
+msgstr "Widget de noticias de WordPress"
+
+msgid "“Events and News” and the planet news."
+msgstr "«Eventos y noticias» y las noticias del planeta."
+
+msgid "ParsiDate: widget and ads"
+msgstr "ParsiDate: widget y anuncios"
+
+msgid "The dashboard widget (sponsor banner such as Files.ir and the news feed) is removed and the sponsors.json and wp-parsi.com connections are closed. The Jalali calendar stays untouched."
+msgstr "Se elimina el widget del escritorio (banner de patrocinadores como Files.ir y el feed de noticias) y se cierran las conexiones sponsors.json y wp-parsi.com. El calendario solar hégira queda intacto."
+
+msgid "Elementor news widget"
+msgstr "Widget de noticias de Elementor"
+
+msgid "Version and tool ads."
+msgstr "Anuncios de versiones y herramientas."
+
+msgid "Yoast widget feed"
+msgstr "Feed del widget de Yoast"
+
+msgid "The SEO score stays; only the English feed is hidden."
+msgstr "La puntuación SEO se mantiene; solo se oculta el feed en inglés."
+
+msgid "Jetpack: offline mode"
+msgstr "Jetpack: modo sin conexión"
+
+msgid "The connection to WordPress.com and the Jetpack connections (including the bundle inside WooCommerce) are cut."
+msgstr "Se corta la conexión con WordPress.com y las conexiones de Jetpack (incluido el paquete dentro de WooCommerce)."
+
+msgid "Persian WooCommerce SMS ads"
+msgstr "Anuncios SMS del WooCommerce persa"
+
+msgid "The national SMS banner and plugin install suggestions."
+msgstr "El banner nacional de SMS y las sugerencias de instalación de plugins."
+
+msgid "Hide promotional notices"
+msgstr "Ocultar avisos promocionales"
+
+msgid "Errors and “new version” notices always stay."
+msgstr "Los errores y los avisos de «nueva versión» siempre se mantienen."
+
+msgid "Enable the keyword filter for notices"
+msgstr "Activar el filtro de palabras clave para avisos"
+
+msgid "One keyword per line, for example: Digits jacket"
+msgstr "Una palabra clave por línea, por ejemplo: Digits jacket"
+
+msgid "Dashboard widgets of this site"
+msgstr "Widgets del escritorio de este sitio"
+
+msgid "(one switch each)"
+msgstr "(un interruptor cada uno)"
+
+msgid "All the widgets that have been seen on this site's dashboard, with the name of the plugin that created them. A ticked widget is never created, so its feed and ad banner are not fetched from an external server either."
+msgstr "Todos los widgets que se han visto en el escritorio de este sitio, con el nombre del plugin que los crea. Un widget marcado nunca se crea, así que su feed y su banner publicitario tampoco se descargan de un servidor externo."
+
+msgid "Admin menu (right side)"
+msgstr "Menú de administración (lateral)"
+
+msgid "(only hidden, not removed)"
+msgstr "(solo se oculta, no se elimina)"
+
+msgid "Every ticked item is hidden from the side menu. The plugin stays active and its settings still open by direct address. “Dashboard”, “Settings” and “Plugins” are not in this list so you never lose access."
+msgstr "Cada elemento marcado se oculta del menú lateral. El plugin sigue activo y sus ajustes se abren con la dirección directa. «Escritorio», «Ajustes» y «Plugins» no están en esta lista para que nunca pierdas el acceso."
+
+msgid "There is no list yet. Open another admin page and come back here."
+msgstr "Aún no hay lista. Abre otra página de administración y vuelve aquí."
+
+msgid "Remove dashboard widgets of the selected plugins"
+msgstr "Eliminar los widgets del escritorio de los plugins seleccionados"
+
+msgid "The widget code does not run and its feed and banner are not fetched from an external server."
+msgstr "El código del widget no se ejecuta y su feed y su banner no se descargan de un servidor externo."
+
+msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "Los servidores de algunas regiones (como Irán) a veces no alcanzan los servicios externos y esperan de 5 a 15 segundos cada vez. Con esta opción, un host que falla o va lento de forma repetida se omite durante un tiempo sin esperar."
+
+msgid "Enable"
+msgstr "Activar"
+
+msgid "Off by default. “License” addresses are always exempt."
+msgstr "Desactivado por defecto. Las direcciones de «licencia» siempre están exentas."
+
+msgid "How long a failing host is skipped (hours)"
+msgstr "Durante cuánto tiempo se omite un host defectuoso (horas)"
+
+msgid "Consecutive failures before it activates"
+msgstr "Fallos consecutivos antes de activarse"
+
+msgid "A response slower than this (seconds) also counts as a failure"
+msgstr "Una respuesta más lenta que esto (segundos) también cuenta como fallo"
+
+msgid "Exempt hosts (one per line)"
+msgstr "Hosts exentos (uno por línea)"
+
+msgid "These hosts (and their subdomains) are never skipped, even if they are slow or failing. You can also exempt hosts from the table beside this one."
+msgstr "Estos hosts (y sus subdominios) nunca se omiten, aunque sean lentos o fallen. También puedes eximir hosts desde la tabla de al lado."
+
+msgid "Hosts being watched"
+msgstr "Hosts en observación"
+
+msgid "Only failures recorded since this option was switched on are shown. After the skip period ends it tries once more; if the host is healthy it is removed from the list."
+msgstr "Solo se muestran los fallos registrados desde que se activó esta opción. Al terminar el periodo de omisión lo vuelve a intentar; si el host está sano, se quita de la lista."
+
+msgid "No host has been recorded yet."
+msgstr "Aún no se ha registrado ningún host."
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Skip ends"
+msgstr "Fin de la omisión"
+
+msgid "Times activated"
+msgstr "Veces activado"
+
+msgid "Last error"
+msgstr "Último error"
+
+msgid "Exempt from the breaker"
+msgstr "Exento del cortacircuitos"
+
+msgid "Release all (clear the list)"
+msgstr "Liberar todo (vaciar la lista)"
+
+msgid "1) Intercept direct PHP connections"
+msgstr "1) Interceptar conexiones PHP directas"
+
+msgid "Enable deep tracking"
+msgstr "Activar el seguimiento profundo"
+
+msgid "Off by default. Try it on a test site first."
+msgstr "Desactivado por defecto. Pruébalo primero en un sitio de pruebas."
+
+msgid "2) Plugin code scan (static)"
+msgstr "2) Análisis del código de los plugins (estático)"
+
+msgid "Scan plugin code"
+msgstr "Analizar el código de los plugins"
+
+msgid "Nothing found."
+msgstr "No se encontró nada."
+
+msgid "Plugin's own code"
+msgstr "Código propio del plugin"
+
+msgid "Library (vendor)"
+msgstr "Biblioteca (vendor)"
+
+msgid "Fixed destinations in code"
+msgstr "Destinos fijos en el código"
+
+msgid "File details were not saved in this scan; scan again."
+msgstr "Los detalles de los archivos no se guardaron en este análisis; vuelve a analizar."
+
+msgid "File"
+msgstr "Archivo"
+
+msgid "Line"
+msgstr "Línea"
+
+msgid "Site / fixed IP inside the file"
+msgstr "Sitio / IP fija dentro del archivo"
+
+msgid "Library"
+msgstr "Biblioteca"
+
+msgid "Plugin code"
+msgstr "Código del plugin"
+
+msgid "“Plugin's own code” means outside the vendor folder. A high count inside libraries is usually harmless. False positives are possible too (for example curl for a local address); to be sure, follow that plugin in the “seen” table."
+msgstr "«Código propio del plugin» significa fuera de la carpeta vendor. Un número alto dentro de bibliotecas suele ser inofensivo. También son posibles los falsos positivos (por ejemplo curl para una dirección local); para estar seguro, sigue ese plugin en la tabla «Vistas»."
+
+msgid "Manual blocking"
+msgstr "Bloqueo manual"
+
+msgid "Save settings"
+msgstr "Guardar ajustes"
+
+msgid "No changes made"
+msgstr "No se hicieron cambios"
+
+msgid "Clear the connection report"
+msgstr "Borrar el informe de conexiones"
+
+msgid "The mu-plugins folder could not be created: %s"
+msgstr "No se pudo crear la carpeta mu-plugins: %s"
+
+msgid "The mu-plugins folder is not writable; the plugin works normally but loads later than the others."
+msgstr "La carpeta mu-plugins no tiene permiso de escritura; el plugin funciona con normalidad pero se carga después que los demás."
+
+msgid "Writing the loader file failed."
+msgstr "Falló la escritura del archivo del cargador."
+
+msgid "Loader installed: %s"
+msgstr "Cargador instalado: %s"
+
+msgid "NIVA WP Guard — connection report"
+msgstr "NIVA WP Guard — informe de conexiones"
+
+msgid "Site: %1$s | Date: %2$s UTC | Version: %3$s"
+msgstr "Sitio: %1$s | Fecha: %2$s UTC | Versión: %3$s"
+
+msgid "The log file has not been created yet."
+msgstr "El archivo de registro aún no se ha creado."
+
+msgid "Unique connections: %1$d | Slow connections (over 0.5 s): %2$d | Total wait: %3$.1f s | Errors / no response: %4$d"
+msgstr "Conexiones únicas: %1$d | Conexiones lentas (más de 0,5 s): %2$d | Espera total: %3$.1f s | Errores / sin respuesta: %4$d"
+
+msgid "— By plugin (total wait time):"
+msgstr "— Por plugin (tiempo total de espera):"
+
+msgid "— Slowest addresses:"
+msgstr "— Direcciones más lentas:"
+
+msgid "  %1$-60s  %2$d times  total %3$.1fs  max %4$.1fs  errors:%5$d  [%6$s]"
+msgstr "  %1$-60s  %2$d veces  total %3$.1fs  máx. %4$.1fs  errores:%5$d  [%6$s]"
+
+msgid "Persian WooCommerce SMS"
+msgstr "SMS del WooCommerce persa"
+
+msgid "Persian WooCommerce"
+msgstr "WooCommerce persa"
+
+msgid "Digits (Mersa Web)"
+msgstr "Digits (Mersa Web)"
+
+msgid "RTL (RTL-CareUnit)"
+msgstr "RTL (RTL-CareUnit)"
+
+msgid "Mahdis Web theme"
+msgstr "Tema Mahdis Web"
+
+msgid "Buy with Digikala"
+msgstr "Comprar con Digikala"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "WordPress — version and plugin updates"
+msgstr "WordPress — actualizaciones de versión y plugins"
+
+msgid "Elementor"
+msgstr "Elementor"
+
+msgid "Yoast (unofficial server)"
+msgstr "Yoast (servidor no oficial)"
+
+msgid "ParsiDate"
+msgstr "ParsiDate"
+
+msgid "Advanced Shipping (Ace Plugins)"
+msgstr "Advanced Shipping (Ace Plugins)"
+
+msgid "Emalls"
+msgstr "Emalls"
+
+msgid "Niva plugins"
+msgstr "Plugins de Niva"
+
+msgid "SMS"
+msgstr "SMS"
+
+msgid "Torob"
+msgstr "Torob"
+
+msgid "Notices and ads (pwsms.json / pwsms.hash)"
+msgstr "Avisos y anuncios (pwsms.json / pwsms.hash)"
+
+msgid "Notice signature"
+msgstr "Firma de los avisos"
+
+msgid "News feed on the dashboard"
+msgstr "Feed de noticias del escritorio"
+
+msgid "Advertising panel (ads-api)"
+msgstr "Panel de anuncios (ads-api)"
+
+msgid "Notices and ads"
+msgstr "Avisos y anuncios"
+
+msgid "License verification (every few seconds)"
+msgstr "Verificación de licencia (cada pocos segundos)"
+
+msgid "Product authorization"
+msgstr "Autorización del producto"
+
+msgid "News feed"
+msgstr "Feed de noticias"
+
+msgid "Version notice (notifier.xml)"
+msgstr "Aviso de versión (notifier.xml)"
+
+msgid "Notices (notifications.json)"
+msgstr "Avisos (notifications.json)"
+
+msgid "Version check (metadata.json)"
+msgstr "Comprobación de versión (metadata.json)"
+
+msgid "Order registration and tracking (plugin function)"
+msgstr "Registro y seguimiento de pedidos (función del plugin)"
+
+msgid "Promotional offers and suggested extensions (promotions / obw-free-extensions)"
+msgstr "Ofertas promocionales y extensiones sugeridas (promotions / obw-free-extensions)"
+
+msgid "Connection to WordPress.com (public-api): account check, suggestions, payments"
+msgstr "Conexión con WordPress.com (public-api): comprobación de cuenta, sugerencias, pagos"
+
+msgid "Jetpack server communication (jetpack.wordpress.com)"
+msgstr "Comunicación con el servidor de Jetpack (jetpack.wordpress.com)"
+
+msgid "The jetpack.com site — product recommendations and ads"
+msgstr "El sitio jetpack.com — recomendaciones y anuncios de productos"
+
+msgid "Visit statistics (stats.wp.com)"
+msgstr "Estadísticas de visitas (stats.wp.com)"
+
+msgid "Tracking pixel (pixel.wp.com)"
+msgstr "Píxel de seguimiento (pixel.wp.com)"
+
+msgid "WooPayments ads (incentives) — the “Set up WooPayments” banner; unrelated to your own payment gateways"
+msgstr "Anuncios de WooPayments (incentives) — el banner «Configura WooPayments»; no tiene relación con tus propias pasarelas de pago"
+
+msgid "Sending usage statistics to WooCommerce (usage tracking), about half a second"
+msgstr "Envío de estadísticas de uso a WooCommerce (usage tracking), aproximadamente medio segundo"
+
+msgid "PayPal (webscr): IPN validation and connecting to PayPal — can wait up to 15 seconds from servers that cannot reach PayPal"
+msgstr "PayPal (webscr): validación IPN y conexión con PayPal — puede esperar hasta 15 segundos en servidores que no alcanzan PayPal"
+
+msgid "Product key check for WooCommerce.com products (product-key-api)"
+msgstr "Comprobación de la clave de producto de WooCommerce.com (product-key-api)"
+
+msgid "WordPress version check from api.wordpress.org (“System status” page; up to 10 seconds on slow hosts)"
+msgstr "Comprobación de la versión de WordPress desde api.wordpress.org (página «Estado del sistema»; hasta 10 segundos en hostings lentos)"
+
+msgid "Theme information from api.wordpress.org (“System status” page)"
+msgstr "Información del tema desde api.wordpress.org (página «Estado del sistema»)"
+
+msgid "QUIC.cloud news and notices (wpapi.quic.cloud/news)"
+msgstr "Noticias y avisos de QUIC.cloud (wpapi.quic.cloud/news)"
+
+msgid "QUIC.cloud version check (ver_check)"
+msgstr "Comprobación de versión de QUIC.cloud (ver_check)"
+
+msgid "QUIC.cloud dashboard (api.quic.cloud/d/dash): statistics and cloud service suggestions"
+msgstr "Escritorio de QUIC.cloud (api.quic.cloud/d/dash): estadísticas y sugerencias de servicios en la nube"
+
+msgid "solidwp.com news and promotional posts (dashboard widget and notice), up to 10 seconds"
+msgstr "Noticias y publicaciones promocionales de solidwp.com (widget y aviso del escritorio), hasta 10 segundos"
+
+msgid "rankmath.com blog news and posts (news widget and dashboard ad)"
+msgstr "Noticias y entradas del blog de rankmath.com (widget de noticias y anuncio del escritorio)"
+
+msgid "Reading the readme from the WordPress svn (up to 10 seconds)"
+msgstr "Lectura del readme desde el svn de WordPress (hasta 10 segundos)"
+
+msgid "Plugin version check"
+msgstr "Comprobación de versión de plugins"
+
+msgid "Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens"
+msgstr "Anuncios y avisos del editor: actualizar a Pro (free-to-pro-upsell), notificaciones y promociones — al abrir el editor"
+
+msgid "my.elementor.com connections (news, library, suggested plugins)"
+msgstr "Conexiones de my.elementor.com (noticias, biblioteca, plugins sugeridos)"
+
+msgid "Yoast SEO (free) translation packages (translationspress)"
+msgstr "Paquetes de traducción de Yoast SEO (gratuito) (translationspress)"
+
+msgid "Yoast SEO Premium translation packages (translationspress)"
+msgstr "Paquetes de traducción de Yoast SEO Premium (translationspress)"
+
+msgid "Yoast WooCommerce SEO translation packages (translationspress)"
+msgstr "Paquetes de traducción de Yoast WooCommerce SEO (translationspress)"
+
+msgid "All Yoast translation packages in one (including News, Local, Video and others)"
+msgstr "Todos los paquetes de traducción de Yoast juntos (incluidos News, Local, Video y otros)"
+
+msgid "vip-themes.com — a third-party server, not Yoast"
+msgstr "vip-themes.com — un servidor de terceros, no Yoast"
+
+msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
+msgstr "Comprobación de la IP del visitante (ipcheck) — también se ejecuta en las páginas del sitio y puede esperar hasta 10 segundos"
+
+msgid "Add-ons list (addons) — up to 10 seconds"
+msgstr "Lista de complementos (addons) — hasta 10 segundos"
+
+msgid "Notices (feeds/notifications)"
+msgstr "Avisos (feeds/notifications)"
+
+msgid "Sponsors list (sponsors.json from GitHub)"
+msgstr "Lista de patrocinadores (sponsors.json desde GitHub)"
+
+msgid "News feed (wp-parsi.com)"
+msgstr "Feed de noticias (wp-parsi.com)"
+
+msgid "Advertising page aceplugins.com"
+msgstr "Página publicitaria aceplugins.com"
+
+msgid "IndexNow — notifying search engines about page changes (up to 10 seconds)"
+msgstr "IndexNow — avisar a los buscadores de cambios en las páginas (hasta 10 segundos)"
+
+msgid "my.yoast.com — site information"
+msgstr "my.yoast.com — información del sitio"
+
+msgid "Upgrade campaign (upgrade-campaign) — advertising; up to 10 seconds"
+msgstr "Campaña de mejora (upgrade-campaign) — publicidad; hasta 10 segundos"
+
+msgid "The entire Wincher connection (keyword tracking: account and connect/token) — up to 10 seconds; block it if you do not use Wincher"
+msgstr "Toda la conexión de Wincher (seguimiento de palabras clave: account y connect/token) — hasta 10 segundos; bloquéala si no usas Wincher"
+
+msgid "Welcome page and ad (cs_welcome.json)"
+msgstr "Página de bienvenida y anuncio (cs_welcome.json)"
+
+msgid "Emalls product extraction service (plugin function)"
+msgstr "Servicio de extracción de productos de Emalls (función del plugin)"
+
+msgid "Niva license server (validate)"
+msgstr "Servidor de licencias de Niva (validate)"
+
+msgid "payamak-panel SMS gateway"
+msgstr "Pasarela SMS payamak-panel"
+
+msgid "Price update webhook (Torob)"
+msgstr "Webhook de actualización de precios (Torob)"
+
+msgid "Ad"
+msgstr "Anuncio"
+
+msgid "Notice / news"
+msgstr "Aviso / noticias"
+
+msgid "License"
+msgstr "Licencia"
+
+msgid "Version check"
+msgstr "Comprobación de versión"
+
+msgid "Plugin function"
+msgstr "Función del plugin"
+
+msgid "Third party"
+msgstr "Terceros"
+
+msgid "Status summary: <b>%1$s</b> blocked, <b>%2$s</b> cached, <b>%3$s</b> plugins offline."
+msgstr "Resumen del estado: <b>%1$s</b> bloqueadas, <b>%2$s</b> en caché, <b>%3$s</b> plugins sin conexión."
+
+msgid "<b>%1$s</b> unique connections · <b>%2$s</b> slow · total wait <b>%3$s</b> · <b>%4$s</b> errors or no response"
+msgstr "<b>%1$s</b> conexiones únicas · <b>%2$s</b> lentas · espera total <b>%3$s</b> · <b>%4$s</b> errores o sin respuesta"
+
+msgid "Skipped"
+msgstr "Omitido"
+
+msgid "Counting (%s)"
+msgstr "Contando (%s)"
+
+msgid "Waiting for next try"
+msgstr "Esperando el siguiente intento"
+
+msgid "Connections that bypass the WordPress API and go through <code>file_get_contents('http…')</code> or <code>fopen</code> are also recorded in the same table and log (tag \"PHP-GET\"), and the blocking rules apply to them too."
+msgstr "Las conexiones que eluden la API de WordPress y pasan por <code>file_get_contents('http…')</code> o <code>fopen</code> también se registran en la misma tabla y registro (etiqueta «PHP-GET»), y las reglas de bloqueo también se les aplican."
+
+msgid "Limits: <code>curl_exec</code> and <code>fsockopen</code> cannot be intercepted live in plain PHP (see section 2). Also, if a plugin reads <code>$http_response_header</code> or <code>get_headers()</code> directly, it may not receive the header data while this option is on; if anything breaks, turn this switch off. Requests made by WordPress core itself (without a calling plugin) are left untouched."
+msgstr "Límites: <code>curl_exec</code> y <code>fsockopen</code> no se pueden interceptar en vivo en PHP puro (consulta la sección 2). Además, si un plugin lee directamente <code>$http_response_header</code> o <code>get_headers()</code>, puede que no reciba los datos de las cabeceras mientras esta opción esté activa; si algo falla, apaga este interruptor. Las peticiones del propio núcleo de WordPress (sin plugin que las llame) no se tocan."
+
+msgid "allow_url_fopen is disabled on this host; this section has no effect."
+msgstr "allow_url_fopen está desactivado en este host; esta sección no tiene efecto."
+
+msgid "Reads the PHP files of all plugins and themes and lists where <code>curl</code>, <code>fsockopen</code> or <code>file_get_contents('http…')</code> is written directly. It does not run or block anything; it only tells you which plugin has the “ability to connect silently”."
+msgstr "Lee los archivos PHP de todos los plugins y temas y enumera dónde está escrito directamente <code>curl</code>, <code>fsockopen</code> o <code>file_get_contents('http…')</code>. No ejecuta ni bloquea nada; solo te dice qué plugin tiene la «capacidad de conectarse en silencio»."
+
+msgid "Last scan: %1$s · %2$s files"
+msgstr "Último análisis: %1$s · %2$s archivos"
+
+msgid "· partial (time ran out)"
+msgstr "· parcial (se agotó el tiempo)"
+
+msgid "No fixed address — the destination comes from settings or input at run time"
+msgstr "Sin dirección fija — el destino viene de los ajustes o de la entrada en tiempo de ejecución"
+
+msgid "One address per line in the form <code>domain/path</code> (prefix); for example <code>example.com/ads/</code>"
+msgstr "Una dirección por línea con el formato <code>dominio/ruta</code> (prefijo); por ejemplo <code>example.com/ads/</code>"
+
+msgid "%s items"
+msgstr "%s elementos"
+
+msgid "This item is of the “license” type. Blocking it may lock a theme or plugin. Turn on “cache” instead. Continue?"
+msgstr "Este elemento es de tipo «licencia». Bloquearlo puede bloquear un tema o un plugin. Activa mejor la «caché». ¿Continuar?"
+
+msgid "This item is needed for the plugin itself to work (SMS, orders, etc.). Continue?"
+msgstr "Este elemento es necesario para que funcione el propio plugin (SMS, pedidos, etc.). ¿Continuar?"
+
+msgid "%s unsaved changes"
+msgstr "%s cambios sin guardar"
+
+msgid "Copied ✓"
+msgstr "Copiado ✓"
+
+msgid "Clear the connection report and log file?"
+msgstr "¿Borrar el informe de conexiones y el archivo de registro?"
+
+msgid "%1$s times · %2$s ·"
+msgstr "%1$s veces · %2$s ·"
+
+msgid "max %s"
+msgstr "máx. %s"
+
+msgid "WordPress core"
+msgstr "Núcleo de WordPress"
+
+msgid "Theme: %s"
+msgstr "Tema: %s"
+
+msgid "There is no list yet. Open the <a href=\"%s\">Dashboard</a> page once and come back here."
+msgstr "Aún no hay lista. Abre una vez la página <a href=\"%s\">Escritorio</a> y vuelve aquí."
+
+msgid "Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site."
+msgstr "Controla las conexiones salientes de plugins y temas: registra cada conexión con su tiempo (archivo txt e informe), bloquea anuncios, avisos y feeds de noticias, guarda en caché las respuestas de licencia (sin cortarlas), pon plugins elegidos sin conexión, elimina los widgets y avisos promocionales del escritorio y omite automáticamente los hosts que fallan. Cada elemento tiene su propio interruptor y la instalación es automática en cada sitio nuevo."
+
+msgid "The old “NIVA HTTP Guard” plugin is still active. Deactivate it so the new version can work. Your settings are migrated automatically and you can delete the old plugin after the first load."
+msgstr "El plugin antiguo «NIVA HTTP Guard» sigue activo. Desactívalo para que funcione la nueva versión. Tus ajustes se migran automáticamente y puedes borrar el plugin antiguo después de la primera carga."
+
+msgid "Relevant to this site"
+msgstr "Relevante para este sitio"
+
+msgid "All connections"
+msgstr "Todas las conexiones"
+
+msgid ".htaccess is up to date (a backup was saved)."
+msgstr ".htaccess está actualizado (se guardó una copia de seguridad)."
+
+msgid "The .htaccess block was removed."
+msgstr "Se eliminó el bloque de .htaccess."
+
+msgid "404.html was regenerated."
+msgstr "Se regeneró 404.html."
+
+msgid "Could not write 404.html — download it and upload it to the site root."
+msgstr "No se pudo escribir 404.html — descárgalo y súbelo a la raíz del sitio."
+
+msgid "The site returned a server error after the change, so .htaccess was restored from the backup."
+msgstr "El sitio devolvió un error del servidor tras el cambio, así que se restauró .htaccess desde la copia de seguridad."
+
+msgid "This server uses Nginx, which does not use .htaccess. Use the Nginx snippet below."
+msgstr "Este servidor usa Nginx, que no usa .htaccess. Usa el fragmento de Nginx de abajo."
+
+msgid "Enable Fast 404 and save first."
+msgstr "Activa primero «404 rápido» y guarda."
+
+msgid "Could not write .htaccess — download the snippet below and add it yourself."
+msgstr "No se pudo escribir .htaccess — descarga el fragmento de abajo y añádelo tú mismo."
+
+msgid "Server and 404"
+msgstr "Servidor y 404"
+
+msgid "Installed"
+msgstr "Instalado"
+
+msgid "Outdated — it is updated when you save"
+msgstr "Desactualizado — se actualiza al guardar"
+
+msgid "Still present — it is removed when you save"
+msgstr "Aún presente — se elimina al guardar"
+
+msgid "Not writable"
+msgstr "Sin permiso de escritura"
+
+msgid "Your own file (kept untouched)"
+msgstr "Tu propio archivo (se deja intacto)"
+
+msgid "Not used on Nginx"
+msgstr "No se usa en Nginx"
+
+msgid "Off"
+msgstr "Apagado"
+
+msgid "WordPress default"
+msgstr "Predeterminado de WordPress"
+
+msgid "Slow down (use the interval)"
+msgstr "Ralentizar (usar el intervalo)"
+
+msgid "Turn off"
+msgstr "Desactivar"
+
+msgid "Post editor"
+msgstr "Editor de entradas"
+
+msgid "Other admin pages"
+msgstr "Otras páginas de administración"
+
+msgid "Front-end (visitors)"
+msgstr "Front-end (visitantes)"
+
+msgid "Heartbeat control"
+msgstr "Control de Heartbeat"
+
+msgid "WordPress sends a background request (Heartbeat) every 15–60 seconds for autosave, post locking and notices. On weak hosts this alone can overload the server. Control it separately for each part of the site."
+msgstr "WordPress envía una petición en segundo plano (Heartbeat) cada 15–60 segundos para el autoguardado, el bloqueo de entradas y los avisos. En hostings débiles, esto solo puede sobrecargar el servidor. Contrólalo por separado para cada parte del sitio."
+
+msgid "Enable heartbeat control"
+msgstr "Activar el control de Heartbeat"
+
+msgid "A separate mu-plugin file is created; off = default WordPress behavior."
+msgstr "Se crea un archivo mu-plugin independiente; apagado = comportamiento predeterminado de WordPress."
+
+msgid "Interval when slowed (seconds)"
+msgstr "Intervalo al ralentizar (segundos)"
+
+msgid "For example 300 = every 5 minutes, 600 = every 10 minutes."
+msgstr "Por ejemplo, 300 = cada 5 minutos, 600 = cada 10 minutos."
+
+msgid "Turning it off in the post editor disables autosave and post locking while editing."
+msgstr "Apagarlo en el editor de entradas desactiva el autoguardado y el bloqueo de entradas mientras editas."
+
+msgid "mu-plugin file"
+msgstr "Archivo mu-plugin"
+
+msgid "Fast 404"
+msgstr "404 rápido"
+
+msgid "Scanner bots probe hundreds of strange addresses (.env, backup files, fake PHP files). Instead of loading WordPress, the database, CSS and JS for each one, a light static 404 page is returned immediately."
+msgstr "Los bots de escaneo prueban cientos de direcciones extrañas (.env, archivos de copia de seguridad, archivos PHP falsos). En lugar de cargar WordPress, la base de datos, CSS y JS para cada una, se devuelve de inmediato una página 404 estática y ligera."
+
+msgid "Enable fast 404"
+msgstr "Activar el 404 rápido"
+
+msgid "Creates a separate mu-plugin, a 404.html page in the site root and a block in .htaccess."
+msgstr "Crea un mu-plugin independiente, una página 404.html en la raíz del sitio y un bloque en .htaccess."
+
+msgid "Strict mode"
+msgstr "Modo estricto"
+
+msgid "Also blocks existing script files outside the WordPress core, plugins and themes folders. May break custom scripts placed in the site root."
+msgstr "También bloquea los archivos de script existentes fuera de las carpetas del núcleo de WordPress, los plugins y los temas. Puede romper scripts personalizados colocados en la raíz del sitio."
+
+msgid "Installation status"
+msgstr "Estado de la instalación"
+
+msgid "404.html page"
+msgstr "Página 404.html"
+
+msgid ".htaccess block"
+msgstr "Bloque de .htaccess"
+
+msgid "Install / repair .htaccess"
+msgstr "Instalar / reparar .htaccess"
+
+msgid "Regenerate 404.html"
+msgstr "Regenerar 404.html"
+
+msgid "Remove .htaccess block"
+msgstr "Eliminar el bloque de .htaccess"
+
+msgid "Download 404.html"
+msgstr "Descargar 404.html"
+
+msgid "Download Nginx snippet"
+msgstr "Descargar el fragmento de Nginx"
+
+msgid "Download .htaccess snippet"
+msgstr "Descargar el fragmento de .htaccess"
+
+msgid "Nginx configuration"
+msgstr "Configuración de Nginx"
+
+msgid "Code to add to .htaccess"
+msgstr "Código para añadir a .htaccess"
+
+msgid "Nginx does not use .htaccess; add this to your server configuration. Fake PHP files are handled by the mu-plugin."
+msgstr "Nginx no usa .htaccess; añade esto a la configuración de tu servidor. Los archivos PHP falsos los gestiona el mu-plugin."
+
+msgid "If automatic installation is not possible, download the files and place them yourself: put 404.html in the site root (next to wp-config.php) and add this code to the top of .htaccess (before “# BEGIN WordPress”)."
+msgstr "Si la instalación automática no es posible, descarga los archivos y colócalos tú mismo: pon 404.html en la raíz del sitio (junto a wp-config.php) y añade este código al principio de .htaccess (antes de «# BEGIN WordPress»)."
+
+msgid "Load before other plugins (mu-plugin loader)"
+msgstr "Cargar antes que otros plugins (cargador mu-plugin)"
+
+msgid "Creates one small file in wp-content/mu-plugins. Nothing is created outside the plugin folder until you turn this on and save."
+msgstr "Se crea un pequeño archivo en wp-content/mu-plugins. No se crea nada fuera de la carpeta del plugin hasta que lo actives y guardes."
+
+msgid "DISABLE_WP_CRON is already defined in wp-config.php by you, so it was left untouched."
+msgstr "DISABLE_WP_CRON ya está definido por ti en wp-config.php, así que se dejó intacto."
+
+msgid "The site returned a server error after the change, so wp-config.php was restored."
+msgstr "El sitio devolvió un error del servidor tras el cambio, así que se restauró wp-config.php."
+
+msgid "Could not find the right place in wp-config.php — add the line shown in the cron card yourself."
+msgstr "No se encontró el lugar adecuado en wp-config.php: añade tú mismo la línea que se muestra en la tarjeta de cron."
+
+msgid "wp-config.php could not be changed automatically — add the line shown in the cron card yourself."
+msgstr "No se pudo modificar wp-config.php automáticamente: añade tú mismo la línea que se muestra en la tarjeta de cron."
+
+msgid "WordPress cron (wp-cron)"
+msgstr "Cron de WordPress (wp-cron)"
+
+msgid "By default WordPress runs its scheduled tasks (scheduled posts, emails, backups, WooCommerce jobs) during visitors’ page loads. This slows pages down and wastes resources. Turn it off here and let the server run it on a fixed schedule instead."
+msgstr "Por defecto WordPress ejecuta sus tareas programadas (entradas programadas, correos, copias de seguridad, tareas de WooCommerce) mientras los visitantes cargan las páginas. Esto ralentiza las páginas y desperdicia recursos. Desactívalo aquí y deja que el servidor lo ejecute con un calendario fijo."
+
+msgid "Disable the built-in WordPress cron"
+msgstr "Desactivar el cron integrado de WordPress"
+
+msgid "Adds DISABLE_WP_CRON to wp-config.php. Add the server cron job below first, otherwise scheduled tasks stop running."
+msgstr "Añade DISABLE_WP_CRON a wp-config.php. Añade primero la tarea cron del servidor de abajo; si no, las tareas programadas dejarán de ejecutarse."
+
+msgid "Run the server job every"
+msgstr "Ejecutar la tarea del servidor cada"
+
+msgid "%s minutes"
+msgstr "%s minutos"
+
+msgid "5 minutes suits most sites and shops, 15 minutes is enough for a blog. Use 1 minute only if you need exact timing; more frequent runs only load the server."
+msgstr "5 minutos sirven para la mayoría de sitios y tiendas; 15 minutos bastan para un blog. Usa 1 minuto solo si necesitas una hora exacta; ejecutar con más frecuencia solo carga el servidor."
+
+msgid "wp-config.php setting"
+msgstr "Ajuste de wp-config.php"
+
+msgid "Scheduled tasks are %s minutes overdue. Check that the server cron job below exists."
+msgstr "Las tareas programadas llevan %s minutos de retraso. Comprueba que exista la tarea cron del servidor de abajo."
+
+msgid "Cron job for cPanel"
+msgstr "Tarea cron para cPanel"
+
+msgid "In cPanel open “Cron Jobs” → “Add New Cron Job”. Enter the schedule (or choose the matching “Common Settings”), paste the command and save."
+msgstr "En cPanel abre «Cron Jobs» → «Add New Cron Job». Introduce la programación (o elige el «Common Settings» equivalente), pega el comando y guarda."
+
+msgid "Schedule (minute, hour, day, month, weekday)"
+msgstr "Programación (minuto, hora, día, mes, día de la semana)"
+
+msgid "Command (matches this site’s PHP %s)"
+msgstr "Comando (acorde con PHP %s de este sitio)"
+
+msgid "Other panels and alternative command"
+msgstr "Otros paneles y comando alternativo"
+
+msgid "The command uses the cPanel path for PHP %1$s (%2$s). On DirectAdmin or other panels replace that path with the PHP path your panel shows for the same version, for example /usr/local/php82/bin/php."
+msgstr "El comando usa la ruta de cPanel para PHP %1$s (%2$s). En DirectAdmin u otros paneles sustitúyela por la ruta de PHP que muestra tu panel para la misma versión, por ejemplo /usr/local/php82/bin/php."
+
+msgid "If the command above does not run, use this one. It calls the cron file through the web address."
+msgstr "Si el comando anterior no se ejecuta, usa este; llama al archivo cron mediante la dirección web."
+
+msgid "If wp-config.php cannot be changed automatically, add this line above “That’s all, stop editing!”:"
+msgstr "Si wp-config.php no se puede modificar automáticamente, añade esta línea encima de «That’s all, stop editing!»:"
+
+msgid "%s hours"
+msgstr "%s horas"
+
+msgid "Longer intervals (hours) lower the server load the most, but scheduled posts, emails and WooCommerce jobs then run later (up to that interval)."
+msgstr "Los intervalos más largos (horas) reducen más la carga del servidor, pero las entradas programadas, correos y tareas de WooCommerce se ejecutan más tarde (hasta ese intervalo)."
+
+msgid "This is the full line (schedule + command), ready for crontab. In the cPanel form, enter the schedule in the time fields and paste only the part after it into the Command field."
+msgstr "Esta es la línea completa (programación + comando), lista para crontab. En el formulario de cPanel, introduce la programación en los campos de tiempo y pega solo la parte posterior en el campo Command."
+
+msgid "Cron activity"
+msgstr "Actividad del cron"
+
+msgid "Last successful run"
+msgstr "Última ejecución correcta"
+
+msgid "Not recorded yet"
+msgstr "Aún no registrado"
+
+msgid "Last failed run"
+msgstr "Última ejecución fallida"
+
+msgid "Next scheduled task"
+msgstr "Próxima tarea programada"
+
+msgid "Run by"
+msgstr "Ejecutado por"
+
+msgid "Server cron command"
+msgstr "Comando cron del servidor"
+
+msgid "Web request (visitor or URL)"
+msgstr "Petición web (visitante o URL)"
+
+msgid "%s ago"
+msgstr "hace %s"
+
+msgid "in %s"
+msgstr "en %s"
+
+msgid "Copy command only"
+msgstr "Copiar solo el comando"
+
