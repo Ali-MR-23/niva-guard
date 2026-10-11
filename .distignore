@@ -1,6 +1,8 @@
 .git
 .github
+.gitattributes
 .gitignore
 .distignore
 README.md
+docs
 *.zip
