@@ -345,8 +345,8 @@ msgstr "Supprimer les widgets du tableau de bord des extensions choisies"
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr "Le code du widget ne s’exécute pas et son flux et sa bannière ne sont pas chargés depuis un serveur externe."
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
-msgstr "Les serveurs de certaines régions (comme l’Iran) n’atteignent parfois pas les services externes et attendent 5 à 15 secondes à chaque fois. Avec cette option, un hôte qui échoue ou ralentit de façon répétée est ignoré pendant un moment sans attente."
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "Un serveur ne parvient parfois pas à joindre des services externes et attend 5 à 15 secondes à chaque fois. Avec cette option, un hôte qui échoue ou est lent plusieurs fois de suite est ignoré pendant un moment sans attente."
 
 msgid "Enable"
 msgstr "Activer"
@@ -519,8 +519,8 @@ msgstr "WordPress — mises à jour de version et d’extensions"
 msgid "Elementor"
 msgstr "Elementor"
 
-msgid "Yoast (unofficial server)"
-msgstr "Yoast (serveur non officiel)"
+msgid "VIP Theme"
+msgstr "VIP Theme"
 
 msgid "ParsiDate"
 msgstr "ParsiDate"
@@ -651,8 +651,8 @@ msgstr "Paquets de traduction Yoast WooCommerce SEO (translationspress)"
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr "Tous les paquets de traduction Yoast d’un coup (y compris News, Local, Video et autres)"
 
-msgid "vip-themes.com — a third-party server, not Yoast"
-msgstr "vip-themes.com — un serveur tiers, pas Yoast"
+msgid "vip-themes.com — a third-party server"
+msgstr "vip-themes.com — un serveur tiers"
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
 msgstr "Vérification de l’IP du visiteur (ipcheck) — s’exécute aussi sur les pages du site et peut attendre jusqu’à 10 secondes"

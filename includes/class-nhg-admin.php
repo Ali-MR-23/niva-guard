@@ -954,7 +954,7 @@ class NIVAWPG_Admin {
                     <?php $brk = NIVAWPG_Settings::breaker(); $now = time(); ?>
                     <div class="nhg-grid nhg-grid-deep">
                         <div class="nhg-card">
-                            <div class="nhg-head"><div><h2><?php esc_html_e('Auto circuit breaker', 'niva-wp-guard'); ?></h2><p><?php esc_html_e('Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting.', 'niva-wp-guard'); ?></p></div></div>
+                            <div class="nhg-head"><div><h2><?php esc_html_e('Auto circuit breaker', 'niva-wp-guard'); ?></h2><p><?php esc_html_e('Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting.', 'niva-wp-guard'); ?></p></div></div>
                             <div class="nhg-body">
                                 <div class="nhg-opts">
                                     <label class="nhg-opt"><span class="nhg-sw"><input type="checkbox" name="nhg[breaker]" value="1" <?php checked($s['breaker'], 1); ?>><span></span></span><div><b><?php esc_html_e('Enable', 'niva-wp-guard'); ?></b><small><?php esc_html_e('Off by default. “License” addresses are always exempt.', 'niva-wp-guard'); ?></small></div></label>

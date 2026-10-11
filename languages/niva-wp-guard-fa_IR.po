@@ -345,8 +345,8 @@ msgstr "حذف ویجت‌های داشبوردِ افزونه‌های انتخ
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr "کد ویجت اجرا نمی‌شود و فید و بنرش از سرور بیرونی گرفته نمی‌شود."
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
-msgstr "سرور ایران گاهی به سرویس‌های بیرونی نمی‌رسد و هر بار ۵ تا ۱۵ ثانیه معطل می‌شود. با این گزینه، هاستی که پشت‌سرهم خطا یا کندی دارد برای مدتی بدون معطلی رد می‌شود."
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "سرور گاهی به سرویس‌های بیرونی نمی‌رسد و هر بار ۵ تا ۱۵ ثانیه معطل می‌شود. با این گزینه، هاستی که پشت‌سرهم خطا یا کندی دارد برای مدتی بدون معطلی رد می‌شود."
 
 msgid "Enable"
 msgstr "فعال‌سازی"
@@ -519,7 +519,7 @@ msgstr "وردپرس - بروز رسانی نسخه و افزونه"
 msgid "Elementor"
 msgstr "المنتور"
 
-msgid "Yoast (unofficial server)"
+msgid "VIP Theme"
 msgstr "Yoast (سرور غیر رسمی)"
 
 msgid "ParsiDate"
@@ -651,7 +651,7 @@ msgstr "بسته‌های ترجمه‌ی Yoast WooCommerce SEO (translationspre
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr "همه‌ی بسته‌های ترجمه‌ی Yoast، یک‌جا (شامل News، Local، Video و بقیه)"
 
-msgid "vip-themes.com — a third-party server, not Yoast"
+msgid "vip-themes.com — a third-party server"
 msgstr "vip-themes.com — سرور شخص ثالث، نه Yoast"
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"

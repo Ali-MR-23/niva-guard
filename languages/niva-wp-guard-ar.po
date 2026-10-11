@@ -345,8 +345,8 @@ msgstr "حذف ودجات لوحة التحكم للإضافات المحددة"
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr "لا يُنفَّذ كود الودجة ولا يُجلب موجزها ولا لافتتها من خادم خارجي."
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
-msgstr "الخوادم في بعض المناطق (مثل إيران) لا تصل أحيانًا إلى الخدمات الخارجية وتنتظر من 5 إلى 15 ثانية في كل مرة. بهذا الخيار، يُتجاوَز المضيف الذي يفشل أو يبطؤ بشكل متتالٍ لفترة دون انتظار."
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "قد لا يستطيع الخادم أحيانًا الوصول إلى الخدمات الخارجية فينتظر من 5 إلى 15 ثانية في كل مرة. مع هذا الخيار يتم تجاوز المضيف الذي يفشل أو يبطؤ باستمرار لفترة دون انتظار."
 
 msgid "Enable"
 msgstr "تفعيل"
@@ -519,8 +519,8 @@ msgstr "WordPress — تحديثات الإصدار والإضافات"
 msgid "Elementor"
 msgstr "Elementor"
 
-msgid "Yoast (unofficial server)"
-msgstr "Yoast (خادم غير رسمي)"
+msgid "VIP Theme"
+msgstr "VIP Theme"
 
 msgid "ParsiDate"
 msgstr "ParsiDate"
@@ -651,8 +651,8 @@ msgstr "حزم ترجمة Yoast WooCommerce SEO (translationspress)"
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr "كل حزم ترجمة Yoast دفعة واحدة (تشمل News وLocal وVideo وغيرها)"
 
-msgid "vip-themes.com — a third-party server, not Yoast"
-msgstr "vip-themes.com — خادم طرف ثالث وليس Yoast"
+msgid "vip-themes.com — a third-party server"
+msgstr "vip-themes.com — خادم تابع لجهة خارجية"
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
 msgstr "فحص IP الزائر (ipcheck) — يعمل أيضًا في صفحات الموقع وقد ينتظر حتى 10 ثوانٍ"

@@ -345,7 +345,7 @@ msgstr ""
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr ""
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
 msgstr ""
 
 msgid "Enable"
@@ -519,7 +519,7 @@ msgstr ""
 msgid "Elementor"
 msgstr ""
 
-msgid "Yoast (unofficial server)"
+msgid "VIP Theme"
 msgstr ""
 
 msgid "ParsiDate"
@@ -651,7 +651,7 @@ msgstr ""
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr ""
 
-msgid "vip-themes.com — a third-party server, not Yoast"
+msgid "vip-themes.com — a third-party server"
 msgstr ""
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"

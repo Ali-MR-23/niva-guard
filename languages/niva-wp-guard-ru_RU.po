@@ -345,8 +345,8 @@ msgstr "Удалить виджеты консоли выбранных плаг
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr "Код виджета не выполняется, а его лента и баннер не загружаются с внешнего сервера."
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
-msgstr "Серверы в некоторых регионах (например, в Иране) иногда не достигают внешних сервисов и каждый раз ждут от 5 до 15 секунд. С этой опцией хост, который подряд даёт сбои или работает медленно, на время пропускается без ожидания."
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "Сервер иногда не может связаться с внешними сервисами и каждый раз ждёт от 5 до 15 секунд. С этой опцией хост, который подряд даёт ошибки или отвечает медленно, на какое-то время пропускается без ожидания."
 
 msgid "Enable"
 msgstr "Включить"
@@ -519,8 +519,8 @@ msgstr "WordPress — обновления версии и плагинов"
 msgid "Elementor"
 msgstr "Elementor"
 
-msgid "Yoast (unofficial server)"
-msgstr "Yoast (неофициальный сервер)"
+msgid "VIP Theme"
+msgstr "VIP Theme"
 
 msgid "ParsiDate"
 msgstr "ParsiDate"
@@ -651,8 +651,8 @@ msgstr "Пакеты перевода Yoast WooCommerce SEO (translationspress)"
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr "Все пакеты перевода Yoast сразу (включая News, Local, Video и другие)"
 
-msgid "vip-themes.com — a third-party server, not Yoast"
-msgstr "vip-themes.com — сторонний сервер, не Yoast"
+msgid "vip-themes.com — a third-party server"
+msgstr "vip-themes.com — сторонний сервер"
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
 msgstr "Проверка IP посетителя (ipcheck) — выполняется и на страницах сайта и может ждать до 10 секунд"

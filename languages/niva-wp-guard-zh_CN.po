@@ -345,8 +345,8 @@ msgstr "移除所选插件的仪表盘小工具"
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr "小工具代码不会运行，其新闻源和横幅也不会从外部服务器获取。"
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
-msgstr "某些地区（如伊朗）的服务器有时无法访问外部服务，每次都要等待 5 到 15 秒。启用此选项后，连续失败或缓慢的主机会在一段时间内被直接跳过，无需等待。"
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "服务器有时无法访问外部服务，每次都要等待 5 到 15 秒。启用此选项后，连续出错或响应缓慢的主机会在一段时间内被直接跳过，无需等待。"
 
 msgid "Enable"
 msgstr "启用"
@@ -519,8 +519,8 @@ msgstr "WordPress — 版本和插件更新"
 msgid "Elementor"
 msgstr "Elementor"
 
-msgid "Yoast (unofficial server)"
-msgstr "Yoast（非官方服务器）"
+msgid "VIP Theme"
+msgstr "VIP Theme"
 
 msgid "ParsiDate"
 msgstr "ParsiDate"
@@ -651,8 +651,8 @@ msgstr "Yoast WooCommerce SEO 翻译包 (translationspress)"
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr "所有 Yoast 翻译包合并（包括 News、Local、Video 等）"
 
-msgid "vip-themes.com — a third-party server, not Yoast"
-msgstr "vip-themes.com — 第三方服务器，并非 Yoast"
+msgid "vip-themes.com — a third-party server"
+msgstr "vip-themes.com — 第三方服务器"
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
 msgstr "访客 IP 检查 (ipcheck) — 也会在站点页面上运行，最长可能等待 10 秒"

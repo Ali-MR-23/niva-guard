@@ -133,7 +133,7 @@ class NIVAWPG_Rules {
             'yoast_trans_prem' => [__('Yoast', 'niva-wp-guard'), __('Yoast SEO Premium translation packages (translationspress)', 'niva-wp-guard')],
             'yoast_trans_woo' => [__('Yoast', 'niva-wp-guard'), __('Yoast WooCommerce SEO translation packages (translationspress)', 'niva-wp-guard')],
             'yoast_trans' => [__('Yoast', 'niva-wp-guard'), __('All Yoast translation packages in one (including News, Local, Video and others)', 'niva-wp-guard')],
-            'yoast_third' => [__('Yoast (unofficial server)', 'niva-wp-guard'), __('vip-themes.com — a third-party server, not Yoast', 'niva-wp-guard')],
+            'yoast_third' => [__('VIP Theme', 'niva-wp-guard'), __('vip-themes.com — a third-party server', 'niva-wp-guard')],
             'yoast_ips' => [__('Better WP Security (Solid Security)', 'niva-wp-guard'), __('Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds', 'niva-wp-guard')],
             'wpforms_addons' => [__('WPForms', 'niva-wp-guard'), __('Add-ons list (addons) — up to 10 seconds', 'niva-wp-guard')],
             'smtp_notice' => [__('WP Mail SMTP', 'niva-wp-guard'), __('Notices (feeds/notifications)', 'niva-wp-guard')],

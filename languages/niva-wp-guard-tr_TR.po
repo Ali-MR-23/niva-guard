@@ -345,8 +345,8 @@ msgstr "Seçilen eklentilerin pano bileşenlerini kaldır"
 msgid "The widget code does not run and its feed and banner are not fetched from an external server."
 msgstr "Bileşen kodu çalıştırılmaz; akışı ve afişi dış sunucudan çekilmez."
 
-msgid "Servers in some regions (such as Iran) sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
-msgstr "Bazı bölgelerdeki (örneğin İran) sunucular dış hizmetlere zaman zaman ulaşamaz ve her seferinde 5 ila 15 saniye bekler. Bu seçenekle, art arda hata veren veya yavaş olan bir ana bilgisayar bir süre beklemeden atlanır."
+msgid "Some servers sometimes cannot reach external services and wait 5 to 15 seconds every time. With this option, a host that keeps failing or is slow in a row is skipped for a while without waiting."
+msgstr "Sunucu bazen harici hizmetlere ulaşamaz ve her seferinde 5 ila 15 saniye bekler. Bu seçenekle, art arda hata veren veya yavaş olan bir sunucu bir süre beklemeden atlanır."
 
 msgid "Enable"
 msgstr "Etkinleştir"
@@ -519,8 +519,8 @@ msgstr "WordPress — sürüm ve eklenti güncellemeleri"
 msgid "Elementor"
 msgstr "Elementor"
 
-msgid "Yoast (unofficial server)"
-msgstr "Yoast (resmî olmayan sunucu)"
+msgid "VIP Theme"
+msgstr "VIP Theme"
 
 msgid "ParsiDate"
 msgstr "ParsiDate"
@@ -651,8 +651,8 @@ msgstr "Yoast WooCommerce SEO çeviri paketleri (translationspress)"
 msgid "All Yoast translation packages in one (including News, Local, Video and others)"
 msgstr "Tüm Yoast çeviri paketleri tek seferde (News, Local, Video ve diğerleri dahil)"
 
-msgid "vip-themes.com — a third-party server, not Yoast"
-msgstr "vip-themes.com — Yoast değil, üçüncü taraf sunucu"
+msgid "vip-themes.com — a third-party server"
+msgstr "vip-themes.com — üçüncü taraf bir sunucu"
 
 msgid "Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds"
 msgstr "Ziyaretçi IP kontrolü (ipcheck) — site sayfalarında da çalışır ve 10 saniyeye kadar bekletebilir"
