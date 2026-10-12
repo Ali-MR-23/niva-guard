@@ -21,20 +21,6 @@ class NIVAWPG_Admin {
         add_action('admin_post_nivawpg_scan', [self::class, 'scan']);
         add_action('admin_post_nivawpg_server', [self::class, 'server']);
         add_action('admin_post_nivawpg_brk_reset', [self::class, 'brk_reset']);
-        add_action('in_admin_header', [self::class, 'quiet_notices'], 0);
-    }
-
-    /** On this plugin's own page, notices from other plugins are not shown. */
-    public static function quiet_notices(): void {
-        $page = isset($_GET['page']) ? sanitize_key(wp_unslash($_GET['page'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only detects the current page
-
-        if ($page !== self::PAGE) {
-            return;
-        }
-
-        foreach (['admin_notices', 'all_admin_notices', 'user_admin_notices', 'network_admin_notices'] as $h) {
-            remove_all_actions($h);
-        }
     }
 
     /** Styles and script are loaded on this settings page only. */
@@ -501,6 +487,7 @@ class NIVAWPG_Admin {
                     <div class="nhg-stat"><b><?php echo esc_html(self::digits((string) $sum['cached'])); ?></b><span><?php esc_html_e('From cache', 'niva-guard'); ?></span></div>
                 </div>
             </div>
+            <hr class="wp-header-end">
 
             <?php if ($q('saved') !== '') : ?><div class="nhg-flash" id="nhg-flash"><?php esc_html_e('✓ Settings saved.', 'niva-guard'); ?></div><?php endif; ?>
             <?php if ($q('cleared') !== '') : ?><div class="nhg-flash" id="nhg-flash"><?php esc_html_e('✓ Connection report and log file cleared.', 'niva-guard'); ?></div><?php endif; ?>
