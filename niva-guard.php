@@ -3,7 +3,7 @@
 Plugin Name: NIVA Guard
 Plugin URI: https://www.nivahost.net
 Description: Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site.
-Version: 2.6.1
+Version: 2.6.2
 Author: Ali Mohajer
 Author URI: https://www.nivahost.net/wordpress-plugin-development
 Requires at least: 6.0
@@ -11,7 +11,6 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: niva-guard
-Domain Path: /languages
 */
 
 if (!defined('ABSPATH')) {
@@ -36,11 +35,10 @@ if (defined('NIVAWPG_VERSION')) {
     return;
 }
 
-define('NIVAWPG_VERSION', '2.6.1');
+define('NIVAWPG_VERSION', '2.6.2');
 define('NIVAWPG_FILE', __FILE__);
 define('NIVAWPG_DIR', plugin_dir_path(__FILE__));
 
-require_once NIVAWPG_DIR . 'includes/class-nhg-i18n.php';
 require_once NIVAWPG_DIR . 'includes/class-nhg-settings.php';
 require_once NIVAWPG_DIR . 'includes/class-nhg-rules.php';
 require_once NIVAWPG_DIR . 'includes/class-nhg-fs.php';
@@ -52,7 +50,6 @@ require_once NIVAWPG_DIR . 'includes/class-nhg-ui.php';
 
 // The connection engine must register its filter before any other request is made
 // (the optional mu-plugin loader includes this file before the other plugins).
-NIVAWPG_I18n::boot();
 NIVAWPG_Engine::boot();
 NIVAWPG_Ui::boot();
 NIVAWPG_Server::boot_cron_watch();

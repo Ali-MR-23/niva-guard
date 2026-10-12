@@ -4,7 +4,7 @@ Tags: performance, http, notices, heartbeat, 404
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,7 +33,7 @@ NIVA Guard shows you which plugin or theme connects to which address, how much o
 * Fast 404: answers scanner probes (`.env`, backups, fake PHP files) with a light static 404 page instead of loading WordPress.
 * WordPress cron: turn off the built-in wp-cron (adds `DISABLE_WP_CRON` to `wp-config.php`) and get a ready cron command for cPanel, matched to your PHP version and a sensible interval.
 
-The settings page is available in English, Persian, Arabic, Turkish, Russian, German, French, Spanish and Chinese and adapts to left-to-right and right-to-left languages.
+The settings page is written in English, is fully translatable (translations are managed on translate.wordpress.org) and adapts to left-to-right and right-to-left languages.
 
 == Installation ==
 
@@ -73,6 +73,9 @@ The logger, circuit breaker and Heartbeat control work everywhere. Fast 404 cann
 All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 
 == Changelog ==
+
+= 2.6.2 =
+* Translation files are no longer bundled; translations are delivered through translate.wordpress.org.
 
 = 2.6.1 =
 * Notice keywords are now passed to the inline script with the JSON_HEX_* flags, so no keyword can close the script tag.
@@ -120,6 +123,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Renamed from NIVA HTTP Guard. Settings are migrated automatically.
 
 == Upgrade Notice ==
+
+= 2.6.2 =
+The interface is shown in English until a translation for your language is available on translate.wordpress.org. Settings are kept.
 
 = 2.6.1 =
 Security hardening of the notice keyword filter. Settings are kept.

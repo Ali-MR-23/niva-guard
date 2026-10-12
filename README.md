@@ -5,7 +5,7 @@ Log each connection with its timing, block ads and promotional notices, cache li
 
 [فارسی](#فارسی) · [Install](#installation-guide) · [Features](#features-in-detail) · [Screenshots](#screenshots) · [FAQ](#faq)
 
-Requires WordPress 6.0+ · PHP 7.4+ · License GPLv2 or later · Admin UI in 9 languages (LTR and RTL)
+Requires WordPress 6.0+ · PHP 7.4+ · License GPLv2 or later · Translatable admin UI (LTR and RTL)
 
 ---
 
@@ -152,7 +152,7 @@ Some plugins bypass the WordPress HTTP API. This optional tab finds them.
 Built-in help describing every tab and the type of each connection.
 
 ### Languages and direction
-English, Persian, Arabic, Turkish, Russian, German, French, Spanish and Chinese (Simplified). The interface follows the site language and switches automatically between LTR and RTL.
+The settings page is written in English and is fully translatable; it follows the site language and switches between LTR and RTL. Source translation files (Persian, Arabic, Turkish, Russian, German, French, Spanish, Chinese) are kept in `translations/` for import into translate.wordpress.org.
 
 ---
 
@@ -238,7 +238,7 @@ wp plugin activate niva-guard
   - **کرون وردپرس:** خاموش کردن wp-cron با یک خط در `wp-config.php`، انتخاب فاصله‌ی اجرا (۱ دقیقه تا ۶ ساعت)، دستور کرون آماده برای cPanel (EasyApache، PHP پیش‌فرض)، CloudLinux، دایرکت‌ادمین، پلسک، WP-CLI، wget و curl متناسب با نسخه‌ی PHP و مسیر واقعی سایت، و نمایش «آخرین اجرای موفق/ناموفق»، نحوه‌ی اجرا و کار زمان‌بندی‌شده‌ی بعدی. اول کرون سرور را بسازید، بعد wp-cron را خاموش کنید.
 - **قطع‌کننده‌ی خودکار:** سروری که چند بار پشت سر هم خطا یا کندی بدهد مدتی بدون انتظار رد می‌شود؛ آدرس‌های لایسنس همیشه مستثنا هستند.
 - **ردیابی عمیق:** ثبت اتصال‌های مستقیم PHP (`file_get_contents`، `fopen`) و اسکن کد افزونه‌ها برای `curl` و socket، همراه با فایل و آدرس مقصد.
-- **زبان:** انگلیسی، فارسی، عربی، ترکی، روسی، آلمانی، فرانسوی، اسپانیایی و چینی، با تغییر خودکار راست‌به‌چپ و چپ‌به‌راست.
+- **زبان:** رابط به انگلیسی نوشته شده و قابل ترجمه است (ترجمه‌ها از translate.wordpress.org می‌آیند)، با تغییر خودکار راست‌به‌چپ و چپ‌به‌راست.
 
 ### مجوز
 GPLv2 یا بالاتر.
