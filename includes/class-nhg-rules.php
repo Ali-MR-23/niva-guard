@@ -34,6 +34,7 @@ class NIVAWPG_Rules {
         'solid_news' => ['better-wp-security', 'solid-security', 'ithemes-security'], 'yoast_ips' => ['better-wp-security', 'solid-security', 'ithemes-security'],
         'rankmath_news' => ['rank-math', 'seo-by-rank-math'],
         'el_assets' => ['elementor'], 'el_remote' => ['elementor'],
+        'wprocket_saas' => ['wp-rocket'], 'wprocket_gpl' => ['wp-rocket'],
         'yoast_trans_free' => ['wordpress-seo'], 'yoast_trans_prem' => ['wordpress-seo'], 'yoast_trans_woo' => ['wpseo-woocommerce', 'yoast-woo'],
         'yoast_trans' => ['wordpress-seo', 'wpseo'], 'yoast_third' => ['wordpress-seo'], 'yoast_indexnow' => ['wordpress-seo'], 'yoast_site' => ['wordpress-seo'],
         'wincher_ads' => ['wordpress-seo'], 'wincher_all' => ['wordpress-seo'],
@@ -132,6 +133,8 @@ class NIVAWPG_Rules {
             'wc_update' => [__('WooCommerce', 'niva-guard'), __('Plugin version check', 'niva-guard')],
             'el_assets' => [__('Elementor', 'niva-guard'), __('Editor ads and notices: upgrade to Pro (free-to-pro-upsell), notifications and promotions — when the editor opens', 'niva-guard')],
             'el_remote' => [__('Elementor', 'niva-guard'), __('my.elementor.com connections (news, library, suggested plugins)', 'niva-guard')],
+            'wprocket_saas' => [__('WP Rocket', 'niva-guard'), __('Remove Unused CSS jobs sent to WP Rocket\'s own service (saas.wp-rocket.me)', 'niva-guard')],
+            'wprocket_gpl' => [__('WP Rocket', 'niva-guard'), __('Remove Unused CSS jobs sent to a third-party server (saas.gpltimes.com) instead of WP Rocket\'s own — your page addresses and CSS leave the site', 'niva-guard')],
             'yoast_trans_free' => [__('Yoast', 'niva-guard'), __('Yoast SEO (free) translation packages (translationspress)', 'niva-guard')],
             'yoast_trans_prem' => [__('Yoast', 'niva-guard'), __('Yoast SEO Premium translation packages (translationspress)', 'niva-guard')],
             'yoast_trans_woo' => [__('Yoast', 'niva-guard'), __('Yoast WooCommerce SEO translation packages (translationspress)', 'niva-guard')],
@@ -200,6 +203,8 @@ class NIVAWPG_Rules {
             ['id' => 'wc_update', 'match' => 'woocommerce.com/wp-json/helper/', 'type' => 'update'],
             ['id' => 'el_assets', 'match' => 'assets.elementor.com/', 'type' => 'ad'],
             ['id' => 'el_remote', 'match' => 'my.elementor.com/', 'type' => 'ad'],
+            ['id' => 'wprocket_saas', 'match' => 'saas.wp-rocket.me/', 'type' => 'service'],
+            ['id' => 'wprocket_gpl', 'match' => 'saas.gpltimes.com/', 'type' => 'third'],
 
             // ── Yoast
             ['id' => 'yoast_trans_free', 'match' => 'packages.translationspress.com/yoast/wordpress-seo/', 'type' => 'update'],
