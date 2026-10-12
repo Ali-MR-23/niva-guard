@@ -4,7 +4,7 @@ Tags: performance, http, notices, heartbeat, 404
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.6.0
+Stable tag: 2.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 
 == Changelog ==
 
+= 2.6.1 =
+* Notice keywords are now passed to the inline script with the JSON_HEX_* flags, so no keyword can close the script tag.
+
 = 2.6.0 =
 * Renamed to "NIVA Guard" (folder and text domain "niva-guard"). Settings, log and menu choices are kept automatically; deactivate the old "niva-wp-guard" copy if it is still active.
 * The mu-plugin files are now named "niva-guard-*.php"; the old files are removed automatically.
@@ -117,6 +120,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Renamed from NIVA HTTP Guard. Settings are migrated automatically.
 
 == Upgrade Notice ==
+
+= 2.6.1 =
+Security hardening of the notice keyword filter. Settings are kept.
 
 = 2.6.0 =
 The plugin folder is now niva-guard. Deactivate the old niva-wp-guard copy first; your settings are shared.

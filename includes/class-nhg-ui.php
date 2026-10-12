@@ -210,7 +210,7 @@ class NIVAWPG_Ui {
 
         self::inline_js(
             "document.addEventListener('DOMContentLoaded', function () {\n"
-            . '    var hide = ' . wp_json_encode($words, JSON_UNESCAPED_UNICODE) . ", keep = ['نسخه جدید', 'خطا', 'error'];\n"
+            . '    var hide = ' . wp_json_encode($words, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ", keep = ['نسخه جدید', 'خطا', 'error'];\n"
             . <<<'JS'
     document.querySelectorAll('.notice, .updated, .update-nag, div.error, .is-dismissible').forEach(function (el) {
         var t = (el.textContent + ' ' + el.innerHTML).toLowerCase();
