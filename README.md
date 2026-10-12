@@ -39,7 +39,7 @@ NIVA Guard shows **which plugin connects to which address and how much time it c
 - Nothing else. The plugin has no dependencies and makes **no external connections of its own**.
 
 ### Option 1: upload the zip from the dashboard (recommended)
-1. Open the [latest release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) and download **`niva-guard-2.6.0.zip`** (the file under *Assets*, not "Source code").
+1. Open the [latest release](https://github.com/Ali-MR-23/niva-guard/releases/latest) and download **`niva-guard-2.6.0.zip`** (the file under *Assets*, not "Source code").
 2. In WordPress go to **Plugins → Add New → Upload Plugin**, choose the zip and click **Install Now**.
 3. Click **Activate Plugin**.
 4. Open **Settings → NIVA Guard**.
@@ -52,7 +52,7 @@ NIVA Guard shows **which plugin connects to which address and how much time it c
 ### Option 3: Git or WP-CLI
 ```bash
 cd wp-content/plugins
-git clone https://github.com/Ali-MR-23/niva-wp-guard.git niva-guard
+git clone https://github.com/Ali-MR-23/niva-guard.git niva-guard
 wp plugin activate niva-guard
 ```
 
@@ -202,7 +202,7 @@ Licensed under the GPL, version 2 or later.
 **الزامات:** وردپرس ۶٫۰ یا بالاتر، PHP نسخه‌ی ۷٫۴ یا بالاتر، حساب مدیر. افزونه هیچ وابستگی ندارد و خودش هرگز به سرویس بیرونی وصل نمی‌شود.
 
 **روش ۱ (پیشنهادی): آپلود از پیشخوان**
-۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-wp-guard/releases/latest) فایل **`niva-guard-2.6.0.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
+۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-guard/releases/latest) فایل **`niva-guard-2.6.0.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
 ۲. در وردپرس: **افزونه‌ها ← افزودن ← بارگذاری افزونه**، فایل را انتخاب و **همین حالا نصب کن** را بزنید.
 ۳. **فعال‌سازی افزونه** را بزنید و به **تنظیمات ← NIVA Guard** بروید.
 
@@ -211,7 +211,7 @@ Licensed under the GPL, version 2 or later.
 **روش ۳: Git یا WP-CLI**
 ```bash
 cd wp-content/plugins
-git clone https://github.com/Ali-MR-23/niva-wp-guard.git niva-guard
+git clone https://github.com/Ali-MR-23/niva-guard.git niva-guard
 wp plugin activate niva-guard
 ```
 
