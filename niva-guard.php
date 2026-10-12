@@ -3,7 +3,7 @@
 Plugin Name: NIVA Guard
 Plugin URI: https://www.nivahost.net
 Description: Control the outgoing connections of plugins and themes: log every connection with its timing (txt file and report), block ads, notices and news feeds, cache license responses (without cutting them off), take chosen plugins offline, remove promotional dashboard widgets and notices, and skip failing hosts automatically. Every item has its own switch and setup is automatic on every new site.
-Version: 2.6.2
+Version: 2.6.3
 Author: Ali Mohajer
 Author URI: https://www.nivahost.net/wordpress-plugin-development
 Requires at least: 6.0
@@ -35,7 +35,7 @@ if (defined('NIVAWPG_VERSION')) {
     return;
 }
 
-define('NIVAWPG_VERSION', '2.6.2');
+define('NIVAWPG_VERSION', '2.6.3');
 define('NIVAWPG_FILE', __FILE__);
 define('NIVAWPG_DIR', plugin_dir_path(__FILE__));
 

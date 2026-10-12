@@ -257,19 +257,19 @@ PHP;
             'title' => '۴۰۴ — صفحه پیدا نشد',
             'h1' => 'صفحه‌ای که دنبالش بودید پیدا نشد',
             'p' => 'ممکن است نشانی اشتباه وارد شده باشد یا صفحه جابه‌جا یا حذف شده باشد. از جستجو استفاده کنید یا به صفحه‌ی اصلی برگردید.',
-            'ph' => 'جستجو در سایت…', 'search' => 'جستجو', 'home' => 'بازگشت به صفحه‌ی اصلی', 'back' => 'صفحه‌ی قبل',
+            'ph' => 'جستجو در سایت…', 'search' => 'جستجو', 'home' => 'بازگشت به صفحه‌ی اصلی',
         ] : [
             'lang' => 'en', 'dir' => 'ltr',
             'font' => 'Arial, Helvetica, sans-serif',
             'title' => '404 — Page not found',
             'h1' => 'We could not find that page',
             'p' => 'The address may be mistyped, or the page may have been moved or removed. Try searching, or head back to the home page.',
-            'ph' => 'Search the site…', 'search' => 'Search', 'home' => 'Back to home', 'back' => 'Go back',
+            'ph' => 'Search the site…', 'search' => 'Search', 'home' => 'Back to home',
         ];
 
         $css = <<<'CSS'
-:root{--bg1:#0a1322;--bg2:#13294a;--fg:#eef3fb;--mut:#a8b6cb;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.15);--a:#2dd4bf;--b:#4f8cff;--field:rgba(255,255,255,.08)}
-@media (prefers-color-scheme:light){:root{--bg1:#eef4fb;--bg2:#d8e7f8;--fg:#0e1a2c;--mut:#4d5f78;--card:rgba(255,255,255,.78);--line:rgba(14,26,44,.12);--a:#0d9488;--b:#2563eb;--field:#fff}}
+:root{--bg1:#17110c;--bg2:#2a1d12;--fg:#f8efe6;--mut:#bfae9d;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--a:#f7a15f;--b:#e8703a;--field:rgba(255,255,255,.07);--ba:#f7b07a;--bb:#df7d40;--glow:rgba(232,112,58,.30)}
+@media (prefers-color-scheme:light){:root{--bg1:#faf7f2;--bg2:#efe6d8;--fg:#2a2018;--mut:#7b6c5e;--card:rgba(255,255,255,.9);--line:rgba(42,32,24,.10);--a:#f08a4b;--b:#c2410c;--field:#fff;--glow:rgba(194,65,12,.26)}.orb{opacity:.18}}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:24px;overflow-x:hidden;background:radial-gradient(900px 520px at 85% -10%,var(--bg2),transparent 62%),radial-gradient(700px 420px at 0% 110%,var(--bg2),transparent 60%),linear-gradient(160deg,var(--bg1),var(--bg1));color:var(--fg);font-family:__FONT__;line-height:1.75}
@@ -279,16 +279,16 @@ body{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:
 @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-22px)}}
 .card{position:relative;z-index:1;width:min(560px,100%);padding:42px 34px 34px;text-align:center;border:1px solid var(--line);border-radius:28px;background:var(--card);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 34px 90px -34px rgba(0,0,0,.6)}
 .brand{display:inline-block;margin-bottom:10px;padding:4px 14px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;color:var(--mut)}
-.code{font-family:Arial,Helvetica,sans-serif;font-size:clamp(88px,24vw,152px);font-weight:800;line-height:1;letter-spacing:-3px;background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 12px 28px rgba(79,140,255,.28))}
+.code{font-family:Arial,Helvetica,sans-serif;font-size:clamp(88px,24vw,152px);font-weight:800;line-height:1;letter-spacing:-3px;background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 12px 28px var(--glow))}
 h1{margin:8px 0 10px;font-size:clamp(1.25rem,4.4vw,1.6rem);font-weight:700;line-height:1.5}
 p{margin:0 auto 24px;max-width:44ch;color:var(--mut);font-size:1rem}
 form{display:flex;gap:8px;margin:0 auto 20px;max-width:430px}
 input[type=search]{flex:1;min-width:0;height:48px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--field);color:var(--fg);font:inherit;outline:0;transition:border-color .15s,box-shadow .15s}
 input[type=search]::placeholder{color:var(--mut)}
-input[type=search]:focus{border-color:var(--b);box-shadow:0 0 0 4px rgba(79,140,255,.22)}
+input[type=search]:focus{border-color:var(--b);box-shadow:0 0 0 4px var(--glow)}
 .btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 22px;border:0;border-radius:14px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,opacity .15s}
 .btn:focus-visible{outline:3px solid var(--b);outline-offset:3px}
-.go{background:linear-gradient(120deg,var(--a),var(--b));color:#06121f;box-shadow:0 12px 26px -12px var(--b)}
+.go{background:linear-gradient(120deg,var(--ba),var(--bb));color:#0b0e1a;box-shadow:0 12px 26px -12px var(--bb)}
 .go:hover{transform:translateY(-2px)}
 .ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
 .ghost:hover{background:var(--field)}
@@ -314,9 +314,8 @@ CSS;
             . '  <h1>' . $t['h1'] . "</h1>\n"
             . '  <p>' . $t['p'] . "</p>\n"
             . '  <form action="' . $home_e . '" method="get" role="search"><input type="search" name="s" placeholder="' . esc_attr($t['ph']) . '" aria-label="' . esc_attr($t['search']) . '" autocomplete="off"><button class="btn go" type="submit">' . $t['search'] . "</button></form>\n"
-            . '  <div class="row"><a class="btn ghost" href="' . $home_e . '">' . $t['home'] . '</a><button class="btn ghost" type="button" id="b" hidden>' . $t['back'] . "</button></div>\n"
+            . '  <div class="row"><a class="btn ghost" href="' . $home_e . '">' . $t['home'] . "</a></div>\n"
             . "</main>\n"
-            . '<script>var b=document.getElementById("b");if(b&&history.length>1){b.hidden=false;b.onclick=function(){history.back()}}</script>' . "\n"
             . "</body>\n</html>\n";
     }
 

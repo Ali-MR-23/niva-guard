@@ -4,7 +4,7 @@ Tags: performance, http, notices, heartbeat, 404
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.6.2
+Stable tag: 2.6.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 
 == Changelog ==
 
+= 2.6.3 =
+* The static 404 page no longer contains a script; the "go back" button was replaced by the plain link to the home page.
+
 = 2.6.2 =
 * Translation files are no longer bundled; translations are delivered through translate.wordpress.org.
 
@@ -123,6 +126,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Renamed from NIVA HTTP Guard. Settings are migrated automatically.
 
 == Upgrade Notice ==
+
+= 2.6.3 =
+The generated 404.html is simplified (no script). Use "Regenerate 404.html" to refresh an existing file.
 
 = 2.6.2 =
 The interface is shown in English until a translation for your language is available on translate.wordpress.org. Settings are kept.
