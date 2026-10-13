@@ -39,13 +39,13 @@ NIVA Guard shows **which plugin connects to which address and how much time it c
 - Nothing else. The plugin has no dependencies and makes **no external connections of its own**.
 
 ### Option 1: upload the zip from the dashboard (recommended)
-1. Open the [latest release](https://github.com/Ali-MR-23/niva-guard/releases/latest) and download **`niva-guard-2.6.0.zip`** (the file under *Assets*, not "Source code").
+1. Open the [latest release](https://github.com/Ali-MR-23/niva-guard/releases/latest) and download **`niva-guard-2.6.4.zip`** (the file under *Assets*, not "Source code").
 2. In WordPress go to **Plugins → Add New → Upload Plugin**, choose the zip and click **Install Now**.
 3. Click **Activate Plugin**.
 4. Open **Settings → NIVA Guard**.
 
 ### Option 2: cPanel / FTP
-1. Unzip `niva-guard-2.6.0.zip` on your computer. You get one folder named `niva-guard`.
+1. Unzip `niva-guard-2.6.4.zip` on your computer. You get one folder named `niva-guard`.
 2. Upload that folder to `wp-content/plugins/` (File Manager or FTP).
 3. Activate the plugin in **Plugins**.
 
@@ -85,7 +85,7 @@ The settings page is **Settings → NIVA Guard** and is organised in tabs.
 
 ### 1. Overview
 - **Plugin enabled**: master switch. Off means no connection is touched.
-- **Log connections**: every connection is recorded in the database and in a text file (`wp-content/uploads/niva-wp-guard/`), with caller, address, context (site, admin, cron, AJAX, REST) and duration.
+- **Log connections**: every connection is recorded in the database and in a text file (`wp-content/uploads/niva-guard/`), with caller, address, context (site, admin, cron, AJAX, REST) and duration.
 - **License response cache time**: 1 hour, 6 hours, 12 hours, 1 day, 3 days or any number of hours.
 - **Load before other plugins (mu-plugin loader)**: one small file in `mu-plugins` so the guard starts before every other plugin. Shows its status and a repair link.
 - **Report**: counters at the top (connections recorded, total wait, blocked, served from cache), a downloadable text log, a downloadable summary report, and a copy-ready list of the slowest connections.
@@ -165,7 +165,7 @@ The settings page is written in English and is fully translatable; it follows th
 | `wp-content/mu-plugins/niva-guard-fast-404.php` | Fast 404 | option off, deactivate |
 | `404.html` and a block in `.htaccess` | Fast 404 | option off, deactivate |
 | one line in `wp-config.php` | Disable WP-Cron | option off, deactivate |
-| `wp-content/uploads/niva-wp-guard/` | Logging | uninstall |
+| `wp-content/uploads/niva-guard/` | Logging | uninstall |
 
 ## FAQ
 
@@ -202,7 +202,7 @@ Licensed under the GPL, version 2 or later.
 **الزامات:** وردپرس ۶٫۰ یا بالاتر، PHP نسخه‌ی ۷٫۴ یا بالاتر، حساب مدیر. افزونه هیچ وابستگی ندارد و خودش هرگز به سرویس بیرونی وصل نمی‌شود.
 
 **روش ۱ (پیشنهادی): آپلود از پیشخوان**
-۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-guard/releases/latest) فایل **`niva-guard-2.6.0.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
+۱. از صفحه‌ی [آخرین Release](https://github.com/Ali-MR-23/niva-guard/releases/latest) فایل **`niva-guard-2.6.4.zip`** را دانلود کنید (از بخش Assets، نه «Source code»).
 ۲. در وردپرس: **افزونه‌ها ← افزودن ← بارگذاری افزونه**، فایل را انتخاب و **همین حالا نصب کن** را بزنید.
 ۳. **فعال‌سازی افزونه** را بزنید و به **تنظیمات ← NIVA Guard** بروید.
 

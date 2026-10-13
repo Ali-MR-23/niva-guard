@@ -586,7 +586,7 @@ class NIVAWPG_Admin {
                                                 <a class="button" href="<?php echo esc_url($dl('report')); ?>"><?php esc_html_e('Download summary report', 'niva-guard'); ?></a>
                                             </div>
                                         <?php else : ?><span style="color:var(--mut);margin-inline-start:8px"><?php esc_html_e('It is created with the first connection', 'niva-guard'); ?></span><?php endif; ?>
-                                        <div class="ltr"><?php echo esc_html(str_replace(ABSPATH, '', NIVAWPG_Setup::log_path())); ?></div>
+                                        <div class="ltr"><?php echo esc_html('uploads/niva-guard/' . basename(NIVAWPG_Setup::log_path())); ?></div>
                                     </div>
                                 </div>
                             </div>

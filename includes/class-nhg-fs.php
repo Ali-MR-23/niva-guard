@@ -26,6 +26,19 @@ final class NIVAWPG_Fs {
         return $wp_filesystem instanceof WP_Filesystem_Base ? $wp_filesystem : null;
     }
 
+    /** Reads one of the plugin's own files (no credentials needed). */
+    public static function read_own(string $path): string {
+        if (!class_exists('WP_Filesystem_Direct')) {
+            require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
+            require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+        }
+
+        $fs = new WP_Filesystem_Direct(null);
+        $c = $fs->get_contents($path);
+
+        return is_string($c) ? $c : '';
+    }
+
     public static function get(string $path): string {
         $fs = self::fs();
         $c = $fs && $fs->exists($path) ? $fs->get_contents($path) : false;

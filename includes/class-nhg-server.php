@@ -40,7 +40,39 @@ final class NIVAWPG_Server {
     /* ───────────── Paths ───────────── */
 
     public static function mu_dir(): string {
-        return rtrim(defined('WPMU_PLUGIN_DIR') ? WPMU_PLUGIN_DIR : WP_CONTENT_DIR . '/mu-plugins', '/\\');
+        return rtrim(WPMU_PLUGIN_DIR, '/\\');
+    }
+
+    /** The WordPress root folder (where index.php lives), with a trailing slash. */
+    public static function root_path(): string {
+        if (!function_exists('get_home_path')) {
+            require_once ABSPATH . 'wp-admin/includes/file.php';
+        }
+
+        return trailingslashit(get_home_path());
+    }
+
+    /**
+     * Site folders that must stay reachable in strict mode, relative to the site root, taken from the real URLs
+     * (so a renamed content folder works too).
+     *
+     * @return string[]
+     */
+    public static function core_dirs(): array {
+        $base = self::base_path();
+        $dirs = [];
+
+        foreach ([admin_url(), includes_url(), plugins_url(), get_theme_root_uri()] as $url) {
+            $path = (string) wp_parse_url($url, PHP_URL_PATH);
+            $path = ($base !== '' && strpos($path, $base . '/') === 0) ? substr($path, strlen($base)) : $path;
+            $path = trim($path, '/');
+
+            if ($path !== '') {
+                $dirs[] = $path;
+            }
+        }
+
+        return array_values(array_unique($dirs));
     }
 
     public static function mu_path(string $k): string {
@@ -48,11 +80,11 @@ final class NIVAWPG_Server {
     }
 
     public static function html_path(): string {
-        return ABSPATH . '404.html';
+        return self::root_path() . '404.html';
     }
 
     public static function htaccess_path(): string {
-        return ABSPATH . '.htaccess';
+        return self::root_path() . '.htaccess';
     }
 
     /** WordPress root path relative to the domain (for example '' or '/blog'). */
@@ -133,7 +165,7 @@ PHP;
         }
 
         // fast404
-        $cfg = ['base' => self::base_path(), 'strict' => !empty($s['f404_strict']) ? 1 : 0];
+        $cfg = ['base' => self::base_path(), 'root' => self::root_path(), 'dirs' => self::core_dirs(), 'strict' => !empty($s['f404_strict']) ? 1 : 0];
 
         $code = self::mu_header('Fast 404') . '$nivawpg_f = ' . var_export($cfg, true) /* phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export -- generates the PHP code of the mu-plugin file */ . ';' . "\n" . "\$nivawpg_ext = '" . self::EXT . "';\n" . "\$nivawpg_dots = '" . self::DOTS . "';\n" . "\$nivawpg_core = '" . addslashes(self::CORE) . "';\n" . <<<'PHP'
 
@@ -148,7 +180,8 @@ if (!function_exists('nivawpg_fast404_send')) {
             header('X-Robots-Tag: noindex, nofollow');
         }
 
-        $file = ABSPATH . '404.html';
+        global $nivawpg_f;
+        $file = $nivawpg_f['root'] . '404.html';
 
         if (is_readable($file)) {
             readfile($file);
@@ -166,8 +199,9 @@ if (PHP_SAPI !== 'cli' && !empty($_SERVER['REQUEST_URI'])) {
     $nivawpg_rel = ($nivawpg_f['base'] !== '' && strpos($nivawpg_path, $nivawpg_f['base'] . '/') === 0) ? substr($nivawpg_path, strlen($nivawpg_f['base'])) : $nivawpg_path;
 
     if (preg_match('~\.(?:' . $nivawpg_ext . ')$~i', $nivawpg_rel) || preg_match('~(^|/)\.(?:' . $nivawpg_dots . ')(/|$)~i', $nivawpg_rel)) {
-        $nivawpg_exists = is_file(ABSPATH . ltrim($nivawpg_rel, '/'));
-        $nivawpg_allowed = (bool) preg_match('~^/(?:' . $nivawpg_core . ')$|^/(?:wp-admin|wp-includes|wp-content/plugins|wp-content/themes)/~i', $nivawpg_rel);
+        $nivawpg_exists = is_file($nivawpg_f['root'] . ltrim($nivawpg_rel, '/'));
+        $nivawpg_dirs = implode('|', array_map(static fn($d) => preg_quote($d, '~'), $nivawpg_f['dirs']));
+        $nivawpg_allowed = (bool) preg_match('~^/(?:' . $nivawpg_core . ')$|^/(?:' . $nivawpg_dirs . ')/~i', $nivawpg_rel);
 
         // A missing file is a scanner probe; in strict mode existing script files outside core/plugins/themes are closed too
         if (!$nivawpg_exists || ($nivawpg_f['strict'] && !$nivawpg_allowed)) {
@@ -175,7 +209,7 @@ if (PHP_SAPI !== 'cli' && !empty($_SERVER['REQUEST_URI'])) {
         }
     }
 
-    unset($nivawpg_path, $nivawpg_rel, $nivawpg_exists, $nivawpg_allowed);
+    unset($nivawpg_path, $nivawpg_rel, $nivawpg_exists, $nivawpg_dirs, $nivawpg_allowed);
 }
 
 // 2) Every other WordPress 404 is answered with the same light page before the theme renders.
@@ -267,56 +301,23 @@ PHP;
             'ph' => 'Search the site…', 'search' => 'Search', 'home' => 'Back to home',
         ];
 
-        $css = <<<'CSS'
-:root{--bg1:#17110c;--bg2:#2a1d12;--fg:#f8efe6;--mut:#bfae9d;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.14);--a:#f7a15f;--b:#e8703a;--field:rgba(255,255,255,.07);--ba:#f7b07a;--bb:#df7d40;--glow:rgba(232,112,58,.30)}
-@media (prefers-color-scheme:light){:root{--bg1:#faf7f2;--bg2:#efe6d8;--fg:#2a2018;--mut:#7b6c5e;--card:rgba(255,255,255,.9);--line:rgba(42,32,24,.10);--a:#f08a4b;--b:#c2410c;--field:#fff;--glow:rgba(194,65,12,.26)}.orb{opacity:.18}}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:24px;overflow-x:hidden;background:radial-gradient(900px 520px at 85% -10%,var(--bg2),transparent 62%),radial-gradient(700px 420px at 0% 110%,var(--bg2),transparent 60%),linear-gradient(160deg,var(--bg1),var(--bg1));color:var(--fg);font-family:__FONT__;line-height:1.75}
-.orb{position:fixed;border-radius:50%;filter:blur(70px);opacity:.35;pointer-events:none;animation:float 14s ease-in-out infinite}
-.o1{width:340px;height:340px;background:var(--a);top:-120px;inset-inline-start:-90px}
-.o2{width:300px;height:300px;background:var(--b);bottom:-110px;inset-inline-end:-70px;animation-delay:-6s}
-@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-22px)}}
-.card{position:relative;z-index:1;width:min(560px,100%);padding:42px 34px 34px;text-align:center;border:1px solid var(--line);border-radius:28px;background:var(--card);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 34px 90px -34px rgba(0,0,0,.6)}
-.brand{display:inline-block;margin-bottom:10px;padding:4px 14px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;color:var(--mut)}
-.code{font-family:Arial,Helvetica,sans-serif;font-size:clamp(88px,24vw,152px);font-weight:800;line-height:1;letter-spacing:-3px;background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 12px 28px var(--glow))}
-h1{margin:8px 0 10px;font-size:clamp(1.25rem,4.4vw,1.6rem);font-weight:700;line-height:1.5}
-p{margin:0 auto 24px;max-width:44ch;color:var(--mut);font-size:1rem}
-form{display:flex;gap:8px;margin:0 auto 20px;max-width:430px}
-input[type=search]{flex:1;min-width:0;height:48px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--field);color:var(--fg);font:inherit;outline:0;transition:border-color .15s,box-shadow .15s}
-input[type=search]::placeholder{color:var(--mut)}
-input[type=search]:focus{border-color:var(--b);box-shadow:0 0 0 4px var(--glow)}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 22px;border:0;border-radius:14px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,opacity .15s}
-.btn:focus-visible{outline:3px solid var(--b);outline-offset:3px}
-.go{background:linear-gradient(120deg,var(--ba),var(--bb));color:#0b0e1a;box-shadow:0 12px 26px -12px var(--bb)}
-.go:hover{transform:translateY(-2px)}
-.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
-.ghost:hover{background:var(--field)}
-.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-@media (max-width:480px){.card{padding:34px 20px 26px}form{flex-direction:column}input[type=search]{flex:none;width:100%}.btn{width:100%}.row{flex-direction:column}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-CSS;
-        $css = str_replace('__FONT__', $t['font'], $css);
-        $home_e = esc_attr($home);
+        $tpl = NIVAWPG_Fs::read_own(NIVAWPG_DIR . 'templates/404.html');
+        $brand_html = $brand !== '' ? '  <span class="brand">' . $brand . "</span>\n" : '';
 
-        return '<!DOCTYPE html>' . "\n"
-            . '<!-- ' . self::MARK . ' v1 — generated by NIVA Guard; delete this comment to keep your own edits -->' . "\n"
-            . '<html lang="' . $t['lang'] . '" dir="' . $t['dir'] . '">' . "\n<head>\n"
-            . '<meta charset="utf-8">' . "\n"
-            . '<meta name="viewport" content="width=device-width, initial-scale=1">' . "\n"
-            . '<meta name="robots" content="noindex, nofollow">' . "\n"
-            . '<meta name="color-scheme" content="dark light">' . "\n"
-            . '<title>' . $t['title'] . "</title>\n<style>\n" . $css . "\n</style>\n</head>\n<body>\n"
-            . '<div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div>' . "\n"
-            . '<main class="card">' . "\n"
-            . ($brand !== '' ? '  <span class="brand">' . $brand . "</span>\n" : '')
-            . '  <div class="code" aria-hidden="true">404</div>' . "\n"
-            . '  <h1>' . $t['h1'] . "</h1>\n"
-            . '  <p>' . $t['p'] . "</p>\n"
-            . '  <form action="' . $home_e . '" method="get" role="search"><input type="search" name="s" placeholder="' . esc_attr($t['ph']) . '" aria-label="' . esc_attr($t['search']) . '" autocomplete="off"><button class="btn go" type="submit">' . $t['search'] . "</button></form>\n"
-            . '  <div class="row"><a class="btn ghost" href="' . $home_e . '">' . $t['home'] . "</a></div>\n"
-            . "</main>\n"
-            . "</body>\n</html>\n";
+        return strtr($tpl, [
+            '{{MARK}}'      => self::MARK,
+            '{{LANG}}'      => $t['lang'],
+            '{{DIR}}'       => $t['dir'],
+            '{{FONT}}'      => $t['font'],
+            '{{TITLE}}'     => $t['title'],
+            '{{BRAND}}'     => $brand_html,
+            '{{H1}}'        => $t['h1'],
+            '{{P}}'         => $t['p'],
+            '{{HOME}}'      => esc_attr($home),
+            '{{PH}}'        => esc_attr($t['ph']),
+            '{{SEARCH}}'    => $t['search'],
+            '{{HOMELABEL}}' => $t['home'],
+        ]);
     }
 
     /** 404.html is written only when it is missing or is this plugin's own file (it carries a marker); a custom file stays untouched. */
@@ -353,7 +354,8 @@ CSS;
         $l[] = 'RewriteCond %{REQUEST_URI} \.(' . self::EXT_SCRIPT . ')$ [NC]';
 
         if (!empty($s['f404_strict'])) {
-            $l[] = 'RewriteCond %{REQUEST_URI} !^' . $b . '/(' . self::CORE . '|wp-admin/|wp-includes/|wp-content/(plugins|themes)/) [NC]';
+            $dirs = implode('|', array_map(static fn($d) => preg_quote($d, '#') . '/', self::core_dirs()));
+            $l[] = 'RewriteCond %{REQUEST_URI} !^' . $b . '/(' . self::CORE . '|' . $dirs . ') [NC]';
         } else {
             $l[] = 'RewriteCond %{REQUEST_FILENAME} !-f';
         }
@@ -811,7 +813,7 @@ CSS;
             if (!$want) {
                 $mu[$k] = is_file($path) ? 'outdated' : 'off';
             } elseif (!is_file($path)) {
-                $mu[$k] = NIVAWPG_Fs::writable(self::mu_dir()) || (!is_dir(self::mu_dir()) && NIVAWPG_Fs::writable(WP_CONTENT_DIR)) ? 'missing' : 'unwritable';
+                $mu[$k] = NIVAWPG_Fs::writable(self::mu_dir()) || (!is_dir(self::mu_dir()) && NIVAWPG_Fs::writable(dirname(self::mu_dir()))) ? 'missing' : 'unwritable';
             } else {
                 $mu[$k] = NIVAWPG_Fs::get($path) === self::mu_code($k, $s) ? 'ok' : 'outdated';
             }

@@ -10,7 +10,7 @@ function nivawpg_uninstall_cleanup(): void
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class-nhg-fs.php';
 
-    $mu_dir = defined('WPMU_PLUGIN_DIR') ? WPMU_PLUGIN_DIR : WP_CONTENT_DIR . '/mu-plugins';
+    $mu_dir = rtrim(WPMU_PLUGIN_DIR, '/\\');
 
     // mu-plugin files (current and earlier names)
     foreach (['niva-guard-', 'niva-wp-guard-'] as $prefix) {
@@ -25,9 +25,15 @@ function nivawpg_uninstall_cleanup(): void
 
     // Log folder in uploads
     $up = wp_upload_dir(null, false);
-    $dir = rtrim(!empty($up['basedir']) ? $up['basedir'] : WP_CONTENT_DIR, '/\\') . '/niva-wp-guard';
 
-    if (is_dir($dir)) {
+    foreach (['niva-guard', 'niva-wp-guard', 'niva-http-guard'] as $folder) {
+        $basedir = rtrim((string) $up['basedir'], '/\\');
+        $dir = $basedir . '/' . $folder;
+
+        if ($basedir === '' || !is_dir($dir)) {
+            continue;
+        }
+
         foreach ((array) glob($dir . '/{,.}*', GLOB_BRACE) as $file) {
             if (is_file($file)) {
                 wp_delete_file($file);
@@ -46,8 +52,14 @@ function nivawpg_uninstall_cleanup(): void
         }
     }
 
+    if (!function_exists('get_home_path')) {
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+    }
+
+    $root = trailingslashit(get_home_path());
+
     // 404.html (only if this plugin created it)
-    $html = ABSPATH . '404.html';
+    $html = $root . '404.html';
 
     if (is_file($html)) {
         $head = NIVAWPG_Fs::head($html, 400);
@@ -58,7 +70,7 @@ function nivawpg_uninstall_cleanup(): void
     }
 
     // .htaccess block
-    $ht = ABSPATH . '.htaccess';
+    $ht = $root . '.htaccess';
 
     if (is_file($ht) && NIVAWPG_Fs::writable($ht)) {
         $cur = NIVAWPG_Fs::get($ht);

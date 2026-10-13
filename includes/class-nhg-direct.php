@@ -176,7 +176,7 @@ final class NIVAWPG_Scan {
         $deadline = microtime(true) + 60;
         $out = ['time' => time(), 'partial' => false, 'files' => 0, 'plugins' => []];
         $roots = [
-            WP_PLUGIN_DIR => '',
+            dirname(untrailingslashit(plugin_dir_path(NIVAWPG_FILE))) => '',
             WPMU_PLUGIN_DIR => 'mu:',
             get_theme_root() => 'theme:',
         ];
@@ -263,7 +263,8 @@ final class NIVAWPG_Scan {
             'sock'  => '/\b(?:fsockopen|pfsockopen|stream_socket_client)\s*\(/',
             'fopen' => '/\b(?:file_get_contents|fopen|readfile|copy|get_headers|simplexml_load_file)\s*\(\s*[\'"]https?:\/\//i',
         ];
-        $rel = ltrim(str_replace(str_replace('\\', '/', WP_CONTENT_DIR), '', str_replace('\\', '/', $file)), '/');
+        $content_root = wp_normalize_path(dirname(untrailingslashit(plugin_dir_path(NIVAWPG_FILE)), 2));
+        $rel = ltrim(str_replace($content_root, '', wp_normalize_path($file)), '/');
 
         $hits = [];
 

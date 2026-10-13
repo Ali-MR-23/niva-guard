@@ -4,7 +4,7 @@ Tags: performance, http, notices, heartbeat, 404
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.6.3
+Stable tag: 2.6.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,7 +56,7 @@ Only if you turn the related option on and save the settings:
 * `404.html` in the site root and a block between `# BEGIN NIVA WP Guard` and `# END NIVA WP Guard` in `.htaccess` — Fast 404. A backup of `.htaccess` is saved first and restored automatically if the site returns a server error afterwards.
 * `wp-config.php` — only if you turn on "Disable the built-in WordPress cron": one marked line `define( 'DISABLE_WP_CRON', true );` is added (and removed again when you turn the option off or deactivate the plugin). If the site returns a server error afterwards, the file is restored automatically.
 
-The log folder `wp-content/uploads/niva-wp-guard/` is created when the first connection is logged. If WordPress cannot write these files, the settings page shows download buttons and manual instructions instead.
+The log folder `wp-content/uploads/niva-guard/` is created when the first connection is logged. If WordPress cannot write these files, the settings page shows download buttons and manual instructions instead.
 
 Everything is removed when you deactivate or delete the plugin.
 
@@ -73,6 +73,12 @@ The logger, circuit breaker and Heartbeat control work everywhere. Fast 404 cann
 All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 
 == Changelog ==
+
+= 2.6.4 =
+* File locations are now taken from WordPress functions (uploads folder, mu-plugins folder, site root, plugin folder) instead of constants and fixed names.
+* The 404 page template is a separate file (templates/404.html).
+* The log folder is now uploads/niva-guard; the previous folder and log file are moved automatically.
+* New rules for WP Rocket.
 
 = 2.6.3 =
 * The static 404 page no longer contains a script; the "go back" button was replaced by the plain link to the home page.
@@ -126,6 +132,9 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Renamed from NIVA HTTP Guard. Settings are migrated automatically.
 
 == Upgrade Notice ==
+
+= 2.6.4 =
+The log folder is renamed to niva-guard; your log and settings are kept. If you use the early loader or Fast 404, they are refreshed automatically.
 
 = 2.6.3 =
 The generated 404.html is simplified (no script). Use "Regenerate 404.html" to refresh an existing file.
