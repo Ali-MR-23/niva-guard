@@ -36,7 +36,7 @@ class NIVAWPG_Settings {
             'ui_keywords'   => '',  // notice keywords (one per line)
             'ui_yoast_feed' => 0,   // hide the Yoast widget feed
             'ui_pwsms'      => 0,   // switch off the Persian WooCommerce SMS ads
-            'ui_parsidate'  => 0,   // ParsiDate: remove the dashboard widget (sponsor banner and feed) and close its connections
+            'ui_parsidate'  => 0,   // ParsiDate: hide the dashboard widget (external banner and feed) and close its connections
             'ui_menus'      => [],  // slugs of admin menu items that are only hidden (not removed)
             'ui_jetpack'    => 0,   // official Jetpack offline mode (no connection to WordPress.com)
             'deep'          => 0,   // deep tracking: direct PHP connections (file_get_contents / fopen over http)

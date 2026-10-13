@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
  */
 class NIVAWPG_Rules {
 
-    /** Address prefix of the WP-ParsiDate sponsor feed (matched only to block it). */
+    /** Address prefix of the WP-ParsiDate remote content list (matched only to block it). */
     public const PARSI_RAW = 'raw.' . 'githubusercontent.com/wordpress-parsi/';
 
     /**
@@ -143,7 +143,7 @@ class NIVAWPG_Rules {
             'yoast_ips' => [__('Better WP Security (Solid Security)', 'niva-guard'), __('Visitor IP check (ipcheck) — also runs on site pages and can wait up to 10 seconds', 'niva-guard')],
             'wpforms_addons' => [__('WPForms', 'niva-guard'), __('Add-ons list (addons) — up to 10 seconds', 'niva-guard')],
             'smtp_notice' => [__('WP Mail SMTP', 'niva-guard'), __('Notices (feeds/notifications)', 'niva-guard')],
-            'parsi_sponsors' => [__('ParsiDate', 'niva-guard'), __('Sponsors list (sponsors.json from GitHub)', 'niva-guard')],
+            'parsi_sponsors' => [__('ParsiDate', 'niva-guard'), __('Remote content list (sponsors.json from GitHub)', 'niva-guard')],
             'parsi_feed' => [__('ParsiDate', 'niva-guard'), __('News feed (wp-parsi.com)', 'niva-guard')],
             'ace_ads' => [__('Advanced Shipping (Ace Plugins)', 'niva-guard'), __('Advertising page aceplugins.com', 'niva-guard')],
             'yoast_indexnow' => [__('Yoast', 'niva-guard'), __('IndexNow — notifying search engines about page changes (up to 10 seconds)', 'niva-guard')],
@@ -217,7 +217,7 @@ class NIVAWPG_Rules {
             // ── WPForms, WP Mail SMTP, ParsiDate, Advanced Shipping, IndexNow
             ['id' => 'wpforms_addons', 'match' => 'wpformsapi.com/feeds/', 'type' => 'ad'],
             ['id' => 'smtp_notice', 'match' => 'wpmailsmtpapi.com/feeds/', 'type' => 'news'],
-            ['id' => 'parsi_sponsors', 'match' => self::PARSI_RAW, 'type' => 'ad'],
+            ['id' => 'parsi_sponsors', 'match' => self::PARSI_RAW, 'type' => 'news'],
             ['id' => 'parsi_feed', 'match' => 'wp-parsi.com/', 'type' => 'news'],
             ['id' => 'ace_ads', 'match' => 'aceplugins.com/', 'type' => 'ad'],
             ['id' => 'yoast_indexnow', 'match' => 'api.indexnow.org/', 'type' => 'service'],

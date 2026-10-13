@@ -101,7 +101,7 @@ A built-in registry of **53 known connections** with an explanation of what each
 - **Select recommended / Clear all**: one click to block all ads and promotional feeds, or to reset.
 - Blocking a *License* or *Plugin function* item shows a warning first, because it can lock a theme or stop SMS and orders.
 
-Covered sources include WooCommerce (promotions, WooPayments ads, tracking, PayPal IPN, product-key checks), Jetpack and WordPress.com, WordPress core and plugin version checks, LiteSpeed Cache and QUIC.cloud, Solid Security, Rank Math, Elementor, Yoast SEO (including translations feeds, Wincher and the unofficial vip-themes server), WPForms, WP Mail SMTP, Code Snippets, and many Persian plugins and themes (Persian WooCommerce and SMS plugins, Digits, RTL plugins, WP-ParsiDate, Mahdis Web theme, Digify, Ace Plugins, Emalls, Torob, payamak-panel and Niva licenses).
+Covered sources include WooCommerce (promotions, WooPayments ads, tracking, PayPal IPN, product-key checks), Jetpack and WordPress.com, WordPress core and plugin version checks, LiteSpeed Cache and QUIC.cloud, Solid Security, Rank Math, Elementor, Yoast SEO (including translations feeds, Wincher and VIP Theme), WPForms, WP Mail SMTP, Code Snippets, and many Persian plugins and themes (Persian WooCommerce and SMS plugins, Digits, RTL plugins, WP-ParsiDate, Mahdis Web theme, Digify, Ace Plugins, Emalls, Torob, payamak-panel and Niva licenses).
 
 ### 3. Seen on your site
 Connections that happened on your site but are **not** in the built-in list, grouped by plugin or theme, with counts and timing, so you can block or cache them too.
@@ -113,7 +113,7 @@ Choose one or more plugins and **everything they send out is closed except wordp
 Clean the admin without deactivating anything.
 - **Dashboard widgets**: the list of widgets detected on your dashboard with the plugin that adds each one; tick to remove. The widget code does not run and its feed is not fetched.
 - **Admin menu items**: tick the items to hide (Dashboard, Settings and Plugins are protected so you cannot lock yourself out). Items are only hidden, not removed: the plugin stays active and its page still opens with a direct link. This includes menus that other plugins add very late.
-- **Ready-made switches**: WordPress news widget, WP-ParsiDate widget and ads, Elementor news widget, Yoast widget feed, Jetpack offline mode, Persian WooCommerce SMS ads.
+- **Ready-made switches**: WordPress news widget, WP-ParsiDate external widget and feed, Elementor news widget, Yoast widget feed, Jetpack offline mode, Persian WooCommerce SMS ads.
 - **Promotional notices by keyword**: write words (one per line) and any admin notice containing them is hidden. Error notices and "new version" notices always stay visible.
 
 ### 6. Server and 404

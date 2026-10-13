@@ -122,7 +122,7 @@ class NIVAWPG_Ui {
         }
 
         if (!empty($s['ui_parsidate'])) {
-            // Any widget whose code lives in wp-parsidate (the ParsiDate widget with sponsor banner and feed)
+            // Any widget whose code lives in wp-parsidate (the ParsiDate widget with its external banner and feed)
             $s['ui_widget_dirs'] = array_merge((array) $s['ui_widget_dirs'], ['wp-parsidate']);
         }
 
