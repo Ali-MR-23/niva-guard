@@ -460,7 +460,7 @@ PHP;
         }
 
         // Health check: if the site answers with a server error after the change the previous file is restored (a network error is inconclusive and does not roll back)
-        $r = wp_remote_get(home_url('/'), ['timeout' => 8, 'redirection' => 0, 'sslverify' => false, 'headers' => ['Cache-Control' => 'no-cache']]);
+        $r = wp_remote_get(home_url('/'), ['timeout' => 8, 'redirection' => 0, 'sslverify' => apply_filters('https_local_ssl_verify', false), 'headers' => ['Cache-Control' => 'no-cache']]);
 
         if (!is_wp_error($r) && (int) wp_remote_retrieve_response_code($r) >= 500) {
             NIVAWPG_Fs::put($path, $cur);
@@ -589,7 +589,7 @@ PHP;
             return 'write';
         }
 
-        $r = wp_remote_get(home_url('/'), ['timeout' => 8, 'redirection' => 0, 'sslverify' => false, 'headers' => ['Cache-Control' => 'no-cache']]);
+        $r = wp_remote_get(home_url('/'), ['timeout' => 8, 'redirection' => 0, 'sslverify' => apply_filters('https_local_ssl_verify', false), 'headers' => ['Cache-Control' => 'no-cache']]);
 
         if (!is_wp_error($r) && (int) wp_remote_retrieve_response_code($r) >= 500) {
             NIVAWPG_Fs::put($path, $cur);

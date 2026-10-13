@@ -45,7 +45,7 @@ The settings page is written in English, is fully translatable (translations are
 
 = Does the plugin send any data to another server? =
 
-No. It does not connect to any external service. The connection log is stored only on your own site (database and a text file in the uploads folder).
+No. It does not connect to any external service. The only request it makes is to your own site (home URL), once, after it edits `.htaccess` or `wp-config.php`, to be sure the site still answers; if the site returns a server error the edit is rolled back. The connection log is stored only on your own site (database and a text file in the uploads folder).
 
 = Which files does it create outside its own folder? =
 
