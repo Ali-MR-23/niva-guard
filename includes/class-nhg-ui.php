@@ -48,7 +48,8 @@ class NIVAWPG_Ui {
                 continue;
             }
 
-            $title = trim(preg_replace(['/\s*\d+\s*(اطلاعیه|اعلان|notifications?|updates?|به‌روزرسانی).*$/ui', '/\s*\d+\s*$/u'], '', wp_strip_all_tags((string) $item[0])));
+            $label = (string) preg_replace('#<span[^>]*class="[^"]*(?:awaiting-mod|update-plugins)[^"]*".*$#is', '', (string) $item[0]);
+            $title = trim(preg_replace(['/\s*\d+\s*(اطلاعیه|اعلان|notifications?|updates?|به‌روزرسانی).*$/ui', '/\s*\d+\s*$/u'], '', wp_strip_all_tags($label)));
             $found[(string) $item[2]] = $title !== '' ? $title : (string) $item[2];
         }
 
