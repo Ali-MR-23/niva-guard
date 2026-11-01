@@ -142,6 +142,20 @@ class NIVAWPG_Settings {
     public static function seen(): array {
         $s = get_option(self::SEEN, []);
 
-        return is_array($s) ? $s : [];
+        if (!is_array($s)) {
+            return [];
+        }
+
+        // Entries written by older versions (or damaged ones) are dropped or completed so the report never breaks
+        $def = ['plugin' => '', 'host' => '', 'path' => '', 'count' => 0, 'blocked' => 0, 'cached' => 0, 'total' => 0.0, 'max' => 0.0, 'status' => '', 'ctx' => '', 'method' => 'GET', 'last' => 0];
+        $out = [];
+
+        foreach ($s as $id => $e) {
+            if (is_array($e) && !empty($e['host']) && is_string($e['host'])) {
+                $out[$id] = array_merge($def, $e);
+            }
+        }
+
+        return $out;
     }
 }

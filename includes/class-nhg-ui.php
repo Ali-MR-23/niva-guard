@@ -211,12 +211,19 @@ class NIVAWPG_Ui {
 
         self::inline_js(
             "document.addEventListener('DOMContentLoaded', function () {\n"
-            . '    var hide = ' . wp_json_encode($words, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ", keep = ['نسخه جدید', 'خطا', 'error'];\n"
+            . '    var hide = ' . wp_json_encode($words, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ", keep = ['نسخه جدید', 'new version'];\n"
             . <<<'JS'
+    // Spaces, zero-width joiners and letter case are ignored so a keyword still matches when the notice uses a double space or a half-space
+    var norm = function (v) { return String(v).replace(/[\u200c\u200d\u200b]/g, '').replace(/\s+/g, ' ').trim().toLowerCase(); };
+    var hideN = hide.map(norm), keepN = keep.map(norm);
     document.querySelectorAll('.notice, .updated, .update-nag, div.error, .is-dismissible').forEach(function (el) {
-        var t = (el.textContent + ' ' + el.innerHTML).toLowerCase();
-        var h = hide.some(function (k) { return t.indexOf(k.toLowerCase()) !== -1; });
-        var k = keep.some(function (k2) { return t.indexOf(k2.toLowerCase()) !== -1; });
+        // Error notices always stay visible (by class, not by text: the dismiss button of every notice says "اخطار")
+        if (el.classList.contains('notice-error') || el.classList.contains('error')) { return; }
+        var body = el.cloneNode(true);
+        body.querySelectorAll('.notice-dismiss, button').forEach(function (b) { b.remove(); });
+        var t = norm(el.textContent + ' ' + el.innerHTML), plain = norm(body.textContent);
+        var h = hideN.some(function (k) { return k !== '' && t.indexOf(k) !== -1; });
+        var k = keepN.some(function (k2) { return plain.indexOf(k2) !== -1; });
         if (h && !k) { el.style.display = 'none'; }
     });
 });
