@@ -108,7 +108,7 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * File locations are now taken from WordPress functions (uploads folder, mu-plugins folder, site root, plugin folder) instead of constants and fixed names.
 * The 404 page template is a separate file (templates/404.html).
 * The log folder is now uploads/niva-guard; the previous folder and log file are moved automatically.
-* New rules for WP Rocket.
+* New connection entries for caching plugins.
 
 = 2.6.3 =
 * The static 404 page no longer contains a script; the "go back" button was replaced by the plain link to the home page.
@@ -125,7 +125,7 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 * Plugin Check clean-up: sanitised form input, no raw third-party addresses in the code.
 
 = 2.5.1 =
-* The "hide menu items" list now includes menus other plugins add very late (for example WP-Parsidate).
+* The "hide menu items" list now includes menus other plugins add very late.
 * Cron card: full crontab line with the schedule, "Copy command only" for the cPanel form, and more command variants (cPanel, CloudLinux, DirectAdmin, Plesk, WP-CLI, wget, curl).
 * Intervals up to 6 hours for the server cron job.
 * Neutral wording in the circuit breaker description; vip-themes.com is shown as "VIP Theme".
@@ -134,7 +134,7 @@ All PHP, CSS and JavaScript files in the plugin are unminified and readable.
 = 2.5.0 =
 * New: switch off the built-in WordPress cron from the "Server and 404" tab and copy a ready cron job command for cPanel (schedule and PHP path matched to your site).
 * New: the cron card shows the last successful (and last failed) cron run, how it was started (server command or web request) and the next scheduled task.
-* Fix: admin menu items added very late by other plugins (for example WP-Parsidate) now appear in the "hide menu items" list and can be hidden.
+* Fix: admin menu items added very late by other plugins now appear in the "hide menu items" list and can be hidden.
 
 = 2.4.1 =
 * The plugin no longer has a shortlink option and does not touch WordPress shortlinks. The Fast 404 file only carries the rule that keeps `?p=ID` links working while Fast 404 is on; the old separate shortlink file is removed automatically.
